@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,6 +12,19 @@ E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
 \newblock ISSN 0375-9474.
 \newblock \doi{https://doi.org/10.1016/S0375-9474(97)00596-4}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0375947497005964}.
+
+\bibitem[Gu et~al.(2013)Gu, Liang, Long, Van~Giai, and Meng]{SlaterApp}
+H.-Q. Gu, H.~Liang, W.~H. Long, N.~Van~Giai, and J.~Meng.
+\newblock Slater approximation for coulomb exchange effects in nuclear covariant density functional theory.
+\newblock \emph{Phys. Rev. C}, 87:\penalty0 041301, Apr 2013.
+\newblock \doi{10.1103/PhysRevC.87.041301}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.87.041301}.
+
+\bibitem[Jackson(1998)]{Jackson1998}
+J.~D. Jackson.
+\newblock \emph{Classical Electrodynamics}.
+\newblock John Wiley \& Sons, New York, 3rd edition, 1998.
+\newblock ISBN 978-0471309321.
 
 \bibitem[Skyrme(1958)]{SKYRME1958615}
 T.~Skyrme.
