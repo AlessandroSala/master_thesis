@@ -50,7 +50,7 @@
 \usepackage{amsthm,thmtools,xcolor} % Coloured "Theorem"
 \usepackage{float}
 \usepackage{physics}
-
+\usepackage{siunitx}
 % STANDARD MATH PACKAGES
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -90,6 +90,8 @@
 %----------------------------------------------------------------------------
 
 % EXAMPLES OF NEW COMMANDS
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\pauli}{\boldsymbol{\sigma}}
 \newcommand{\bea}{\begin{eqnarray}} % Shortcut for equation arrays
 \newcommand{\eea}{\end{eqnarray}}
 \newcommand{\e}[1]{\times 10^{#1}}  % Powers of 10 notation
@@ -196,6 +198,7 @@ Qui va l'Abstract in lingua italiana della tesi seguito dalla lista di parole ch
 % NUMBERED CHAPTERS % Regular chapters following
 % --------------------------------------------------------------------------
 \input{chapters/functional/functional.tex}
+\input{chapters/numerical/numerical.tex}
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 \bibliography{Thesis_bibliography} % The references information are stored in the file named "Thesis_bibliography.bib"
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -26,6 +26,11 @@ J.~D. Jackson.
 \newblock John Wiley \& Sons, New York, 3rd edition, 1998.
 \newblock ISBN 978-0471309321.
 
+\bibitem[Ring and Schuck(2004)]{ring2004nuclear}
+P.~Ring and P.~Schuck.
+\newblock \emph{The nuclear many-body problem}.
+\newblock Springer Science \& Business Media, 2004.
+
 \bibitem[Skyrme(1958)]{SKYRME1958615}
 T.~Skyrme.
 \newblock The effective nuclear potential.
@@ -38,5 +43,13 @@ T.~Skyrme.
 P.~Stevenson and M.~Barton.
 \newblock Low-energy heavy-ion reactions and the skyrme effective interaction.
 \newblock \emph{Progress in Particle and Nuclear Physics}, 104:\penalty0 142--164, 2019.
+
+\bibitem[Zhou(1993)]{Zhou1993}
+P.-b. Zhou.
+\newblock \emph{Finite Difference Method}, pages 63--94.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 1993.
+\newblock ISBN 978-3-642-50319-1.
+\newblock \doi{10.1007/978-3-642-50319-1_3}.
+\newblock URL \url{https://doi.org/10.1007/978-3-642-50319-1_3}.
 
 \end{thebibliography}

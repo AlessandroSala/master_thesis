@@ -1,0 +1,99 @@
+\section{Finite differences}
+One, if not the easiest way to numerically represent and solve differential equations, is through finite differences. The core idea is to find a suitable 3D mesh for the problem at hand, use an approximation for derivatives on said mesh, and ultimately using the language of linear algebra to formulate and solve the resulting system of equations.
+\subsection{3D mesh}
+The first task on the agenda, is finding a suitable representation of the various fields for a computer.
+Generally speaking, we deal at most with 2-rank tensors, which vary in space and spin. 
+\\Discretizing the 3D cartesian space with a 3-index mesh, choosing a box which size on x, y, z is respectively $[-a_x, a_x]$, $[-a_y, a_y]$, $[-a_z, a_z]$, and a number of points $N_x, N_y, N_z$, the resulting lattice will be given by
+\begin{equation*}
+V=\{(-a_x+ih_x, -a_y+ih_y, -a_z+ih_z)\} = \{(x_i, y_j,z_k)\} 
+\end{equation*}
+Where the indices and step size are
+\begin{align*}
+  i&=0,\ldots,N_x-1,\ h_x = \frac{2a_x}{N_x-1}\\
+  j&=0,\ldots,N_y-1,\ h_y = \frac{2a_y}{N_y-1}\\
+  k&=0,\ldots,N_z-1,\ h_z = \frac{2a_z}{N_z-1}
+\end{align*}
+For ease of notation, we will assume $a=a_x=a_y=a_z=a$ and $N=N_x=N_y=N_z=N$, without losing generality.
+\\Including the spin degree of freedom, we can finally represent fields in a numerical way through
+\begin{equation}
+    \psi(\bm r, \sigma) \mapsto \psi(x_i, y_j, z_k, s) = \psi_{ijks}
+\end{equation}
+\subsubsection{Discretizing differential operators}
+By using Taylor series, it's possible to write approximations to derivatives \cite{Zhou1993}, in any point of the lattice, of any (reasonable) order of accuracy, involving only near neighbouring points. In the present work, 5-points derivates are used, meaning Taylor expansions are written for $\psi(x\pm h)$ and $\psi(x\pm 2h)$ to compute the differential operators. Formulae for first and second derivates in this framework are given in appendix \ref{app:5p_derivatives}.
+\subsection{Schr\"odinger equation}
+As outlined in (REF), one of the two PDEs we want to solve is the single particle Schr\"odinger equation \ref{eq:spe_ks}.
+\\It can be summarized as
+\begin{equation}
+    \label{eq:pde} f(\nabla^2 \psi, \nabla \psi, \psi, \bm r, s) = E\psi
+\end{equation}
+If $f$ is linear in $\psi$, it would be possible to employ the powerful numerical methods of linear algebra to solve the problem.
+Breaking down each part of the equation, the kinetic term
+\begin{equation}
+\label{eq:kin_lin_dim}
+\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg)\psi = \frac{\hbar^2}{2m^{*}_q(\mathbf r)} \nabla^2\psi + \nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\bigg) \nabla\psi
+\end{equation}
+Is evidently linear in $\psi$. 
+\\The spin-orbit coupling, which most generally reads
+\begin{align*}
+    \hat {{h}}_{\text{SO}}&=\bm f (\bm r )\cdot (\nabla \times \pauli ) 
+    \\&=f_x(\bm r)(\sigma_z\partial_y - \sigma_y\partial_z) + f_y(\bm r)(\sigma_x\partial_z - \sigma_z\partial_x) + f_z(\bm r)(\sigma_y\partial_x - \sigma_x\partial_y)
+\end{align*}
+$\hat {h}_\text{SO}$ acts linearly on the spinor $\psi_{ijk}$.
+Finally, the mean field terms $U_q, U_c$ are just multiplicative.
+\\Given that the equation is linear in $\psi$, we can evaluate it on the chosen mesh, using finite differences to approximate the differential operators, yielding a linear system of equations of the form
+\begin{align}
+    \sum_n^{N_x\cdot N_y\cdot N_z \cdot 2} A_{mn}\psi_{n} &= E\psi_m
+\end{align}
+\subsubsection{Boundary conditions}
+We expect the nucleus to be a localized object, prompting for null Dirichlet boundary conditions for the Schr\"odinger equation.
+Near the boundaries, the derivatives will involve points outside the box. Setting these points to zero, is equivalent to solving 
+\begin{equation}
+    \begin{bmatrix}
+        0 & 0 & 0 & 0 & 0
+        \\0 & 0 & 0 & 0 & 0
+        \\0 & 0 & A & 0 & 0
+        \\0 & 0 & 0 & 0 & 0
+        \\0 & 0 & 0 & 0 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        0\\0\\\mathbf{\psi}\\0\\0
+    \end{bmatrix}
+    = E 
+    \begin{bmatrix}
+        0\\0\\\mathbf{\psi}\\0\\0
+    \end{bmatrix}
+\end{equation}
+Meaning that ignoring the outside points while constructing the $A$ matrix is equivalent to setting the desired boundary conditions on a box slightly larger than the one considered.
+\subsection{Poisson equation}
+\label{subsec:poisson}
+The other fundamental PDE we need to solve is the Poisson equation encountered in section (REF). Dropping the $c$ and $p$ subscripts, it reads
+\begin{equation*}
+\nabla^2 V = 4\pi e^2 \rho
+\end{equation*}
+It's much simpler than the Schr\"odinger equation, as it only involves a laplacian and it is not an eigenvalue problem. The right is side is given, and the solution is found by inverting the matrix.
+\subsubsection{Boundary conditions}
+Unlike the Schr\"odinger equation, we do not expect the solution to rapidly decay near the boundaries; as reported in section \ref{sec:coulomb_treatment}, we have fixed, non-null boundary conditions, which we have to properly impose on the system.
+\\We can choose a direction, say $x$, and look at the equation at the boundaries $x=\pm a$. Since the indeces $j,k$ won't vary, we can omit them, and ignore the other derivates in the following equations.
+\begin{align}
+    \label{eq:poisson_disc}
+    \nabla^2 V = \partial_{xx} V + \partial_{yy}V + \partial_{zz}V = \frac{-V_{i-2} + 16V_{i-1} -30V_i + 16V_{i+1} - V_{i+2}}{12h^2}+\cdots=4\pi e^2 \rho_i
+\end{align}
+Near a boundary, say $i = 0$, the formula calls for points outside the box, known as \textit{ghost points}. Since they are not part of the linear system, but they are known, we can bring them on the right side of equation \ref{eq:poisson_disc}.
+\begin{align}
+    \frac{-30 V_0 + 16 V_1 - V_2 }{12h^2} &= 4\pi e^2 \rho_0 +\frac{ V_{-2} -16V_{-1}}{12h^2} = \tilde\rho_0
+\end{align}
+The same procedure must be applied to all equations involving ghost points, e.g. for $i=1$
+\begin{align}
+    \frac{+16V_0 -30V_{1} + 16 V_2 - V_3}{12h^2} &= 4\pi e^2 \rho_1 + \frac{V_{-1} }{12h^2} = \tilde\rho_1
+\end{align}
+The proper system to solve will then be
+\begin{align}
+A V = \tilde \rho
+\end{align}
+Where $A$ is constructed as previously specified. $\tilde \rho $ will force the solution to abide boundary conditions.
+\subsubsection{On higher order approximations and performance}
+Higher and higher order approximations for derivatives involve points that are further and further away. This increases accuracy, but it also decreases matrix sparseness.
+\\Algorithms like Conjugate Gradient, as we'll see in the next section,  and linear algebra computing libraries, benefit from matrix sparseness. The implication is that performance \textit{vs} accuracy is a tradeoff that isn't univocal to every problem.
+\\In the present work, the golden choice has been 5-point stencils; but it's not definitive, as the lattice points rapidly cap depending on the system's memory.
+\\As an example, take a seemingly harmless grid, made of 50 points in each direction. The resulting matrix will be $50\times 50 \times 50 \times 2=\num{2.5e5}$ both in columns and rows. 
+It may be the case in the future, that higher order derivatives will be needed, to compensate for the limitation brought by the $\mathcal O (h^n)$ polynomial accuracy of the method in the step size.
