@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -13,6 +13,50 @@ E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
 \newblock \doi{https://doi.org/10.1016/S0375-9474(97)00596-4}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0375947497005964}.
 
+\bibitem[Chen et~al.(2022)Chen, Li, Schuetrumpf, Reinhard, and Nazarewicz]{CHEN2022108344}
+M.~Chen, T.~Li, B.~Schuetrumpf, P.-G. Reinhard, and W.~Nazarewicz.
+\newblock Three-dimensional skyrme hartree-fock-bogoliubov solver in coordinate-space representation.
+\newblock \emph{Computer Physics Communications}, 276:\penalty0 108344, 2022.
+\newblock ISSN 0010-4655.
+\newblock \doi{https://doi.org/10.1016/j.cpc.2022.108344}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465522000625}.
+
+\bibitem[Colò(2020)]{NDFT}
+G.~Colò.
+\newblock Nuclear density functional theory.
+\newblock \emph{Advances in Physics: X}, 5\penalty0 (1):\penalty0 1740061, 2020.
+\newblock \doi{10.1080/23746149.2020.1740061}.
+\newblock URL \url{https://doi.org/10.1080/23746149.2020.1740061}.
+
+\bibitem[Cusson et~al.(1985)Cusson, Reinhard, Strayer, Maruhn, and Greiner]{Cusson1985}
+R.~Y. Cusson, P.~G. Reinhard, M.~R. Strayer, J.~A. Maruhn, and W.~Greiner.
+\newblock Density as a constraint and the separation of internal excitation energy in tdhf.
+\newblock \emph{Zeitschrift für Physik A Atoms and Nuclei}, 320:\penalty0 475--482, 1985.
+\newblock \doi{10.1007/BF01415725}.
+\newblock URL \url{https://doi.org/10.1007/BF01415725}.
+
+\bibitem[Erler et~al.(2010)Erler, Klüpfel, and Reinhard]{Erler_2010}
+J.~Erler, P.~Klüpfel, and P.-G. Reinhard.
+\newblock Misfits in skyrme–hartree–fock.
+\newblock \emph{Journal of Physics G: Nuclear and Particle Physics}, 37\penalty0 (6):\penalty0 064001, mar 2010.
+\newblock \doi{10.1088/0954-3899/37/6/064001}.
+\newblock URL \url{https://doi.org/10.1088/0954-3899/37/6/064001}.
+
+\bibitem[Flocard et~al.(1973)Flocard, Quentin, Kerman, and Vautherin]{FLOCARD1973433}
+H.~Flocard, P.~Quentin, A.~Kerman, and D.~Vautherin.
+\newblock Nuclear deformation energy curves with the constrained hartree-fock method.
+\newblock \emph{Nuclear Physics A}, 203\penalty0 (3):\penalty0 433--472, 1973.
+\newblock ISSN 0375-9474.
+\newblock \doi{https://doi.org/10.1016/0375-9474(73)90357-6}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0375947473903576}.
+
+\bibitem[Golub and van Loan(2013)]{golub13}
+G.~H. Golub and C.~F. van Loan.
+\newblock \emph{Matrix Computations}.
+\newblock JHU Press, fourth edition, 2013.
+\newblock ISBN 1421407949 9781421407944.
+\newblock URL \url{http://www.cs.cornell.edu/cv/GVL4/golubandvanloan.htm}.
+
 \bibitem[Gu et~al.(2013)Gu, Liang, Long, Van~Giai, and Meng]{SlaterApp}
 H.-Q. Gu, H.~Liang, W.~H. Long, N.~Van~Giai, and J.~Meng.
 \newblock Slater approximation for coulomb exchange effects in nuclear covariant density functional theory.
@@ -20,16 +64,85 @@ H.-Q. Gu, H.~Liang, W.~H. Long, N.~Van~Giai, and J.~Meng.
 \newblock \doi{10.1103/PhysRevC.87.041301}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.87.041301}.
 
+\bibitem[Hohenberg and Kohn(1964)]{HK}
+P.~Hohenberg and W.~Kohn.
+\newblock Inhomogeneous electron gas.
+\newblock \emph{Phys. Rev.}, 136:\penalty0 B864--B871, Nov 1964.
+\newblock \doi{10.1103/PhysRev.136.B864}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.136.B864}.
+
 \bibitem[Jackson(1998)]{Jackson1998}
 J.~D. Jackson.
 \newblock \emph{Classical Electrodynamics}.
 \newblock John Wiley \& Sons, New York, 3rd edition, 1998.
 \newblock ISBN 978-0471309321.
 
+\bibitem[Knyazev(1991)]{LOBPCG}
+A.~V. Knyazev.
+\newblock \emph{A Preconditioned Conjugate Gradient Method for Eigenvalue Problems and its Implementation in a Subspace}, pages 143--154.
+\newblock Birkh{\"a}user Basel, Basel, 1991.
+\newblock ISBN 978-3-0348-6332-2.
+\newblock \doi{10.1007/978-3-0348-6332-2_11}.
+\newblock URL \url{https://doi.org/10.1007/978-3-0348-6332-2_11}.
+
+\bibitem[Lanczos(1952)]{lanczos1952solution}
+C.~Lanczos.
+\newblock Solution of systems of linear equations by minimized iterations.
+\newblock \emph{J. Res. Nat. Bur. Standards}, 49\penalty0 (1):\penalty0 33--53, 1952.
+
+\bibitem[Li et~al.(2020)Li, Ren, and Zhao]{li2020efficient}
+B.~Li, Z.~Ren, and P.~Zhao.
+\newblock Efficient solution for the dirac equation in 3d lattice space with the conjugate gradient method.
+\newblock \emph{Physical Review C}, 102\penalty0 (4):\penalty0 044307, 2020.
+
+\bibitem[Lin et~al.(2013)Lin, Shao, and E]{LIN2013205}
+L.~Lin, S.~Shao, and W.~E.
+\newblock Efficient iterative method for solving the dirac–kohn–sham density functional theory.
+\newblock \emph{Journal of Computational Physics}, 245:\penalty0 205--217, 2013.
+\newblock ISSN 0021-9991.
+\newblock \doi{https://doi.org/10.1016/j.jcp.2013.03.030}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0021999113002088}.
+
+\bibitem[Nottoli et~al.(2023)Nottoli, Gianni, Levitt, and Lipparini]{Nottoli2023}
+T.~Nottoli, I.~Gianni, A.~Levitt, and F.~Lipparini.
+\newblock A robust, open-source implementation of the locally optimal block preconditioned conjugate gradient for large eigenvalue problems in quantum chemistry.
+\newblock \emph{Theoretical Chemistry Accounts}, 142\penalty0 (8):\penalty0 69, 2023.
+\newblock ISSN 1432-2234.
+\newblock \doi{10.1007/s00214-023-03010-y}.
+\newblock URL \url{https://doi.org/10.1007/s00214-023-03010-y}.
+
+\bibitem[Reinhard and Flocard(1995)]{REINHARD1995467}
+P.-G. Reinhard and H.~Flocard.
+\newblock Nuclear effective forces and isotope shifts.
+\newblock \emph{Nuclear Physics A}, 584\penalty0 (3):\penalty0 467--488, 1995.
+\newblock ISSN 0375-9474.
+\newblock \doi{https://doi.org/10.1016/0375-9474(94)00770-N}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/037594749400770N}.
+
 \bibitem[Ring and Schuck(2004)]{ring2004nuclear}
 P.~Ring and P.~Schuck.
 \newblock \emph{The nuclear many-body problem}.
 \newblock Springer Science \& Business Media, 2004.
+
+\bibitem[Robledo et~al.(2018)Robledo, Rodríguez, and Rodríguez-Guzmán]{Robledo_2019}
+L.~M. Robledo, T.~R. Rodríguez, and R.~R. Rodríguez-Guzmán.
+\newblock Mean field and beyond description of nuclear structure with the gogny force: a review.
+\newblock \emph{Journal of Physics G: Nuclear and Particle Physics}, 46\penalty0 (1):\penalty0 013001, dec 2018.
+\newblock \doi{10.1088/1361-6471/aadebd}.
+\newblock URL \url{https://doi.org/10.1088/1361-6471/aadebd}.
+
+\bibitem[Ryssens et~al.(2015)Ryssens, Hellemans, Bender, and Heenen]{RYSSENS2015175}
+W.~Ryssens, V.~Hellemans, M.~Bender, and P.-H. Heenen.
+\newblock Solution of the skyrme–hf+bcs equation on a 3d mesh, ii: A new version of the ev8 code.
+\newblock \emph{Computer Physics Communications}, 187:\penalty0 175--194, 2015.
+\newblock ISSN 0010-4655.
+\newblock \doi{https://doi.org/10.1016/j.cpc.2014.10.001}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465514003361}.
+
+\bibitem[Saad(1992)]{Saad1992}
+Y.~Saad.
+\newblock \emph{Numerical Methods for Large Eigenvalue Problems}.
+\newblock Manchester University Press, Manchester, UK, 1992.
 
 \bibitem[Skyrme(1958)]{SKYRME1958615}
 T.~Skyrme.
@@ -39,10 +152,39 @@ T.~Skyrme.
 \newblock \doi{https://doi.org/10.1016/0029-5582(58)90345-6}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/0029558258903456}.
 
+\bibitem[Sleijpen and Van~der Vorst(2000)]{JacobiDavidson}
+G.~L.~G. Sleijpen and H.~A. Van~der Vorst.
+\newblock A jacobi--davidson iteration method for linear eigenvalue problems.
+\newblock \emph{SIAM Review}, 42\penalty0 (2):\penalty0 267--293, 2000.
+\newblock \doi{10.1137/S0036144599363084}.
+\newblock URL \url{https://doi.org/10.1137/S0036144599363084}.
+
+\bibitem[Staszczak et~al.(2010)Staszczak, Stoitsov, Baran, and Nazarewicz]{Staszczak2010}
+A.~Staszczak, M.~Stoitsov, A.~Baran, and W.~Nazarewicz.
+\newblock Augmented lagrangian method for constrained nuclear density functional theory.
+\newblock \emph{The European Physical Journal A}, 46:\penalty0 85--90, 2010.
+\newblock \doi{10.1140/epja/i2010-11018-9}.
+\newblock URL \url{https://doi.org/10.1140/epja/i2010-11018-9}.
+
 \bibitem[Stevenson and Barton(2019)]{stevenson2019low}
 P.~Stevenson and M.~Barton.
 \newblock Low-energy heavy-ion reactions and the skyrme effective interaction.
 \newblock \emph{Progress in Particle and Nuclear Physics}, 104:\penalty0 142--164, 2019.
+
+\bibitem[Vautherin and Brink(1972)]{VauhBrinkOriginal}
+D.~Vautherin and D.~M. Brink.
+\newblock Hartree-fock calculations with skyrme's interaction. i. spherical nuclei.
+\newblock \emph{Phys. Rev. C}, 5:\penalty0 626--647, Mar 1972.
+\newblock \doi{10.1103/PhysRevC.5.626}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.5.626}.
+
+\bibitem[Woo et~al.(2023)Woo, Kim, and Kim]{LOBPCGDKS}
+J.~Woo, S.~Kim, and W.~Y. Kim.
+\newblock Gaussian-approximated poisson preconditioner for iterative diagonalization in real-space density functional theory.
+\newblock \emph{The Journal of Physical Chemistry A}, 127\penalty0 (17):\penalty0 3883--3893, 2023.
+\newblock \doi{10.1021/acs.jpca.2c09111}.
+\newblock URL \url{https://doi.org/10.1021/acs.jpca.2c09111}.
+\newblock PMID: 37094552.
 
 \bibitem[Zhou(1993)]{Zhou1993}
 P.-b. Zhou.

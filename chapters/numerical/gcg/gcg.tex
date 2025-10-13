@@ -1,17 +1,119 @@
-\section{Conjugate gradient methods}
-This section is devoted to exploring the idea behind the Conjugate Gradient (CG) algorithm and its use in the General Conjugate Gradient (GCG).
-\subsection{Conjugate Gradient}
-The CG method is used for solving linear systems of the form
+\section{Iterative eigensolvers}
+This section is devoted to approximate, iterative eigensolvers, exploring the idea behind the Conjugate Gradient (CG) algorithm and its use in the General Conjugate Gradient (GCG).
+\\Eigenproblems are ubiquitous in physics and engineering, and while solving one for a small matrix is trivial, it still requires roughly $O(n^3)$ \cite{golub13} operations to do so. More often than not, real computational applications result in large-scale matrices, which are completely out of the question for exact eigenvalues calculation.
+\\The workaround, is to use approximate algorithms. To keep things simple, we'll skim through the basics of the most modern and used ones, address their limitations, and move on to a new one, the General Conjugate Gradient (GCG).
+\subsection{Techniques}
+Iterative eigensolvers often share some common numerical techniques, like the Rayleigh-Ritz procedure, shift-and-invert, and approximate linear systems solvers. 
+We will begin by describing these recurring techniques, then look at commonly used algorithms and finally move on to the solver used in this work, the GCG.
+\subsubsection{Conjugate Gradient and numerical techniques}
+Solving linear systems of the form
 \begin{equation}
     \label{eq:lin_sys}
     Ax = b
 \end{equation}
-Where $A$ is an $n\times n$ matrix, and $x$ and $b$ are $n$-dimensional vectors.
-\\The quadratic form $f(x)$ associated to this system  
+is crucial in many eigensolvers. The Conjugate Gradient (CG) is perhaps the most famous iterative solver in this sense, especially in regards to sparse matrices, as we'll see in a moment.
+CG applies to cases where $A$ is an $n\times n$, positive-definite, symmetric matrix, and $x$ and $b$ are $n$-dimensional vectors.
+Many generalizations to this methods exist, which relax the requirements on the matrix, like BiCGSTAB, CGNR, MINRES, and so on. We'll describe the working principle of CG, but the same applies to all the others, with slight variations.
+\\The quadratic form $f(x)$ associated to system \ref{eq:lin_sys} is
 \begin{equation}
     \label{eq:quad_form}
     f(x) = \frac 1 2 x^T A x - b^T x
 \end{equation}
-If $A$ is symmetric, positive-definite, the 
-
-
+If $A$ is symmetric, positive-definite, 
+\subsubsection{Preconditioning}
+\subsubsection{Rayleigh-Ritz procedure}
+A common denominator of all these algorithms is the search of good approximations for the correct eigenvectors in a certain subspace $\mathcal K$. The method is called Rayleigh-Ritz (RR) procedure \cite{Saad1992}, and is here outlined.
+\\Suppose to have a matrix $A$ of size $n\times n$, with entries in $\C$ and a collection of vectors $k$ which form a subspace $\mathcal K \subset \C^n$, where $\mathcal K$ is an $n\times k$ matrix. Generally speaking, $n$ is large, while $k$ is much smaller.
+\\The best approximation of the true eigenvectors of $A$ in $\mathcal K$ can be computed by solving the small scale eigenvalue problem
+\begin{equation}
+    \mathcal K^\dagger A  \mathcal K X = X\lambda
+\end{equation}
+Resulting in a matrix $X$ of size $k\times k$.
+Computing $\mathcal K X$ gives a matrix of size $n\times k$, whose column vectors are the best approximations of the eigenvectors of $A$ in $\mathcal K$, with their corresponding eigenvalues $\lambda$.
+\subsubsection{Shift and Invert}
+\subsection{Iterative eigensolvers}
+\subsubsection{Jacobi-Davidson}
+The Jacobi-Davidson method \cite{JacobiDavidson} performes the RR procedure on a subspace which is enriched at each iteration by a correction to the previous eigenvectors.
+\\Given an approximation $(u, \theta)$ of an eigenpair of matrix $A$, if the residual
+\begin{equation}
+    \label{eq:residual}
+    r= A u - \theta u
+\end{equation}
+is $\approx 0$, then the eigenpair converged. Otherwise, we want to fine a correction $t$ such that 
+\begin{equation}
+    \label{eq:jacobi_correction}
+    r= A(u+t) - (\theta + \delta \theta) (u+t) = 0 
+\end{equation}
+Linearizing this equation in $t$ gives
+\begin{equation}
+   (A - \theta  I ) t = -r 
+\end{equation}
+To avoid singularity of the equation near convergence, since $u$ approximately spans a subspace of $\text{ker} (A-\theta I)$, and enrich the subspace search with a useful orthogonal correction, we project the problem onto the orthogonal subspace of $u$, which finally gives
+\begin{equation}
+    \label{eq:jacobi_eq_proj}
+    ( I - uu^\dagger) (A - \theta  I )(I - u u^\dagger) t = -r
+\end{equation}
+\begin{algorithm}[H]
+\caption{Jacobi-Davidson method for $A x = \lambda x$}
+\begin{algorithmic}[1]
+\STATE Choose normalized initial vectors $\{u_k\}$, set $V = [u_1, \ldots, u_{k}]$
+\REPEAT
+    \STATE Compute Ritz pair: $T = V^* A V$, solve $T y = \theta y$
+    \STATE Set $u = V y$, residual $r = A u - \theta u$
+    \IF{$\|r_k\| < \varepsilon\ \forall k$}
+         \RETURN $(\theta, u)$
+    \ENDIF
+    \STATE Solve approximately $(I - u_k u_k^*)(A - \theta I)(I - u_k u_k^*) t_k = -r_k$
+        using preconditioned iterative solver, ensuring $t_k \perp u_k$
+    \STATE Normalize: $v_k = t_k / \|t_k\|$
+    \STATE Expand subspace, setting $V = [V, v]$
+\UNTIL{convergence}
+for $k = 1, \dots, \text{nev}$
+\end{algorithmic}
+\end{algorithm}
+Although simple, this method is computationally efficient only by using preconditioning, which is known to be unstable \cite{Saad1992}.
+\subsubsection{Lanczos}
+Lanczos algorithm \cite{lanczos1952solution} is probably the most used iterative eigensolver in regards to hermitian matrices. It's a Krylov subspace search method, meaning the Rayleigh-Ritz procedure is done on a subspace formed as 
+\begin{equation}
+    \mathcal K = \{ v_1, Av_1, A^2 v_1, \ldots, A^{k-1} v_1 \}
+\end{equation}
+By iteratively applying $A$ to the search vector, orthogonalizing it to the previous one and diagonalizing the small scale problem.
+\begin{algorithm}[H]
+\caption{Lanczos Method for Computing nev Lowest Eigenpairs of Hermitian $A$}
+\begin{algorithmic}[1]
+\STATE Choose normalized initial vector $v_1$, set $\beta_0 = 0$, $m=$ subspace size.
+\REPEAT
+\FOR{$j = 1, 2, \dots, m$}
+    \STATE $w \gets A v_j - \beta_{j-1} v_{j-1}$
+    \STATE $\alpha_j \gets v_j^* w$
+    \STATE $w \gets w - \alpha_j v_j$
+    \STATE $\beta_j \gets \|w\|$
+    \IF{$\beta_j = 0$}
+        \STATE \textbf{break}
+    \ENDIF
+    \STATE $v_{j+1} \gets w / \beta_j$
+\ENDFOR
+\STATE Form tridiagonal matrix 
+       $T_m = \mathrm{tridiag}(\beta_{1:m-1}, \alpha_{1:m}, \beta_{1:m-1})$
+\STATE Compute eigen-decomposition $T_m y_k = \theta_k y_k$, 
+       for $k = 1, \dots, \text{nev}$
+\STATE Form Ritz approximations 
+       $x_k = V_m y_k$, where $V_m = [v_1, \dots, v_m]$
+\STATE Compute residual norms 
+       $r_k = \|A x_k - \theta_k x_k\|$ for all $k$
+\UNTIL convergence for $k = 1, \dots, \text{nev}$
+\end{algorithmic}
+\end{algorithm}
+Lanczos is extremely efficient memory and computationally wise for extremal eigenvalues, but this limits its applicability to unbound discretized operators, where unwanted eigenvalues may dominate the Krylov subspace, and most importantly, for applications where the inner part of the spectrum is of interest, as in the case of Hartree-Fock-Bogoliubov.
+\\A shift-and-invert strategy would be unfeasible in the case of large scale problems, since all Lanczos steps need to be performed exactly to avoid instabilities, a well known problem in the Arnoldi generalization \cite{Saad1992}.
+\subsubsection{LOBPCG}
+The last algorithm of this short list is LOBPCG, it's the newest and most sofisticated one of the three.
+\\Introduced by A. V. Knyazev in 1991 \cite{LOBPCG}, it's a block, preconditioned conjugate gradient method, explicitly targeted at solving large-scale eigenvalue problems, and it's been used in modern solutions of the Schr\"odinger/KS equation in recent years \cite{LOBPCGDKS,Nottoli2023,LIN2013205,li2020efficient}.
+In this algorithm, the Rayleigh-Ritz procedure is done on a subspace formed as
+\begin{equation}
+    \label{eq:LOBPCG_search_subspace}
+    V = [X, W, P]
+\end{equation}
+Where $X$ is the current best eigenvectors approximation, $P$ is the block of previous search directions, and $W$ is a block formed by preconditioning $P$.
+\\We won't go into the details of LOBPCG, since GCG shares with it many aspects, like blocking and search directions calculation.
+\subsection{General Conjugate Gradient}

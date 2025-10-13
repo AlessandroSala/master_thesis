@@ -1,1 +1,52 @@
-\section{Constraints}
+\subsection{Constraints}
+The HF ground state is a great starting point to get theoretical results regarding many nuclear properties; however, for a plethora of applications, calculating the state of the nuclear system under certain constraints becomes necessary.
+\\Effectively, a need to explore the energy surface arises. This means minimizing the energy functional, under a series of constraints of the type $\expval{ {\mathcal Q}}=q_0$, where $q_0$ is the desired expectation value of the operator ${\mathcal Q}$.
+\\This is an equality-constrained optimization problem (ECP), formulated as
+\begin{align}
+\min_{\ket \Psi}&E 
+\\\text{constrainted to } &\bra{\Psi} {\mathcal Q} \ket {\Psi} = \expval{ {\mathcal Q}} = q_0
+\end{align}
+Which yields the Lagrangian
+\begin{equation}
+    \label{eq:constr_lagrangian}
+    E' = E + \lambda (\expval{{\mathcal Q}}-q_0)
+\end{equation}
+where $\lambda$ is a Lagrange multiplier determined by the condition $\expval {{\mathcal Q}} = q_0$. 
+After finding the minimum of $E'$, it's trivial to show that for a given $\lambda$, we get \cite{FLOCARD1973433}
+\begin{equation}
+\dv{E}{\expval{{\mathcal Q}}} = -\lambda 
+\end{equation}
+If $\lambda$ is properly adjusted, a certain value for $q_0$ can be obtained. From a numerical standpoint, $\lambda$ needs to be tuned at each iteration to reach the desired value. 
+This method was the one used in early constrained Hartree-Fock calculations \cite{Cusson1985}.
+\\Although the method is simple, it's often the case that it fails. Moreover, for the same value of $\lambda$, many, possibly infinite values of $\expval{{\mathcal Q}}$ can be obtained, for which we are only allowed to get the one with the most stable solution.
+\\A different method is provided by the Quadratic Penalty Method (QPM). Briefly speaking, instead of a Lagrange multiplier, we add a quadratic contribution to the functional, such that
+\begin{equation}
+    \label{eq:constr_quadratic}
+    E' = E + \frac c 2 (\expval{{\mathcal Q}}-q_0)^2.
+\end{equation}
+This is a straightforward method; intuitively one penalizes (hence the name), any solution for which $\expval{{\mathcal Q}}\neq q_0$ by increasing its energy. However, the success of such procedure is heavily influenced by the choice of $c$, often leading to instabilities for large values.
+\\What happens is that for small values of $c$, the penalty may be insufficient to reach the target $q_0$, while for large values, the penalty may be so big that the self consistent calculation oscillates and fails.
+\subsubsection{Augmented Lagrangian Method}
+A modern, robust approach, used by HF/HFB codes \cite{RYSSENS2015175,CHEN2022108344} is given in the form of the Augmented Lagrangian Method (ALM) \cite{Staszczak2010}.
+Its main idea is to combine the precision of the ECP with the accuracy of the QPM.
+\\Without delving into cumbersome mathematical details, we'll see how the algorithm is practically implemented in the code.
+\\Given the functional
+\begin{equation}
+    \label{eq:alm_lagrangian}
+    E' = E + \lambda (q-q_0) + \frac c 2 (q-q_0)^2
+\end{equation}
+where $q = \expval{{\mathcal Q}}$, the resulting mean field potential will be given by
+\begin{align}
+    U' &= U + \lambda  {\mathcal Q} + c(q-q_0) {\mathcal Q} 
+    \\ &= U + c(q-q_0(\lambda)) {\mathcal Q}
+\end{align}
+Where $q_0(\lambda)$ is updated at each iteration with the formula
+\begin{align}
+    \label{eq:alm_q0}
+    q_0(\lambda) = q_0 - \frac{\lambda}{c}
+    \\\lambda ^{(i+1)} = \lambda^{(i)}+\mu c(q-q_0)
+\end{align}
+Here, a slight deviation from the original ALM is present. Since the original work \cite{Staszczak2010} doesn't provide guidance regarding what is considered an \textit{iteration}, we employ the strategy \cite{CHEN2022108344} of using a damping factor $\mu\in [0, 1]$, so $\lambda$ can be updated at each HF iteration for fast convergence, without large oscillations or instabilities of any kind.
+\\This method is what powers the deformation curves that are shown in section (REF), allowing to explore the energy surface with arbitrary precision in reaching the value of $q_0$ at convergence, provided that enough HF iterations are performed.
+\\Note that, since $\lambda^{(0)}=0$, for $\mu=0$ ALM reduces to the standard QPM.
+

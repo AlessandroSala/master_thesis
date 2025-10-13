@@ -3,44 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Thesis.aux
 The style file: abbrvnat.bst
 Database file #1: Thesis_bibliography.bib
-You've used 7 entries,
+Warning--can't use both author and editor fields in LOBPCG
+You've used 27 entries,
             2773 wiz_defined-function locations,
-            660 strings with 6058 characters,
-and the built_in function-call counts, 3313 in all, are:
-= -- 306
-> -- 168
-< -- 6
-+ -- 58
-- -- 51
-* -- 266
-:= -- 529
-add.period$ -- 33
-call.type$ -- 7
-change.case$ -- 36
-chr.to.int$ -- 7
-cite$ -- 14
-duplicate$ -- 150
-empty$ -- 269
-format.name$ -- 62
-if$ -- 694
+            852 strings with 11173 characters,
+and the built_in function-call counts, 13364 in all, are:
+= -- 1262
+> -- 715
+< -- 16
++ -- 243
+- -- 216
+* -- 1159
+:= -- 2115
+add.period$ -- 135
+call.type$ -- 27
+change.case$ -- 149
+chr.to.int$ -- 27
+cite$ -- 55
+duplicate$ -- 571
+empty$ -- 1056
+format.name$ -- 257
+if$ -- 2797
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 10
-newline$ -- 55
-num.names$ -- 28
-pop$ -- 68
+missing$ -- 33
+newline$ -- 197
+num.names$ -- 108
+pop$ -- 234
 preamble$ -- 1
-purify$ -- 31
+purify$ -- 126
 quote$ -- 0
-skip$ -- 109
+skip$ -- 417
 stack$ -- 0
-substring$ -- 123
-swap$ -- 15
-text.length$ -- 1
+substring$ -- 545
+swap$ -- 49
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 62
-warning$ -- 0
-while$ -- 29
+type$ -- 267
+warning$ -- 1
+while$ -- 114
 width$ -- 0
-write$ -- 123
+write$ -- 468
+(There was 1 warning)

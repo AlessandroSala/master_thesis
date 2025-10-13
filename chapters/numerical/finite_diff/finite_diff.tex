@@ -38,9 +38,12 @@ Is evidently linear in $\psi$.
     \hat {{h}}_{\text{SO}}&=\bm f (\bm r )\cdot (\nabla \times \pauli ) 
     \\&=f_x(\bm r)(\sigma_z\partial_y - \sigma_y\partial_z) + f_y(\bm r)(\sigma_x\partial_z - \sigma_z\partial_x) + f_z(\bm r)(\sigma_y\partial_x - \sigma_x\partial_y)
 \end{align*}
-$\hat {h}_\text{SO}$ acts linearly on the spinor $\psi_{ijk}$.
-Finally, the mean field terms $U_q, U_c$ are just multiplicative.
-\\Given that the equation is linear in $\psi$, we can evaluate it on the chosen mesh, using finite differences to approximate the differential operators, yielding a linear system of equations of the form
+where $\hat {h}_\text{SO}$ acts linearly on the spinor $\psi_{ijk}$.
+Finally, the mean field terms $U_q, U_c$ are just multiplicative, hence linear in $\psi$.
+\begin{equation*}
+    U\psi
+\end{equation*}
+Given that the whole equation is linear in $\psi$, we can evaluate it on the chosen mesh, using finite differences to approximate the differential operators, yielding a linear system of equations of the form
 \begin{align}
     \sum_n^{N_x\cdot N_y\cdot N_z \cdot 2} A_{mn}\psi_{n} &= E\psi_m
 \end{align}
@@ -56,14 +59,22 @@ Near the boundaries, the derivatives will involve points outside the box. Settin
         \\0 & 0 & 0 & 0 & 0
     \end{bmatrix}
     \begin{bmatrix}
-        0\\0\\\mathbf{\psi}\\0\\0
+        \psi_{-2}\\\psi_{-1}\\\psi\\\psi_{N}\\ \psi_{N+1} 
     \end{bmatrix}
     = E 
     \begin{bmatrix}
-        0\\0\\\mathbf{\psi}\\0\\0
+        \psi_{-2}\\\psi_{-1}\\\psi\\\psi_{N}\\ \psi_{N+1} 
     \end{bmatrix}
 \end{equation}
-Meaning that ignoring the outside points while constructing the $A$ matrix is equivalent to setting the desired boundary conditions on a box slightly larger than the one considered.
+From this system of equations, we get for points outside the boundary:
+\begin{equation}
+    \begin{cases}
+        \psi_{-2} = 0\\
+        \psi_{-1} = 0\\
+        \ldots
+    \end{cases}
+\end{equation}
+Meaning that $\psi$ outside the box will automatically be set to zero if the $A$ matrix is built assuming those points to be zero.
 \subsection{Poisson equation}
 \label{subsec:poisson}
 The other fundamental PDE we need to solve is the Poisson equation encountered in section (REF). Dropping the $c$ and $p$ subscripts, it reads

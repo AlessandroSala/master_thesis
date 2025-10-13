@@ -1,85 +1,58 @@
-\section{Skyrme force and functional}
-Now that the theoretical framework is clear, we can investigate a plausible nucleonic interaction, which in the present work, takes the form of the Skyrme interaction.
-\\It was first proposed by Tony Skyrme in 1958 \cite{SKYRME1958615} as a zero range force between nucleons, and has been used successfully as the building block of theoretical nuclear structure.
-\\Nowadays, the standard form is slightly enriched to be more general \cite{CHABANAT1997710}. It comprises a two-body interaction, which reads
+\section{Skyrme}
+\label{sec:skyrme}
+Now that the theoretical framework is clear, we can investigate a plausible nucleonic interaction, which in the present work, takes the form of the Skyrme force.
+\subsection{Skyrme force}
+It was first proposed by Tony Skyrme in 1958 \cite{SKYRME1958615} as a zero range force between nucleons, and has been used successfully as the building block of theoretical nuclear structure.
+It comprises a two body attractive term that reads
 \begin{align*}
 v^{(2)}(\mathbf{r}_1, \mathbf{r}_2) &= t_0 \left(1 + x_0 P_\sigma \right) \delta(\mathbf{r}) \\
 &\quad + \frac{1}{2} t_1 \left(1 + x_1 P_\sigma \right) \left[ \mathbf{P}'^2 \delta(\mathbf{r}) + \delta(\mathbf{r}) \mathbf{P}^2 \right] \\
-&\quad + t_2 \left(1 + x_2 P_\sigma \right) \mathbf{P}' \cdot \delta(\mathbf{r}) \mathbf{P} \\
-&\quad + \frac{1}{6} t_3 \left(1 + x_3 P_\sigma \right) \left[ \rho(\mathbf{R}) \right]^\sigma \delta(\mathbf{r}) \\
+&\quad + t_2 P_\sigma  \mathbf{P}' \cdot \delta(\mathbf{r}) \mathbf{P} \\
 &\quad + i W_0 \boldsymbol{\sigma}\cdot \left[ \mathbf{P}' \times \delta(\mathbf{r}) \mathbf{P} \right]
 \end{align*}
 And a three body interaction, that is
 \begin{equation*}
-v^{(3)}(\mathbf r_1, \mathbf r_2)=\frac 1 6 t_3 \left(1 + x_3 P_\sigma \right) \left[ \rho(\mathbf{R}) \right]^\sigma \delta(\mathbf{r}) 
+    v^{(3)}(\bm r_1, \bm r_2, \bm r_3) = t_3\delta(\bm r_1-\bm r_2)\delta(\bm r_2 -\bm r_3)
+%v^{(3)}(\mathbf r_1, \mathbf r_2)=\frac 1 6 t_3 \left(1 + x_3 P_\sigma \right) \left[ \rho(\mathbf{R}) \right]^\sigma \delta(\mathbf{r}) 
 \end{equation*}
-Where 
-\begin{align*}
-\\\mathbf{r} &= \mathbf{r}_1 - \mathbf{r}_2
-\\\mathbf{R} &= \frac{\mathbf{r}_1+\mathbf{r}_2}{2}
-\\\mathbf{P} &= \frac{-i(\nabla_1 - \nabla_2)}{2}
-\\\boldsymbol{\sigma} &= \boldsymbol{\sigma}_1 + \boldsymbol{\sigma}_2
-\\\mathbf{P}_\sigma &= \frac{(1+\boldsymbol{\sigma}_1\cdot\boldsymbol{\sigma}_2)}{2}
-\end{align*}
-Primed operators refer to the adjoint operator acting on the dual space.
-\\This formulation respects all symmetries required of a non relativistic nuclear interaction 
-\begin{itemize}
-    \item Galilean boost
-    \item Particle exchange
-    \item Translation
-    \item Rotation
-    \item Parity
-    \item Time reversal
-\end{itemize}
-The zero-range characteristic takes the form of a Dirac delta $\delta(\mathbf r)$, which allows to write the exchange Fock term detailed in (REF) as a local one.
-\\Taking the expectation value of the many body hamiltonian, in the Hilbert space of Slater determinants, yields
+which mimics the repulsive three-body force; without it, a collapse of the nuclear density would occur.
+\\It's trivial to show that the three-body term is equivalent to a two-body, density-dependent interaction: \cite{VauhBrinkOriginal}
 \begin{equation}
-    \label{eq:slater_exp}
-    \expval{H} = \bra{\Psi} H \ket{\Psi} = \int (\mathcal E_\text{Skyrme} + \mathcal E_\text{Kin}) d\mathbf r = \int \mathcal E d\mathbf r
+v^{(3)}(\bm r_1, \bm r_2) = \frac 1 6 t_3 (1+P_\sigma)  \delta(\bm r )\rho(\bm R)
 \end{equation}
-Since the Skyrme interaction is time-reversal invariant (as well as the kinetic operator), this means that the total Hamiltonian must be time-even.
-Different additive contributions must be time-even as well, even if the densities from which they are calculated are not. Unless we reduce to the even-even nucleus case, where total angular momentum is defined at $J=0$, giving vanishing time-odd densities.
-This allows us to write the functional in a simpler form as \cite{stevenson2019low}
-\begin{align}
-    \mathcal E_\text{Kin} &= \frac{\hbar^2}{2m}\tau \label{eq:kinfunc}\\
-    \mathcal E_\text{Skyrme} &= \sum_{t=0,1}\bigg\{C_t^\rho [\rho_0]\rho_t^2+C_t^{\Delta \rho}\rho_t\nabla^2\rho_t+C_t^{\nabla\cdot J}\rho_t\nabla\cdot \mathbf J_t + C_t^\tau\rho_t\tau_t\bigg\}\label{eq:skfunc}
-\end{align}
-Here, $t=0,1$ refers to the isoscalar and isovector components of the densities, e.g.
-\begin{align*}
-    \rho_0 = \rho_p + \rho_n
-    \\\rho_1 = \rho_p - \rho_n
-\end{align*}
-Where
-\begin{align}
-    \label{eq:coefficients_func}
-    C_0^\rho &= +\frac 3 8 t_0 + \frac 3 {48} t_3\rho_0^\sigma 
-    \\C_1^\rho &= -\frac 1 8 t_0(1+2x_0)- \frac 1 {48} t_3(1+x_3)\rho_0^\sigma 
-    \\C_0^\tau &= +\frac 3 {16} t_1 + \frac 1 {16} t_2 (5+4x_2)
-    \\C_1^\tau &= -\frac 1 {16} t_1(1+2x_1)+\frac 1 {16}t_2(1+2x_2)
-    \\C_0^{\Delta \rho} &= -\frac 9 {64}t_1+\frac 1 {64}t_2(5+4x_2)
-    \\C_1^{\Delta \rho} &= +\frac 3 {64}t_1(1+2x_1)+\frac 1 {64}t_2(1+2x_2)
-    \\C_0^{\nabla\cdot J} &= -\frac 3 4 W_0
-    \\C_1^{\nabla\cdot J} &= -\frac 1 4 W_0
-\end{align}
-As outlined in previous chapters (REF), we can now derive the Kohn-Sham equations, by constraining orthonormality and enforcing the variation of the functional to be zero. What we end up with is
+The different operators here are defined as
 \begin{equation}
-    \label{eq:spe_ks}
-    \bigg[-\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg) + U_q(\mathbf r) + \delta_{\text{q,proton}}U_C(\mathbf r)-i\mathbf B_q(\mathbf r)\cdot(\nabla \times \boldsymbol\sigma) \bigg]\varphi_\alpha=\varepsilon_\alpha\varphi_\alpha
+\mathbf{r} = \mathbf{r}_1 - \mathbf{r}_2\quad \mathbf{R} = \frac{\mathbf{r}_1+\mathbf{r}_2}{2}
 \end{equation}
-The index $q=n,p$ refers respectively to the neutron and proton quantities.
-\\Where the different terms are given by
-\begin{align}
-    \frac{\hbar^2}{2m^{*}_q(\mathbf r)} &= \fdv{\mathcal E}{\tau_q}
-    \\U_q(\mathbf r) &= \fdv{\mathcal E}{\rho_q}\label{eq:fdv_rho_skyrme}
-    \\\mathbf B_q(\mathbf r) &= \fdv{\mathcal E}{\boldsymbol{\mathbf J_q}}
-\end{align}
-The coulomb field $U_C$, which is present only in the single particle equation for protons, doesn't come from the skyrme interaction, rather from the Coulomb part of the whole functional. It will be properly derived in section \ref{sec:coulomb_treatment}.
-\\Following the rules for functional derivatives, outlined in the appendix (REF) we get
-\begin{align}
-    \frac{\hbar^2}{2m_q^*(\mathbf r)} =& +\frac{\hbar^2}{2m} \\&+ \frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\rho(\mathbf r) \\&- \frac 1 8 [t_1(1+2x_1)+t_2(1+2x_2)]\rho_q(\mathbf r ) \\\\
-    U_q(\mathbf r) =& +\frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\rho \\&+ \frac 1 8 [t_2(1+2x_2)-t_1(1+2x_1)]\rho_q \\
-    &+ \frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\tau \\&+ \frac 1 8 [t_2(1+2x_2)-t_1(1+2x_1)]\tau_q \\
-    &+ \frac 1 {16} [t_2(2+x_2)-3t_1(2+x_1)] \nabla^2 \rho \\&+ \frac 1 {16} [3t_1(2x_1+1)+t_2(2x_2+1)] \nabla^2 \rho_q \\\\
-    \mathbf W_q (\mathbf r ) = &+\frac 1 2 W_0 [\nabla\rho + \nabla \rho_q] \\&-\frac 1 8 (t_1 x_1 + t_2 x_2) \mathbf J + \frac 1 8 (t_1 - t_2) \mathbf J_q 
-\end{align}
-Unless otherwise specified, unindexed densities denote isoscalar quantities (sum of neutron's and proton's).
+which are respectively the relative position of two particles and their center of mass coordinate, assuming equal masses.
+\begin{equation}
+\mathbf{P} = \frac{-i(\nabla_1 - \nabla_2)}{2}
+\end{equation}
+which is the so called relative wave-number operator.
+\begin{equation}
+\boldsymbol{\sigma} = \boldsymbol{\sigma}_1 + \boldsymbol{\sigma}_2
+\end{equation}
+being the total spin of the two interacting particles, and lastly
+\begin{equation}
+    \mathbf{P}_\sigma = \frac{(1+\boldsymbol{\sigma}_1\cdot\boldsymbol{\sigma}_2)}{2}
+\end{equation}
+which represents the spin-exchange operator.
+Primed operators refer to the adjoint acting on the left.
+\\The zero-range characteristic takes the form of a Dirac delta $\delta(\mathbf r)$, which allows the writing of the Fock term detailed in (REF) as a purely local one.
+\\Taking the expectation value of the many body hamiltonian, in the Hilbert space of Slater determinants, yields an energy density which can be expressed as a function of $\rho_q, \tau_q, \bm J_q$ \cite{VauhBrinkOriginal}.
+\begin{equation}
+    \label{eq:skyrme_int_en_dens}
+    \expval{H} = \bra{\Psi} H \ket{\Psi} = \int \mathcal H(\bm r) d\mathbf r
+\end{equation}
+\subsubsection{Modern parametrization}
+The Skyrme force has evolved from the original one to accomodate new nuclei, done through the addition of a few parameters, yielding the following form of the interaction \cite{CHABANAT1997710}
+    \begin{align*}
+v^{(2)}(\mathbf{r}_1, \mathbf{r}_2) &= t_0 \left(1 + x_0 P_\sigma \right) \delta(\mathbf{r}) \\
+&\quad + \frac{1}{2} t_1 \left(1 + x_1 P_\sigma \right) \left[ \mathbf{P}'^2 \delta(\mathbf{r}) + \delta(\mathbf{r}) \mathbf{P}^2 \right] \\
+&\quad + t_2 \left(1 + x_2 P_\sigma \right) \mathbf{P}' \cdot \delta(\mathbf{r}) \mathbf{P} \\
+&\quad + \frac{1}{6} t_3 \left(1 + x_3 P_\sigma \right) \left[ \rho(\mathbf{R}) \right]^\sigma \delta(\mathbf{r}) \\
+&\quad + i W_0 \boldsymbol{\sigma}\cdot \left[ \mathbf{P}' \times \delta(\mathbf{r}) \mathbf{P} \right]\\
+&\quad + \frac 1 6 t_3 \left(1 + x_3 P_\sigma \right) \left[ \rho(\mathbf{R}) \right]^\sigma \delta(\mathbf{r}) 
+\end{align*}
+Here, the boundary between Hartree-Fock and DFT starts to thin out, as the exponent $\sigma$ of the density makes that piece of the force a true three-body interaction only for the value $\sigma=1$ \cite{Erler_2010}.
+\\On top of that, additional, empirical tweaking of the resulting energy density needed to reach satisfactory physical accuracy, such as the case for the spin-orbit couplings \cite{REINHARD1995467}, prompts for the following, well established proceeding: use the Skyrme interaction as a starting guide for building the energy functional to employ Density Functional Theory.

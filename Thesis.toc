@@ -5,35 +5,51 @@
 \vspace {2em}
 \contentsline {chapter}{\numberline {1}Energy functional}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Hartree-Fock theory}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Variational principle}{1}{subsection.1.1.1}%
-\contentsline {section}{\numberline {1.2}Functional}{2}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Skyrme force and functional}{2}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Coulomb interaction}{5}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Energy calculation}{6}{section.1.5}%
-\contentsline {subsubsection}{Integrated energy}{7}{subsubsection*.23}%
-\contentsline {subsubsection}{Hartree-Fock energy}{7}{subsubsection*.24}%
-\contentsline {paragraph}{Sidenote:}{8}{paragraph*.32}%
-\contentsline {chapter}{\numberline {2}Numerical methods}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Finite differences}{9}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}3D mesh}{9}{subsection.2.1.1}%
-\contentsline {subsubsection}{Discretizing differential operators}{10}{subsubsection*.35}%
-\contentsline {subsection}{\numberline {2.1.2}Schr\"odinger equation}{10}{subsection.2.1.2}%
-\contentsline {subsubsection}{Boundary conditions}{11}{subsubsection*.39}%
-\contentsline {subsection}{\numberline {2.1.3}Poisson equation}{11}{subsection.2.1.3}%
-\contentsline {subsubsection}{Boundary conditions}{11}{subsubsection*.41}%
-\contentsline {subsubsection}{On higher order approximations and performance}{12}{subsubsection*.46}%
-\contentsline {section}{\numberline {2.2}Conjugate gradient methods}{12}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Conjugate Gradient}{13}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Functional minimization}{13}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Constraints}{13}{section.2.4}%
+\contentsline {subsection}{\numberline {1.1.1}Hartree-Fock equations}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Symmetries}{2}{subsection.1.1.2}%
+\contentsline {subsubsection}{Symmetry propagation}{3}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {1.1.3}Density Functional Theory}{3}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}Skyrme}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Skyrme force}{4}{subsection.1.2.1}%
+\contentsline {subsubsection}{Modern parametrization}{5}{subsubsection*.24}%
+\contentsline {subsection}{\numberline {1.2.2}Skyrme functional}{5}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Coulomb interaction}{8}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Energy calculation}{9}{section.1.4}%
+\contentsline {subsubsection}{Integrated energy}{9}{subsubsection*.37}%
+\contentsline {subsubsection}{Hartree-Fock energy}{9}{subsubsection*.38}%
+\contentsline {paragraph}{Sidenote:}{10}{paragraph*.46}%
+\contentsline {chapter}{\numberline {2}Numerical methods}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Finite differences}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}3D mesh}{11}{subsection.2.1.1}%
+\contentsline {subsubsection}{Discretizing differential operators}{12}{subsubsection*.49}%
+\contentsline {subsection}{\numberline {2.1.2}Schr\"odinger equation}{12}{subsection.2.1.2}%
+\contentsline {subsubsection}{Boundary conditions}{13}{subsubsection*.53}%
+\contentsline {subsection}{\numberline {2.1.3}Poisson equation}{13}{subsection.2.1.3}%
+\contentsline {subsubsection}{Boundary conditions}{13}{subsubsection*.56}%
+\contentsline {subsubsection}{On higher order approximations and performance}{14}{subsubsection*.61}%
+\contentsline {section}{\numberline {2.2}Iterative eigensolvers}{15}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Techniques}{15}{subsection.2.2.1}%
+\contentsline {subsubsection}{Conjugate Gradient and numerical techniques}{15}{subsubsection*.62}%
+\contentsline {subsubsection}{Preconditioning}{16}{subsubsection*.65}%
+\contentsline {subsubsection}{Rayleigh-Ritz procedure}{16}{subsubsection*.66}%
+\contentsline {subsubsection}{Shift and Invert}{16}{subsubsection*.68}%
+\contentsline {subsection}{\numberline {2.2.2}Iterative eigensolvers}{16}{subsection.2.2.2}%
+\contentsline {subsubsection}{Jacobi-Davidson}{16}{subsubsection*.69}%
+\contentsline {subsubsection}{Lanczos}{17}{subsubsection*.74}%
+\contentsline {subsubsection}{LOBPCG}{18}{subsubsection*.76}%
+\contentsline {subsection}{\numberline {2.2.3}General Conjugate Gradient}{19}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Code implementation details}{19}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Constraints}{19}{subsection.2.3.1}%
+\contentsline {subsubsection}{Augmented Lagrangian Method}{20}{subsubsection*.82}%
+\contentsline {subsection}{\numberline {2.3.2}Self consistent procedure pseudocode}{21}{subsection.2.3.2}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{15}{chapter*.50}%
+\contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{23}{chapter*.87}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix}{17}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Spherical harmonics}{17}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Algorithm}{18}{subsection.A.1.1}%
-\contentsline {section}{\numberline {A.2}5-point derivatives}{18}{section.A.2}%
-\contentsline {chapter}{List of Figures}{19}{appendix*.61}%
-\contentsline {chapter}{List of Tables}{21}{appendix*.63}%
-\contentsline {chapter}{List of Symbols}{23}{appendix*.65}%
-\contentsline {chapter}{Acknowledgements}{25}{appendix*.68}%
+\contentsline {chapter}{\numberline {A}Appendix}{27}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Spherical harmonics}{27}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Algorithm}{28}{subsection.A.1.1}%
+\contentsline {section}{\numberline {A.2}5-point derivatives}{28}{section.A.2}%
+\contentsline {chapter}{List of Figures}{29}{appendix*.98}%
+\contentsline {chapter}{List of Tables}{31}{appendix*.100}%
+\contentsline {chapter}{List of Symbols}{33}{appendix*.102}%
+\contentsline {chapter}{Acknowledgements}{35}{appendix*.105}%
