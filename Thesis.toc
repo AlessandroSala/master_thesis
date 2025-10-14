@@ -21,35 +21,47 @@
 \contentsline {chapter}{\numberline {2}Numerical methods}{11}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Finite differences}{11}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}3D mesh}{11}{subsection.2.1.1}%
-\contentsline {subsubsection}{Discretizing differential operators}{12}{subsubsection*.49}%
+\contentsline {subsubsection}{Differential operators discretization}{12}{subsubsection*.49}%
 \contentsline {subsection}{\numberline {2.1.2}Schr\"odinger equation}{12}{subsection.2.1.2}%
-\contentsline {subsubsection}{Boundary conditions}{13}{subsubsection*.53}%
-\contentsline {subsection}{\numberline {2.1.3}Poisson equation}{13}{subsection.2.1.3}%
-\contentsline {subsubsection}{Boundary conditions}{13}{subsubsection*.56}%
-\contentsline {subsubsection}{On higher order approximations and performance}{14}{subsubsection*.61}%
-\contentsline {section}{\numberline {2.2}Iterative eigensolvers}{15}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Techniques}{15}{subsection.2.2.1}%
-\contentsline {subsubsection}{Conjugate Gradient and numerical techniques}{15}{subsubsection*.62}%
-\contentsline {subsubsection}{Preconditioning}{16}{subsubsection*.65}%
-\contentsline {subsubsection}{Rayleigh-Ritz procedure}{16}{subsubsection*.66}%
-\contentsline {subsubsection}{Shift and Invert}{16}{subsubsection*.68}%
-\contentsline {subsection}{\numberline {2.2.2}Iterative eigensolvers}{16}{subsection.2.2.2}%
-\contentsline {subsubsection}{Jacobi-Davidson}{16}{subsubsection*.69}%
-\contentsline {subsubsection}{Lanczos}{17}{subsubsection*.74}%
-\contentsline {subsubsection}{LOBPCG}{18}{subsubsection*.76}%
-\contentsline {subsection}{\numberline {2.2.3}General Conjugate Gradient}{19}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Code implementation details}{19}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Constraints}{19}{subsection.2.3.1}%
-\contentsline {subsubsection}{Augmented Lagrangian Method}{20}{subsubsection*.82}%
-\contentsline {subsection}{\numberline {2.3.2}Self consistent procedure pseudocode}{21}{subsection.2.3.2}%
+\contentsline {paragraph}{Linearity}{12}{paragraph*.51}%
+\contentsline {subsubsection}{Boundary conditions}{13}{subsubsection*.54}%
+\contentsline {subsection}{\numberline {2.1.3}Poisson equation}{14}{subsection.2.1.3}%
+\contentsline {subsubsection}{Boundary conditions}{14}{subsubsection*.57}%
+\contentsline {subsubsection}{On higher order approximations and performance}{15}{subsubsection*.62}%
+\contentsline {section}{\numberline {2.2}Eigenvalue problem}{15}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Conjugate Gradient and numerical techniques}{15}{subsection.2.2.1}%
+\contentsline {subsubsection}{Conjugate Gradient and numerical techniques}{16}{subsubsection*.63}%
+\contentsline {paragraph}{Steepest descent method}{16}{paragraph*.65}%
+\contentsline {subsubsection}{Preconditioning}{17}{subsubsection*.70}%
+\contentsline {subsubsection}{Rayleigh-Ritz procedure}{17}{subsubsection*.73}%
+\contentsline {subsubsection}{Shift and Invert}{18}{subsubsection*.75}%
+\contentsline {paragraph}{Smallest eigenvalue}{18}{paragraph*.80}%
+\contentsline {subsection}{\numberline {2.2.2}Iterative eigensolvers}{19}{subsection.2.2.2}%
+\contentsline {subsubsection}{Jacobi-Davidson}{19}{subsubsection*.82}%
+\contentsline {subsubsection}{Lanczos}{20}{subsubsection*.87}%
+\contentsline {subsubsection}{LOBPCG}{21}{subsubsection*.89}%
+\contentsline {subsection}{\numberline {2.2.3}General Conjugate Gradient}{22}{subsection.2.2.3}%
+\contentsline {paragraph}{Eigenvalue problem}{22}{paragraph*.91}%
+\contentsline {paragraph}{Blocking}{22}{paragraph*.92}%
+\contentsline {paragraph}{Orthogonalization}{22}{paragraph*.93}%
+\contentsline {paragraph}{Preconditioning}{22}{paragraph*.94}%
+\contentsline {paragraph}{Shift update}{23}{paragraph*.95}%
+\contentsline {paragraph}{Convergence}{23}{paragraph*.97}%
+\contentsline {section}{\numberline {2.3}Code implementation details}{23}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Constraints}{24}{subsection.2.3.1}%
+\contentsline {subsubsection}{Augmented Lagrangian Method}{25}{subsubsection*.102}%
+\contentsline {subsection}{\numberline {2.3.2}Self-consistent procedure pseudocode}{25}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Optimal parameters choice}{26}{subsection.2.3.3}%
+\contentsline {subsubsection}{Inverse power step tolerance}{26}{subsubsection*.106}%
+\contentsline {subsubsection}{Inner GCG iterations}{27}{subsubsection*.108}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{23}{chapter*.87}%
+\contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{31}{chapter*.112}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix}{27}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Spherical harmonics}{27}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Algorithm}{28}{subsection.A.1.1}%
-\contentsline {section}{\numberline {A.2}5-point derivatives}{28}{section.A.2}%
-\contentsline {chapter}{List of Figures}{29}{appendix*.98}%
-\contentsline {chapter}{List of Tables}{31}{appendix*.100}%
-\contentsline {chapter}{List of Symbols}{33}{appendix*.102}%
-\contentsline {chapter}{Acknowledgements}{35}{appendix*.105}%
+\contentsline {chapter}{\numberline {A}Appendix}{35}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Spherical harmonics}{35}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Algorithm}{36}{subsection.A.1.1}%
+\contentsline {section}{\numberline {A.2}5-point derivatives}{36}{section.A.2}%
+\contentsline {chapter}{List of Figures}{37}{appendix*.123}%
+\contentsline {chapter}{List of Tables}{39}{appendix*.125}%
+\contentsline {chapter}{List of Symbols}{41}{appendix*.127}%
+\contentsline {chapter}{Acknowledgements}{43}{appendix*.130}%

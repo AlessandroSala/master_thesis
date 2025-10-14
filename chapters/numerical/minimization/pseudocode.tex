@@ -1,0 +1,35 @@
+\subsection{Self-consistent procedure pseudocode}
+\renewcommand{\DTstyle}{\textrm\expandafter\raisebox{-0.5ex}}
+\DTsetlength{1em}{1em}{0.2em}{0.1pt}{0.4pt}
+%\setlength{\DTbaselineskip}{2\baselineskip}
+\dirtree{%
+.1 HF Code.
+.2 Parse user input.
+.2 Generate mesh.
+.2 Solve deformed Woods-Saxon.
+.3    Generate harmonic oscillator guess.
+.3    Diagonalize Woods-Saxon hamiltonian.
+.2 Normalize wavefunctions.
+.2 HF iterations.
+.3    Solve BCS self-consistent equations.
+.4        Identify time-reversal states.
+.4        Compute pairing matrix elements.
+.4        Solve for pairing gaps and chemical potential.
+.4        Compute occupation factors $v_i^2$.
+.3    Generate iteration data.
+.4        Generate new densities, mix with previous ones.
+.4        Generate mean fields.
+.4        Generate constraint fields, mix with previous ones.
+.3    Compute single-particle hamiltonian.
+.3    Diagonalize h.
+.3    Normalize wavefunctions.
+.3    Compute energies, constraints residuals,.
+.4        Hartree-Fock energy.
+.4        Constraints residuals.
+.3    Check convergence.
+.4        Integrated energy.
+.2    Generate output.
+.3        Compute multipole moments.
+.3        Compute single-particle states quantum numbers.
+.3        Write program output.
+}

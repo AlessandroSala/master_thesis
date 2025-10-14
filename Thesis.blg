@@ -4,45 +4,46 @@ The top-level auxiliary file: Thesis.aux
 The style file: abbrvnat.bst
 Database file #1: Thesis_bibliography.bib
 Warning--can't use both author and editor fields in LOBPCG
-You've used 27 entries,
+Warning--empty journal in PainlessCGM
+You've used 31 entries,
             2773 wiz_defined-function locations,
-            852 strings with 11173 characters,
-and the built_in function-call counts, 13364 in all, are:
-= -- 1262
-> -- 715
-< -- 16
-+ -- 243
-- -- 216
-* -- 1159
-:= -- 2115
-add.period$ -- 135
-call.type$ -- 27
-change.case$ -- 149
-chr.to.int$ -- 27
-cite$ -- 55
-duplicate$ -- 571
-empty$ -- 1056
-format.name$ -- 257
-if$ -- 2797
-int.to.chr$ -- 1
+            882 strings with 12055 characters,
+and the built_in function-call counts, 15193 in all, are:
+= -- 1434
+> -- 804
+< -- 19
++ -- 275
+- -- 243
+* -- 1312
+:= -- 2401
+add.period$ -- 152
+call.type$ -- 31
+change.case$ -- 170
+chr.to.int$ -- 30
+cite$ -- 64
+duplicate$ -- 651
+empty$ -- 1209
+format.name$ -- 290
+if$ -- 3175
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 33
-newline$ -- 197
-num.names$ -- 108
-pop$ -- 234
+missing$ -- 37
+newline$ -- 222
+num.names$ -- 124
+pop$ -- 269
 preamble$ -- 1
-purify$ -- 126
+purify$ -- 143
 quote$ -- 0
-skip$ -- 417
+skip$ -- 472
 stack$ -- 0
-substring$ -- 545
-swap$ -- 49
+substring$ -- 633
+swap$ -- 55
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 267
-warning$ -- 1
-while$ -- 114
+type$ -- 311
+warning$ -- 2
+while$ -- 131
 width$ -- 0
-write$ -- 468
-(There was 1 warning)
+write$ -- 528
+(There were 2 warnings)

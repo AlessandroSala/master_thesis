@@ -1,9 +1,14 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{31}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bj{\"o}rck(1994)]{GM}
+{\AA}.~Bj{\"o}rck.
+\newblock Numerics of gram-schmidt orthogonalization.
+\newblock \emph{Linear Algebra and Its Applications}, 197:\penalty0 297--316, 1994.
 
 \bibitem[Chabanat et~al.(1997)Chabanat, Bonche, Haensel, Meyer, and Schaeffer]{CHABANAT1997710}
 E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
@@ -90,10 +95,19 @@ C.~Lanczos.
 \newblock Solution of systems of linear equations by minimized iterations.
 \newblock \emph{J. Res. Nat. Bur. Standards}, 49\penalty0 (1):\penalty0 33--53, 1952.
 
-\bibitem[Li et~al.(2020)Li, Ren, and Zhao]{li2020efficient}
+\bibitem[Li et~al.(2020{\natexlab{a}})Li, Ren, and Zhao]{li2020efficient}
 B.~Li, Z.~Ren, and P.~Zhao.
 \newblock Efficient solution for the dirac equation in 3d lattice space with the conjugate gradient method.
-\newblock \emph{Physical Review C}, 102\penalty0 (4):\penalty0 044307, 2020.
+\newblock \emph{Physical Review C}, 102\penalty0 (4):\penalty0 044307, 2020{\natexlab{a}}.
+
+\bibitem[Li et~al.(2020{\natexlab{b}})Li, Xie, Xu, You, and Zhang]{GCG1}
+Y.~Li, H.~Xie, R.~Xu, C.~You, and N.~Zhang.
+\newblock A parallel generalized conjugate gradient method for large scale eigenvalue problems.
+\newblock \emph{CCF Transactions on High Performance Computing}, 2\penalty0 (2):\penalty0 111--122, jun 2020{\natexlab{b}}.
+\newblock ISSN 2524-4930.
+\newblock \doi{10.1007/s42514-020-00029-6}.
+\newblock URL \url{https://doi.org/10.1007/s42514-020-00029-6}.
+\newblock The corresponding computing package can be downloaded from the web site: \url{https://github.com/pase2017/GCGE-1.0}.
 
 \bibitem[Lin et~al.(2013)Lin, Shao, and E]{LIN2013205}
 L.~Lin, S.~Shao, and W.~E.
@@ -110,6 +124,11 @@ T.~Nottoli, I.~Gianni, A.~Levitt, and F.~Lipparini.
 \newblock ISSN 1432-2234.
 \newblock \doi{10.1007/s00214-023-03010-y}.
 \newblock URL \url{https://doi.org/10.1007/s00214-023-03010-y}.
+
+\bibitem[Pearson and Pestana(2020)]{pearson2020preconditioners}
+J.~W. Pearson and J.~Pestana.
+\newblock Preconditioners for krylov subspace methods: An overview.
+\newblock \emph{GAMM-Mitteilungen}, 43\penalty0 (4):\penalty0 e202000015, 2020.
 
 \bibitem[Reinhard and Flocard(1995)]{REINHARD1995467}
 P.-G. Reinhard and H.~Flocard.
@@ -143,6 +162,12 @@ W.~Ryssens, V.~Hellemans, M.~Bender, and P.-H. Heenen.
 Y.~Saad.
 \newblock \emph{Numerical Methods for Large Eigenvalue Problems}.
 \newblock Manchester University Press, Manchester, UK, 1992.
+
+\bibitem[Shewchuk(1994)]{PainlessCGM}
+J.~R. Shewchuk.
+\newblock An introduction to the conjugate gradient method without the agonizing pain.
+\newblock 1994.
+\newblock URL \url{http://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf}.
 
 \bibitem[Skyrme(1958)]{SKYRME1958615}
 T.~Skyrme.
