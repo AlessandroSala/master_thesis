@@ -14,18 +14,18 @@ Which yields the Lagrangian
 where $\lambda$ is a Lagrange multiplier determined by the condition $\expval {{\mathcal Q}} = q_0$. 
 After finding the minimum of $E'$, it's trivial to show that for a given $\lambda$, we get \cite{FLOCARD1973433}
 \begin{equation}
-\dv{E}{\expval{{\mathcal Q}}} = -\lambda 
+\dv{E}{\expval{{\mathcal Q}}} = -\lambda. 
 \end{equation}
-If $\lambda$ is properly adjusted, a certain value for $q_0$ can be obtained. From a numerical standpoint, $\lambda$ needs to be tuned at each iteration to reach the desired value. 
+From a numerical standpoint, $\lambda$ needs to be tuned at each iteration to reach the desired value of $q_0$. 
 This method was the one used in early constrained Hartree-Fock calculations \cite{Cusson1985}.
-\\Although the method is simple, it's often the case that it fails. Moreover, for the same value of $\lambda$, many, possibly infinite values of $\expval{{\mathcal Q}}$ can be obtained, for which we are only allowed to get the one with the most stable solution.
+\\Although this method is simple, it's often the case that it fails. Moreover, for the same value of $\lambda$, many, possibly infinite values of $\expval{{\mathcal Q}}$ can be obtained, for which we are only allowed to get the one with the most stable solution.
 \\A different method is provided by the Quadratic Penalty Method (QPM). Briefly speaking, instead of a Lagrange multiplier, we add a quadratic contribution to the functional, such that
 \begin{equation}
     \label{eq:constr_quadratic}
     E' = E + \frac c 2 (\expval{{\mathcal Q}}-q_0)^2.
 \end{equation}
 This is a straightforward method; intuitively one penalizes (hence the name), any solution for which $\expval{{\mathcal Q}}\neq q_0$ by increasing its energy. However, the success of such procedure is heavily influenced by the choice of $c$, often leading to instabilities for large values.
-\\What happens is that for small values of $c$, the penalty may be insufficient to reach the target $q_0$, while for large values, the penalty may be so big that the self consistent calculation oscillates and fails.
+\\What happens is that for small values of $c$, the penalty may be insufficient to reach the target $q_0$, while for bigger values, the penalty may be so strong that the self consistent calculation oscillates and fails.
 \subsubsection{Augmented Lagrangian Method}
 A modern, robust approach, used by HF/HFB codes \cite{RYSSENS2015175,CHEN2022108344} is given in the form of the Augmented Lagrangian Method (ALM) \cite{Staszczak2010}.
 Its main idea is to combine the precision of the ECP with the accuracy of the QPM.
@@ -40,7 +40,7 @@ where $q = \expval{{\mathcal Q}}$, the resulting mean field potential will be gi
     U' &= U + \lambda  {\mathcal Q} + c(q-q_0) {\mathcal Q} 
     \\ &= U + c(q-q_0(\lambda)) {\mathcal Q}
 \end{align}
-Where $q_0(\lambda)$ is updated at each iteration with the formula
+where $q_0(\lambda)$ is updated at each iteration with the formula
 \begin{align}
     \label{eq:alm_q0}
     q_0(\lambda) = q_0 - \frac{\lambda}{c}

@@ -5,63 +5,81 @@
 \vspace {2em}
 \contentsline {chapter}{\numberline {1}Energy functional}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Hartree-Fock theory}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Hartree-Fock equations}{1}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Symmetries}{2}{subsection.1.1.2}%
-\contentsline {subsubsection}{Symmetry propagation}{3}{subsubsection*.16}%
-\contentsline {subsection}{\numberline {1.1.3}Density Functional Theory}{3}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Skyrme}{3}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Skyrme force}{4}{subsection.1.2.1}%
-\contentsline {subsubsection}{Modern parametrization}{5}{subsubsection*.24}%
-\contentsline {subsection}{\numberline {1.2.2}Skyrme functional}{5}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Coulomb interaction}{8}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Energy calculation}{9}{section.1.4}%
-\contentsline {subsubsection}{Integrated energy}{9}{subsubsection*.37}%
-\contentsline {subsubsection}{Hartree-Fock energy}{9}{subsubsection*.38}%
-\contentsline {paragraph}{Sidenote:}{10}{paragraph*.46}%
-\contentsline {chapter}{\numberline {2}Numerical methods}{11}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Finite differences}{11}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}3D mesh}{11}{subsection.2.1.1}%
-\contentsline {subsubsection}{Differential operators discretization}{12}{subsubsection*.49}%
-\contentsline {subsection}{\numberline {2.1.2}Schr\"odinger equation}{12}{subsection.2.1.2}%
-\contentsline {paragraph}{Linearity}{12}{paragraph*.51}%
-\contentsline {subsubsection}{Boundary conditions}{13}{subsubsection*.54}%
-\contentsline {subsection}{\numberline {2.1.3}Poisson equation}{14}{subsection.2.1.3}%
-\contentsline {subsubsection}{Boundary conditions}{14}{subsubsection*.57}%
-\contentsline {subsubsection}{On higher order approximations and performance}{15}{subsubsection*.62}%
-\contentsline {section}{\numberline {2.2}Eigenvalue problem}{15}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Conjugate Gradient and numerical techniques}{15}{subsection.2.2.1}%
-\contentsline {subsubsection}{Conjugate Gradient and numerical techniques}{16}{subsubsection*.63}%
-\contentsline {paragraph}{Steepest descent method}{16}{paragraph*.65}%
-\contentsline {subsubsection}{Preconditioning}{17}{subsubsection*.70}%
-\contentsline {subsubsection}{Rayleigh-Ritz procedure}{17}{subsubsection*.73}%
-\contentsline {subsubsection}{Shift and Invert}{18}{subsubsection*.75}%
-\contentsline {paragraph}{Smallest eigenvalue}{18}{paragraph*.80}%
-\contentsline {subsection}{\numberline {2.2.2}Iterative eigensolvers}{19}{subsection.2.2.2}%
-\contentsline {subsubsection}{Jacobi-Davidson}{19}{subsubsection*.82}%
-\contentsline {subsubsection}{Lanczos}{20}{subsubsection*.87}%
-\contentsline {subsubsection}{LOBPCG}{21}{subsubsection*.89}%
-\contentsline {subsection}{\numberline {2.2.3}General Conjugate Gradient}{22}{subsection.2.2.3}%
-\contentsline {paragraph}{Eigenvalue problem}{22}{paragraph*.91}%
-\contentsline {paragraph}{Blocking}{22}{paragraph*.92}%
-\contentsline {paragraph}{Orthogonalization}{22}{paragraph*.93}%
-\contentsline {paragraph}{Preconditioning}{22}{paragraph*.94}%
-\contentsline {paragraph}{Shift update}{23}{paragraph*.95}%
-\contentsline {paragraph}{Convergence}{23}{paragraph*.97}%
-\contentsline {section}{\numberline {2.3}Code implementation details}{23}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Constraints}{24}{subsection.2.3.1}%
-\contentsline {subsubsection}{Augmented Lagrangian Method}{25}{subsubsection*.102}%
-\contentsline {subsection}{\numberline {2.3.2}Self-consistent procedure pseudocode}{25}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Optimal parameters choice}{26}{subsection.2.3.3}%
-\contentsline {subsubsection}{Inverse power step tolerance}{26}{subsubsection*.106}%
-\contentsline {subsubsection}{Inner GCG iterations}{27}{subsubsection*.108}%
+\contentsline {subsection}{\numberline {1.1.1}Variational principle}{1}{subsection.1.1.1}%
+\contentsline {subsubsection}{Ground state}{2}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {1.1.2}Hartree-Fock equations}{2}{subsection.1.1.2}%
+\contentsline {paragraph}{Exchange interaction}{3}{paragraph*.21}%
+\contentsline {paragraph}{Self-consistent solution}{3}{paragraph*.22}%
+\contentsline {subsection}{\numberline {1.1.3}Symmetries}{4}{subsection.1.1.3}%
+\contentsline {subsubsection}{Symmetry propagation}{4}{subsubsection*.26}%
+\contentsline {subsection}{\numberline {1.1.4}Density Functional Theory}{4}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Skyrme}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Skyrme force}{5}{subsection.1.2.1}%
+\contentsline {subsubsection}{Modern parametrization}{6}{subsubsection*.34}%
+\contentsline {subsection}{\numberline {1.2.2}Skyrme functional}{7}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Coulomb interaction}{9}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Energy calculation}{10}{section.1.4}%
+\contentsline {subsubsection}{Integrated energy}{11}{subsubsection*.47}%
+\contentsline {subsubsection}{Hartree-Fock energy}{11}{subsubsection*.48}%
+\contentsline {paragraph}{Sidenote:}{12}{paragraph*.56}%
+\contentsline {chapter}{\numberline {2}Numerical methods}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Finite differences}{13}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}3D mesh}{13}{subsection.2.1.1}%
+\contentsline {subsubsection}{Differential operators discretization}{14}{subsubsection*.59}%
+\contentsline {subsection}{\numberline {2.1.2}Schr\"odinger equation}{14}{subsection.2.1.2}%
+\contentsline {paragraph}{Linearity}{14}{paragraph*.61}%
+\contentsline {subsubsection}{Boundary conditions}{15}{subsubsection*.64}%
+\contentsline {subsection}{\numberline {2.1.3}Poisson equation}{16}{subsection.2.1.3}%
+\contentsline {subsubsection}{Boundary conditions}{16}{subsubsection*.67}%
+\contentsline {subsubsection}{On higher order approximations and performance}{17}{subsubsection*.72}%
+\contentsline {section}{\numberline {2.2}Eigenvalue problem}{17}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Conjugate Gradient and numerical techniques}{17}{subsection.2.2.1}%
+\contentsline {subsubsection}{Conjugate Gradient and numerical techniques}{18}{subsubsection*.73}%
+\contentsline {paragraph}{Steepest descent method}{18}{paragraph*.75}%
+\contentsline {subsubsection}{Preconditioning}{19}{subsubsection*.80}%
+\contentsline {subsubsection}{Rayleigh-Ritz procedure}{19}{subsubsection*.83}%
+\contentsline {subsubsection}{Shift and Invert}{20}{subsubsection*.85}%
+\contentsline {paragraph}{Smallest eigenvalue}{20}{paragraph*.90}%
+\contentsline {subsection}{\numberline {2.2.2}Iterative eigensolvers}{21}{subsection.2.2.2}%
+\contentsline {subsubsection}{Jacobi-Davidson}{21}{subsubsection*.92}%
+\contentsline {subsubsection}{Lanczos}{22}{subsubsection*.97}%
+\contentsline {subsubsection}{LOBPCG}{23}{subsubsection*.99}%
+\contentsline {subsection}{\numberline {2.2.3}General Conjugate Gradient}{24}{subsection.2.2.3}%
+\contentsline {paragraph}{Eigenvalue problem}{24}{paragraph*.101}%
+\contentsline {paragraph}{Blocking}{24}{paragraph*.102}%
+\contentsline {paragraph}{Orthogonalization}{24}{paragraph*.103}%
+\contentsline {paragraph}{Preconditioning}{24}{paragraph*.104}%
+\contentsline {paragraph}{Shift update}{25}{paragraph*.105}%
+\contentsline {paragraph}{Convergence}{25}{paragraph*.107}%
+\contentsline {section}{\numberline {2.3}Code implementation details}{25}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Constraints}{26}{subsection.2.3.1}%
+\contentsline {subsubsection}{Augmented Lagrangian Method}{27}{subsubsection*.112}%
+\contentsline {subsection}{\numberline {2.3.2}Code implementation}{27}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Optimal parameters choice}{28}{subsection.2.3.3}%
+\contentsline {subsubsection}{Inverse power step tolerance}{29}{subsubsection*.117}%
+\contentsline {subsubsection}{Inner GCG iterations}{29}{subsubsection*.119}%
+\contentsline {subsection}{\numberline {2.3.4}Numerical stability}{31}{subsection.2.3.4}%
+\contentsline {chapter}{\numberline {3}Results for spherical nuclei}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Physical quantities}{33}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Mean square radii}{33}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Deformation parameters}{34}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Parameters and mesh choice}{34}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Results for \(^{16}\)O}{35}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Results neglecting Coulomb interaction}{35}{subsection.3.3.1}%
+\contentsline {subsubsection}{Results including Coulomb interaction}{36}{subsubsection*.132}%
+\contentsline {section}{\numberline {3.4}Results for heavier nuclei}{37}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Results for deformed nuclei}{41}{chapter.4}%
+\contentsline {section}{\numberline {4.1}$^{24}$Mg}{41}{section.4.1}%
+\contentsline {subsubsection}{Ground state}{41}{subsubsection*.138}%
+\contentsline {subsubsection}{Deformation curve}{41}{subsubsection*.141}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{31}{chapter*.112}%
+\contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{45}{chapter*.144}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix}{35}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Spherical harmonics}{35}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Algorithm}{36}{subsection.A.1.1}%
-\contentsline {section}{\numberline {A.2}5-point derivatives}{36}{section.A.2}%
-\contentsline {chapter}{List of Figures}{37}{appendix*.123}%
-\contentsline {chapter}{List of Tables}{39}{appendix*.125}%
-\contentsline {chapter}{List of Symbols}{41}{appendix*.127}%
-\contentsline {chapter}{Acknowledgements}{43}{appendix*.130}%
+\contentsline {chapter}{\numberline {A}Appendix}{49}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Spherical harmonics}{49}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Algorithm}{50}{subsection.A.1.1}%
+\contentsline {section}{\numberline {A.2}5-point derivatives}{50}{section.A.2}%
+\contentsline {chapter}{List of Figures}{51}{appendix*.155}%
+\contentsline {chapter}{List of Tables}{53}{appendix*.157}%
+\contentsline {chapter}{List of Symbols}{55}{appendix*.159}%
+\contentsline {chapter}{Acknowledgements}{57}{appendix*.162}%

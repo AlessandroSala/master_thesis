@@ -1,7 +1,13 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces HF calculation convergence with varying CG tolerance. $^{16}$O\relax }}{27}{figure.caption.107}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces HF calculation convergence with varying number of inverse power steps for the spherical nucleus. $^{16}$O\relax }}{28}{figure.caption.109}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces HF calculation convergence with varying number of inverse power steps for the deformed nucleus. $^{24}$Mg\relax }}{28}{figure.caption.110}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Pseudocode of the Hartree-Fock program.\relax }}{28}{figure.caption.116}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces HF calculation convergence with varying CG tolerance for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{29}{figure.caption.118}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces HF calculation convergence with varying number of inverse power steps for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{30}{figure.caption.120}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg, box $[-10, 10]$ fm, step size $0.33$ fm.\relax }}{30}{figure.caption.121}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Numerical stability map of the HF solver for $^{16}$O. Relative error is taken as the \relax }}{32}{figure.caption.122}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Magnesium ground state density, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SKM* parametrization\relax }}{42}{figure.caption.140}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Magnesium deformation curve, no pairing interaction, calculation done on a box $[-10, 10]$ fm, step size 0.66 fm, SKM* parametrization.\relax }}{43}{figure.caption.142}%
 \addvspace {10\p@ }

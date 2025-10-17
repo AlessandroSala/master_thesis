@@ -1,0 +1,43 @@
+\section{Physical quantities}
+After finding a nucleus ground state, we are able to compute numerous physical properties of the system. We can use these values as a numerical reference when comparing our results with other codes.
+\subsection{Mean square radii}
+An important set of parameters characterizing the nuclear density is certainly the one of mean square radii.
+\\The individual nuclear spieces' mean square radius is defined as
+\begin{equation}
+    \label{eq:msr}
+    \expval{r^2_q} = \frac{\int\rho_q(\bm r) r^2 d\bm r}{\int \rho_q(\bm r) d\bm r}
+\end{equation}
+While the charge mean square radius formula is derived from the convolution of the neutron and proton particle densities with their respective internal charge distribution \cite{BERTOZZI1972408}, resulting in equation \ref{eq:cmsr}.
+\begin{equation}
+    \label{eq:cmsr}
+    \expval{r^2_{ch}} = \expval{r^2_p} + \expval{r^2}_P + \frac N Z \expval{r^2}_N + \frac 2 Z \bigg(\frac{ \hbar}{mc}\bigg)^2\sum_{\alpha q}\mu_q \expval{\bm \sigma\cdot \bm {\ell}}_{\alpha q}
+\end{equation}
+where $q$ runs over the nuclear species and $\alpha$ runs over all single particle states. $\bm \sigma$ is the vector operator of Pauli matrices, while $\bm {\ell}$ is the angular momentum operator $-i(\bm r \times \nabla)$.
+$\expval{r^2}_P$ and $\expval{r^2}_N$ refer to the square charge radii of the proton and the neutron, while $\mu_q$ to their respective magnetic dipole moment in units of nuclear magneton.
+\\All square charge radii computed in this work use the set of parameters in table \ref{tab:charge_par}.
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lcc}
+    \toprule
+    \textbf{Parameter} & \textbf{Value} & \textbf{Units} \\
+    \midrule
+    $\expval{r^2}_P$ & 0.64 & fm$^2$ \\
+    $\expval{r^2}_N$ & -0.11 & fm$^2$ \\
+    $\mu_p$ & 2.792847 & - \\
+    $\mu_n$ & -1.913043 & - \\
+    \bottomrule
+  \end{tabular}
+  \caption{Parameters used to compute the charge mean square radius}
+  \label{tab:charge_par}
+\end{table}
+\subsection{Deformation parameters}
+When dealing with deformed nuclei, mean square radii are not sufficient to characterize the nuclear density. The main parameter used is the deformation parameter $\beta$, defined already in section (REF), it can be computed through the actual mean square radius with formula \ref{eq:beta_real_radius}
+\begin{equation}
+    \label{eq:beta_real_radius}
+    \beta_2 = \frac{4\pi\expval{Y_{2 0}}}{3A\expval{r^2}}
+\end{equation}
+Where $\expval{r^2}$ is the total mean square radius of the nucleus 
+\begin{equation}
+    \expval{r^2} = \frac{\int (\rho_n + \rho_p )r^2 d\bm r}{\int (\rho_n + \rho_p )d\bm r} = \expval{x^2+y^2+z^2}.
+\end{equation}
+For spherical nuclei, $\beta_2 = 0$, while for deformed ones, thanks to the normalization with respect to the total radius and mass, the $\beta_2$ parameter can be used to compare different nuclei across the nuclide chart.

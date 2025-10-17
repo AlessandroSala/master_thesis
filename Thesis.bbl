@@ -1,9 +1,17 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bertozzi et~al.(1972)Bertozzi, Friar, Heisenberg, and Negele]{BERTOZZI1972408}
+W.~Bertozzi, J.~Friar, J.~Heisenberg, and J.~Negele.
+\newblock Contributions of neutrons to elastic electron scattering from nuclei.
+\newblock \emph{Physics Letters B}, 41\penalty0 (4):\penalty0 408--414, 1972.
+\newblock ISSN 0370-2693.
+\newblock \doi{https://doi.org/10.1016/0370-2693(72)90662-4}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0370269372906624}.
 
 \bibitem[Bj{\"o}rck(1994)]{GM}
 {\AA}.~Bj{\"o}rck.
@@ -18,6 +26,14 @@ E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
 \newblock \doi{https://doi.org/10.1016/S0375-9474(97)00596-4}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0375947497005964}.
 
+\bibitem[Chabanat et~al.(1998)Chabanat, Bonche, Haensel, Meyer, and Schaeffer]{chabanat2}
+E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
+\newblock A skyrme parametrization from subnuclear to neutron star densities part ii. nuclei far from stabilities.
+\newblock \emph{Nuclear Physics A}, 635\penalty0 (1):\penalty0 231--256, 1998.
+\newblock ISSN 0375-9474.
+\newblock \doi{https://doi.org/10.1016/S0375-9474(98)00180-8}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0375947498001808}.
+
 \bibitem[Chen et~al.(2022)Chen, Li, Schuetrumpf, Reinhard, and Nazarewicz]{CHEN2022108344}
 M.~Chen, T.~Li, B.~Schuetrumpf, P.-G. Reinhard, and W.~Nazarewicz.
 \newblock Three-dimensional skyrme hartree-fock-bogoliubov solver in coordinate-space representation.
@@ -25,6 +41,10 @@ M.~Chen, T.~Li, B.~Schuetrumpf, P.-G. Reinhard, and W.~Nazarewicz.
 \newblock ISSN 0010-4655.
 \newblock \doi{https://doi.org/10.1016/j.cpc.2022.108344}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465522000625}.
+
+\bibitem[Colo' and Roca-Maza()]{hfbcsqrpa}
+G.~Colo' and X.~Roca-Maza.
+\newblock User guide for the hfbcs-qrpa(v1) code.
 
 \bibitem[Colò(2020)]{NDFT}
 G.~Colò.
@@ -68,6 +88,11 @@ H.-Q. Gu, H.~Liang, W.~H. Long, N.~Van~Giai, and J.~Meng.
 \newblock \emph{Phys. Rev. C}, 87:\penalty0 041301, Apr 2013.
 \newblock \doi{10.1103/PhysRevC.87.041301}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.87.041301}.
+
+\bibitem[Guennebaud et~al.(2010)Guennebaud, Jacob, et~al.]{eigenweb}
+G.~Guennebaud, B.~Jacob, et~al.
+\newblock Eigen.
+\newblock http://eigen.tuxfamily.org, 2010.
 
 \bibitem[Hohenberg and Kohn(1964)]{HK}
 P.~Hohenberg and W.~Kohn.
@@ -138,11 +163,6 @@ P.-G. Reinhard and H.~Flocard.
 \newblock \doi{https://doi.org/10.1016/0375-9474(94)00770-N}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/037594749400770N}.
 
-\bibitem[Ring and Schuck(2004)]{ring2004nuclear}
-P.~Ring and P.~Schuck.
-\newblock \emph{The nuclear many-body problem}.
-\newblock Springer Science \& Business Media, 2004.
-
 \bibitem[Robledo et~al.(2018)Robledo, Rodríguez, and Rodríguez-Guzmán]{Robledo_2019}
 L.~M. Robledo, T.~R. Rodríguez, and R.~R. Rodríguez-Guzmán.
 \newblock Mean field and beyond description of nuclear structure with the gogny force: a review.
@@ -195,6 +215,11 @@ A.~Staszczak, M.~Stoitsov, A.~Baran, and W.~Nazarewicz.
 P.~Stevenson and M.~Barton.
 \newblock Low-energy heavy-ion reactions and the skyrme effective interaction.
 \newblock \emph{Progress in Particle and Nuclear Physics}, 104:\penalty0 142--164, 2019.
+
+\bibitem[Stroustrup(1986)]{stroustrup1986overview}
+B.~Stroustrup.
+\newblock An overview of c++.
+\newblock In \emph{Proceedings of the 1986 SIGPLAN workshop on Object-oriented programming}, pages 7--18, 1986.
 
 \bibitem[Vautherin and Brink(1972)]{VauhBrinkOriginal}
 D.~Vautherin and D.~M. Brink.

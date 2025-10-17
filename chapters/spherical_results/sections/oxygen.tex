@@ -1,0 +1,273 @@
+\section{Parameters and mesh choice}
+All $\texttt{hfbcs\_qrpa}$ calculations are performed using a mesh size of $0.1$ fm, no pairing interaction, and a radial mesh size that corresponds to the one chosen for our computation. The lattice of our code will depend on the extension of the nucleus, since the number of subdivisions that allows reasonable CPU times on a laptop caps around $60-70$. For $^{16}$O, we are able to reach a $0.3$ fm step size, while for the heaviest, the $^{90}$Zr, we are only able to reach $0.42$ fm. The reason behind this choice is that as the nucleus size increases, a bigger box is needed to ensure that weakly bound states are able to decay to zero at the boundary. All the data reported in this chapter is computed with the SLy5 parametrization.
+\section{Results for \(^{16}\)O}
+The first results we will take a look at are the ones for $^{16}$O. It's the best candidate for gauging the solver's performance, as it is a light, double magic nucleus, meaning it has no pairing interaction and a spherical shape.
+\\All calculations are performed on a box of size $[-9, 9]$ fm in all three directions and a step size of $0.3$ fm, correponding to $60$ subdivisions.
+\subsection{Results neglecting Coulomb interaction}
+As a case study, we will start by looking at results for increasing terms in the functional. 
+Starting from the ones for $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$ reported in table \ref{tab:no_so_no_j_no_coul}, neglecting the Coulomb interaction. Without further terms, the spin-orbit field $\bm B(\bm r)$ is null, hence the $1p_{3/2}$ and $1p_{1/2}$ levels are degenerate.
+\\Since $N=Z$, the single-particle equations will be exactly equal between the two species, assuming equal mass, therefore only neutron results are reported. Note that $C_1$ terms reduce to being null in this case, that is until we either break the $N=Z$ equality or introduce Coulomb terms.
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lrrccc}
+    \multicolumn{6}{c}{\textbf{Physical quantities}}\\
+    \addlinespace[0.3em]
+    \toprule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    $E_{\text{TOT}}$& [MeV] & -141.582 & -141.582 & - & - \\
+    $\expval{ r^2_n}^{1/2}$ &[fm] & 2.6504 & 2.6510 & 0.0006 & \num{2.26e-2}\\
+    $\expval{ r^2_{ch}}^{1/2}$ &[fm] & 2.7486 & 2.7491 & 0.0005 & \num{1.82e-2}\\
+    \midrule
+    \addlinespace[1.3em]
+    \multicolumn{6}{c}{\textbf{Neutron energy levels}}\\
+    \addlinespace[0.3em]
+    \midrule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    1s$_{1/2}$ &[MeV] & -36.142 & -36.139 & 0.003 & \num{8.30e-3}\\
+    1p$_{3/2}$ &[MeV] & -18.573 & -18.572 & 0.001 & \num{5.38e-3}\\
+    1p$_{1/2}$ &[MeV] & -18.573 & -18.572 & 0.001 & \num{5.38e-3}\\
+    \bottomrule
+  \end{tabular}
+  \caption{$^{16}$O including $C_0^{\rho}$, $C_1^{\rho}$, $C_0^{\tau}$, $C_1^{\tau}$ terms, neglecting Coulomb interaction.}
+  \label{tab:no_so_no_j_no_coul}
+\end{table}
+In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are included just for the spin-orbit field $\bm B(\bm r)$, but not for the mean field $U(\bm r)$; from an interaction point of view, it's as if we were neglecting the spin-gradient coupling term \cite{chabanat2}.
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lrrccc}
+    \multicolumn{6}{c}{\textbf{Physical quantities}}\\
+    \addlinespace[0.3em]
+    \toprule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    $E_{\text{TOT}}$& [MeV] & -142.080 & -142.080 & - & - \\
+    $\expval{ r^2_n}^{1/2}$ &[fm] & 2.6516 & 2.6516 & - & -\\
+    $\expval{ r^2_{ch}}^{1/2}$ &[fm] & 2.7497 & 2.7497 & - & -\\
+    \midrule
+    \addlinespace[1.3em]
+    \multicolumn{6}{c}{\textbf{Neutron energy levels}}\\
+    \addlinespace[0.3em]
+    \midrule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    1s$_{1/2}$ &[MeV] & -36.314 & -36.312 & 0.002 & \num{5.5e-3}\\
+    1p$_{3/2}$ &[MeV] & -20.696 & -20.696 & - & -\\
+    1p$_{1/2}$ &[MeV] & -14.335 & -14.335 & - & -\\
+    \bottomrule
+  \end{tabular}
+  \caption{$^{16}$O including $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$, $C_0^{\div \bm J}$, $C_1^{\div \bm J}$ terms, neglecting Coulomb interaction and spin-gradient coupling.}
+  \label{tab:compare_so}
+\end{table}
+\\Lastly, in table \ref{tab:compare_j2}, the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are also included in the calculation of the mean-field.
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lrrccc}
+    \multicolumn{6}{c}{\textbf{Physical quantities}}\\
+    \addlinespace[0.3em]
+    \toprule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    $E_{\text{TOT}}$& [MeV] & -142.074 & -142.074 & - & - \\
+    $\expval{ r^2_n}^{1/2}$ &[fm] & 2.6515 & 2.6516 & 0.0001 & \num{3.77e-3}\\
+    $\expval{ r^2_{ch}}^{1/2}$ &[fm] & 2.7497 & 2.7497 & - & -\\
+    \midrule
+    \addlinespace[1.3em]
+    \multicolumn{6}{c}{\textbf{Neutron energy levels}}\\
+    \addlinespace[0.3em]
+    \midrule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    1s$_{1/2}$ &[MeV] & -36.309 & -36.308 & 0.001 & \num{2.75e-3}\\
+    1p$_{3/2}$ &[MeV] & -20.684 & -20.685 & 0.001 & \num{4.83e-3}\\
+    1p$_{1/2}$ &[MeV] & -14.361 & -14.361 & - & -\\
+    \bottomrule
+  \end{tabular}
+  \caption{$^{16}$O neglecting Coulomb interaction.}
+  \label{tab:compare_j2}
+\end{table}
+\subsubsection{Results including Coulomb interaction}
+In table \ref{tab:confronto} results for the full Skyrme functional and the Coulomb interaction are presented.
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lrrccc}
+    \multicolumn{6}{c}{\textbf{Physical quantities}}\\
+    \addlinespace[0.3em]
+    \toprule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    $E_{\text{TOT}}$& [MeV] & -128.402 & -128.400 & 0.002 & \num{1.56e-3} \\
+    $\expval{ r^2_n}^{1/2}$ &[fm] & 2.6584 & 2.6585 & 0.0001 & \num{3.76e-3}\\
+    $\expval{ r^2_p}^{1/2}$ &[fm] & 2.6835 & 2.6836 & 0.0001 & \num{3.73e-3}\\
+    $\expval{ r^2_{ch}}^{1/2}$ &[fm] & 2.7805 & 2.7803 & 0.0002 & \num{7.19e-3}\\
+    \midrule
+    \addlinespace[1.3em]
+    \multicolumn{6}{c}{\textbf{Neutron energy levels}}\\
+    \addlinespace[0.3em]
+    \midrule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    1s$_{1/2}$ &[MeV] & -36.140 & -36.137 & 0.003 & \num{8.30e-3}\\
+    1p$_{3/2}$ &[MeV] & -20.611 & -20.611 & - & -\\
+    1p$_{1/2}$ &[MeV] & -14.427 & -14.428 & 0.001 & \num{6.93e-3}\\
+    \midrule
+    \addlinespace[1.3em]
+    \multicolumn{6}{c}{\textbf{Proton energy levels}}\\
+    \addlinespace[0.3em]
+    \midrule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    1s$_{1/2}$ &[MeV] & -32.349 & -32.345 & 0.004 & \num{1.24e-2}\\
+    1p$_{3/2}$ &[MeV] & -17.137 & -17.137 & - & -\\
+    1p$_{1/2}$ &[MeV] & -11.081 & -11.082 & 0.001 & \num{9.02e-3}\\
+    \bottomrule
+  \end{tabular}
+  \caption{$^{16}$O complete of the Skyrme functional and Coulomb interaction.}
+  \label{tab:confronto}
+\end{table}
+\section{Results for heavier nuclei}
+In the following section, results for spherical nuclei heavier than $^{16}$O are presented.
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lrrccc}
+    \multicolumn{6}{c}{\textbf{Physical quantities}}\\
+    \addlinespace[0.3em]
+    \toprule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    $E_{\text{TOT}}$& [MeV] & -415.955 & -415.931 & 0.024 & \num{5.77e-3} \\
+    $\expval{ r^2_n}^{1/2}$ &[fm] & 3.6106 & 3.6110 & 0.0004 & \num{1.11e-2}\\
+    $\expval{ r^2_p}^{1/2}$ &[fm] & 3.4502 & 3.4507 & 0.0005 & \num{1.45e-2}\\
+    $\expval{ r^2_{ch}}^{1/2}$ &[fm] & 3.5274 & 3.5060 & 0.0214 & 0.610\\
+    \midrule
+    \addlinespace[1.3em]
+    \multicolumn{6}{c}{\textbf{Neutron energy levels}}\\
+    \addlinespace[0.3em]
+    \midrule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    1s$_{1/2}$ &[MeV] & -49.758 & -49.752 & 0.006 & \num{1.21e-2}\\
+    1p$_{3/2}$ &[MeV] & -35.952 & -35.949 & 0.003 & \num{8.34e-3}\\
+    1p$_{1/2}$ &[MeV] & -33.891 & -33.891 & - & -\\
+    1d$_{5/2}$ &[MeV] & -22.170 & -22.169 & 0.001 & \num{4.51e-3}\\
+    2s$_{1/2}$ &[MeV] & -17.720 & -17.720 & - & -\\
+    1d$_{3/2}$ &[MeV] & -17.431 & -17.434 & 0.003 & \num{1.72e-2}\\
+    1f$_{7/2}$ &[MeV] & -9.262 & -9.261 & 0.001 & \num{1.08e-2}\\
+    \midrule
+    \addlinespace[1.3em]
+    \multicolumn{6}{c}{\textbf{Proton energy levels}}\\
+    \addlinespace[0.3em]
+    \midrule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    1s$_{1/2}$ &[MeV] & -45.936 & -45.930 & 0.006 & \num{1.31e-2}\\
+    1p$_{3/2}$ &[MeV] & -34.314 & -34.311 & 0.003 & \num{8.74e-3}\\
+    1p$_{1/2}$ &[MeV] & -30.482 & -30.483 & 0.001 & \num{3.28e-3}\\
+    1d$_{5/2}$ &[MeV] & -22.455 & -22.454 & 0.001 & \num{4.45e-3}\\
+    2s$_{1/2}$ &[MeV] & -16.753 & -16.751 & 0.002 & \num{1.19e-2}\\
+    1d$_{3/2}$ &[MeV] & -15.337 & -15.340 & 0.003 & \num{1.96e-2}\\
+    \bottomrule
+  \end{tabular}
+  \caption{$^{48}$Ca, box size [-12, 12] fm, step size 0.34 fm}
+  \label{tab:compare_all_ca48}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lrrccc}
+    \multicolumn{6}{c}{\textbf{Physical quantities}}\\
+    \addlinespace[0.3em]
+    \toprule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    $E_{\text{TOT}}$& [MeV] & -482.805 & -482.700 & 0.105 & \num{2.18e-2} \\
+    $\expval{ r^2_n}^{1/2}$ &[fm] & 3.6422 & 3.6433 & 0.0011 & \num{3.02e-2}\\
+    $\expval{ r^2_p}^{1/2}$ &[fm] & 3.6968 & 3.6979 & 0.0011 & \num{2.97e-2}\\
+    $\expval{ r^2_{ch}}^{1/2}$ &[fm] & 3.7722 & 3.7682 & 0.0040 & 0.106\\
+    \midrule
+    \addlinespace[1.3em]
+    \multicolumn{6}{c}{\textbf{Neutron energy levels}}\\
+    \addlinespace[0.3em]
+    \midrule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    1s$_{1/2}$ &[MeV] & -54.277 & -54.260 & 0.017 & \num{3.13e-2}\\
+    1p$_{3/2}$ &[MeV] & -41.571 & -41.562 & 0.009 & \num{2.16e-2}\\
+    1p$_{1/2}$ &[MeV] & -39.613 & -39.611 & 0.002 & \num{5.05e-3}\\
+    1d$_{5/2}$ &[MeV] & -28.536 & -28.530 & 0.006 & \num{2.10e-2}\\
+    2s$_{1/2}$ &[MeV] & -23.539 & -23.545 & 0.006 & \num{2.55e-2}\\
+    1d$_{3/2}$ &[MeV] & -23.367 & -23.361 & 0.006 & \num{2.57e-2}\\
+    1f$_{7/2}$ &[MeV] & -16.019 & -16.018 & 0.001 & \num{6.24e-3}\\
+    \midrule
+    \addlinespace[1.3em]
+    \multicolumn{6}{c}{\textbf{Proton energy levels}}\\
+    \addlinespace[0.3em]
+    \midrule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    1s$_{1/2}$ &[MeV] & -43.754 & -43.740 & 0.014 & \num{3.20e-2}\\
+    1p$_{3/2}$ &[MeV] & -31.561 & -31.555 & 0.006 & \num{1.90e-2}\\
+    1p$_{1/2}$ &[MeV] & -29.545 & -29.545 & - & -\\
+    1d$_{5/2}$ &[MeV] & -19.017 & -19.016 & 0.001 & \num{5.26e-3}\\
+    2s$_{1/2}$ &[MeV] & -14.004 & -14.012 & 0.008 & \num{5.71e-2}\\
+    1d$_{3/2}$ &[MeV] & -13.891 & -13.887 & 0.004 & \num{2.88e-2}\\
+    1f$_{7/2}$ &[MeV] & -6.934 & -6.935 & 0.001 & \num{1.44e-2}\\
+    \bottomrule
+  \end{tabular}
+  \caption{$^{56}$Ni, box size [-13, 13] fm, step size 0.37 fm}
+  \label{tab:compare_all_ni56}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lrrccc}
+    \multicolumn{6}{c}{\textbf{Physical quantities}}\\
+    \addlinespace[0.3em]
+    \toprule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    $E_{\text{TOT}}$& [MeV] & -783.587 & -783.325 & 0.262 & \num{3.34e-2} \\
+    $\expval{ r^2_n}^{1/2}$ &[fm] & 4.2854 & 4.2872 & 0.0018 & \num{4.20e-2}\\
+    $\expval{ r^2_p}^{1/2}$ &[fm] & 4.2196 & 4.2212 & 0.0016 & \num{3.79e-2}\\
+    $\expval{ r^2_{ch}}^{1/2}$ &[fm] & 4.2767 & 4.2704 & 0.0063 & 0.148\\
+    \midrule
+    \addlinespace[1.3em]
+    \multicolumn{6}{c}{\textbf{Neutron energy levels}}\\
+    \addlinespace[0.3em]
+    \midrule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    1s$_{1/2}$ &[MeV] & -55.636 & -55.615 & 0.021 & \num{3.78e-2}\\
+    1p$_{3/2}$ &[MeV] & -45.324 & -45.309 & 0.015 & \num{3.31e-2}\\
+    1p$_{1/2}$ &[MeV] & -44.172 & -44.160 & 0.012 & \num{2.72e-2}\\
+    1d$_{5/2}$ &[MeV] & -34.148 & -34.137 & 0.011 & \num{3.22e-2}\\
+    2s$_{1/2}$ &[MeV] & -31.393 & -31.391 & 0.002 & \num{6.37e-3}\\
+    1d$_{3/2}$ &[MeV] & -29.802 & -29.797 & 0.005 & \num{1.68e-2}\\
+    1f$_{7/2}$ &[MeV] & -22.755 & -22.748 & 0.007 & \num{3.08e-2}\\
+    2p$_{3/2}$ &[MeV] & -17.837 & -17.840 & 0.003 & \num{1.68e-2}\\
+    1f$_{5/2}$ &[MeV] & -17.568 & -17.563 & 0.005 & \num{2.85e-2}\\
+    2p$_{1/2}$ &[MeV] & -15.729 & -15.723 & 0.006 & \num{3.82e-2}\\
+    1g$_{9/2}$ &[MeV] & -11.586 & -11.580 & 0.006 & \num{5.18e-2}\\
+    \midrule
+    \addlinespace[1.3em]
+    \multicolumn{6}{c}{\textbf{Proton energy levels}}\\
+    \addlinespace[0.3em]
+    \midrule
+    && GCG & hfbcs\_qrpa & $\Delta$ & $\Delta\%$ \\
+    \midrule
+    1s$_{1/2}$ &[MeV] & -44.973 & -44.956 & 0.017 & \num{3.78e-2}\\
+    1p$_{3/2}$ &[MeV] & -36.347 & -36.336 & 0.011 & \num{3.03e-2}\\
+    1p$_{1/2}$ &[MeV] & -34.121 & -34.115 & 0.006 & \num{1.76e-2}\\
+    1d$_{5/2}$ &[MeV] & -26.766 & -26.759 & 0.007 & \num{2.62e-2}\\
+    2s$_{1/2}$ &[MeV] & -22.175 & -22.178 & 0.003 & \num{1.35e-2}\\
+    1d$_{3/2}$ &[MeV] & -21.216 & -21.214 & 0.002 & \num{9.43e-3}\\
+    1f$_{7/2}$ &[MeV] & -16.722 & -16.718 & 0.004 & \num{2.39e-2}\\
+    2p$_{3/2}$ &[MeV] & -10.239 & -10.236 & 0.003 & \num{2.93e-2}\\
+    1f$_{5/2}$ &[MeV] & -9.613 &  -9.618 & 0.005 & \num{5.20e-2}\\
+    2p$_{1/2}$ &[MeV] & -8.108 &  -8.104 & 0.004 & \num{4.94e-2}\\
+    \bottomrule
+  \end{tabular}
+  \caption{$^{90}$Zr, box size [-15, 15] fm, step size 0.43 fm}
+  \label{tab:compare_all_zr90}
+\end{table}

@@ -43,7 +43,8 @@
 \usepackage{eso-pic} % For the background picture on the title page
 \usepackage{subfig} % Numbered and caption subfigures using \subfloat.
 \usepackage{tikz} % A package for high-quality hand-made figures.
-
+\usepackage{forest}
+\usepackage[T1]{fontenc}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
 \usepackage{dirtree}
 
@@ -67,6 +68,8 @@
 \usepackage{tabularx}
 \usepackage{longtable} % Tables that can span several pages
 \usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{booktabs}
 
 % PACKAGES FOR ALGORITHMS (PSEUDO-CODE)
 \usepackage{algorithm}
@@ -203,6 +206,8 @@ Qui va l'Abstract in lingua italiana della tesi seguito dalla lista di parole ch
 % --------------------------------------------------------------------------
 \input{chapters/functional/functional.tex}
 \input{chapters/numerical/numerical.tex}
+\input{chapters/spherical_results/spherical_results.tex}
+\input{chapters/deformed_results/deformed_results.tex}
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 \bibliography{Thesis_bibliography} % The references information are stored in the file named "Thesis_bibliography.bib"
 

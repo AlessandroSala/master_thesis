@@ -1,4 +1,5 @@
 \section{Finite differences}
+\label{sec:finite_diff}
 The framework used to numerically solve the relevant PDEs of the problem, is the one of finite differences. The core idea is to discretize the domain on a 3D mesh, use Taylor expansions to approximate differential operators and then solve the resulting system of linear equations.
 \subsection{3D mesh}
 The first step of the process is representing the different fields in a numerical, discretized fashon.
@@ -16,42 +17,42 @@ Where the indices and step sizes are
 For ease of notation, we will assume $a=a_x=a_y=a_z=a$ and $N=N_x=N_y=N_z=N$, without losing generality.
 \\Including the spin degree of freedom, we can finally represent fields in a numerical way through
 \begin{equation}
-    \psi(\bm r, \sigma) \mapsto \psi(x_i, y_j, z_k, s) = \psi_{ijks}
+    \varphi(\bm r, \sigma) \mapsto \varphi(x_i, y_j, z_k, s) = \varphi_{ijks}
 \end{equation}
 \subsubsection{Differential operators discretization}
-By using Taylor series, it's possible to write approximations to derivatives \cite{Zhou1993}, in any point of the lattice, of any (reasonable) order of accuracy, involving only near neighbouring points. In the present work, 5-points derivates are used, meaning Taylor expansions are written for $\psi(x\pm h)$ and $\psi(x\pm 2h)$ to compute the differential operators. Formulae for first and second derivates are given in appendix \ref{app:5p_derivatives}.
+By using Taylor series, it's possible to write approximations to derivatives \cite{Zhou1993}, in any point of the lattice, of any (reasonable) order of accuracy, involving only near neighbouring points. In the present work, 5-points derivates are used, meaning Taylor expansions are written for $\varphi(x\pm h)$ and $\varphi(x\pm 2h)$ to compute the differential operators. Formulae for first and second derivates are given in appendix \ref{app:5p_derivatives}.
 \\From the theory background of chapter \ref{chap:hf}, we discern two main kinds of PDEs, the Schr\"odinger like KS equation, and the Poisson equation. Both are similar to a diffusion equation, but the former involves the spin degree of freedom, while the latter requires careful treatment of the boundary conditions.
 \subsection{Schr\"odinger equation}
 Starting from the Schr\"odinger equation \ref{eq:spe_ks}, reported here for clarity
 \begin{equation*}
-    \bigg[-\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg) + U_q(\mathbf r) + \delta_{\text{q,proton}}U_C(\mathbf r)-i\mathbf B_q(\mathbf r)\cdot(\nabla \times \boldsymbol\sigma) \bigg]\psi=\varepsilon\psi
+    \bigg[-\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg) + U_q(\mathbf r) + \delta_{\text{q,proton}}U_C(\mathbf r)-i\mathbf B_q(\mathbf r)\cdot(\nabla \times \boldsymbol\sigma) \bigg]\varphi=\varepsilon\varphi
 \end{equation*}
 it can be compactly written as
 \begin{equation}
-    \label{eq:pde} f(\nabla^2 \psi, \nabla \psi, \psi, \bm r, s) = \varepsilon\psi.
+    \label{eq:pde} f(\nabla^2 \varphi, \nabla \varphi, \varphi, \bm r, s) = \varepsilon\varphi.
 \end{equation}
-If $f$ is linear in $\psi$, it would be possible to rewrite it as a linear combination of $\psi$ on the mesh, after which we can use linear algebra methods to solve the problem.
+If $f$ is linear in $\varphi$, it would be possible to rewrite it as a linear combination of $\varphi$ on the mesh, after which we can use linear algebra methods to solve the problem.
 \paragraph{Linearity}
 Breaking down each part of the equation, the kinetic term
 \begin{equation}
 \label{eq:kin_lin_dim}
-\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg)\psi = \frac{\hbar^2}{2m^{*}_q(\mathbf r)} \nabla^2\psi + \nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\bigg)\cdot \nabla\psi
+\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg)\varphi = \frac{\hbar^2}{2m^{*}_q(\mathbf r)} \nabla^2\varphi + \nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\bigg)\cdot \nabla\varphi
 \end{equation}
-Is evidently linear in $\psi$. 
+Is evidently linear in $\varphi$. 
 \\The spin-orbit coupling, which most generally reads
 \begin{align*}
     \hat {{h}}_{\text{SO}}&=\bm f (\bm r )\cdot (\nabla \times \pauli ) 
     \\&=f_x(\bm r)(\sigma_z\partial_y - \sigma_y\partial_z) + f_y(\bm r)(\sigma_x\partial_z - \sigma_z\partial_x) + f_z(\bm r)(\sigma_y\partial_x - \sigma_x\partial_y)
 \end{align*}
-where $\hat {h}_\text{SO}$ acts on the spinor $\psi_{ijk}$. Since $\bm \sigma$ is the vector of Pauli matrices acting as linear operators on $\psi_{ijk}$, this portion of the equation is linear in $\psi$.
+where $\hat {h}_\text{SO}$ acts on the spinor $\varphi_{ijk}$. Since $\bm \sigma$ is the vector of Pauli matrices acting as linear operators on $\varphi_{ijk}$, this portion of the equation is linear in $\varphi$.
 \\Finally, the mean field terms $U_q, U_c$ 
 \begin{equation*}
-    (U_q + \delta_{\text{q,proton}}U_c)\psi
+    (U_q + \delta_{\text{q,proton}}U_c)\varphi
 \end{equation*}
 are just multiplicative, hence linear.
-\\Given that the whole equation is linear in $\psi$, we can evaluate it on the chosen mesh, using finite differences to approximate the differential operators, yielding a linear eigenvalue problem of the form
+\\Given that the whole equation is linear in $\varphi$, we can evaluate it on the chosen mesh, using finite differences to approximate the differential operators, yielding a linear eigenvalue problem of the form
 \begin{align}
-    \sum_n^{N_x\cdot N_y\cdot N_z \cdot 2} A_{mn}\psi_{n} &= E\psi_m
+    \sum_n^{N_x\cdot N_y\cdot N_z \cdot 2} A_{mn}\varphi_{n} &= E\varphi_m
 \end{align}
 \subsubsection{Boundary conditions}
 We expect the nucleus to be a localized object, prompting null Dirichlet boundary conditions for the Schr\"odinger equation.
@@ -65,22 +66,22 @@ Near the boundaries, the derivatives will involve points outside the box, settin
         \\0 & 0 & 0 & 0 & 0
     \end{bmatrix}
     \begin{bmatrix}
-        \psi_{-2}\\\psi_{-1}\\\psi\\\psi_{N}\\ \psi_{N+1} 
+        \varphi_{-2}\\\varphi_{-1}\\\varphi\\\varphi_{N}\\ \varphi_{N+1} 
     \end{bmatrix}
     = E 
     \begin{bmatrix}
-        \psi_{-2}\\\psi_{-1}\\\psi\\\psi_{N}\\ \psi_{N+1} 
+        \varphi_{-2}\\\varphi_{-1}\\\varphi\\\varphi_{N}\\ \varphi_{N+1} 
     \end{bmatrix}
 \end{equation}
 From this system of equations, we get for points outside the boundary:
 \begin{equation}
     \begin{cases}
-        \psi_{-2} = 0\\
-        \psi_{-1} = 0\\
+        \varphi_{-2} = 0\\
+        \varphi_{-1} = 0\\
         \ldots
     \end{cases}
 \end{equation}
-Meaning that $\psi$ outside the box will automatically be set to zero if the $A$ matrix is built assuming those points to be zero when computing its coefficients.
+Meaning that $\varphi$ outside the box will automatically be set to zero if the $A$ matrix is built assuming those points to be zero when computing its coefficients.
 \subsection{Poisson equation}
 \label{subsec:poisson}
 The other fundamental PDE we need to solve is the Poisson equation encountered in section (REF). Dropping the $c$ and $p$ subscripts, it reads
