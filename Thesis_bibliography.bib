@@ -238,6 +238,40 @@
   howpublished = {http://eigen.tuxfamily.org},
   year = {2010} 
 }
+@online{AMDC_website,
+  author = {{Atomic Mass Data Center}},
+  title  = {{Atomic Mass Data Center}},
+  url    = {https://www-nds.iaea.org/amdc/},
+  organization = {{International Atomic Energy Agency (IAEA)}},
+  note   = {Accessed: 19 October 2025}
+}
+@article{Bender2003,
+  author  = {Bender, M. and Heenen, P.-H. and Reinhard, P.-G.},
+  title   = {{Self-consistent mean-field models for nuclear structure}},
+  journal = {Reviews of Modern Physics},
+  volume  = {75},
+  number  = {1},
+  pages   = {121--180},
+  year    = {2003},
+  doi     = {10.1103/RevModPhys.75.121}
+}
+@article{MAREVIC2022108367,
+title = {Axially-deformed solution of the Skyrme-Hartree-Fock-Bogoliubov equations using the transformed harmonic oscillator basis (IV) hfbtho (v4.0): A new version of the program},
+journal = {Computer Physics Communications},
+volume = {276},
+pages = {108367},
+year = {2022},
+issn = {0010-4655},
+doi = {https://doi.org/10.1016/j.cpc.2022.108367},
+url = {https://www.sciencedirect.com/science/article/pii/S0010465522000868},
+author = {P. Marević and N. Schunck and E.M. Ney and R. {Navarro Pérez} and M. Verriere and J. O'Neal},
+keywords = {Energy density functional theory, Self-consistent mean field, Hartree-Fock-Bogoliubov theory, Harmonic oscillator, Restoration of symmetries, Angular momentum projection, Particle number projection, Distributed memory parallelism},
+abstract = {We describe the new version 4.0 of the code hfbtho that solves the nuclear Hartree-Fock-Bogoliubov problem by using the deformed harmonic oscillator basis in cylindrical coordinates. In the new version, we have implemented the restoration of rotational, particle number, and reflection symmetry for even-even nuclei. The restoration of rotational symmetry does not require using bases closed under rotation. Furthermore, we added the SeaLL1 functional and improved the calculation of the Coulomb potential. Finally, we refactored the code to facilitate maintenance and future developments.
+New version program summary
+Program title: hfbtho v4.0 CPC Library link to program files: https://doi.org/10.17632/c5g2f92by3.2 Code Ocean capsule: https://codeocean.com/capsule/5389629 Licensing provisions: GPLv3 Programming language: Fortran 2003 Journal reference of previous version: R.N. Pérez, N. Schunck, R.-D. Lasseri, C. Zhang and J. Sarich, Comput. Phys. Commun. 220 (2017) 363 Does the new version supersede the previous version: Yes Reasons for the new version: This version adds new capabilities to restore broken symmetries and determine corresponding quantum numbers of even-even nuclei Summary of revisions:1.Angular momentum projection for even-even nuclei in a deformed basis;2.Particle number projection for even-even nuclei in the quasiparticle basis;3.Implementation of the SeaLL1 functional;4.Expansion of the Coulomb potential onto Gaussians;5.MPI-parallelization of a single hfbtho execution;6.Code refactoring. Nature of problem: hfbtho is a physics computer code that is used to model the structure of the nucleus. It is an implementation of the energy density functional (EDF) approach to atomic nuclei, where the energy of the nucleus is obtained by integration over space of some phenomenological energy density, which is itself a functional of the neutron and proton intrinsic densities. In the present version of hfbtho, the energy density is derived either from the zero-range Skyrme or the finite-range Gogny effective two-body interaction between nucleons. Nuclear superfluidity is treated at the Hartree-Fock-Bogoliubov (HFB) approximation. Constraints on the nuclear shape allow probing the potential energy surface of the nucleus as needed, e.g., for the description of shape isomers or fission. A local scale transformation of the single-particle basis in which the HFB solutions are expanded provides a tool to properly compute the structure of weakly-bound nuclei. Restoration of the rotational, particle number, and reflection symmetry for even-even nuclei enables recovering the quantum numbers that are lost at the HFB approximation. Solution method: The program uses the axial harmonic oscillator (HO) or the transformed harmonic oscillator (THO) single-particle basis to expand quasiparticle wave functions. It iteratively diagonalizes the HFB Hamiltonian based on generalized Skyrme-like energy densities and zero-range pairing interactions or the finite-range Gogny force until a self-consistent solution is found. Lagrange parameters are used to impose constraints on HFB solutions, and their value is updated at each iteration from an approximation of the quasiparticle random phase approximation (QRPA) matrix. Symmetry restoration is implemented through standard projection techniques. Previous versions of the program were presented in [1-3]. Additional comments including restrictions and unusual features: Axial and time-reversal symmetries are assumed in HFB calculations; y-simplex symmetry and even particle numbers are assumed in angular momentum projection.
+References
+[1]M. V. Stoitsov, J. Dobaczewski, W. Nazarewicz, P. Ring, Axially deformed solution of the Skyrme-Hartree-Fock-Bogolyubov equations using the transformed harmonic oscillator basis. The program hfbtho (v1.66p), Comput. Phys. Commun. 167 (1) (2005) 43.[2]M. Stoitsov, N. Schunck, M. Kortelainen, N. Michel, H. Nam, E. Olsen, J. Sarich, S. Wild, Axially deformed solution of the Skyrme-Hartree-Fock-Bogolyubov equations using the transformed harmonic oscillator basis (II) hfbtho v2.00d: A new version of the program, Comput. Phys. Commun. 184 (6) (2013) 1592.[3]R. N. Perez, N. Schunck, R.-D. Lasseri, C. Zhang, J. Sarich, Axially deformed solution of the Skyrme–Hartree–Fock–Bogolyubov equations using the transformed harmonic oscillator basis (III) hfbtho (v3.00): A new version of the program, Comput. Phys. Commun. 220 (2017) 363.}
+}
 @misc{hfbcsqrpa,
       title={User guide for the hfbcs-qrpa(v1) code}, 
       author={Gianluca Colo' and Xavier Roca-Maza},

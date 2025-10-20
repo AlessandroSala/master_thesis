@@ -1,9 +1,21 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Atomic Mass Data Center}()]{AMDC_website}
+{Atomic Mass Data Center}.
+\newblock {Atomic Mass Data Center}.
+\newblock URL \url{https://www-nds.iaea.org/amdc/}.
+\newblock Accessed: 19 October 2025.
+
+\bibitem[Bender et~al.(2003)Bender, Heenen, and Reinhard]{Bender2003}
+M.~Bender, P.-H. Heenen, and P.-G. Reinhard.
+\newblock {Self-consistent mean-field models for nuclear structure}.
+\newblock \emph{Reviews of Modern Physics}, 75\penalty0 (1):\penalty0 121--180, 2003.
+\newblock \doi{10.1103/RevModPhys.75.121}.
 
 \bibitem[Bertozzi et~al.(1972)Bertozzi, Friar, Heisenberg, and Negele]{BERTOZZI1972408}
 W.~Bertozzi, J.~Friar, J.~Heisenberg, and J.~Negele.
@@ -142,6 +154,14 @@ L.~Lin, S.~Shao, and W.~E.
 \newblock \doi{https://doi.org/10.1016/j.jcp.2013.03.030}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0021999113002088}.
 
+\bibitem[Marević et~al.(2022)Marević, Schunck, Ney, {Navarro Pérez}, Verriere, and O'Neal]{MAREVIC2022108367}
+P.~Marević, N.~Schunck, E.~Ney, R.~{Navarro Pérez}, M.~Verriere, and J.~O'Neal.
+\newblock Axially-deformed solution of the skyrme-hartree-fock-bogoliubov equations using the transformed harmonic oscillator basis (iv) hfbtho (v4.0): A new version of the program.
+\newblock \emph{Computer Physics Communications}, 276:\penalty0 108367, 2022.
+\newblock ISSN 0010-4655.
+\newblock \doi{https://doi.org/10.1016/j.cpc.2022.108367}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465522000868}.
+
 \bibitem[Nottoli et~al.(2023)Nottoli, Gianni, Levitt, and Lipparini]{Nottoli2023}
 T.~Nottoli, I.~Gianni, A.~Levitt, and F.~Lipparini.
 \newblock A robust, open-source implementation of the locally optimal block preconditioned conjugate gradient for large eigenvalue problems in quantum chemistry.
@@ -162,6 +182,11 @@ P.-G. Reinhard and H.~Flocard.
 \newblock ISSN 0375-9474.
 \newblock \doi{https://doi.org/10.1016/0375-9474(94)00770-N}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/037594749400770N}.
+
+\bibitem[Ring and Schuck(2004)]{ring2004nuclear}
+P.~Ring and P.~Schuck.
+\newblock \emph{The nuclear many-body problem}.
+\newblock Springer Science \& Business Media, 2004.
 
 \bibitem[Robledo et~al.(2018)Robledo, Rodríguez, and Rodríguez-Guzmán]{Robledo_2019}
 L.~M. Robledo, T.~R. Rodríguez, and R.~R. Rodríguez-Guzmán.

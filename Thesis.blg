@@ -3,48 +3,51 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Thesis.aux
 The style file: abbrvnat.bst
 Database file #1: Thesis_bibliography.bib
+Warning--entry type for "AMDC_website" isn't style-file defined
+--line 241 of file Thesis_bibliography.bib
+Warning--empty year in AMDC_website
 Warning--empty year in hfbcsqrpa
 Warning--can't use both author and editor fields in LOBPCG
 Warning--empty journal in PainlessCGM
-You've used 35 entries,
+You've used 39 entries,
             2773 wiz_defined-function locations,
-            906 strings with 12789 characters,
-and the built_in function-call counts, 17246 in all, are:
-= -- 1621
-> -- 930
-< -- 21
-+ -- 318
-- -- 282
-* -- 1486
-:= -- 2714
-add.period$ -- 169
-call.type$ -- 35
-change.case$ -- 195
-chr.to.int$ -- 34
-cite$ -- 73
-duplicate$ -- 732
-empty$ -- 1372
-format.name$ -- 333
-if$ -- 3612
+            933 strings with 13647 characters,
+and the built_in function-call counts, 19098 in all, are:
+= -- 1784
+> -- 1048
+< -- 23
++ -- 358
+- -- 318
+* -- 1640
+:= -- 3008
+add.period$ -- 186
+call.type$ -- 39
+change.case$ -- 218
+chr.to.int$ -- 38
+cite$ -- 82
+duplicate$ -- 809
+empty$ -- 1516
+format.name$ -- 375
+if$ -- 3994
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 38
-newline$ -- 247
-num.names$ -- 140
-pop$ -- 316
+missing$ -- 42
+newline$ -- 272
+num.names$ -- 156
+pop$ -- 367
 preamble$ -- 1
-purify$ -- 163
+purify$ -- 183
 quote$ -- 0
-skip$ -- 542
+skip$ -- 600
 stack$ -- 0
-substring$ -- 702
-swap$ -- 65
+substring$ -- 753
+swap$ -- 69
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 360
-warning$ -- 3
-while$ -- 148
+type$ -- 399
+warning$ -- 4
+while$ -- 163
 width$ -- 0
-write$ -- 588
-(There were 3 warnings)
+write$ -- 647
+(There were 5 warnings)

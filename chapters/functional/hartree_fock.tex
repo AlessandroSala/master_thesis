@@ -104,10 +104,53 @@ If we expand on a different, orthonormal complete basis $\{\chi_l\}$, we can wri
 \end{align}
 Since orthonormality is guaranteed for both sets, taking 
 \begin{equation}
-    \delta_{jk} = \bra{\varphi_j}\ket{\varphi_k} = \sum_{ll'} D_{l'j}^\dagger D_{lk}\bra{\chi_l}\ket{\chi_l'}\implies DD^\dagger = 1
+    \delta_{jk} = \bra{\varphi_j}\ket{\varphi_k} = \sum_{ll'} D_{l'j}^\dagger D_{lk}\bra{\chi_l}\ket{\chi_l'}\implies DD^\dagger = 1.
 \end{equation}
+We can define the density matrix as
+\begin{equation}
+    \label{eq:density_op}
+    \rho_{ll'} = \bra{\Psi}c_{l'}^\dagger c_l\ket{\Psi}
+\end{equation}
+which in the hartree fock basis, using relations \ref{eq:basis_change}, is diagonal and its trace is equal to the particle number $A$.
+\\Writing the many body hamiltonian \ref{eq:many_body_schrodinger} in the arbitrary basis of second quantization operators $c_l^\dagger, c_l$, we get
+\begin{equation}
+    \label{eq:mb_hamiltonian_sq}
+    \hat H = \sum_{l_1 l_2}t_{l_1l_2} c_{l_1}^\dagger c_{l_2} + \frac 1 4 \sum_{l_1 l_2 l_3 l_4}\overline{v}_{l_1l_2l_3l_4} c_{l_1}^\dagger c_{l_2}^\dagger c_{l_3} c_{l_4}
+\end{equation}
+where $t_{l_1l_2}$ and $\overline{v}_{l_1 l_2 l_3 l_4}$ are defined as 
+\begin{align}
+    \label{eq:t_op}
+    t_{l_1l_2} &= \bra{-}c_{l_1}c_{l_2} t c_{l_1}^\dagger c_{l_2}^\dagger \ket{-} = \bra{l_1 l_2}t\ket{l_1 l_2}
+    \\ \overline{v}_{l_1 l_2 l_3 l_4} &= \bra{l_1 l_2 l_3 l_4} v \ket{l_1 l_2 l_3 l_4} - \bra{l_1 l_2 l_4 l_3} v \ket{l_1 l_2 l_4 l_3}
+\end{align}
+The minimization \ref{eq:fdv_hf} can be restated as the variation of $\bra{\Psi}\hat H \ket{\Psi}$, with respect to the density matrix $\rho_{ll'}$, which yields the single particle hamiltonian $h$
+\begin{equation}
+    \label{eq:spe_scnd}
+    h_{ll'} = \pdv{E[\rho]}{\rho_{ll'}} = t + \sum_{kk'}\overline{v}_{lk'l'k}\rho_{kk'} = t+\Gamma_{ll'}.
+\end{equation}
+Being $h$ diagonal in the Hartree-Fock basis, the self-consistent solution is the one for which
+\begin{equation}
+    [h, \rho] = 0
+\end{equation}
+holds.
 \subsubsection{Symmetry propagation}
-COMPLETARE
+Suppose to start a Hartree-Fock calculation with an initial guess $\ket{\Psi}^{(0)}$ for which the corresponding density matrix is symmetric under the action of a many-body symmetry operator $S$ which commutes with the Hamiltonian
+\begin{equation}
+    \label{eq:comm_S_H}
+    [S, \hat H] = 0.
+\end{equation}
+It can be shown \cite{ring2004nuclear} that 
+\begin{equation}
+    \label{eq:comm_S_Gamma}
+    S\Gamma[\rho] S^\dagger  = \Gamma[S\rho S^\dagger].
+\end{equation}
+The single particle Hamiltonian $h$ will then display the same property
+\begin{equation}
+    \label{eq:comm_h_S}
+    S h[\rho] S^\dagger = h[S\rho S^\dagger]
+\end{equation}
+meaning that $h$ will be symmetric under the action of $S$, as well as the next iteration's density matrix $\rho^{(1)}$. The symmetry $S$ gets propagated self-consistently until the minimum is found.
+\\This has profound numerical implications, since the real minimum of deformed nuclei can be found only starting from starting guesses with similar broken symmetries. It can be the case that numerical noise allows to explore the full energy surface, but if one has to take into consideration the numerical cost of a bad guess, then it's still advantageous to start from a good one.
 \subsection{Density Functional Theory}
 It shall be evident shortly, in section \ref{sec:skyrme}, that a more general approach to microscopic models has to be taken, in order to give a satisfactory description of the nuclear world.
 \\The framework that we'll briefly outline here is called Density Functional Theory (DFT). DFT was introduced by P. Hohenberg and W. Kohn in 1964 \cite{HK}, by proving two theorems.
