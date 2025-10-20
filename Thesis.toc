@@ -34,7 +34,7 @@
 \contentsline {subsubsection}{On higher order approximations and performance}{19}{subsubsection*.80}%
 \contentsline {section}{\numberline {2.2}Eigenvalue problem}{19}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Conjugate Gradient and numerical techniques}{19}{subsection.2.2.1}%
-\contentsline {subsubsection}{Conjugate Gradient and numerical techniques}{20}{subsubsection*.81}%
+\contentsline {subsubsection}{Conjugate Gradient and numerical techniques}{19}{subsubsection*.81}%
 \contentsline {paragraph}{Steepest descent method}{20}{paragraph*.83}%
 \contentsline {subsubsection}{Preconditioning}{21}{subsubsection*.88}%
 \contentsline {subsubsection}{Rayleigh-Ritz procedure}{21}{subsubsection*.91}%

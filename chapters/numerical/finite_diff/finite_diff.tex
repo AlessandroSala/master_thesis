@@ -3,27 +3,27 @@
 The framework used to numerically solve the relevant PDEs of the problem, is the one of finite differences. The core idea is to discretize the domain on a 3D mesh, use Taylor expansions to approximate differential operators and then solve the resulting system of linear equations.
 \subsection{3D mesh}
 The first step of the process is representing the different fields in a numerical, discretized fashon.
-Generally speaking, we deal at most with 2-rank tensors, which vary in space and spin. 
-\\Discretizing the 3D cartesian space with a 3-index mesh, choosing a box which size on x, y, z is respectively $[-a_x, a_x]$, $[-a_y, a_y]$, $[-a_z, a_z]$, and a number of points $N_x, N_y, N_z$, the resulting lattice will be given by
+Generally speaking, we deal at most with 2-rank tensors, which depend on three space coordinates and one spin coordinate.
+\\Discretizing the 3D cartesian space with a 3-index mesh, choosing a box which size on x, y, z is respectively $[-a_x, a_x]$, $[-a_y, a_y]$, $[-a_z, a_z]$, and a number of points $n_x, n_y, n_z$, the resulting lattice will be given by
 \begin{equation*}
 V=\{(-a_x+ih_x, -a_y+ih_y, -a_z+ih_z)\} = \{(x_i, y_j,z_k)\} 
 \end{equation*}
 Where the indices and step sizes are
 \begin{align*}
-  i&=0,\ldots,N_x-1\quad h_x = \frac{2a_x}{N_x-1}\\
-  j&=0,\ldots,N_y-1\quad h_y = \frac{2a_y}{N_y-1}\\
-  k&=0,\ldots,N_z-1\quad h_z = \frac{2a_z}{N_z-1}
+  i&=0,\ldots,n_x-1\quad h_x = \frac{2a_x}{n_x-1}\\
+  j&=0,\ldots,n_y-1\quad h_y = \frac{2a_y}{n_y-1}\\
+  k&=0,\ldots,n_z-1\quad h_z = \frac{2a_z}{n_z-1}
 \end{align*}
-For ease of notation, we will assume $a=a_x=a_y=a_z=a$ and $N=N_x=N_y=N_z=N$, without losing generality.
+For ease of notation, we will assume $a=a_x=a_y=a_z=a$ and $n=n_x=n_y=n_z=n$, without losing generality.
 \\Including the spin degree of freedom, we can finally represent fields in a numerical way through
 \begin{equation}
     \varphi(\bm r, \sigma) \mapsto \varphi(x_i, y_j, z_k, s) = \varphi_{ijks}
 \end{equation}
 \subsubsection{Differential operators discretization}
 By using Taylor series, it's possible to write approximations to derivatives \cite{Zhou1993}, in any point of the lattice, of any (reasonable) order of accuracy, involving only near neighbouring points. In the present work, 5-points derivates are used, meaning Taylor expansions are written for $\varphi(x\pm h)$ and $\varphi(x\pm 2h)$ to compute the differential operators. Formulae for first and second derivates are given in appendix \ref{app:5p_derivatives}.
-\\From the theory background of chapter \ref{chap:hf}, we discern two main kinds of PDEs, the Schr\"odinger like KS equation, and the Poisson equation. Both are similar to a diffusion equation, but the former involves the spin degree of freedom, while the latter requires careful treatment of the boundary conditions.
+\\From the theory background of chapter \ref{chap:hf}, we discern two main kinds of PDEs: the Schr\"odinger like KS equation, and the Poisson equation.
 \subsection{Schr\"odinger equation}
-Starting from the Schr\"odinger equation \ref{eq:spe_ks}, reported here for clarity
+Starting from the Schr\"odinger equation \eqref{eq:spe_ks}, reported here for clarity
 \begin{equation*}
     \bigg[-\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg) + U_q(\mathbf r) + \delta_{\text{q,proton}}U_C(\mathbf r)-i\mathbf B_q(\mathbf r)\cdot(\nabla \times \boldsymbol\sigma) \bigg]\varphi=\varepsilon\varphi
 \end{equation*}
@@ -31,20 +31,20 @@ it can be compactly written as
 \begin{equation}
     \label{eq:pde} f(\nabla^2 \varphi, \nabla \varphi, \varphi, \bm r, s) = \varepsilon\varphi.
 \end{equation}
-If $f$ is linear in $\varphi$, it would be possible to rewrite it as a linear combination of $\varphi$ on the mesh, after which we can use linear algebra methods to solve the problem.
+If $f$ is linear in $\varphi$, it is be possible to rewrite it as a linear combination of the values of $\varphi$ on the mesh, after which we can use linear algebra methods to solve the problem.
 \paragraph{Linearity}
 Breaking down each part of the equation, the kinetic term
 \begin{equation}
 \label{eq:kin_lin_dim}
 \nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg)\varphi = \frac{\hbar^2}{2m^{*}_q(\mathbf r)} \nabla^2\varphi + \nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\bigg)\cdot \nabla\varphi
 \end{equation}
-Is evidently linear in $\varphi$. 
-\\The spin-orbit coupling, which most generally reads
+is evidently linear in $\varphi$. 
+\\The spin-orbit term of \eqref{eq:spe_ks}, which we write as
 \begin{align*}
-    \hat {{h}}_{\text{SO}}&=\bm f (\bm r )\cdot (\nabla \times \pauli ) 
-    \\&=f_x(\bm r)(\sigma_z\partial_y - \sigma_y\partial_z) + f_y(\bm r)(\sigma_x\partial_z - \sigma_z\partial_x) + f_z(\bm r)(\sigma_y\partial_x - \sigma_x\partial_y)
+    \hat {{h}}_{\text{SO}}&=-i\mathbf B_q (\bm r )\cdot (\nabla \times \pauli ) 
+    \\&=-i[\mathbf B_{q,x}(\bm r)(\sigma_z\partial_y - \sigma_y\partial_z) + \mathbf B_{q,y}(\bm r)(\sigma_x\partial_z - \sigma_z\partial_x) + \mathbf B_{q,z}(\bm r)(\sigma_y\partial_x - \sigma_x\partial_y)]
 \end{align*}
-where $\hat {h}_\text{SO}$ acts on the spinor $\varphi_{ijk}$. Since $\bm \sigma$ is the vector of Pauli matrices acting as linear operators on $\varphi_{ijk}$, this portion of the equation is linear in $\varphi$.
+is also linear in $\varphi$.
 \\Finally, the mean field terms $U_q, U_c$ 
 \begin{equation*}
     (U_q + \delta_{\text{q,proton}}U_c)\varphi
@@ -52,11 +52,12 @@ where $\hat {h}_\text{SO}$ acts on the spinor $\varphi_{ijk}$. Since $\bm \sigma
 are just multiplicative, hence linear.
 \\Given that the whole equation is linear in $\varphi$, we can evaluate it on the chosen mesh, using finite differences to approximate the differential operators, yielding a linear eigenvalue problem of the form
 \begin{align}
-    \sum_n^{N_x\cdot N_y\cdot N_z \cdot 2} A_{mn}\varphi_{n} &= E\varphi_m
+    \sum_{\alpha = 1}^{N} A_{\alpha\beta}\varphi_{\beta} &= E\varphi_\alpha
 \end{align}
+where the shorthand notation $N=2\cdot N_x\cdot N_y\cdot N_z$ is used to denote the size of the matrix A, which is $N\times N$.
 \subsubsection{Boundary conditions}
-We expect the nucleus to be a localized object, prompting null Dirichlet boundary conditions for the Schr\"odinger equation.
-Near the boundaries, the derivatives will involve points outside the box, setting these points to zero, is equivalent to solving 
+We expect the nucleus to be a localized object, leading to null Dirichlet boundary conditions for the Schr\"odinger equation.
+Near the boundaries, the derivatives will involve points outside the box and setting these points to zero, is equivalent to solving 
 \begin{equation}
     \begin{bmatrix}
         0 & 0 & 0 & 0 & 0
@@ -112,7 +113,3 @@ A V = \tilde \rho
 Where $A$ is constructed as previously specified. Solving with $\tilde \rho $ on the right hand side will force the solution to abide boundary conditions.
 \subsubsection{On higher order approximations and performance}
 Higher and higher order approximations for derivatives involve more points that are further away. This increases accuracy by reducing the finite differences error, but it also decreases matrix sparseness.
-\\Algorithms like Conjugate Gradient, as we'll see in the next section, and linear algebra computations, benefit from matrix sparseness, since multiplication by zero is readily known. The implication is that performance \textit{vs} accuracy is a tradeoff that isn't univocal to every problem.
-\\In the present work, the golden choice has been 5-point derivatives; but it's not definitive, as the lattice points rapidly cap depending on the system's memory.
-\\As an example, take a seemingly harmless grid, made of 50 points in each direction. The resulting matrix will be $50\times 50 \times 50 \times 2=\num{2.5e5}$ both in columns and rows. 
-It may be the case in the future, that higher order derivatives will be needed, to compensate for the limitation brought by the $\mathcal O (h^n)$ polynomial accuracy of the method in the step size.
