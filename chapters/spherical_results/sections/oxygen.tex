@@ -5,7 +5,8 @@ All $\texttt{hfbcs\_qrpa}$ calculations were performed using a mesh size of $0.1
 The first results we will take a look at are the ones for $^{16}$O. It's the best candidate for gauging the solver's performance, as it is a very light, double magic nucleus, meaning it has no pairing interaction and a spherical shape.
 \\All calculations are performed on a box of size $[-9, 9]$ fm in all three directions and a step size of $0.3$ fm, correponding to $2\cdot 60^{3}$ mesh points.
 \subsection{Results neglecting Coulomb interaction}
-Since the Skyrme functional is complex and nuanced, results are shown for increasing terms in \ref{eq:skfunc}, starting from $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$ reported in table \ref{tab:no_so_no_j_no_coul}, neglecting the Coulomb interaction. Without further terms, the spin-orbit field $\bm B(\bm r)$ is null, hence the $1p_{3/2}$ and $1p_{1/2}$ levels show degeneration in energy.
+Since the Skyrme functional is complex and nuanced, results are shown for more and more terms in expression \eqref{eq:skfunc}. We start by including only $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$ and neglecting the others and the Coulomb interaction; results are reported in table \ref{tab:no_so_no_j_no_coul}.
+Without further terms, the spin-orbit field $\bm B(\bm r)$ vanishes, hence the $1p_{3/2}$ and $1p_{1/2}$ levels show degeneration in energy.
 \\Since $N=Z$, assuming equal masses the single-particle equations will be exactly equal between the two species, therefore only neutron results are reported. Note that $C_1$ terms reduce to being null in this case, that is until we either break the $N=Z$ equality or introduce the Coulomb interaction.
 \begin{table}[ht]
   \centering
@@ -33,7 +34,7 @@ Since the Skyrme functional is complex and nuanced, results are shown for increa
   \caption{$^{16}$O including $C_0^{\rho}$, $C_1^{\rho}$, $C_0^{\tau}$, $C_1^{\tau}$ terms, neglecting Coulomb interaction.}
   \label{tab:no_so_no_j_no_coul}
 \end{table}
-In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are included just for the spin-orbit field $\bm B(\bm r)$, but not for the mean field $U(\bm r)$; from an interaction point of view, it's as if we were neglecting the spin-gradient coupling term \cite{chabanat2}. As expected, the $1p_{3/2}$ and $1p_{1/2}$ degeneration is removed, displaying the spin-orbit splitting, which lowers the $j=3/2$ level and raises the $j=1/2$ level.
+In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are included just for the spin-orbit field $\bm B(\bm r)$, but not for the mean field $U(\bm r)$; from an interaction point of view, it's as if we were neglecting the spin-gradient coupling term \cite{chabanat2}. As expected, the $1p_{3/2}$ and $1p_{1/2}$ degeneration is removed, displaying the spin-orbit splitting, which lowers the total angular momentum $j=3/2$ level and raises the $j=1/2$ level.
 \begin{table}[ht]
   \centering
   \begin{tabular}{lrrccc}
@@ -57,7 +58,7 @@ In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ term
     1p$_{1/2}$ &[MeV] & -14.335 & -14.335 & - & -\\
     \bottomrule
   \end{tabular}
-  \caption{$^{16}$O including $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$, $C_0^{\div \bm J}$, $C_1^{\div \bm J}$ terms, neglecting Coulomb interaction and spin-gradient coupling.}
+  \caption{$^{16}$O including $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$, $C_0^{\div \bm J}$, $C_1^{\div \bm J}$ terms, neglecting Coulomb interaction and $J^2$ terms.}
   \label{tab:compare_so}
 \end{table}
 \\Lastly, the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are also included in the calculation of the mean-field, resulting in the full implementation of the Skyrme functional. As shown in table \ref{tab:compare_j2}, the effect of this addition on the ground state is little, as the spin current $J_{\mu \nu}$ is small in light, closed shell nuclei.
@@ -126,7 +127,7 @@ As the final addition to get a complete and accurate description of $^{16}$O, th
   \caption{$^{16}$O complete of the Skyrme functional and Coulomb interaction.}
   \label{tab:confronto}
 \end{table}
-As shown in tables \ref{tab:no_so_no_j_no_coul}, \ref{tab:compare_so} and \ref{tab:compare_j2}, results for $^{16}$O are in great agreement with the output of the well established \texttt{hfbcs\_qrpa} code.
+\\As shown in tables \ref{tab:no_so_no_j_no_coul}, \ref{tab:compare_so}, \ref{tab:compare_j2}, and \ref{tab:confronto} results for $^{16}$O are in great agreement with the output of the \texttt{hfbcs\_qrpa} code for all the terms in the Skyrme functional.
 \section{Results for heavier nuclei}
 In the following section, results for some spherical nuclei heavier than $^{16}$O are presented in tables \ref{tab:compare_all_ca48}, \ref{tab:compare_all_ni56} and \ref{tab:compare_all_zr90}.
 Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight increase of the numerical error can be observed as the step size increaseas, which is compatible with the polynomial error in the finite difference method.
@@ -285,6 +286,6 @@ The Skyrme functional is highly successful at producing theoretical values in gr
     $E_{\text{exp}}$ & 127.62 & 414.33 & 483.99 & 783.89 \\ 
     \bottomrule
     \end{tabular}
-    \caption{Comparison of experimental binding energies in MeV with theoretical calculated values.}
+    \caption{Comparison of experimental binding energies in MeV with theoretical calculated values using the SLy5 functional.}
     \label{tab:exp_comp}
   \end{table}

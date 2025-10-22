@@ -1,0 +1,57 @@
+\section{Functional derivatives}
+\label{app:func_der}
+Given a functional $\mathcal F[\rho]$, the functional derivative is defined as the variation of $\mathcal F$ with respect to a small change in the density $\rho$, formally
+\begin{equation*}
+    \fdv{\mathcal F[\rho]}{\rho} = \lim_{\delta \rho \to 0} \frac{\mathcal F[\rho+\delta \rho] - \mathcal F[\rho]}{\delta \rho}.
+\end{equation*}
+\paragraph{Power dependence}
+Let us suppose to have $\mathcal F[\rho] = A\rho^{\sigma}$, where $A$ is a constant. A variation $\delta \rho$ of $\rho$ yields
+\[
+\mathcal F[\rho+\delta\rho] - \mathcal F[\rho]
+= A\big[(\rho+\delta\rho)^{\sigma} - \rho^{\sigma}\big].
+\]
+Expanding to first order in $\delta\rho$ (Taylor expansion) we obtain
+\[
+(\rho+\delta\rho)^{\sigma} = \rho^{\sigma} + \sigma \rho^{\sigma-1}\,\delta\rho + \mathcal{O}((\delta\rho)^2),
+\]
+hence
+\[
+\mathcal F[\rho+\delta\rho] - \mathcal F[\rho] = A\,\sigma\,\rho^{\sigma-1}\,\delta\rho + \mathcal{O}((\delta\rho)^2).
+\]
+Dividing by $\delta\rho$ and taking the limit $\delta\rho\to 0$ gives the usual result for the functional derivative
+\begin{equation}
+\fdv{\mathcal F[\rho]}{\rho} = A\,\sigma\,\rho^{\sigma-1}.
+\end{equation}
+\paragraph{Divergence of a vector field}
+Consider the functional
+\[
+\mathcal G[\bm J](\bm r) = \nabla_{\bm r}\!\cdot\!\bm J(\bm r).
+\]
+A small variation $\delta\bm J$ induces
+\[
+\delta\mathcal G(\bm r) = \nabla_{\bm r}\!\cdot\!\delta\bm J(\bm r).
+\]
+We can express the variation $\delta\bm J(\bm r)$ in terms of its values at all points $\bm r'$ as
+\[
+\delta\bm J(\bm r) = \int d^3r'\; \delta\bm J(\bm r')\,\delta(\bm r - \bm r').
+\]
+Substituting this into the expression for $\delta\mathcal G(\bm r)$ yields
+\[
+\delta\mathcal G(\bm r)
+= \int d^3r'\; \nabla_{\bm r}\!\cdot\!\big[\delta\bm J(\bm r')\,\delta(\bm r - \bm r')\big].
+\]
+Since $\bm r$ and $\bm r'$ are independent variables, the derivative acts only on the delta function:
+\[
+\delta\mathcal G(\bm r)
+= \int d^3r'\; \big(\nabla_{\bm r}\delta(\bm r - \bm r')\big)\!\cdot\!\delta\bm J(\bm r').
+\]
+By the definition of the functional derivative as the kernel relating $\delta\mathcal G(\bm r)$ to $\delta\bm J(\bm r')$, we can read off
+\begin{equation}
+\frac{\delta\,\mathcal G[\bm J](\bm r)}{\delta \bm J(\bm r')}
+= \nabla_{\bm r}\,\delta(\bm r - \bm r').
+\label{eq:funcder_div_vec}
+\end{equation}
+In compact vector form \cite{Jackson1998},
+\[
+\frac{\delta\,(\nabla_{\bm r}\!\cdot\!\bm J(\bm r))}{\delta \bm J(\bm r')} = \nabla_{\bm r}\,\delta(\bm r - \bm r').
+\]

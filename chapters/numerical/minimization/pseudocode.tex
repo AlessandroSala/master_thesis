@@ -1,4 +1,4 @@
-\subsection{Code implementation}
+\subsection{Details on the implementation of the code}
 The whole Hartree-Fock framework presented up to this point, has been implemented using the C++ language \cite{stroustrup1986overview} and the Eigen linear algebra library \cite{eigenweb}, which implements linear algebra operatrions through low level routines such as $\texttt{LAPACK}$ and $\texttt{BLAS}$. In figure \ref{fig:pseudocode}, the schematics of the program structure is reported.
 \begin{figure}[h!]
 \begin{forest}
@@ -33,14 +33,15 @@ The whole Hartree-Fock framework presented up to this point, has been implemente
     [HF iterations, name=1
       [Solve BCS self-consistent equations]
       [Generate iteration data
-        [Generate new densities mix with previous ones]
+        [{Generate new densities, mix with previous ones}]
         [Generate mean fields]
-        [Generate constraint fields mix with previous ones]
+        [{Generate constraint fields, mix with previous ones}]
       ]
       [Compute single-particle hamiltonian]
       [Diagonalize $h$]
       [Normalize wavefunctions]
       [Check convergence
+        [{Compute energies, constraints residuals}]
         [If above tolerance, name=3]
       ]
     ]

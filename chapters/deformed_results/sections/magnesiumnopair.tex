@@ -2,8 +2,12 @@
 In the following section, results for $^{24}$Mg are presented, it's a natural choice to study how well deformations are represented by our framework, since it's light, very deformed and shows no pairing interaction in its ground state.
 \subsection{\texttt{HFBTHO} code and calculation details}
 \subsubsection{\texttt{HFBTHO}}
-To benchmark the code in the case of nuclear deformation, the \texttt{HFBTHO} code was used \cite{MAREVIC2022108367}, it's a HFB code which minimizes the energy functional on a (Transformed) Harmonic Oscillator basis. Since $^{24}$Mg is a light nucleus, it still works well in this case.
-\\All calculations are carried out using a number of shells of $12$ and a null pairing interaction. Default paramters for the quadrupole constraints were used.
+To benchmark the code in the case of nuclear deformation, the \texttt{HFBTHO} code was used \cite{MAREVIC2022108367}, it's a HFB code which minimizes the energy functional on a (Transformed) harmonic oscillator basis. Since $^{24}$Mg is a light nucleus, it still works well in this case.
+All calculations were performed using 12 oscillator shells and assuming a zero pairing interaction. 
+Default parameters were adopted for the quadrupole constraints. 
+Since the version of \texttt{HFBTHO} used in this work has been compiled with the $J^2$ terms disabled, we present the results from our code both with and without them. 
+The results obtained without them serve as a benchmark for the code, 
+while those including the $J^2$ contribution illustrate their impact on the calculated observables.
 \subsubsection{Code parameters and axial constraint}
 As for our code, calculations are performed on a box $[-10, 10]$ fm.
 In the case of the ground state calculation, a step size of $0.33$ fm is used, with a starting guess of a deformed Woods-Saxon with $\beta_2=0.4$.
@@ -20,19 +24,19 @@ Table \ref{tab:mg_table} reports data for the ground state of $^{24}$Mg, compare
 Charge radii for the two codes are displayed but not compared, due to different formulas used for their computation.
 \begin{table}[ht]
   \centering
-  \begin{tabular}{lrrccc}
+  \begin{tabular}{lrccccc}
     \addlinespace[0.3em]
     \toprule
-    && GCG & \texttt{HFBTHO} & $\Delta$ & $\Delta\%$ \\
+    && GCG & GCG no $J^2$ & \texttt{HFBTHO} & $\Delta$ & $\Delta\%$ \\
     \midrule
-    $E_{\text{TOT}}$& [MeV]    & -195.854 &-197.030 & 1.176 & 0.597 \\
-    $\expval{ r^2_n}^{1/2}$    &[fm] & 3.0124    & 2.9996 & 0.0128  & 0.427\\
-    $\expval{ r^2_p}^{1/2}$    &[fm] & 3.0475    & 3.0326  & 0.0149 & 0.491\\
-    $\expval{ r^2_{ch}}^{1/2}$ &[fm] & 3.5390    & 3.4614  & - & - \\
-    $\expval{z^2}^{1/2}$ &[fm] & 2.1454 &-  &- &-\\
-    $\expval{x^2}^{1/2}$ &[fm] & 1.5112 &- & -&-\\
-    $\expval{y^2}^{1/2}$ &[fm] & 1.5147 &- & -&-\\
-    $\beta_2$ &[-] & 0.399 &0.390 & 0.009 & 2.3  \\
+    $E_{\text{TOT}}$& [MeV]    & -195.854 & -197.219 &-197.030 & 0.189 & \num{9.52e-2} \\
+    $\expval{ r^2_n}^{1/2}$    &[fm] & 3.0124 & 2.9998    & 2.9996 & 0.0002  & \num{6.67e-3}\\
+    $\expval{ r^2_p}^{1/2}$    &[fm] & 3.0475 & 3.0346    & 3.0326  & 0.0020 & \num{6.59e-2}\\
+    $\expval{ r^2_{ch}}^{1/2}$ &[fm] & 3.1364 & 3.1240    & 3.4614  & - & - \\
+    $\expval{z^2}^{1/2}$ &[fm] & 2.145 &2.128 &- &-&-\\
+    $\expval{x^2}^{1/2}$ &[fm] & 1.511 &1.511 & -&-&-\\
+    $\expval{y^2}^{1/2}$ &[fm] & 1.514 &1.514 & -&-&-\\
+    $\beta_2$ &[-] & 0.399 &0.390 & 0.390 & - & -  \\
     \bottomrule
   \end{tabular}
   \caption{Results for $^{24}$Mg ground state, no pairing interaction, box $[-10, 10]$ fm, step size 0.33 fm, SKM* parametrization.}
@@ -49,6 +53,6 @@ In figure \ref{fig:mg_no_pair_deformation}, the deformation curve is shown for $
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\linewidth]{Images/mg_nopair_curve.pdf}
-  \caption{Magnesium deformation curve, no pairing interaction, calculation done on a box $[-10, 10]$ fm, step size 0.66 fm, SKM* parametrization.}
+  \caption{Magnesium deformation curve, no pairing interaction, calculation done on a box $[-10, 10]$ fm, step size 0.66 fm, SKM* parametrization, neglecting $J^2$ terms.}
   \label{fig:mg_no_pair_deformation}
 \end{figure}

@@ -1,21 +1,28 @@
 \section{Eigenvalue problem}
-This section is devoted to the approximate solution of the eigenvalue problem, by exploring the idea behind the Conjugate Gradient (CG) algorithm and its use in the General Conjugate Gradient (GCG).
-\\Eigenvalue problems are ubiquitous in physics and engineering, and while solving one for a small matrix is trivial, it still requires roughly $O(n^3)$ \cite{golub13} operations to do so. More often than not, real computational applications result in large-scale matrices, which are completely out of question for exact eigenvalues calculations, thus requiring the use of approximate algorithms. 
-\\We'll start by skimming through the basics of the most modern and used algorithms, by understanding shared numerical techniques and addressing their limitations, and then move on to the GCG.
+This section is devoted to the approximate solution of the eigenvalue problem, needed for the Schr\"odinger equation \eqref{eq:spe_ks}. 
+\\Eigenvalue problems are ubiquitous in physics and engineering, and while solving one for a small matrix is trivial, it still requires roughly $O(n^3)$ operations \cite{golub13} to do so. More often than not, real computational applications result in large-scale matrices, which are completely out of question for exact eigenvalues calculations, thus requiring the use of approximate algorithms. 
+\\We will begin by describing common building blocks of iterative eigensolvers in section \ref{sec:techniques}, namely:
+\begin{itemize}
+    \item the approximate solutions of linear systems by the use of the Conjugate Gradient method;
+    \item matrix preconditioning to speed up convergence;
+    \item the Rayleigh-Ritz procedure to find good approximations to the eigenpairs in a certain subspace in section; and
+    \item the shift-and-invert method, to select the desired portion of the eigenvalue spectrum in section.
+\end{itemize}
+After describing these building blocks, some of the most commonly used eigensolvers are hinted in section \ref{sec:eigensolvers}, focusing on the core ideas and stating their limitations, to finally address the General Conjugate Gradient method, whose implementation in the present work is detailed in section \ref{sec:gcg}.
 \subsection{Conjugate Gradient and numerical techniques}
-Iterative eigensolvers often share some common numerical techniques, like the Rayleigh-Ritz procedure, shift-and-invert, and approximate linear systems solvers. 
-We will begin by describing these recurring techniques.
+\label{sec:techniques}
 \subsubsection{Conjugate Gradient and numerical techniques}
+\label{sec:cg}
 Solving linear systems of the form
 \begin{equation}
     \label{eq:lin_sys}
     Ax = b
 \end{equation}
 is crucial in many eigensolvers. The Conjugate Gradient (CG) is perhaps the most famous iterative solver in this sense, especially in regards to sparse matrices, as we'll see in a moment.
-CG applies to cases where $A$ is an $n\times n$, positive-definite, symmetric matrix, and $x$ and $b$ are $n$-dimensional vectors.
+CG applies to cases where $A$ is an real, $n\times n$, positive-definite, symmetric matrix, and $x$ and $b$ are $n$-dimensional vectors.
 \\Many generalizations to this method exist, which relax the requirements on the matrix, like BiCGSTAB, CGRES and so on \cite{Saad1992}. We'll describe the working principle of CG, but the same applies to all the others, with slight variations.
 \paragraph{Steepest descent method}
-The quadratic form $f(x)$ derived from system \ref{eq:lin_sys} is
+The quadratic form $f(x)$ derived from system \eqref{eq:lin_sys} is
 \begin{equation}
     \label{eq:quad_form}
     f(x) = \frac 1 2 x^T A x - b^T x
@@ -25,7 +32,7 @@ If $A$ is symmetric, positive-definite, the shape of $f(x)$ is convex and has a 
     \label{eq:quad_form_min}
     \nabla_x f(x) = A x_m - b = 0 \implies A x_m = b
 \end{equation}
-This implies that the extremum of the quadratic form is the also the solution of the linear system \ref{eq:lin_sys}.
+This implies that the extremum of the quadratic form is the also the solution of the linear system \eqref{eq:lin_sys}.
 \\We can employ the well-known gradient descent technique \cite{PainlessCGM} to find such point: starting from a guess $x_0$, we compute the direction where $f$ decreases the most (the residual $r_i$), compute the step size for maximal decrease, and update $x_i$ at each iteration accordingly, repeating until convergence.
 \begin{align}
 d_i = r_i =&= b - A x_i \\
@@ -43,32 +50,41 @@ This is a powerful but highly inefficient procedure. We are not ensuring that th
     \\\beta_{i+1} = \frac{r_{i+1}^T r_{i+1}}{r_i^T r_i}
     \\d_{i+1} = r_{i+1} + \beta_{i+1} d_i
 \end{align}
-Where iterations are truncated if the norm of the residual $r_i$ is smaller than a certain threshold.
+where iterations are truncated if the norm of the residual $r_i$ is smaller than a certain threshold.
 CG represents a great method for sparse matrices, because it can be proven to be of complexity $O(m)$, where $m$ is the number of non-zero elements in $A$ \cite{PainlessCGM}.
+\paragraph{Complex matrices} Algorithm \eqref{eq:cg_method} and the CG method in general can be used for complex matrices, under the condition that $A$ is Hermitian and positive-definite when using the complex inner product, meaning that
+\begin{equation}
+    A = A^\dagger\text{ and }
+    x^\dagger Ax > 0.
+\end{equation}
 \subsubsection{Preconditioning}
+\label{sec:preconditioning}
 The CG method convergence is known to be limited by the modulus of the condition number of $A$ \cite{PainlessCGM}, given by 
 \begin{equation}
     \label{eq:cond_num}
-    \kappa(A) = \frac{\lambda_\text{max}(A)}{\lambda_\text{min}(A)}.
+    \kappa(A) = \frac{\lambda_\text{max}(A)}{\lambda_\text{min}(A)}
 \end{equation}
+where $\lambda_\text{max}$ and $\lambda_\text{min}$ are respctively the largest and smallest eigenvalues of $A$ in magnitude.
 If we were able to find a good \textit{preconditioner} $M$, symmetric and positive-definite, such that $\kappa(M^{-1}A) \lll \kappa(A)$, and $M^{-1}$ is easy to compute, then the algorithm would converge much faster, by solving $M^{-1}Ax = M^{-1}b$, since $x$ is also the solution of $Ax = b$.
 \begin{equation}
     \label{eq:precond}
-    x = (M^{-1}A)^{-1} M^{-1}b = A^{-1} MM^{-1} b = A^{-1} b
+    x = (M^{-1}A)^{-1} M^{-1}b = A^{-1} MM^{-1} b = A^{-1} b.
 \end{equation}
-Without delving the details of the preconditioner implementation, detailed in \cite{PainlessCGM}, note that, in general, $M^{-1}A$ is neither positive-definite nor symmetric, which requires a decomposition of the type $M = EE^T$ to be used.
+Without delving into the details of the preconditioner implementation, detailed in \cite{PainlessCGM}, note that, in general, $M^{-1}A$ is neither positive-definite nor symmetric, which requires a Cholesky decomposition \cite{cholesky} $M = EE^T$ to be used, so that the problem may be restated with a symmetric positive-definite matrix $E^{-1}AE^{-T}$.
 \\The catch with preconditioning is that $M$ has no unique recipe. Preconditioners are widely spread across numerical analysis, so many methods have been explored and implemented \cite{pearson2020preconditioners}.
 \subsubsection{Rayleigh-Ritz procedure}
-A common denominator of all these algorithms is the search of good approximations for the correct eigenvectors in a certain subspace $\mathcal K$. The method is called Rayleigh-Ritz (RR) procedure \cite{Saad1992}, and is here outlined.
-\\Suppose to have a matrix $A$ of size $n\times n$, with entries in $\C$ and a collection of vectors $k$ which form a subspace $\mathcal K \subset \C^n$, where $\mathcal K$ is an $n\times k$ matrix. Generally speaking, $n$ is large, while $k$ is much smaller.
-\\The best approximation of the true eigenvectors of $A$ in $\mathcal K$ can be computed by solving the small scale eigenvalue problem
+\label{sec:rayleigh_ritz}
+A common denominator of all these algorithms is the search of good approximations for the correct eigenvectors in a certain subspace. The method is called Rayleigh-Ritz (RR) procedure \cite{Saad1992}, and is here outlined.
+\\Let us suppose to have a matrix $A$ of size $n\times n$, with entries in $\C$ and a collection of vectors $k$ organized in a matrix $K$, where $K$ is of size $n\times k$. Generally speaking, $n$ is large, while $k$ is much smaller.
+\\The best approximation of the true eigenvectors of $A$ in the subspace $\mathcal K$ spanned by the vectors in $K$ can be computed by solving the small scale eigenvalue problem
 \begin{equation}
-    \mathcal K^\dagger A  \mathcal K C = C\Lambda
+    K^\dagger A  K C = C\Lambda.
 \end{equation}
-Resulting in matrices $\mathcal K^\dagger A \mathcal K$ and $C$ being of size $k\times k$.
-Computing $\mathcal K C$ gives a matrix of size $n\times k$, whose column vectors are the best approximations of the eigenvectors of $A$ in $\mathcal K$, with their corresponding eigenvalues in the entries of the diagonal matrix $\Lambda$.
+Here matrices $K^\dagger A K$ and $C$ are of size $k\times k$.
+Computing $K C$ gives a matrix of size $n\times k$, whose column vectors are the best approximations of the true eigenvectors of $A$ in the subspace  $\mathcal K$, with their corresponding eigenvalues in the entries of the diagonal matrix $\Lambda$.
 \subsubsection{Shift and Invert}
-The power iteration is the technique on which Krylov subspace search methods are based \cite{golub13}. By repeatedly applying matrix $A$ to a vector $x$, it gets skewed towards the eigenvector whose eigenvalue is of largest magnitude $\lambda_n$.
+\label{sec:shift_invert}
+The power iteration is the technique on which Krylov subspace search methods are based \cite{golub13}. By repeatedly applying matrix $A$ to a vector $x$, $x$ gets skewed towards the eigenvector whose eigenvalue is of largest magnitude $\lambda_n$.
 \\Assume $A$ is a hermitian matrix, thus diagonalizable. This means we can write an arbitrary vector $x^{(0)}$ as a linear combination of the eigenvectors $\{v_i\}$ of $A$.
 \begin{equation}
     x^{(0)} = \sum_i^n \alpha_i v_i
@@ -77,7 +93,7 @@ If we apply $A$ to $x^{(0)}$ k times, we get
 \begin{equation}
     x^{(k)} = A^k x^{(0)} = \sum_i^n \alpha_i A^k v_i = \sum_i^n \alpha_i\lambda_i ^{k}v_i
 \end{equation}
-It can be proven that taking the ratio of the $j$-th component of $x_j^{(k)}$ and $x_j^{(k-1)}$ converges to $\lambda_n$
+It can be proven that the ratio of the $j$-th component of $x_j^{(k)}$ and $x_j^{(k-1)}$ converges to $\lambda_n$
 \begin{equation}
     \label{eq:power_iter_ratio}
     \lim_{k\to\infty} \frac{x_j^{(k)}}{x_j^{(k-1)}} = \lambda_n
@@ -89,24 +105,25 @@ which means, that for large enough $k$, we have the relation
 \end{equation}
 So $x^{(k)}$ is an approximation of the eigenvector $v_n$ of $A$ whose eigenvalue is $\lambda_n$.
 \paragraph{Smallest eigenvalue}
-If instead of the largest eigenvalue, we were intereseted in the smallest one (in magnitude) $\lambda_0$, then we would need to apply the inverse matrix $A^{-1}$ to $x^{(k)}$, which would change the ratio \ref{eq:power_iter_ratio} to 
+If instead of the largest eigenvalue, we were intereseted in the smallest one (in magnitude) $\lambda_0$, then we would need to apply the inverse matrix $A^{-1}$ to $x^{(k)}$, which would change the ratio \eqref{eq:power_iter_ratio} to 
 \begin{equation}
     \label{eq:power_iter_ratio_inv}
     \lim_{k\to\infty} \frac{x_j^{(k)}}{x_j^{(k-1)}} = \lambda_0
 \end{equation}
-Assume for a moment that we're solving a nuclear single-particle hamiltonian, where we have a certain number of bound states of negative energy and a much larger number of unbound states with positive energy. In this case, the inverse power iteration would converge to the states which energy is closer to zero, avoiding the interesting ones on the bottom of the spectrum.
+Let us assume for a moment that we're solving a nuclear single-particle Hamiltonian, where we have a certain number of bound states of negative energy and a much larger number of unbound states with positive energy. In this case, the inverse power iteration would converge to the states whose energy is closer to zero, avoiding the interesting ones on the bottom of the spectrum.
 \\The solution is, before inverting, to shift the matrix by a quantity $\sigma$ that is very close to the lowest eigenvalue we want to compute, call it $\lambda_\sigma$ (eigenvector $v_\sigma$).
 Now, the eigenvalue of lowest magnitude of $(A-\sigma I)$ is $\lambda_\sigma - \sigma$ and by applying $(A-\sigma I)^{-1}$ to $x^{(k)}$, we'll get the approximation to the eigenvector $v_\sigma$.
 \subsection{Iterative eigensolvers}
+\label{sec:eigensolvers}
 Now that the main techniques used by iterative eigensolvers have been laid out, we can look at three general methods, which are the most commonly used ones.
 \subsubsection{Jacobi-Davidson}
-The Jacobi-Davidson method \cite{JacobiDavidson} performs the RR procedure on a subspace which is enriched at each iteration by a correction to the previous eigenvectors.
-\\Given an approximation $(u, \theta)$ of an eigenpair of matrix $A$, if the residual
+The Jacobi-Davidson, where at each iteration by a correction to the previous eigenvectors.
+\\Given an approximation $(u, \theta)$ of an eigenpair of matrix $A$, where $u$ is the approximate eigenvector and $\theta$ is the approximate eigenvalue, if the residual
 \begin{equation}
     \label{eq:residual}
     r= A u - \theta u
 \end{equation}
-is $\approx 0$, then the eigenpair converged. Otherwise, we want to fine a correction $t$ such that 
+is $\approx 0$, then the eigenpair converged. Otherwise, we want to find a correction $t$ such that 
 \begin{equation}
     \label{eq:jacobi_correction}
     r= A(u+t) - (\theta + \delta \theta) (u+t) = 0 
@@ -115,7 +132,7 @@ Linearizing this equation in $t$ gives
 \begin{equation}
    (A - \theta  I ) t = -r 
 \end{equation}
-To avoid singularity of the equation near convergence, since $u$ approximately spans a subspace of $\text{ker} (A-\theta I)$, and enrich the subspace search with a useful orthogonal correction, we project the problem onto the orthogonal subspace of $u$, which finally gives
+To avoid singularity of the equation near convergence, since $u$ approximately spans a subspace of the system's kernel $\text{ker} (A-\theta I)$, and enrich the subspace search with a useful orthogonal correction, we project the problem onto the orthogonal subspace of $u$, which finally gives
 \begin{equation}
     \label{eq:jacobi_eq_proj}
     ( I - uu^\dagger) (A - \theta  I )(I - u u^\dagger) t = -r
@@ -171,30 +188,29 @@ which exploits the power iteration. After orthogonalizing the new approximation 
 \UNTIL convergence for $k = 1, \dots, \text{nev}$
 \end{algorithmic}
 \end{algorithm}
-Lanczos is extremely efficient, memory and CPU wise for extremal eigenvalues, but this limits its applicability to discretized unbound operators, where unwanted eigenvalues may dominate the Krylov subspace, and most importantly, for applications where the inner part of the spectrum is of interest, as in the case of Hartree-Fock-Bogoliubov (HFB).
+Lanczos is extremely efficient, memory- and CPU-wise for extremal eigenvalues, but this limits its applicability, as one may be interested in the inner portion of the eigenvalue spectrum, such in the case of Hartree-Fock-Bogoliubov (HFB).
 \\A shift-and-invert strategy would be unfeasible in the case of large scale problems, since all Lanczos steps need to be performed exactly to avoid instabilities, a well known problem in the Arnoldi generalization \cite{Saad1992}.
 \subsubsection{LOBPCG}
 The last algorithm of this short list is LOBPCG, it's the newest and most sofisticated one of the three.
-\\Introduced by A. V. Knyazev in 1991 \cite{LOBPCG}, it's a block, preconditioned conjugate gradient method, explicitly targeted at solving large-scale eigenvalue problems, and it's been used in modern solutions of the Schr\"odinger/KS equation in recent years \cite{LOBPCGDKS,Nottoli2023,LIN2013205,li2020efficient}.
-In this algorithm, the Rayleigh-Ritz procedure is done on a subspace formed as
-\begin{equation}
-    \label{eq:LOBPCG_search_subspace}
-    V = [X, W, P]
-\end{equation}
-Where $X$ is the current best eigenvectors approximation, $P$ is the block of previous search directions and $W$ is a block formed by preconditioning $P$.
+\\Introduced by A. V. Knyazev in 1991 \cite{LOBPCG}, it's a block, preconditioned conjugate gradient method, explicitly targeted at solving large-scale eigenvalue problems, and it has been used in modern solutions of the Schr\"odinger/KS equation in recent years \cite{LOBPCGDKS,Nottoli2023,LIN2013205,li2020efficient}.
 \\We won't go into the details of LOBPCG, since GCG shares with it many aspects, like blocking and search directions calculation.
 \\LOBPCG works very well for large scale problems, but it has limitations. 
-For one, it's not possible arbitrarily select the portion of the matrix spectrum to calculate, which is required for problems where variational collapse happens, like in HFB or the Dirac equation, which manifests particle/antiparticle solutions \cite{li2020efficient}.
+For one, it's not possible to arbitrarily select the portion of the matrix spectrum to calculate, which is required for problems where variational collapse happens, like in HFB or the Dirac equation, which manifests particle/antiparticle solutions \cite{li2020efficient}.
 To solve this, an additional filtering step is required \cite{LIN2013205,li2020efficient}, which introduces a computational cost in the algorithm.
 \\Lastly, LOBPCG may fail when poor conditioning is present or when high precision on the eigenvalues is required \cite{GCG1}.
 \subsection{General Conjugate Gradient}
-The General Conjugate Gradient is an iterative eigensolver designed with the aim of improving LOBPCG, it's a blocked algorithm, which uses the inverse power method and previous search directions to generate the search subspace. GCG is proven to be faster and more stable than LOBPCG \cite{GCG1}.
+\label{sec:gcg}
+The General Conjugate Gradient is an iterative eigensolver designed with the aim of improving LOBPCG, it is a blocked algorithm, which uses the inverse power method and previous search directions to generate the search subspace. GCG is proven to be faster and more stable than LOBPCG \cite{GCG1}.
 \\A slightly different implementation of the algorithm is employed in the present work, detailed in algorithm \ref{alg:mod_gcg}, to improve applicability to HF calculations and reduce the computational cost.
-\paragraph{Eigenvalue problem} The original algorithm aims at solving the general eigenvalue problem $AX = \lambda BX$. Since in our case $B=I$, it is omitted from the algorithm, reducing the computational cost of $P$ generation, and orthogonalization of $V$.
+\paragraph{Eigenvalue problem} The original algorithm aims at solving the general eigenvalue problem $AX = \lambda BX$. Since in our case $B=I$, it is omitted from the procedure, reducing the computational cost for the generation of the search direction block $P$. After orthonormalization of $V$, the calculation of $P$ is given by
+\begin{equation}
+    \label{eq:gcg_p}
+    P = X_\text{new} - X.
+\end{equation}
 \paragraph{Blocking} The algorithm allows to save converged eigenpairs (implemented) and work on a subset of the active eigenvectors. Since in a self-consistent calculation the matrix changes rapidly and at each HF iteration, it will be the case that the maximum number of iterations is reached before convergence, so we must work at all times on the remaining unconverged eigenvectors.
 \paragraph{Orthogonalization} The original paper \cite{GCG1} suggests an improved orthogonalization procedure; being beyond the scope of this work, the simpler Gram-Schmidt \cite{GM} orthogonalization is used in the present work.
+\paragraph{Shift update} The shift update is either fixed, in case of known spectrum, e.g. for HFB $\texttt{shift} = 0$, or adaptive \cite{GCG1}, so that the inverse power step can find the correct eigenvalues, using the update formula \eqref{eq:update_shift}
 \paragraph{Preconditioning} The use of a preconditioner is beyond the scope of this work, a simple diagonal preconditioner is used.
-\paragraph{Shift update} The shift update is either fixed, in case of known spectrum, e.g. for HFB $\texttt{shift} = 0$, or adaptive \cite{GCG1}, so that the inverse power step can find the correct eigenvalues, using the update formula \ref{eq:update_shift}
 \begin{equation}
     \label{eq:update_shift}
     \texttt{shift}=(\lambda_\text{nev} - 100\lambda_1)/99

@@ -1,13 +1,13 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Pseudocode of the Hartree-Fock program.\relax }}{30}{figure.caption.124}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces HF calculation convergence with varying CG tolerance for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{31}{figure.caption.126}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces HF calculation convergence with varying number of inverse power steps for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{32}{figure.caption.128}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg, box $[-10, 10]$ fm, step size $0.33$ fm.\relax }}{32}{figure.caption.129}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Numerical stability map of the HF solver for $^{16}$O. Relative error is taken as the \relax }}{34}{figure.caption.130}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Pseudocode of the Hartree-Fock program.\relax }}{33}{figure.caption.142}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces HF calculation convergence with varying CG tolerance for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{34}{figure.caption.145}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces HF calculation convergence with varying number of inverse power steps for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{35}{figure.caption.147}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg, box $[-10, 10]$ fm, step size $0.33$ fm.\relax }}{35}{figure.caption.148}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Numerical stability map of the HF solver for $^{16}$O for different box and step sizes. Relative error is taken against a benchmark reference value.\relax }}{37}{figure.caption.149}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Magnesium ground state density, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SKM* parametrization\relax }}{47}{figure.caption.152}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Magnesium deformation curve, no pairing interaction, calculation done on a box $[-10, 10]$ fm, step size 0.66 fm, SKM* parametrization.\relax }}{48}{figure.caption.154}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Magnesium ground state density, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SKM* parametrization\relax }}{51}{figure.caption.171}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Magnesium deformation curve, no pairing interaction, calculation done on a box $[-10, 10]$ fm, step size 0.66 fm, SKM* parametrization, neglecting $J^2$ terms.\relax }}{52}{figure.caption.173}%
 \addvspace {10\p@ }

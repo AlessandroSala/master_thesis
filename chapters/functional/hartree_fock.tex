@@ -13,12 +13,12 @@ With the Schr\"odinger equation of the many-body system given by
     \hat H \Psi = E\Psi.
 \end{equation}
 \subsection{Variational principle}
-Since $\hat H$ is a many body operator, finding its eigenstates would be a rather challenging task. To our aid, comes the variational principle, from which we can show that equation \ref{eq:many_body_schrodinger} is equivalent to 
+Since $\hat H$ is a many body operator, finding its eigenstates would be a rather challenging task. To our aid, comes the variational principle, from which we can show that equation \eqref{eq:many_body_schrodinger} is equivalent to 
 \begin{equation}
     \label{eq:variational_Psi}
     \delta E[\Psi] = \delta \frac{\bra{\Psi} E \ket{\Psi}}{\bra{\Psi}\ket{\Psi}} = 0.
 \end{equation}
-The variation \ref{eq:variational_Psi} can be obtained from an arbitrary variation of $\Psi$, which can be done indipendently on $\bra{\Psi}$ and $\ket{\Psi}$, since $\Psi$ is complex, yielding
+The variation \eqref{eq:variational_Psi} can be obtained from an arbitrary variation of $\Psi$, which can be done indipendently on $\bra{\Psi}$ and $\ket{\Psi}$, since $\Psi$ is complex, yielding
 \begin{equation}
     \label{eq:variational_Psi2}
     \bra{\delta \Psi} \hat H  -E\ket{\Psi} + \bra{\Psi} \hat H-E \ket{\delta \Psi} = 0
@@ -28,12 +28,12 @@ since the variation is arbitrary, we can multiply by a phase factor $\ket{\delta
     \label{eq:variational_Psi3}
     -i\bra{\delta \Psi} \hat H-E \ket{\Psi} + i\bra{\Psi} \hat H-E \ket{\delta \Psi} = 0.
 \end{equation}
-Combining equations \ref{eq:variational_Psi2} and \ref{eq:variational_Psi3}, we get
+Combining equations \eqref{eq:variational_Psi2} and \eqref{eq:variational_Psi3}, we get
 \begin{equation}
     \label{eq:var_eq_res}
     \bra{\delta \Psi} \hat H-E \ket{\Psi} = 0.
 \end{equation}
-Again, since the variation is arbitrary, equation \ref{eq:var_eq_res} satisfies equation \ref{eq:many_body_schrodinger}.
+Again, since the variation is arbitrary, equation \eqref{eq:var_eq_res} satisfies equation \eqref{eq:many_body_schrodinger}.
 \subsubsection{Ground state}
 Since we always restrict ourselves to a certain subspace of the full Hilbert space, we can only find an approximate solution to the eigenvalue problem. Expanding this solution on the complete set of exact eigenstates of $\hat H$, we have
 \begin{equation}
@@ -45,9 +45,9 @@ the total energy amounts to
     \label{eq:ground_state_min}
     E[\Psi] = \frac{\sum_{nn'}\bra {a_{n'}\Psi_{n'}}\hat H \ket{a_n \Psi_n}}{\sum_{nn'}\bra{a_{n'}\Psi_{n'}}\ket{a_n\Psi_{n}}} = \frac{\sum_{n}E_n|a_n|^2}{\sum_n|a_n|^2}\ge \frac{\sum_{n}E_0|a_n|^2}{\sum_n|a_n|^2}\ge E_0.
 \end{equation}
-where the orthonormality $\bra{\Psi_{n'}\ket{\Psi_n}}=\delta_{nn'}$ has been used. Equation \ref{eq:ground_state_min} tells us that the minimum of the variational subspace we are considering is bound from below by the true ground state energy.
+where the orthonormality $\bra{\Psi_{n'}\ket{\Psi_n}}=\delta_{nn'}$ has been used. Equation \eqref{eq:ground_state_min} tells us that the minimum of the variational subspace we are considering is bound from below by the true ground state energy.
 \subsection{Hartree-Fock equations}
-The Hartree-Fock method is the application of the variational principle \ref{eq:var_eq_res} to a many-body wavefunction represented by a Slater determinant, which reads
+The Hartree-Fock method is the application of the variational principle \eqref{eq:var_eq_res} to a many-body wavefunction represented by a Slater determinant, which reads
 \begin{equation}
     \label{eq:slater_formula}
     \Psi = \frac{1}{\sqrt {A!}} \sum_{\{p\}} (-1)^{p}  \varphi_{p(1)}(\bm r_1)\ldots \varphi_{p(A)}(\bm r_A)
@@ -67,7 +67,7 @@ We can explicit $E[\Psi] = \bra{\Psi} \hat T + \hat V\ket \Psi$, which can be ex
     \bra\Psi\hat V\ket \Psi &= \frac 1 2 \sum_{ij}\int\varphi_i^*(\bm r) \varphi_j^*(\bm r') v_{ij}(\bm r, \bm r')\varphi_i(\bm r)\varphi_j(\bm r') d\bm r d\bm r'\\
     &- \frac 1 2 \sum_{ij}\int \varphi_i^*(\bm r) \varphi_j^*(\bm r') v_{ij}(\bm r, \bm r')\varphi_i(\bm r')\varphi_j(\bm r) d\bm r d\bm r'
 \end{align}
-If we use $\varphi_i^*(\bm r)$ as the quantity to be varied for equation \ref{eq:fdv_hf}, we get the \textit{Hartree-Fock equations}
+If we use $\varphi_i^*(\bm r)$ as the quantity to be varied for equation \eqref{eq:fdv_hf}, we get the \textit{Hartree-Fock equations}
 \begin{align}
     \label{eq:hf_equations}
     &-\frac{\hbar^2}{2m} \nabla^2 \varphi_i\\
@@ -84,8 +84,8 @@ If we use $\varphi_i^*(\bm r)$ as the quantity to be varied for equation \ref{eq
 here the Lagrange multipliers $\lambda_i$ have been replaced by $\varepsilon_i$, since they can be interpreted as the energy of the single-particle states.\\
 Now, a couple of observations are in order.
 \paragraph{Exchange interaction}
-The interaction term \ref{eq:hartree}, called Hartree term, arises from considering independent particles, and is also routinely found in classical physics. The other one in \ref{eq:fock}, called Fock term, or exchange term, takes the form of an integral operator and is given by the quantum mechanical nature of the problem.
-\\For what concerns the solution of equation \ref{eq:hf_equations}, the Fock term is very problematic, and is avoided using finite-range interaction like the Gogny force \cite{Robledo_2019}, or contact forces like the Skyrme one \cite{SKYRME1958615}, which is used in the present work, since they render the exchange term as a local one.
+The interaction term \eqref{eq:hartree}, called Hartree term, arises from considering independent particles, and is also routinely found in classical physics. The other one in \eqref{eq:fock}, called Fock term, or exchange term, takes the form of an integral operator and is given by the quantum mechanical nature of the problem.
+\\For what concerns the solution of equation \eqref{eq:hf_equations}, the Fock term is very problematic, and is avoided using finite-range interaction like the Gogny force \cite{Robledo_2019}, or contact forces like the Skyrme one \cite{SKYRME1958615}, which is used in the present work, since they render the exchange term as a local one.
 \paragraph{Self-consistent solution}
 Even if the interaction terms are local, the equation is still highly non-linear, since the mean field potential will be a function of the eigenfunctions themselves. The consequece is that the solution will be found \textit{self-consistently}, that is, by solving for the set of eigenfunctions $\{\varphi_i\}$, using them to build the new mean field, and solving again, repeating the process until convergence.
 \subsection{Symmetries}
@@ -111,8 +111,8 @@ We can define the density matrix as
     \label{eq:density_op}
     \rho_{ll'} = \bra{\Psi}c_{l'}^\dagger c_l\ket{\Psi}
 \end{equation}
-which in the hartree fock basis, using relations \ref{eq:basis_change}, is diagonal and its trace is equal to the particle number $A$.
-\\Writing the many body hamiltonian \ref{eq:many_body_schrodinger} in the arbitrary basis of second quantization operators $c_l^\dagger, c_l$, we get
+which in the hartree fock basis, using relations \eqref{eq:basis_change}, is diagonal and its trace is equal to the particle number $A$.
+\\Writing the many body hamiltonian \eqref{eq:many_body_schrodinger} in the arbitrary basis of second quantization operators $c_l^\dagger, c_l$, we get
 \begin{equation}
     \label{eq:mb_hamiltonian_sq}
     \hat H = \sum_{l_1 l_2}t_{l_1l_2} c_{l_1}^\dagger c_{l_2} + \frac 1 4 \sum_{l_1 l_2 l_3 l_4}\overline{v}_{l_1l_2l_3l_4} c_{l_1}^\dagger c_{l_2}^\dagger c_{l_3} c_{l_4}
@@ -123,7 +123,7 @@ where $t_{l_1l_2}$ and $\overline{v}_{l_1 l_2 l_3 l_4}$ are defined as
     t_{l_1l_2} &= \bra{-}c_{l_1}c_{l_2} t c_{l_1}^\dagger c_{l_2}^\dagger \ket{-} = \bra{l_1 l_2}t\ket{l_1 l_2}
     \\ \overline{v}_{l_1 l_2 l_3 l_4} &= \bra{l_1 l_2 l_3 l_4} v \ket{l_1 l_2 l_3 l_4} - \bra{l_1 l_2 l_4 l_3} v \ket{l_1 l_2 l_4 l_3}
 \end{align}
-The minimization \ref{eq:fdv_hf} can be restated as the variation of $\bra{\Psi}\hat H \ket{\Psi}$, with respect to the density matrix $\rho_{ll'}$, which yields the single particle hamiltonian $h$
+The minimization \eqref{eq:fdv_hf} can be restated as the variation of $\bra{\Psi}\hat H \ket{\Psi}$, with respect to the density matrix $\rho_{ll'}$, which yields the single particle hamiltonian $h$
 \begin{equation}
     \label{eq:spe_scnd}
     h_{ll'} = \pdv{E[\rho]}{\rho_{ll'}} = t + \sum_{kk'}\overline{v}_{lk'l'k}\rho_{kk'} = t+\Gamma_{ll'}.
@@ -152,16 +152,32 @@ The single particle Hamiltonian $h$ will then display the same property
 meaning that $h$ will be symmetric under the action of $S$, as well as the next iteration's density matrix $\rho^{(1)}$. The symmetry $S$ gets propagated self-consistently until the minimum is found.
 \\This has profound numerical implications, since the real minimum of deformed nuclei can be found only starting from starting guesses with similar broken symmetries. It can be the case that numerical noise allows to explore the full energy surface, but if one has to take into consideration the numerical cost of a bad guess, then it's still advantageous to start from a good one.
 \subsection{Density Functional Theory}
-It shall be evident shortly, in section \ref{sec:skyrme}, that a more general approach to microscopic models has to be taken, in order to give a satisfactory description of the nuclear world.
-\\The framework that we'll briefly outline here is called Density Functional Theory (DFT). DFT was introduced by P. Hohenberg and W. Kohn in 1964 \cite{HK}, by proving two theorems.
-\\The \textbf{first} HK theorem states that the energy of a fermion system, subject to an external potential $V_\text{ext}$ can be expressed solely as a functional of the particle density $\rho$ of the system.
+\label{sec:dft}
+It shall be evident shortly, in section \ref{sec:skyrme}, that a more general approach to microscopic models has to be taken, in order to give a satisfactory description of the nuclear world. The method that we will briefly outline here is called Density Functional Theory (DFT).
+\\DFT was introduced by P. Hohenberg and W. Kohn in 1964 \cite{HK}, by proving two theorems.
+\\The \textbf{first} Hohenberg Kohn (HK) theorem states that the energy of a fermion system, subject to an external potential $V_\text{ext}$ can be expressed solely as a functional of the particle density $\rho$ of the system.
+While the \textbf{second} one states that the ground state of the system is found by minimizing the functional \eqref{eq:hk_theorem} with respect to $\rho$. 
 \begin{equation}
-    \label{eq:hk_theorem1}
-    E[\rho] = F[\rho] + \int V_\text{ext} \rho(\bm r) d\mathbf r
+    \label{eq:hk_theorem}
+    E[\rho] = F[\rho] + \int V_\text{ext} \rho(\bm r) d\mathbf r.
 \end{equation}
-While the \textbf{second} one states that the ground state of the system is found by minimizing its variation with respect to $\rho$. 
+The $V_\text{ext}$ term is the external potential to which the system is subject to; when treating atomic nuclei, the potential is generated by the nucleons themselves, so this term will be omitted in the following.
 \\HK theorems are fundamental but not constructive \cite{NDFT}, since they do not provide a form for the functional $F$, which is intrinsic to the physics of the fermions at hand.
-COMPLETARE
-
-
-
+A pragmatic approach to using DFT was proposed by Kohn and Sham in 1965 \cite{KS}. They proposed expressing the system as a set of non-interacting particles occupying auxiliary orbitals $\varphi_i$, which yield the particle density
+\begin{equation}
+    \rho(\bm r)=\sum_i |\varphi_i(\bm r)|^2 
+\end{equation}
+and an energy functional of the form
+\begin{equation}
+    E[\rho] = T[\rho] + E_H[\rho] + E_\text{xc}[\rho].
+\end{equation}
+where $T$ is the kinetic energy, which reads
+\begin{equation}
+    \label{eq:kin_functional}
+    T[\rho] = -\frac{\hbar^2}{2m}\sum_i \varphi_i ^*(\bm r)\nabla^2 \varphi_i(\bm r)
+\end{equation}
+and $E_H$ is the classical Hartree term, which in an electronic system may read
+\begin{equation}
+    E_H[\rho] = \iint \frac{\rho(\bm r)\rho(\bm r')}{|\bm r-\bm r'|} d\bm r d\bm r'
+\end{equation}
+and $E_\text{xc}$ is an unknown exchange term. In nuclear systems, the historical path has been to apply the Hartree-Fock method with an effective interaction, as we will see in section \ref{sec:skyrme}, and generate the proper energy density functional (EDF) with it, which is necessary for instance when dealing with density dependent forces, as we shall see for the skyrme functional in section \ref{sec:skyrme}.

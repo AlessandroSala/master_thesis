@@ -1,27 +1,53 @@
-\subsection{Skyrme functional}
-The energy functional we want to minimize is rather complex, due to the rich phenomenology of nuclear interactions and numerical nuances.
-\\The complete energy functional is
+\subsection{Energy density functional}
+The energy functional to be minimized is of the form \cite{Bender2003}
 \begin{equation}
 \label{eq:full_functional}
-E_{\text{HF}} = E_\text{Skyrme}+E_\text{Coul} + E_\text{Kin}
+E_{\text{HF}} =  E_\text{Kin}+E_\text{Skyrme}+E_\text{Coul} = \int( \mathcal E_\text{Kin} + \mathcal E_\text{Skyrme} + \mathcal E_\text{Coul})d\bm r.
 \end{equation}
-We'll begin by looking at the Skyrme and kinetic parts, while later on give a treatment for the Coulomb one.
+\subsubsection{Densities}
+Functional \eqref{eq:full_functional} can be expressed through a set of particle densities, let us define them and express them on the spin coordiantes up ($\uparrow$) and down ($\downarrow$).
+\\We can start from the density matrix, defined as
 \begin{equation}
-    \label{eq:slater_exp}
-    \expval{H} = \bra{\Psi} H \ket{\Psi} = \int (\mathcal E_\text{Skyrme} + \mathcal E_\text{Kin}) d\mathbf r = \int \mathcal E d\mathbf r
+    \rho_q (\mathbf r \sigma, \mathbf r \sigma') = \sum_{\alpha} \phi_{\alpha, \sigma} (\mathbf r )\phi_{\alpha, \sigma'}^*(\mathbf r')
 \end{equation}
-Since the Skyrme interaction is time-reversal invariant (as well as the kinetic operator), this means that the total Hamiltonian must be time-even.
-Different additive contributions must be time-even as well, even if the densities from which they are calculated are not. Unless we reduce to the even-even nucleus case, where total angular momentum is defined at $J=0$, giving vanishing time-odd densities.
-This allows us to write the functional in a simpler form as \cite{stevenson2019low}
+The index $\alpha$ goes through all single particle states of the particles of type $q$ (Protons, Neutrons), while the index $\sigma$ refers to the spin coordinate. The particle density is defined in equation \eqref{eq:part_density} 
 \begin{align}
-    \mathcal E_\text{Kin} &= \frac{\hbar^2}{2m}\tau \label{eq:kinfunc}\\
+    \rho_q(\mathbf r, \mathbf r') &= \sum_{\sigma}\rho(\mathbf r\sigma, \mathbf r'\sigma) =\sum_{\alpha} \phi_{\uparrow}(\mathbf r)\phi_{\uparrow}^*(\mathbf r')+\phi_{\downarrow}(\mathbf r)\phi_{\downarrow}^*(\mathbf r') \nonumber
+    \\\rho_q(\mathbf r) &= \rho_q(\mathbf r, \mathbf r')\bigg|_{\mathbf r'=\mathbf r} =\sum_{\alpha} |\phi_{\uparrow}(\mathbf r)|^2+|\phi_{\downarrow}(\mathbf r)|^2.
+    \label{eq:part_density}
+\end{align}
+The kinetic density
+\begin{align}
+    \tau_q(\mathbf r) &= \sum_{\alpha} \nabla'\cdot\nabla\rho_q(\mathbf r, \mathbf r')\bigg|_{\mathbf r'=\mathbf r} \nonumber
+    \\&= \sum_{\sigma, \alpha} \nabla \phi_\sigma (\mathbf r)\cdot \nabla \phi_\sigma^*(\mathbf r')\bigg|_{\mathbf r = \mathbf r'} = \sum_{\sigma, \alpha} |\nabla \phi_\sigma(\mathbf r)|^2 \nonumber
+    \\&= \sum_{\alpha}|\nabla \phi_\uparrow(\mathbf r)|^2 + |\nabla \phi_\downarrow(\mathbf r)|^2 \label{eq:kin_density}.
+\end{align}
+The spin density, which reads
+\begin{align}
+    s_q(\mathbf r, \mathbf r') &=\sum_{\sigma \sigma', i} \rho_q(\mathbf r \sigma, \mathbf r' \sigma')\bra{\sigma'} \hat {\boldsymbol{\sigma}} \ket{\sigma} = \sum_{\alpha} \begin{bmatrix} \phi_{\uparrow}^*(\mathbf r') \ \phi_{\downarrow}^*(\mathbf r') \end{bmatrix}\hat{\boldsymbol{\sigma}} \begin{bmatrix} \phi_{\uparrow}(\mathbf r) \\ \phi_{\downarrow}(\mathbf r) \end{bmatrix}
+\end{align}
+and lastly, the spin-orbit density tensor, which reads
+\begin{align}
+    J_{q, \mu\nu} &= \frac 1 {2i}(\partial_\mu - \partial_\mu') s_{q, \nu}(\mathbf r, \mathbf r')\bigg|_{\mathbf r'=\mathbf r}\nonumber \\
+    &= \frac 1 {2i}\bigg(\begin{bmatrix}\phi_{\uparrow}^*(\boldsymbol r')\ \phi_{\downarrow}^*(\boldsymbol r')\end{bmatrix} \partial_\mu\hat{\sigma}_\nu\begin{bmatrix} \phi_{\uparrow}(\mathbf r) \\ \phi_{\downarrow}(\mathbf r) \end{bmatrix} - \begin{bmatrix}\phi_{\uparrow}(\boldsymbol{r})\ \phi_{\downarrow}(\boldsymbol{r})\end{bmatrix} \partial_\mu'\hat{\sigma}_\nu\begin{bmatrix} \phi_{\uparrow}^*(\mathbf r') \\ \phi_{\downarrow}^*(\mathbf r') \end{bmatrix}\bigg)_{\mathbf r'=\mathbf r}\nonumber
+     \\&= \sum_\alpha\Im\bigg\{\begin{bmatrix}\phi_{\uparrow}^*(\boldsymbol r)\ \phi_{\downarrow}^*(\boldsymbol r) \end{bmatrix}\partial_\mu \hat{\sigma}_\nu\begin{bmatrix} \phi_{\uparrow}(\mathbf r) \\ \phi_{\downarrow}(\mathbf r) \end{bmatrix}\bigg\}
+\end{align}
+which also defines the spin-orbit current vector $\bm J$, which reads
+\begin{equation}
+     J_{q,\kappa} (\bm r ) = \sum_{\mu\nu}\epsilon_{\kappa\mu\nu} J_{q, \mu\nu}(\bm r).
+\end{equation}
+\subsubsection{Kinetic functional}
+The kinetic term can be expressed as
+\begin{equation}
+    \label{eq:kinfunc}
+    \mathcal E_\text{Kin} = \frac{\hbar^2}{2m}\tau
+\end{equation}
+which is found integrating by parts \eqref{eq:kin_functional}.
+\subsubsection{Skyrme functional}
+Since this work only deals with even-even nuclei, only even densities, as previously defined, are non-vanishing. This reduces the Skyrme functional to the following form \cite{stevenson2019low}
+\begin{align}
     \mathcal E_\text{Skyrme} &= \sum_{t=0,1}\bigg\{C_t^\rho [\rho_0]\rho_t^2+C_t^{\Delta \rho}\rho_t\nabla^2\rho_t+C_t^{\nabla\cdot J}\rho_t\nabla\cdot \mathbf J_t + C_t^\tau\rho_t\tau_t\bigg\}\label{eq:skfunc}
 \end{align}
-Here, $t=0,1$ refers to the isoscalar and isovector components of the densities, e.g.
-\begin{align*}
-    \rho_0 = \rho_p + \rho_n
-    \\\rho_1 = \rho_p - \rho_n
-\end{align*}
 Where
 \begin{align}
     %\label{eq:coefficients_func}
@@ -34,25 +60,40 @@ Where
     \\C_0^{\nabla\cdot J} &= -\frac 3 4 W_0 \label{eq:C0nabladotJ}
     \\C_1^{\nabla\cdot J} &= -\frac 1 4 W_0 \label{eq:C1nabladotJ}
 \end{align}
-As outlined in previous chapters (REF), we can now derive the Kohn-Sham equations, by constraining orthonormality and enforcing the variation of the functional to be zero. What we end up with is
+Here, $t=0,1$ refers to the isoscalar and isovector components of the densities, eg
+\begin{align*}
+    \rho_0 = \rho_p + \rho_n
+    \\\rho_1 = \rho_p - \rho_n.
+\end{align*}
+As outlined in section \ref{sec:dft}, we can now derive the Kohn-Sham equations, by minimizing the functional under the constraint
+\begin{equation}
+    \label{eq:spe_ks_constraint}
+    \int \rho_0(\bm r ) d\bm r = A.
+\end{equation}
+The resulting Kohn-Sham equations are of the form
 \begin{equation}
     \label{eq:spe_ks}
     \bigg[-\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg) + U_q(\mathbf r) + \delta_{\text{q,proton}}U_C(\mathbf r)-i\mathbf B_q(\mathbf r)\cdot(\nabla \times \boldsymbol\sigma) \bigg]\varphi_\alpha=\varepsilon_\alpha\varphi_\alpha
 \end{equation}
-The index $q=n,p$ refers respectively to the neutron and proton quantities.
-\\Where the different terms are given by
-\begin{align}
-    \frac{\hbar^2}{2m^{*}_q(\mathbf r)} &= \fdv{\mathcal E}{\tau_q}
-    \\U_q(\mathbf r) &= \fdv{\mathcal E}{\rho_q}\label{eq:fdv_rho_skyrme}
-    \\\mathbf B_q(\mathbf r) &= \fdv{\mathcal E}{\boldsymbol{\mathbf J_q}}
-\end{align}
-The coulomb field $U_C$, which is present only in the single particle equation for protons, doesn't come from the skyrme interaction, rather from the Coulomb part of the whole functional. It will be properly derived in section \ref{sec:coulomb_treatment}.
-\\Following the rules for functional derivatives, outlined in the appendix (REF) we get
+where an effective mass field arises, which is defined as
+\begin{equation}
+    \frac{\hbar^2}{2m^{*}_q(\mathbf r)} = \fdv{\mathcal E}{\tau_q}
+\end{equation}
+a mean field potential, which reads
+\begin{equation}
+    U_q(\mathbf r) = \fdv{\mathcal E}{\rho_q}\label{eq:fdv_rho_skyrme}
+\end{equation}
+and a spin-orbit field, given by
+\begin{equation}
+    \mathbf B_q(\mathbf r) = \fdv{\mathcal E}{\boldsymbol{\mathbf J_q}}.
+\end{equation}
+The coulomb field $U_C$, which is present only in the single particle equation for protons, doesn't come from the Skyrme interaction, rather from the Coulomb part of the whole functional. It will be properly derived in section \ref{sec:coulomb_treatment}.
+\\Following the rules for functional derivatives, outlined in the appendix \ref{app:func_der} we get
 \begin{align}
     \frac{\hbar^2}{2m_q^*(\mathbf r)} =& +\frac{\hbar^2}{2m} \\&+ \frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\rho(\mathbf r) \\&- \frac 1 8 [t_1(1+2x_1)+t_2(1+2x_2)]\rho_q(\mathbf r ) \\\\
     U_q(\mathbf r) =& +\frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\rho \\&+ \frac 1 8 [t_2(1+2x_2)-t_1(1+2x_1)]\rho_q \\
     &+ \frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\tau \\&+ \frac 1 8 [t_2(1+2x_2)-t_1(1+2x_1)]\tau_q \\
     &+ \frac 1 {16} [t_2(2+x_2)-3t_1(2+x_1)] \nabla^2 \rho \\&+ \frac 1 {16} [3t_1(2x_1+1)+t_2(2x_2+1)] \nabla^2 \rho_q \\\\
-    \mathbf B_q (\mathbf r ) = &+\frac 1 2 W_0 [\nabla\rho + \nabla \rho_q] \\&-\frac 1 8 (t_1 x_1 + t_2 x_2) \mathbf J + \frac 1 8 (t_1 - t_2) \mathbf J_q 
+    \mathbf B_q (\mathbf r ) = &+\frac 1 2 W_0 [\nabla\rho + \nabla \rho_q] \\&-\frac 1 8 (t_1 x_1 + t_2 x_2) \mathbf J + \frac 1 8 (t_1 - t_2) \mathbf J_q.
 \end{align}
 Unless otherwise specified, unindexed densities denote isoscalar quantities (sum of neutron's and proton's).

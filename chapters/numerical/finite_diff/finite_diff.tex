@@ -98,7 +98,7 @@ Unlike the Schr\"odinger equation, we do not expect the solution to rapidly deca
     \nabla^2 V &= \partial_{xx} V + \partial_{yy}V + \partial_{zz}V\nonumber \\
     &= \frac{-V_{i-2} + 16V_{i-1} -30V_i + 16V_{i+1} - V_{i+2}}{12h^2}+\cdots=4\pi e^2 \rho_i
 \end{align}
-Near a boundary, say $i = 0$, the formula calls for points outside the box, known as \textit{ghost points}. Since they are not part of the linear system, but they are known, we can bring them on the right side of equation \ref{eq:poisson_disc}.
+Near a boundary, say $i = 0$, the formula calls for points outside the box, known as \textit{ghost points}. Since they are not part of the linear system, but they are known, we can bring them on the right side of equation \eqref{eq:poisson_disc}.
 \begin{align}
     \frac{-30 V_0 + 16 V_1 - V_2 }{12h^2} &= 4\pi e^2 \rho_0 +\frac{ V_{-2} -16V_{-1}}{12h^2} = \tilde\rho_0
 \end{align}

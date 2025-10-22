@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{41}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -29,6 +29,12 @@ W.~Bertozzi, J.~Friar, J.~Heisenberg, and J.~Negele.
 {\AA}.~Bj{\"o}rck.
 \newblock Numerics of gram-schmidt orthogonalization.
 \newblock \emph{Linear Algebra and Its Applications}, 197:\penalty0 297--316, 1994.
+
+\bibitem[Bonche et~al.(1985)Bonche, Flocard, and Heenen]{bonche1985self}
+P.~Bonche, H.~Flocard, and P.-H. Heenen.
+\newblock Self-consistent calculation of nuclear rotations: The complete yrast line of 24mg.
+\newblock \emph{Nuclear Physics A}, 443\penalty0 (1):\penalty0 39--63, 1985.
+\newblock \doi{10.1016/0375-9474(85)90224-7}.
 
 \bibitem[Chabanat et~al.(1997)Chabanat, Bonche, Haensel, Meyer, and Schaeffer]{CHABANAT1997710}
 E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
@@ -127,6 +133,18 @@ A.~V. Knyazev.
 \newblock \doi{10.1007/978-3-0348-6332-2_11}.
 \newblock URL \url{https://doi.org/10.1007/978-3-0348-6332-2_11}.
 
+\bibitem[Kohn and Sham(1965)]{KS}
+W.~Kohn and L.~J. Sham.
+\newblock Self-consistent equations including exchange and correlation effects.
+\newblock \emph{Phys. Rev.}, 140:\penalty0 A1133--A1138, Nov 1965.
+\newblock \doi{10.1103/PhysRev.140.A1133}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.140.A1133}.
+
+\bibitem[Krishnamoorthy and Menon(2013)]{cholesky}
+A.~Krishnamoorthy and D.~Menon.
+\newblock Matrix inversion using cholesky decomposition.
+\newblock In \emph{2013 Signal Processing: Algorithms, Architectures, Arrangements, and Applications (SPA)}, pages 70--72, 2013.
+
 \bibitem[Lanczos(1952)]{lanczos1952solution}
 C.~Lanczos.
 \newblock Solution of systems of linear equations by minimized iterations.
@@ -221,13 +239,6 @@ T.~Skyrme.
 \newblock ISSN 0029-5582.
 \newblock \doi{https://doi.org/10.1016/0029-5582(58)90345-6}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/0029558258903456}.
-
-\bibitem[Sleijpen and Van~der Vorst(2000)]{JacobiDavidson}
-G.~L.~G. Sleijpen and H.~A. Van~der Vorst.
-\newblock A jacobi--davidson iteration method for linear eigenvalue problems.
-\newblock \emph{SIAM Review}, 42\penalty0 (2):\penalty0 267--293, 2000.
-\newblock \doi{10.1137/S0036144599363084}.
-\newblock URL \url{https://doi.org/10.1137/S0036144599363084}.
 
 \bibitem[Staszczak et~al.(2010)Staszczak, Stoitsov, Baran, and Nazarewicz]{Staszczak2010}
 A.~Staszczak, M.~Stoitsov, A.~Baran, and W.~Nazarewicz.

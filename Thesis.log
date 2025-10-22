@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.30)  20 OCT 2025 16:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.30)  22 OCT 2025 11:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1161,7 +1161,7 @@ Package epstopdf Info: Source file: <Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO
 (epstopdf)             Command: <repstopdf --outfile=Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO-eps-converted-to.pdf Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO.eps>
 (epstopdf)             \includegraphics on input line 141.
 Package epstopdf Info: Output file is already uptodate.
-<Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO-eps-converted-to.pdf, id=203, 493.845pt x 227.85126pt>
+<Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO-eps-converted-to.pdf, id=208, 493.845pt x 227.85126pt>
 File: Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO-eps-converted-to.pdf>
 Package pdftex.def Info: Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO-eps-converted-to.pdf  used on input line 141.
@@ -1183,7 +1183,7 @@ Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
 (epstopdf)             Command: <repstopdf --outfile=./Images//./raggiera_polimi-eps-converted-to.pdf ./Images//./raggiera_polimi.eps>
 (epstopdf)             \includegraphics on input line 141.
 Package epstopdf Info: Output file is already uptodate.
-<./Images//./raggiera_polimi-eps-converted-to.pdf, id=205, 502.87875pt x 502.87875pt>
+<./Images//./raggiera_polimi-eps-converted-to.pdf, id=210, 502.87875pt x 502.87875pt>
 File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Images//./raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 141.
@@ -1278,7 +1278,11 @@ Chapter 1.
 
 
 
-] [2] [3] [4] [5]) (./chapters/functional/skyrme/skyrme.tex [6] [7]) (./chapters/functional/edf/edf.tex [8] [9]) (./chapters/functional/coulomb/coulomb.tex [10]) (./chapters/functional/energy/energy_calculation.tex [11] [12])) (./chapters/numerical/numerical.tex [13]
+] [2] [3] [4] [5]) (./chapters/functional/skyrme/skyrme.tex [6] [7]) (./chapters/functional/edf/edf.tex [8] [9] [10] [11]) (./chapters/functional/coulomb/coulomb.tex [12]) (./chapters/functional/energy/energy_calculation.tex [13] [14]
+
+LaTeX Warning: Reference `eq:slater_exp' on page 15 undefined on input line 38.
+
+)) (./chapters/numerical/numerical.tex [15]
 Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
 (epstopdf)                    date: 2025-09-15 15:14:14
 (epstopdf)                    size: 1813066 bytes
@@ -1292,43 +1296,63 @@ File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Images//./raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 1.
 (pdftex.def)             Requested size: 507.88533pt x 507.88051pt.
- [14
+ [16
 
 ]
 Chapter 2.
-(./chapters/numerical/finite_diff/finite_diff.tex [15
+(./chapters/numerical/finite_diff/finite_diff.tex [17
 
-] [16] [17] [18]) (./chapters/numerical/gcg/gcg.tex [19] [20] [21] [22]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 124.
- [23] [24] [25] [26]) (./chapters/numerical/minimization/minimization.tex (./chapters/numerical/constraints/constraints.tex [27] [28]) (./chapters/numerical/minimization/pseudocode.tex) (./chapters/numerical/minimization/parameters_choice.tex [29] [30]
-<Images/conv_tol.pdf, id=873, 578.16pt x 433.62pt>
+] [18] [19] [20]) (./chapters/numerical/gcg/gcg.tex [21{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [22] [23] [24] [25]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 141.
+ [26] [27] [28]) (./chapters/numerical/minimization/minimization.tex [29] (./chapters/numerical/constraints/constraints.tex [30] [31]) (./chapters/numerical/minimization/pseudocode.tex) (./chapters/numerical/minimization/parameters_choice.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[32]
+<Images/conv_tol.pdf, id=941, 578.16pt x 433.62pt>
 File: Images/conv_tol.pdf Graphic file (type pdf)
 <use Images/conv_tol.pdf>
-Package pdftex.def Info: Images/conv_tol.pdf  used on input line 8.
+Package pdftex.def Info: Images/conv_tol.pdf  used on input line 13.
 (pdftex.def)             Requested size: 409.71692pt x 307.28348pt.
-<Images/conv_steps_o.pdf, id=876, 1084.05pt x 578.16pt>
+ [33]
+<Images/conv_steps_o.pdf, id=950, 1084.05pt x 578.16pt>
 File: Images/conv_steps_o.pdf Graphic file (type pdf)
 <use Images/conv_steps_o.pdf>
-Package pdftex.def Info: Images/conv_steps_o.pdf  used on input line 17.
+Package pdftex.def Info: Images/conv_steps_o.pdf  used on input line 22.
 (pdftex.def)             Requested size: 455.24411pt x 242.79907pt.
- [31 <./Images/conv_tol.pdf>]
-<Images/conv_steps.pdf, id=921, 1084.05pt x 578.16pt>
+ [34 <./Images/conv_tol.pdf>]
+<Images/conv_steps.pdf, id=996, 1084.05pt x 578.16pt>
 File: Images/conv_steps.pdf Graphic file (type pdf)
 <use Images/conv_steps.pdf>
-Package pdftex.def Info: Images/conv_steps.pdf  used on input line 23.
+Package pdftex.def Info: Images/conv_steps.pdf  used on input line 28.
 (pdftex.def)             Requested size: 455.24411pt x 242.79907pt.
- [32 <./Images/conv_steps_o.pdf> <./Images/conv_steps.pdf>]) (./chapters/numerical/minimization/stability.tex
-<Images/stability.pdf, id=1018, 433.62pt x 433.62pt>
+ [35 <./Images/conv_steps_o.pdf> <./Images/conv_steps.pdf>]) (./chapters/numerical/minimization/stability.tex
+<Images/stability.pdf, id=1091, 433.62pt x 433.62pt>
 File: Images/stability.pdf Graphic file (type pdf)
 <use Images/stability.pdf>
 Package pdftex.def Info: Images/stability.pdf  used on input line 6.
 (pdftex.def)             Requested size: 455.24411pt x 455.26813pt.
-))) (./chapters/spherical_results/spherical_results.tex [33] [34 <./Images/stability.pdf>]
+))) (./chapters/spherical_results/spherical_results.tex [36] [37 <./Images/stability.pdf>]
+Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
+(epstopdf)                    date: 2025-09-15 15:14:14
+(epstopdf)                    size: 1813066 bytes
+(epstopdf)             Output file: <./Images//./raggiera_polimi-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-09-15 17:18:34
+(epstopdf)                    size: 40044 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Images//./raggiera_polimi-eps-converted-to.pdf ./Images//./raggiera_polimi.eps>
+(epstopdf)             \includegraphics on input line 1.
+Package epstopdf Info: Output file is already uptodate.
+File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Images//./raggiera_polimi-eps-converted-to.pdf>
+Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 507.88533pt x 507.88051pt.
+ [38
+
+]
 Chapter 3.
-(./chapters/spherical_results/sections/physical_quantities.tex [35
+(./chapters/spherical_results/sections/physical_quantities.tex [39
 
-
-]) (./chapters/spherical_results/sections/oxygen.tex [36]
+]) (./chapters/spherical_results/sections/oxygen.tex [40]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
@@ -1337,23 +1361,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `superscript' on input line 4.
 
-[37] [38])) (./chapters/deformed_results/deformed_results.tex [39] [40] [41] [42] [43]
-Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
-(epstopdf)                    date: 2025-09-15 15:14:14
-(epstopdf)                    size: 1813066 bytes
-(epstopdf)             Output file: <./Images//./raggiera_polimi-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-09-15 17:18:34
-(epstopdf)                    size: 40044 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Images//./raggiera_polimi-eps-converted-to.pdf ./Images//./raggiera_polimi.eps>
-(epstopdf)             \includegraphics on input line 1.
-Package epstopdf Info: Output file is already uptodate.
-File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Images//./raggiera_polimi-eps-converted-to.pdf>
-Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 1.
-(pdftex.def)             Requested size: 507.88533pt x 507.88051pt.
- [44
-
-]
+[41])) (./chapters/deformed_results/deformed_results.tex [42] [43] [44] [45] [46] [47] [48]
 Chapter 4.
 (./chapters/deformed_results/sections/magnesiumnopair.tex
 
@@ -1372,51 +1380,52 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 LaTeX Font Warning: Font shape `T1/cmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 3.
 
-[45
+[49
+
 
 ]
-<Images/mg_gs_density_axial.pdf, id=1173, 462.52798pt x 346.89601pt>
+<Images/mg_gs_density_axial.pdf, id=1246, 462.52798pt x 346.89601pt>
 File: Images/mg_gs_density_axial.pdf Graphic file (type pdf)
 <use Images/mg_gs_density_axial.pdf>
-Package pdftex.def Info: Images/mg_gs_density_axial.pdf  used on input line 43.
+Package pdftex.def Info: Images/mg_gs_density_axial.pdf  used on input line 47.
 (pdftex.def)             Requested size: 455.24411pt x 341.44844pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Images/mg_nopair_curve.pdf, id=1176, 433.62pt x 433.62pt>
+<Images/mg_nopair_curve.pdf, id=1249, 433.62pt x 433.62pt>
 File: Images/mg_nopair_curve.pdf Graphic file (type pdf)
 <use Images/mg_nopair_curve.pdf>
-Package pdftex.def Info: Images/mg_nopair_curve.pdf  used on input line 51.
+Package pdftex.def Info: Images/mg_nopair_curve.pdf  used on input line 55.
 (pdftex.def)             Requested size: 364.19667pt x 364.21185pt.
 )) (./Thesis.bbl
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[46] [47 <./Images/mg_gs_density_axial.pdf>] [48 <./Images/mg_nopair_curve.pdf>]
-Underfull \hbox (badness 3009) in paragraph at lines 34--40
+[50] [51 <./Images/mg_gs_density_axial.pdf>] [52 <./Images/mg_nopair_curve.pdf>]
+Underfull \hbox (badness 3009) in paragraph at lines 40--46
 []\T1/cmr/m/n/12 E. Cha-banat, P. Bonche, P. Haensel, J. Meyer, and R. Scha-ef-fer.  A
  []
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 34--40
+Underfull \hbox (badness 1281) in paragraph at lines 40--46
 \T1/cmr/m/n/12 skyrme parametriza-tion from sub-nu-clear to neu-tron star den-si-ties.  \T1/cmr/m/it/12 Nu-clear
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 50--56
+Underfull \hbox (badness 1038) in paragraph at lines 56--62
 \T1/cmr/m/n/12 https : / / doi . org / 10 . 1016 / j . cpc . 2022 . 108344$.  URL [][]$\T1/cmtt/m/n/12 https : / / www . sciencedirect .
  []
 
-[49
+[53
 
 
-] [50] [51]
-Underfull \hbox (badness 1189) in paragraph at lines 212--216
+] [54] [55]
+Underfull \hbox (badness 1189) in paragraph at lines 230--234
 []\T1/cmr/m/n/12 J. R. Shewchuk.  An in-tro-duc-tion to the con-ju-gate gra-di-ent method with-
  []
 
-[52]) [53]
+[56]) [57]
 Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
 (epstopdf)                    date: 2025-09-15 15:14:14
 (epstopdf)                    size: 1813066 bytes
@@ -1430,19 +1439,34 @@ File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Images//./raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 218.
 (pdftex.def)             Requested size: 507.88533pt x 507.88051pt.
- [54
+ [58
 
 ] (./chapters/appendix/appendix.tex
 Appendix A.
-(./chapters/appendix/spherical_harmonics.tex [55
+(./chapters/appendix/spherical_harmonics.tex [59
 
 
-]) (./chapters/appendix/5p_derivatives.tex)) [56] (./Thesis.lof)
+]) (./chapters/appendix/5p_derivatives.tex) (./chapters/appendix/func_der.tex [60])) [61]
+Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
+(epstopdf)                    date: 2025-09-15 15:14:14
+(epstopdf)                    size: 1813066 bytes
+(epstopdf)             Output file: <./Images//./raggiera_polimi-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-09-15 17:18:34
+(epstopdf)                    size: 40044 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Images//./raggiera_polimi-eps-converted-to.pdf ./Images//./raggiera_polimi.eps>
+(epstopdf)             \includegraphics on input line 223.
+Package epstopdf Info: Output file is already uptodate.
+File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Images//./raggiera_polimi-eps-converted-to.pdf>
+Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 223.
+(pdftex.def)             Requested size: 507.88533pt x 507.88051pt.
+ [62
+
+] (./Thesis.lof)
 \tf@lof=\write7
 \openout7 = `Thesis.lof'.
 
- [57
-
+ [63
 
 ]
 Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
@@ -1458,13 +1482,13 @@ File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Images//./raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 226.
 (pdftex.def)             Requested size: 507.88533pt x 507.88051pt.
- [58
+ [64
 
 ] (./Thesis.lot)
 \tf@lot=\write8
 \openout8 = `Thesis.lot'.
 
- [59
+ [65
 
 ]
 Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
@@ -1480,9 +1504,9 @@ File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Images//./raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 230.
 (pdftex.def)             Requested size: 507.88533pt x 507.88051pt.
- [60
+ [66
 
-] [61
+] [67
 
 ]
 Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
@@ -1498,9 +1522,9 @@ File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Images//./raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 241.
 (pdftex.def)             Requested size: 507.88533pt x 507.88051pt.
- [62
+ [68
 
-] [63
+] [69
 
 ]
 Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
@@ -1516,25 +1540,28 @@ File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Images//./raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 244.
 (pdftex.def)             Requested size: 507.88533pt x 507.88051pt.
- [64
+ [70
 
 ] (./Thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 19BCF98BFBFBB219ED31BBC2E19DC1C8;7662.
+(rerunfilecheck)             Checksum: 28E82AB360471E83A4621588A168FEEA;7999.
  ) 
 Here is how much of TeX's memory you used:
- 48128 strings out of 476041
- 1051596 string characters out of 5793174
- 1899388 words of memory out of 6000000
- 67282 multiletter control sequences out of 15000+600000
- 536122 words of font info for 92 fonts, out of 8000000 for 9000
+ 48300 strings out of 476041
+ 1054384 string characters out of 5793174
+ 1910388 words of memory out of 6000000
+ 67403 multiletter control sequences out of 15000+600000
+ 536459 words of font info for 93 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 150i,18n,141p,1644b,3069s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on Thesis.pdf (72 pages, 786887 bytes).
+ 150i,18n,141p,1644b,3139s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
+Output written on Thesis.pdf (78 pages, 813409 bytes).
 PDF statistics:
- 1668 PDF objects out of 1728 (max. 8388607)
- 1307 compressed objects within 14 object streams
- 517 named destinations out of 1000 (max. 500000)
- 451 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1777 PDF objects out of 2073 (max. 8388607)
+ 1407 compressed objects within 15 object streams
+ 563 named destinations out of 1000 (max. 500000)
+ 459 words of extra memory for PDF output out of 10000 (max. 10000000)
 
