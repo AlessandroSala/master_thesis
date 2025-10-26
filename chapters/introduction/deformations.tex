@@ -1,0 +1,43 @@
+\section{Nuclear deformations}
+We shall now give a description of the nuclear shape in a formal structure. We will start by describing the simplest case, the one of an axial quadrupole deformation. After that, we will discuss the more general case of trixial, octupole, and parity breaking deformations.
+\subsection{Axial quadrupole deformation}
+Assuming the nuclear volume to be evaluated as
+\begin{equation}
+    V(A) = \frac{4}{3}\pi R^3
+\end{equation}
+Let us suppose to consider variations of the nuclear radius $R$ in terms of spherical harmonics
+\begin{equation}
+    R(\theta, \phi) = R_0\bigg[1+\sum_{\lambda \mu}\alpha_{\lambda \mu}\,Y_{\lambda\mu}(\theta)\bigg]
+\end{equation}
+where the moments $\alpha_{\lambda \mu}$ defined as
+\begin{equation}
+    \alpha_{\lambda \mu}=\int Y_{\lambda\mu}^*(\theta, \phi)R(\theta, \phi) d\Omega
+\end{equation}
+are considered small, in the sense that $|\alpha_{\lambda \mu}| ^2 \ll |\alpha_{\lambda \mu}| $. We have that $Y_{00}$ is constant, so its moment does not produce an interesting variation. We can set $\alpha_{00}=0$. 
+Since $Y_{10}$, $Y_{11}$ and $Y_{1-1}$ are odd for $\theta + \pi$ and $\phi + \pi$, we have that $\alpha_{1\mu}$ vanishes in a reference frame in which the centre of mass is at the origin.
+\\Now, let us consider only $\alpha_{2\mu}$ coefficients and neglect higher order terms, so that the deformation is purely quadrupolar, then the radius reads
+\begin{equation}
+    R(\theta, \phi) = R_0\bigg[1+\sum_{\mu=-2}^2\alpha_{2\mu}\,Y_{2\mu}(\theta, \phi)\bigg].
+\end{equation}
+If we move to the reference frame in which the inertia tensor, proportional to the coefficients $\alpha_{2\mu}$, is diagonal, which is known as intrinsic frame, then the coefficients $\alpha_{2\pm 1}$ vanish. Since $R$ is a real valued function, we have the relation
+\begin{equation}
+\alpha_{\lambda \mu}Y_{\lambda\mu}+\alpha_{\lambda -\mu}Y_{\lambda-\mu}=2\Re{\alpha_{\lambda \mu}Y_{\lambda\mu}},
+\end{equation}
+as a consequence, the resulting expansion reads
+\begin{align}
+    R(\theta, \phi) &= R_0\bigg[1+a_{20}Y_{20}+2\Re{a_{22}Y_{22}}\bigg]
+    \\&=R_0\bigg[1+\sqrt{\frac{5}{16\pi}}\bigg(a_{20}(3\cos^2\theta-1)+ 2a_{22}\sqrt{3}\sin^2\theta(\cos^2\phi-\sin^2\phi) \bigg)\bigg].
+\end{align}
+If we perform the substitution 
+\begin{align}
+    \label{eq:a20}
+    a_{20} &= \beta\cos(\gamma)
+    \\  a_{22} &= \beta\sin(\gamma)\label{eq:a22}
+\end{align} 
+and express the variation of $R$ along the cartesian axes, we get 
+\begin{align}
+     R_x - R_0  =\delta R_{x}&=\sqrt{\frac{5}{4\pi}}\beta R_0 \cos\bigg(\gamma - \frac{2\pi}{3}\bigg),
+    \\R_y - R_0 =\delta R_{y}&=\sqrt{\frac{5}{4\pi}}\beta R_0 \cos\bigg(\gamma + \frac{2\pi}{3}\bigg),
+    \\R_z - R_0 =\delta R_{z}&=\sqrt{\frac{5}{4\pi}}\beta R_0 \cos\gamma.
+\end{align}
+

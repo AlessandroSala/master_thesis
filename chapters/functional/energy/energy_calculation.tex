@@ -9,22 +9,22 @@ The obvious way would be to evaluate the functional for a given density. We will
 An alternative approach can be used, as in a stationary point $\delta E = 0$, the single particle eigenvalue equation \eqref{eq:spe_ks} stands true, summarized as 
 \begin{align}
     \label{eq:simple_spe}
-    (\hat t + U)\varphi_k = \varepsilon_k \varphi_k
+    ( t + U)\varphi_k = \varepsilon_k \varphi_k
 \end{align}
 We can multiply \eqref{eq:simple_spe} on the left by $\varphi_k^*$ and integrate to get
 \begin{align}
     \label{eq:int_simple_spe}
-    \int -\varphi_k^* \frac{\hbar^2}{2m}\nabla^2\varphi_k d\bm r + \int \varphi_k^* U \varphi_k d\bm r = \int \varphi_l^* \varepsilon_k \varphi_k d\bm r
+    \int -\varphi_k^* \frac{\hbar^2}{2m}\nabla^2\varphi_k d\bm r + \int \varphi_k^* U \varphi_k d\bm r = \int \varphi_k^* \varepsilon_k \varphi_k d\bm r
 \end{align}
 The integral on the right hand side of \eqref{eq:int_simple_spe} evaluates to $\varepsilon_k$ due to the orthonormality constraint. If we sum over all states $k$ we get
 \begin{align}
     \sum_k \bigg\{\int -\varphi_k^* \frac{\hbar^2}{2m}\nabla^2\varphi_k d\bm r + \int \varphi_k^* U \varphi_k d\bm r \bigg\}= \sum_k \varepsilon_k 
     \\\sum_k t_k + \int \rho U = \sum_k \varepsilon_k \label{eq:sum_spe}
 \end{align}
-Since $U$ is calculated as \eqref{eq:fdv_rho_skyrme}, assuming that the functional has a power dependence from $\rho$ of the form $\mathcal E_\text{Skyrme} = A\rho^{\sigma+1}$ as in our case, we get the \textit{rearrangement energy}
+Since $U$ is calculated as the functional derivative with respect to the density $\rho$ \eqref{eq:fdv_rho_skyrme}, assuming that the functional has a power dependence from $\rho$ of the form $\mathcal E_\text{Skyrme} = A\rho^{\sigma+1}$ as in our case, we get the \textit{rearrangement energy}
 \begin{align}
     \label{eq:sum_spe_new}
-    \rho U = \rho \fdv{\mathcal E_\text{Skyrme}}{\rho} = \rho(\sigma +1)A \rho^\sigma = (\sigma+1)A \rho^{\sigma+1} = \mathcal E_\text{Skyrme} + \sigma \mathcal E_\text{Skyrme} = \mathcal E_\text{Skyrme} - \mathcal E_\text{rea}
+    \rho U = \rho \fdv{\mathcal E_\text{Skyrme}}{\rho} = \rho(1+\sigma )A \rho^\sigma = (1+\sigma)A \rho^{\sigma+1} = \mathcal E_\text{Skyrme} + \sigma \mathcal E_\text{Skyrme} = \mathcal E_\text{Skyrme} - \mathcal E_\text{rea}
 \end{align}
 If we explicit $\rho U$ in equation \eqref{eq:sum_spe} using \eqref{eq:sum_spe_new}, we get to
 \begin{align*}
@@ -45,9 +45,9 @@ substituting \eqref{eq:int_E_rea} in \eqref{eq:brief_tot_energy} yields
     \label{eq:hf_energy}
 E_\text{HF} = \frac 1 2 \sum_k (\varepsilon_k + t_k) +\int \mathcal E_\text{rea} d\bm r = \frac 1 2 \bigg(T+\sum_k\varepsilon_k\bigg) +E_\text{rea}
 \end{align}
-which will be called \textit{Hartree-Fock energy} throughout this text.
-\paragraph{Sidenote:}
-The actual functional has a plethora of $\rho$ terms, which can be summarized as
+which will is called \textit{Hartree-Fock energy}.
+\paragraph{Sidenote}
+The actual functional, including the Coulomb exchange term, has different $\rho$ terms, which can be summarized as
 \begin{equation*}
     \mathcal E_\text{Skyrme} = \sum_j A_j \rho^{\sigma_j+1} \implies E_\text{rea} = -\sum_j \sigma_j A_j \rho^{\sigma_j+1} 
 \end{equation*}

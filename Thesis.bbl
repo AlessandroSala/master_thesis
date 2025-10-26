@@ -1,4 +1,4 @@
-\begin{thebibliography}{41}
+\begin{thebibliography}{44}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,6 +16,12 @@ M.~Bender, P.-H. Heenen, and P.-G. Reinhard.
 \newblock {Self-consistent mean-field models for nuclear structure}.
 \newblock \emph{Reviews of Modern Physics}, 75\penalty0 (1):\penalty0 121--180, 2003.
 \newblock \doi{10.1103/RevModPhys.75.121}.
+
+\bibitem[Benzaid et~al.(2020)Benzaid, Bentridi, Kerraci, and Amrani]{Benzaid2020}
+D.~Benzaid, S.~Bentridi, A.~Kerraci, and N.~Amrani.
+\newblock {Bethe--Weizsäcker semiempirical mass formula coefficients 2019 update based on AME2016}.
+\newblock \emph{Nuclear Science and Techniques}, 31\penalty0 (1):\penalty0 5, 2020.
+\newblock \doi{10.1007/s41365-019-0718-8}.
 
 \bibitem[Bertozzi et~al.(1972)Bertozzi, Friar, Heisenberg, and Negele]{BERTOZZI1972408}
 W.~Bertozzi, J.~Friar, J.~Heisenberg, and J.~Negele.
@@ -92,6 +98,13 @@ H.~Flocard, P.~Quentin, A.~Kerman, and D.~Vautherin.
 \newblock ISSN 0375-9474.
 \newblock \doi{https://doi.org/10.1016/0375-9474(73)90357-6}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/0375947473903576}.
+
+\bibitem[FR(2012)]{ldmimg}
+D.~FR.
+\newblock {Liquid drop model.svg: Illustration of the terms of the semi-empirical mass formula in the liquid drop model of the atomic nucleus}.
+\newblock Wikimedia Commons, the free media repository, 2012.
+\newblock URL \url{https://commons.wikimedia.org/wiki/File:Liquid_drop_model.svg}.
+\newblock Original work by Honina, derivative by Daniel FR. Licensed under CC BY-SA 3.0.
 
 \bibitem[Golub and van Loan(2013)]{golub13}
 G.~H. Golub and C.~F. van Loan.
@@ -180,6 +193,12 @@ P.~Marević, N.~Schunck, E.~Ney, R.~{Navarro Pérez}, M.~Verriere, and J.~O'Neal
 \newblock \doi{https://doi.org/10.1016/j.cpc.2022.108367}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465522000868}.
 
+\bibitem[Martin(2004)]{Martin2004}
+R.~M. Martin.
+\newblock \emph{Electronic Structure: Basic Theory and Practical Methods}.
+\newblock Cambridge University Press, Cambridge, UK, 2004.
+\newblock ISBN 9780521534406.
+
 \bibitem[Nottoli et~al.(2023)Nottoli, Gianni, Levitt, and Lipparini]{Nottoli2023}
 T.~Nottoli, I.~Gianni, A.~Levitt, and F.~Lipparini.
 \newblock A robust, open-source implementation of the locally optimal block preconditioned conjugate gradient for large eigenvalue problems in quantum chemistry.
@@ -205,13 +224,6 @@ P.-G. Reinhard and H.~Flocard.
 P.~Ring and P.~Schuck.
 \newblock \emph{The nuclear many-body problem}.
 \newblock Springer Science \& Business Media, 2004.
-
-\bibitem[Robledo et~al.(2018)Robledo, Rodríguez, and Rodríguez-Guzmán]{Robledo_2019}
-L.~M. Robledo, T.~R. Rodríguez, and R.~R. Rodríguez-Guzmán.
-\newblock Mean field and beyond description of nuclear structure with the gogny force: a review.
-\newblock \emph{Journal of Physics G: Nuclear and Particle Physics}, 46\penalty0 (1):\penalty0 013001, dec 2018.
-\newblock \doi{10.1088/1361-6471/aadebd}.
-\newblock URL \url{https://doi.org/10.1088/1361-6471/aadebd}.
 
 \bibitem[Ryssens et~al.(2015)Ryssens, Hellemans, Bender, and Heenen]{RYSSENS2015175}
 W.~Ryssens, V.~Hellemans, M.~Bender, and P.-H. Heenen.
@@ -263,6 +275,12 @@ D.~Vautherin and D.~M. Brink.
 \newblock \emph{Phys. Rev. C}, 5:\penalty0 626--647, Mar 1972.
 \newblock \doi{10.1103/PhysRevC.5.626}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.5.626}.
+
+\bibitem[von Weizsäcker(1935)]{Weizsacker1935}
+C.~F. von Weizsäcker.
+\newblock {Zur Theorie der Kernmassen}.
+\newblock \emph{Zeitschrift f{\"u}r Physik}, 96\penalty0 (7-8):\penalty0 431--458, 1935.
+\newblock \doi{10.1007/BF01337700}.
 
 \bibitem[Woo et~al.(2023)Woo, Kim, and Kim]{LOBPCGDKS}
 J.~Woo, S.~Kim, and W.~Y. Kim.

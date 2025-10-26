@@ -5,34 +5,34 @@ The energy functional to be minimized is of the form \cite{Bender2003}
 E_{\text{HF}} =  E_\text{Kin}+E_\text{Skyrme}+E_\text{Coul} = \int( \mathcal E_\text{Kin} + \mathcal E_\text{Skyrme} + \mathcal E_\text{Coul})d\bm r.
 \end{equation}
 \subsubsection{Densities}
-Functional \eqref{eq:full_functional} can be expressed through a set of particle densities, let us define them and express them on the spin coordiantes up ($\uparrow$) and down ($\downarrow$).
-\\We can start from the density matrix, defined as
+Functional \eqref{eq:full_functional} can be expressed through a series of particle densities. Let us define them and express them on the spin coordiantes up ($\uparrow$) and down ($\downarrow$) for the convinience in a mesh representation.
+\\The starting point is the density matrix, defined as
 \begin{equation}
     \rho_q (\mathbf r \sigma, \mathbf r \sigma') = \sum_{\alpha} \phi_{\alpha, \sigma} (\mathbf r )\phi_{\alpha, \sigma'}^*(\mathbf r')
 \end{equation}
-The index $\alpha$ goes through all single particle states of the particles of type $q$ (Protons, Neutrons), while the index $\sigma$ refers to the spin coordinate. The particle density is defined in equation \eqref{eq:part_density} 
+where the index $\alpha$ goes through all single particle states of the particles of type $q$ (protons, neutrons) and the index $\sigma$ refers to the spin coordinate. The particle density is defined as 
 \begin{align}
-    \rho_q(\mathbf r, \mathbf r') &= \sum_{\sigma}\rho(\mathbf r\sigma, \mathbf r'\sigma) =\sum_{\alpha} \phi_{\uparrow}(\mathbf r)\phi_{\uparrow}^*(\mathbf r')+\phi_{\downarrow}(\mathbf r)\phi_{\downarrow}^*(\mathbf r') \nonumber
-    \\\rho_q(\mathbf r) &= \rho_q(\mathbf r, \mathbf r')\bigg|_{\mathbf r'=\mathbf r} =\sum_{\alpha} |\phi_{\uparrow}(\mathbf r)|^2+|\phi_{\downarrow}(\mathbf r)|^2.
+    \rho_q(\mathbf r) \coloneq\rho_q(\mathbf r, \mathbf r')\bigg|_{\mathbf{r} = \mathbf{r'}} \coloneq \sum_{\sigma}\rho(\mathbf r\sigma, \mathbf r'\sigma) \bigg|_{\mathbf{r} = \mathbf{r'}} &=\sum_{\alpha} \phi_{\uparrow}(\mathbf r)\phi_{\uparrow}^*(\mathbf r')+\phi_{\downarrow}(\mathbf r)\phi_{\downarrow}^*(\mathbf r') \bigg|_{\mathbf{r} = \mathbf{r'}} \nonumber
+    \\&=\sum_{\alpha} |\phi_{\uparrow}(\mathbf r)|^2+|\phi_{\downarrow}(\mathbf r)|^2.
     \label{eq:part_density}
 \end{align}
-The kinetic density
+The kinetic density reads
 \begin{align}
-    \tau_q(\mathbf r) &= \sum_{\alpha} \nabla'\cdot\nabla\rho_q(\mathbf r, \mathbf r')\bigg|_{\mathbf r'=\mathbf r} \nonumber
+    \tau_q(\mathbf r) &\coloneq \sum_{\alpha} \nabla'\cdot\nabla\rho_q(\mathbf r, \mathbf r')\bigg|_{\mathbf r'=\mathbf r} \nonumber
     \\&= \sum_{\sigma, \alpha} \nabla \phi_\sigma (\mathbf r)\cdot \nabla \phi_\sigma^*(\mathbf r')\bigg|_{\mathbf r = \mathbf r'} = \sum_{\sigma, \alpha} |\nabla \phi_\sigma(\mathbf r)|^2 \nonumber
     \\&= \sum_{\alpha}|\nabla \phi_\uparrow(\mathbf r)|^2 + |\nabla \phi_\downarrow(\mathbf r)|^2 \label{eq:kin_density}.
 \end{align}
-The spin density, which reads
+The spin density  reads
 \begin{align}
-    s_q(\mathbf r, \mathbf r') &=\sum_{\sigma \sigma', i} \rho_q(\mathbf r \sigma, \mathbf r' \sigma')\bra{\sigma'} \hat {\boldsymbol{\sigma}} \ket{\sigma} = \sum_{\alpha} \begin{bmatrix} \phi_{\uparrow}^*(\mathbf r') \ \phi_{\downarrow}^*(\mathbf r') \end{bmatrix}\hat{\boldsymbol{\sigma}} \begin{bmatrix} \phi_{\uparrow}(\mathbf r) \\ \phi_{\downarrow}(\mathbf r) \end{bmatrix}
+    s_q(\mathbf r, \mathbf r') &\coloneq\sum_{\sigma \sigma', i} \rho_q(\mathbf r \sigma, \mathbf r' \sigma')\bra{\sigma'} \hat {\boldsymbol{\sigma}} \ket{\sigma} = \sum_{\alpha} \begin{bmatrix} \phi_{\uparrow}^*(\mathbf r') \ \phi_{\downarrow}^*(\mathbf r') \end{bmatrix}\hat{\boldsymbol{\sigma}} \begin{bmatrix} \phi_{\uparrow}(\mathbf r) \\ \phi_{\downarrow}(\mathbf r) \end{bmatrix}
 \end{align}
-and lastly, the spin-orbit density tensor, which reads
+and lastly, the spin-orbit density tensor reads
 \begin{align}
-    J_{q, \mu\nu} &= \frac 1 {2i}(\partial_\mu - \partial_\mu') s_{q, \nu}(\mathbf r, \mathbf r')\bigg|_{\mathbf r'=\mathbf r}\nonumber \\
+    J_{q, \mu\nu} &\coloneq \frac 1 {2i}(\partial_\mu - \partial_\mu') s_{q, \nu}(\mathbf r, \mathbf r')\bigg|_{\mathbf r'=\mathbf r}\nonumber \\
     &= \frac 1 {2i}\bigg(\begin{bmatrix}\phi_{\uparrow}^*(\boldsymbol r')\ \phi_{\downarrow}^*(\boldsymbol r')\end{bmatrix} \partial_\mu\hat{\sigma}_\nu\begin{bmatrix} \phi_{\uparrow}(\mathbf r) \\ \phi_{\downarrow}(\mathbf r) \end{bmatrix} - \begin{bmatrix}\phi_{\uparrow}(\boldsymbol{r})\ \phi_{\downarrow}(\boldsymbol{r})\end{bmatrix} \partial_\mu'\hat{\sigma}_\nu\begin{bmatrix} \phi_{\uparrow}^*(\mathbf r') \\ \phi_{\downarrow}^*(\mathbf r') \end{bmatrix}\bigg)_{\mathbf r'=\mathbf r}\nonumber
      \\&= \sum_\alpha\Im\bigg\{\begin{bmatrix}\phi_{\uparrow}^*(\boldsymbol r)\ \phi_{\downarrow}^*(\boldsymbol r) \end{bmatrix}\partial_\mu \hat{\sigma}_\nu\begin{bmatrix} \phi_{\uparrow}(\mathbf r) \\ \phi_{\downarrow}(\mathbf r) \end{bmatrix}\bigg\}
 \end{align}
-which also defines the spin-orbit current vector $\bm J$, which reads
+which also defines the spin-orbit current vector $\bm J$ that reads
 \begin{equation}
      J_{q,\kappa} (\bm r ) = \sum_{\mu\nu}\epsilon_{\kappa\mu\nu} J_{q, \mu\nu}(\bm r).
 \end{equation}
@@ -44,11 +44,11 @@ The kinetic term can be expressed as
 \end{equation}
 which is found integrating by parts \eqref{eq:kin_functional}.
 \subsubsection{Skyrme functional}
-Since this work only deals with even-even nuclei, only even densities, as previously defined, are non-vanishing. This reduces the Skyrme functional to the following form \cite{stevenson2019low}
+Since this work only deals with even-even nuclei, only time-even densities, which are the ones previously defined, are non-vanishing, due to the ground state being time-reversal invariant \cite{Bender2003}. This reduces the Skyrme functional to the following form \cite{stevenson2019low}
 \begin{align}
     \mathcal E_\text{Skyrme} &= \sum_{t=0,1}\bigg\{C_t^\rho [\rho_0]\rho_t^2+C_t^{\Delta \rho}\rho_t\nabla^2\rho_t+C_t^{\nabla\cdot J}\rho_t\nabla\cdot \mathbf J_t + C_t^\tau\rho_t\tau_t\bigg\}\label{eq:skfunc}
 \end{align}
-Where
+where
 \begin{align}
     %\label{eq:coefficients_func}
     C_0^\rho &= +\frac 3 8 t_0 + \frac 3 {48} t_3\rho_0^\sigma \label{eq:C0rho}
@@ -58,17 +58,17 @@ Where
     \\C_0^{\Delta \rho} &= -\frac 9 {64}t_1+\frac 1 {64}t_2(5+4x_2) \label{eq:C0Deltarho}
     \\C_1^{\Delta \rho} &= +\frac 3 {64}t_1(1+2x_1)+\frac 1 {64}t_2(1+2x_2) \label{eq:C1Deltarho}
     \\C_0^{\nabla\cdot J} &= -\frac 3 4 W_0 \label{eq:C0nabladotJ}
-    \\C_1^{\nabla\cdot J} &= -\frac 1 4 W_0 \label{eq:C1nabladotJ}
+    \\C_1^{\nabla\cdot J} &= -\frac 1 4 W_0 \label{eq:C1nabladotJ}.
 \end{align}
 Here, $t=0,1$ refers to the isoscalar and isovector components of the densities, eg
 \begin{align*}
     \rho_0 = \rho_p + \rho_n
     \\\rho_1 = \rho_p - \rho_n.
 \end{align*}
-As outlined in section \ref{sec:dft}, we can now derive the Kohn-Sham equations, by minimizing the functional under the constraint
+We can now derive the Kohn-Sham equations, by minimizing the functional under the constraint
 \begin{equation}
     \label{eq:spe_ks_constraint}
-    \int \rho_0(\bm r ) d\bm r = A.
+    \bra{\varphi_i}\ket{\varphi_j}=\delta_{ij}.
 \end{equation}
 The resulting Kohn-Sham equations are of the form
 \begin{equation}
@@ -90,10 +90,21 @@ and a spin-orbit field, given by
 The coulomb field $U_C$, which is present only in the single particle equation for protons, doesn't come from the Skyrme interaction, rather from the Coulomb part of the whole functional. It will be properly derived in section \ref{sec:coulomb_treatment}.
 \\Following the rules for functional derivatives, outlined in the appendix \ref{app:func_der} we get
 \begin{align}
-    \frac{\hbar^2}{2m_q^*(\mathbf r)} =& +\frac{\hbar^2}{2m} \\&+ \frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\rho(\mathbf r) \\&- \frac 1 8 [t_1(1+2x_1)+t_2(1+2x_2)]\rho_q(\mathbf r ) \\\\
-    U_q(\mathbf r) =& +\frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\rho \\&+ \frac 1 8 [t_2(1+2x_2)-t_1(1+2x_1)]\rho_q \\
-    &+ \frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\tau \\&+ \frac 1 8 [t_2(1+2x_2)-t_1(1+2x_1)]\tau_q \\
-    &+ \frac 1 {16} [t_2(2+x_2)-3t_1(2+x_1)] \nabla^2 \rho \\&+ \frac 1 {16} [3t_1(2x_1+1)+t_2(2x_2+1)] \nabla^2 \rho_q \\\\
-    \mathbf B_q (\mathbf r ) = &+\frac 1 2 W_0 [\nabla\rho + \nabla \rho_q] \\&-\frac 1 8 (t_1 x_1 + t_2 x_2) \mathbf J + \frac 1 8 (t_1 - t_2) \mathbf J_q.
+    \frac{\hbar^2}{2m_q^*(\mathbf r)} =& +\frac{\hbar^2}{2m} \nonumber
+    \\&+ \frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\rho(\mathbf r) \nonumber
+    \\&- \frac 1 8 [t_1(1+2x_1)+t_2(1+2x_2)]\rho_q(\mathbf r ) \\\nonumber
 \end{align}
-Unless otherwise specified, unindexed densities denote isoscalar quantities (sum of neutron's and proton's).
+\begin{align}
+    U_q(\mathbf r) =& +\frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\rho \nonumber
+    \\&+ \frac 1 8 [t_2(1+2x_2)-t_1(1+2x_1)]\rho_q \nonumber
+    \\&+ \frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\tau \nonumber
+    \\&+ \frac 1 8 [t_2(1+2x_2)-t_1(1+2x_1)]\tau_q \nonumber
+    \\
+    &+ \frac 1 {16} [t_2(2+x_2)-3t_1(2+x_1)] \nabla^2 \rho \nonumber
+    \\&+ \frac 1 {16} [3t_1(2x_1+1)+t_2(2x_2+1)] \nabla^2 \rho_q \\\nonumber
+\end{align}
+\begin{align}
+    \mathbf B_q (\mathbf r ) = &+\frac 1 2 W_0 [\nabla\rho + \nabla \rho_q] \nonumber\\
+    &-\frac 1 8 (t_1 x_1 + t_2 x_2) \mathbf J + \frac 1 8 (t_1 - t_2) \mathbf J_q.
+\end{align}
+Unless otherwise specified, unlabelled densities denote isoscalar quantities (sum of neutron and proton).
