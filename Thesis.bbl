@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{56}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -31,6 +31,11 @@ W.~Bertozzi, J.~Friar, J.~Heisenberg, and J.~Negele.
 \newblock \doi{https://doi.org/10.1016/0370-2693(72)90662-4}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/0370269372906624}.
 
+\bibitem[Bertulani(2007)]{bertulani2007nuclear}
+C.~A. Bertulani.
+\newblock Nuclear physics in a nutshell.
+\newblock 2007.
+
 \bibitem[Bj{\"o}rck(1994)]{GM}
 {\AA}.~Bj{\"o}rck.
 \newblock Numerics of gram-schmidt orthogonalization.
@@ -41,6 +46,12 @@ P.~Bonche, H.~Flocard, and P.-H. Heenen.
 \newblock Self-consistent calculation of nuclear rotations: The complete yrast line of 24mg.
 \newblock \emph{Nuclear Physics A}, 443\penalty0 (1):\penalty0 39--63, 1985.
 \newblock \doi{10.1016/0375-9474(85)90224-7}.
+
+\bibitem[Bonche et~al.(2005)Bonche, Flocard, and Heenen]{oldEv8}
+P.~Bonche, H.~Flocard, and P.~H. Heenen.
+\newblock Solution of the skyrme $\text{HF}+\text{BCS}$ equation on a 3d mesh.
+\newblock \emph{Computer Physics Communications}, 171\penalty0 (1):\penalty0 49--62, 2005.
+\newblock \doi{10.1016/j.cpc.2005.03.001}.
 
 \bibitem[Chabanat et~al.(1997)Chabanat, Bonche, Haensel, Meyer, and Schaeffer]{CHABANAT1997710}
 E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
@@ -58,13 +69,20 @@ E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
 \newblock \doi{https://doi.org/10.1016/S0375-9474(98)00180-8}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0375947498001808}.
 
-\bibitem[Chen et~al.(2022)Chen, Li, Schuetrumpf, Reinhard, and Nazarewicz]{CHEN2022108344}
+\bibitem[Chen et~al.(2022{\natexlab{a}})Chen, Li, Schuetrumpf, Reinhard, and Nazarewicz]{CHEN2022108344}
 M.~Chen, T.~Li, B.~Schuetrumpf, P.-G. Reinhard, and W.~Nazarewicz.
 \newblock Three-dimensional skyrme hartree-fock-bogoliubov solver in coordinate-space representation.
-\newblock \emph{Computer Physics Communications}, 276:\penalty0 108344, 2022.
+\newblock \emph{Computer Physics Communications}, 276:\penalty0 108344, 2022{\natexlab{a}}.
 \newblock ISSN 0010-4655.
 \newblock \doi{https://doi.org/10.1016/j.cpc.2022.108344}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465522000625}.
+
+\bibitem[Chen et~al.(2022{\natexlab{b}})Chen, Li, Schuetrumpf, Reinhard, and Nazarewicz]{hfbftt}
+M.~Chen, T.~Li, B.~Schuetrumpf, P.-G. Reinhard, and W.~Nazarewicz.
+\newblock Three-dimensional skyrme hartree-fock-bogoliubov solver in coordinate-space representation.
+\newblock \emph{Computer Physics Communications}, 275:\penalty0 108344, 2022{\natexlab{b}}.
+\newblock \doi{10.1016/j.cpc.2022.108344}.
+\newblock This paper describes the new 3D, symmetry-unrestricted coordinate-space solver HFBFFT, which is based on the Sky3D code.
 
 \bibitem[Colo' and Roca-Maza()]{hfbcsqrpa}
 G.~Colo' and X.~Roca-Maza.
@@ -83,6 +101,20 @@ R.~Y. Cusson, P.~G. Reinhard, M.~R. Strayer, J.~A. Maruhn, and W.~Greiner.
 \newblock \emph{Zeitschrift für Physik A Atoms and Nuclei}, 320:\penalty0 475--482, 1985.
 \newblock \doi{10.1007/BF01415725}.
 \newblock URL \url{https://doi.org/10.1007/BF01415725}.
+
+\bibitem[Dobaczewski(2000)]{blochmessiah}
+J.~Dobaczewski.
+\newblock Generalization of the bloch-messiah-zumino theorem.
+\newblock \emph{Phys. Rev. C}, 62:\penalty0 017301, May 2000.
+\newblock \doi{10.1103/PhysRevC.62.017301}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.62.017301}.
+
+\bibitem[Dudek and Werner(1978)]{def_WS_dudek}
+J.~Dudek and T.~Werner.
+\newblock New parameters of the deformed woods-saxon potential for a=110-210 nuclei.
+\newblock \emph{Journal of Physics G: Nuclear Physics}, 4\penalty0 (10):\penalty0 1543, oct 1978.
+\newblock \doi{10.1088/0305-4616/4/10/006}.
+\newblock URL \url{https://doi.org/10.1088/0305-4616/4/10/006}.
 
 \bibitem[Erler et~al.(2010)Erler, Klüpfel, and Reinhard]{Erler_2010}
 J.~Erler, P.~Klüpfel, and P.-G. Reinhard.
@@ -125,12 +157,25 @@ G.~Guennebaud, B.~Jacob, et~al.
 \newblock Eigen.
 \newblock http://eigen.tuxfamily.org, 2010.
 
+\bibitem[Hofstadter(1956)]{Hofstadter1956}
+R.~Hofstadter.
+\newblock Electron scattering and nuclear structure.
+\newblock \emph{Reviews of Modern Physics}, 28:\penalty0 214--254, 1956.
+\newblock \doi{10.1103/RevModPhys.28.214}.
+
 \bibitem[Hohenberg and Kohn(1964)]{HK}
 P.~Hohenberg and W.~Kohn.
 \newblock Inhomogeneous electron gas.
 \newblock \emph{Phys. Rev.}, 136:\penalty0 B864--B871, Nov 1964.
 \newblock \doi{10.1103/PhysRev.136.B864}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.136.B864}.
+
+\bibitem[Jachimowicz et~al.(2017)Jachimowicz, Kowal, and Skalski]{defWSfissionbarriers}
+P.~Jachimowicz, M.~Kowal, and J.~Skalski.
+\newblock Adiabatic fission barriers in superheavy nuclei.
+\newblock \emph{Phys. Rev. C}, 95:\penalty0 014303, Jan 2017.
+\newblock \doi{10.1103/PhysRevC.95.014303}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.95.014303}.
 
 \bibitem[Jackson(1998)]{Jackson1998}
 J.~D. Jackson.
@@ -152,6 +197,12 @@ W.~Kohn and L.~J. Sham.
 \newblock \emph{Phys. Rev.}, 140:\penalty0 A1133--A1138, Nov 1965.
 \newblock \doi{10.1103/PhysRev.140.A1133}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.140.A1133}.
+
+\bibitem[Koponen et~al.(2021)Koponen, Pellikka, Tanimoto, Dendo, Lesinski, and Terasaki]{skyax}
+J.~A. Koponen, K.~Pellikka, S.~Tanimoto, K.~Dendo, T.~Lesinski, and K.~Terasaki.
+\newblock The axial hartree--fock + $\text{BCS}$ code $\text{SkyAx}$.
+\newblock \emph{Computer Physics Communications}, 267:\penalty0 108034, 2021.
+\newblock \doi{10.1016/j.cpc.2021.108034}.
 
 \bibitem[Krishnamoorthy and Menon(2013)]{cholesky}
 A.~Krishnamoorthy and D.~Menon.
@@ -199,6 +250,11 @@ R.~M. Martin.
 \newblock Cambridge University Press, Cambridge, UK, 2004.
 \newblock ISBN 9780521534406.
 
+\bibitem[Mottelson(2006)]{nilsson}
+B.~Mottelson.
+\newblock The nilsson model and sven g{\"o}sta nilsson.
+\newblock \emph{Physica Scripta}, 125, 2006.
+
 \bibitem[Nottoli et~al.(2023)Nottoli, Gianni, Levitt, and Lipparini]{Nottoli2023}
 T.~Nottoli, I.~Gianni, A.~Levitt, and F.~Lipparini.
 \newblock A robust, open-source implementation of the locally optimal block preconditioned conjugate gradient for large eigenvalue problems in quantum chemistry.
@@ -211,6 +267,12 @@ T.~Nottoli, I.~Gianni, A.~Levitt, and F.~Lipparini.
 J.~W. Pearson and J.~Pestana.
 \newblock Preconditioners for krylov subspace methods: An overview.
 \newblock \emph{GAMM-Mitteilungen}, 43\penalty0 (4):\penalty0 e202000015, 2020.
+
+\bibitem[Pei et~al.(2011)Pei, Kruppa, and Nazarewicz]{Pei2012_HFBcontinuum}
+J.~C. Pei, A.~T. Kruppa, and W.~Nazarewicz.
+\newblock Quasi-particle continuum and resonances in the hartree-fock-bogoliubov theory.
+\newblock \emph{Physical Review C}, 84\penalty0 (2):\penalty0 024311, 2011.
+\newblock \doi{10.1103/PhysRevC.84.024311}.
 
 \bibitem[Reinhard and Flocard(1995)]{REINHARD1995467}
 P.-G. Reinhard and H.~Flocard.
@@ -237,6 +299,12 @@ W.~Ryssens, V.~Hellemans, M.~Bender, and P.-H. Heenen.
 Y.~Saad.
 \newblock \emph{Numerical Methods for Large Eigenvalue Problems}.
 \newblock Manchester University Press, Manchester, UK, 1992.
+
+\bibitem[Schunck et~al.(2012)Schunck, Dobaczewski, McDonnell, Sarich, Staszczak, and Stoitsov]{hfodd}
+N.~Schunck, J.~Dobaczewski, J.~McDonnell, J.~Sarich, A.~Staszczak, and M.~V. Stoitsov.
+\newblock Solution of the $\text{HFB}$ equation in the oscillatory basis: the $\text{HFODD}$ code.
+\newblock \emph{Computer Physics Communications}, 183\penalty0 (1):\penalty0 166--191, 2012.
+\newblock \doi{10.1016/j.cpc.2011.09.018}.
 
 \bibitem[Shewchuk(1994)]{PainlessCGM}
 J.~R. Shewchuk.
@@ -281,6 +349,11 @@ C.~F. von Weizsäcker.
 \newblock {Zur Theorie der Kernmassen}.
 \newblock \emph{Zeitschrift f{\"u}r Physik}, 96\penalty0 (7-8):\penalty0 431--458, 1935.
 \newblock \doi{10.1007/BF01337700}.
+
+\bibitem[{Wikipedia contributors}(2025)]{wikipedia_equation_of_state}
+{Wikipedia contributors}.
+\newblock Nilsson model graphical representation -- wikipedia.
+\newblock \url{https://en.wikipedia.org/w/index.php?curid=60892381}, 2025.
 
 \bibitem[Woo et~al.(2023)Woo, Kim, and Kim]{LOBPCGDKS}
 J.~Woo, S.~Kim, and W.~Y. Kim.

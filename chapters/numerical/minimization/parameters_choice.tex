@@ -2,11 +2,11 @@
 Inside the `Diagonalize $h$' step in figure \ref{fig:pseudocode}, the execution of the GCG algorithm is performed, using the current iteration's single-particle Hamiltonian as the matrix to diagonalize and the previous iteration's orbitals as the initial guess. This is the main computational bottleneck of the code, where a correct choice of the execution parameters can drastically reduce execution times.
 The paramters that need to be chosen carefully are essentially the inverse power step tolerance and the number of maximum GCG iterations.
 \subsubsection{Inverse power step tolerance}
-The first parameter to be tuned is the tolerance on the CG solution of the system \begin{equation}
-    AW = \Lambda X
+The first parameter to be tuned is the tolerance on the CG step which approximately solves the system \begin{equation}
+    (A+ \texttt{shift}\cdot I)W = X_a\Lambda
 \end{equation}
 in algorithm \ref{alg:mod_gcg}, where $A$ is actually the single-particle Hamiltonian $h$.
-When the CG residual $AW -  X\Lambda$ is smaller than the tolerance, the procedure stops and outputs the $W$ block.
+When the CG residual $(A+ \texttt{shift}\cdot I)W -  X_a\Lambda$ is smaller than the tolerance, the procedure stops and outputs the $W$ block.
 \\In figure \ref{fig:conv_tol}, the relative absolute error of the total energy is calculated against a reference benchmark value (details in the results chapter \ref{chap:res_sph}), for different values of the CG tolerance. It's clear that at least a tolerance of $10^{-3}$ is needed for good convergence, while tolerances $\ge 10^{-4}$ stop offering increasing returns, rendering a choice between $10^{-4}$ and $10^{-5}$ an optimal one.
 \begin{figure}[H]
     \centering
