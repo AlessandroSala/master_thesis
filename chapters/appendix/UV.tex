@@ -4,21 +4,29 @@ The blocked form of the $\overline U$ and $\overline V$ matrices in section \ref
 \[
 \bar{U} =
 \begin{pmatrix}
-0 &        &        &        &        \\
-  & \begin{matrix} u_1 & 0 \\ 0 & u_1 \end{matrix} &        &        &        \\
-  &        & \ddots &        &        \\
-  &        &        & \begin{matrix} u_n & 0 \\ 0 & u_n \end{matrix} &        \\
-  &        &        &        & 1
+0 &        &        &        &        & & & & \\
+ &\ddots        &        &       &        & & \\
+ &        &0        &        &        & & \\
+& &  & \begin{matrix} u_1 & 0 \\ 0 & u_1 \end{matrix} &        &        &        & & \\
+& &  &        & \ddots &        &        & & \\
+& &  &        &        & \begin{matrix} u_n & 0 \\ 0 & u_n \end{matrix} &        & & \\
+& & & & &        & 1       &        & \\
+& & & &  &        &        &   \ddots     & \\
+& & & &  &        &        &        & 1
 \end{pmatrix}
 \]
 
 \[
 \bar{V} =
 \begin{pmatrix}
-1 &        &        &        &        \\
-  & \begin{matrix} 0 & v_1 \\ -v_1 & 0 \end{matrix} &        &        &        \\
-  &        & \ddots &        &        \\
-  &        &        & \begin{matrix} 0 & v_n \\ -v_n & 0 \end{matrix} &        \\
-  &        &        &        & 0
+1 &        &        &        &        & & & & \\
+ &\ddots        &        &       &        & & \\
+ &        &1        &        &        & & \\
+& &  & \begin{matrix} 0 & v_1 \\ -v_1 & 0 \end{matrix} &        &        &        & & \\
+& &  &        & \ddots &        &        & & \\
+& &  &        &        & \begin{matrix} 0 & v_n \\ -v_n & 0 \end{matrix} &        & & \\
+& & & & &        &0       &        & \\
+& & & &  &        &        &   \ddots     & \\
+& & & &  &        &        &        & 0
 \end{pmatrix}
 \]

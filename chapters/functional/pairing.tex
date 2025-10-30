@@ -1,27 +1,27 @@
 \section{Pairing in Hartree-Fock theory}
 \label{sec:pairing_hf}
-In this section, we will discuss the two common approaches to include nuclear pairing in the HF theory. The aim of these few pages is to provide a brief overview of how the BCS equations are derived and understand the basics of the more general Hartree-Fock-Bogoliubov theory. The former method is the most widely implemented thanks to its low complexity \cite{hfbcsqrpa,oldEv8,skyax}, while the latter, more sophisticated and advanced, is the standard in modern codes \cite{hfodd, hfbftt,MAREVIC2022108367}, we will touch on it so that the reader may appriciate in the numerical chapter the natural extension of this work to the more general Bogoliubov ansatz. 
+In this section, we will discuss the two common approaches to include nuclear pairing in the HF theory. The aim of these few pages is to provide a brief overview of how the BCS equations are derived and understand the basics of the more general Hartree-Fock-Bogoliubov theory. The former method is the most widely implemented thanks to its low complexity \cite{hfbcsqrpa,oldEv8,skyax}, while the latter, more sophisticated and advanced, is the standard in modern codes \cite{hfodd, hfbftt,MAREVIC2022108367}. We will touch on it so that the reader may appreciate in the numerical chapter the natural extension of this work to the more general Bogoliubov ansatz. 
 \subsection{BCS theory}
 The BCS approximation, from Bardeen-Cooper-Schrieffer, is the same theory used to describe Cooper pairs in superconductivity, applied to the nuclear case.
 The ansatz of BCS is that nucleons are paired in states whose total angular momentum is zero, such a wavefunction can be expressed as $\ket{JM}=\ket{00}$ and reads
 \begin{equation}
     \label{eq:zero_mom}
-    \ket{00} = \sum_m \bra{jm_j j-m_j}\ket{00}\ket{j-m}
+    \ket{00} = \sum_{m_j} \bra{jm_j j-m_j}\ket{00}\ket{jm_j}\ket{j-m_j}
 \end{equation}
-Introducting the time-reversal operator $\hat {\mathcal T}:t\mapsto -t$, it acts on $\ket{00}$ as 
+Introducing the time-reversal operator $\hat {\mathcal T}:t\mapsto -t$, it acts on $\ket{00}$ as 
 \begin{equation}
-    \hat {\mathcal T} \ket{jm} = \widetilde{\ket{{jm}}} = (-1)^{j+m}\ket{j-m},
+    \hat {\mathcal T} \ket{jm_j} = \widetilde{\ket{{jm_j}}} = (-1)^{j+m_j}\ket{j-m_j},
 \end{equation}
 using this relation, equation \eqref{eq:zero_mom} becomes 
 \begin{equation}
-    \ket{00} =- \frac{1}{\sqrt{2j+1}}\ket{jm}\widetilde{\ket{{jm}}}.
+    \ket{00} =- \frac{1}{\sqrt{2j+1}}\sum_{m_j}\ket{jm_j}\widetilde{\ket{{jm_j}}}.
 \end{equation}
-Hence BCS amounts to using in the HF method the more general Slater determinant
+Hence BCS amounts to replacing the Slater determinant with a more general wavefunction to describe the ground state, which reads
 \begin{equation}
     \label{eq:bcs_det}
     \bcs = \prod_{k>0}(u_k+ v_k a_{\tilde k}^\dagger a_k^\dagger) \ket{-}
 \end{equation}
-where $u_k$ and $v_k$ are real parameters whose meaning will shortly be clear, $k$ is short-hand for $\ket{jm}$, and $\tilde k = -k$ denotes the time-reversal state of $k$; the product runs over positive $k$ only. The BCS wavefunction is the creation in the vacuum of quasi-paticles made of time-reversal paired particles, instead of individual ones. The normalization condition on the BCS wavefunction reads
+where $u_k$ and $v_k$ are real parameters whose meaning will shortly be clear, $k$ is short-hand for $\ket{jm}$, and $\tilde k = -k$ denotes the time-reversal state of $k$; the product runs over positive $k$ only. The BCS wavefunction is the creation in the vacuum of quasi-particles made of time-reversal paired particles, instead of individual ones. The normalization condition on the BCS wavefunction reads
 \begin{equation}
     \label{eq:bcs_norm}
     1=\braket{\text{BCS}} = \prod_{k>0} \bra{-}(u_{k}+v_{k}a_{k}a_{\tilde k})(u_k+v_k a_{\tilde k}^\dagger a_k^\dagger)\ket{-} =\prod_{k>0}(u_k^2+v_k^2)=1
@@ -37,9 +37,9 @@ Taking the expectation value of the particle number operator $\hat N = \sum_k a_
 \end{equation}
 while the expectation value of the particle number dispersion reads
 \begin{equation}
-\expval{\Delta\hat N ^2} = \expval{\hat N^2} - \expval{\hat N}^2 = 4\sum_{k>0} v_k u_k.
+\expval{\Delta\hat N ^2} = \expval{\hat N^2} - \expval{\hat N}^2 = 4\sum_{k>0} v_k^2 u_k^2.
 \end{equation}
-The consequence of this result is profound. The BCS ansatz does not assume a fixed number of particles, rather it becomes an observables of the system, with an expectation value that depends on how the parameters $v_k^2$ are set, which represent the probability of finding a particle in the $k$-th state.
+The consequence of this result is profound. The BCS ansatz does not assume a fixed number of particles, rather it becomes an observable of the system, with an expectation value that depends on how the parameters $v_k^2$ are set, which represent the probability of finding a particle in the $k$-th state.
 We can now write the many body Hamiltonian of the system as in equation \eqref{eq:mb_hamiltonian_sq}
 \begin{equation}
     \hat H = \sum_{k_1 k_2}t_{k_1k_2} a_{k_1}^\dagger a_{k_2} + \frac 1 4 \sum_{k_1 k_2 k_3 k_4}\overline{v}_{k_1k_2k_3k_4} a_{k_1}^\dagger a_{k_2}^\dagger a_{k_3} a_{k_4}
@@ -51,12 +51,12 @@ and replace it with the Routhian
 \end{equation}
 so that the expected number of particles may be fixed, under the appropriate choice of $\lambda$, by the relation
 \begin{equation}
-\pdv{}{N}{\bbcs \hat H - \lambda \hat N \bcs} = \lambda.
+\pdv{}{N}\bbcs \hat H  \bcs = \lambda.
 \end{equation}
 the Lagrange multiplier $\lambda$ takes on the meaning of the Fermi energy.
 We can now apply the variational principle \eqref{eq:var_eq_res} to \eqref{eq:bcs_routhian} using the $v_k$ as variational quantities, which yields 
 \begin{equation}
-   4\tilde \varepsilon_k ^2 u_k^2 v_k^2 = \Delta_k ^2 - \Delta_k^2 u_k^2v_k^2,
+   4\tilde \varepsilon_k ^2 u_k^2 v_k^2 = \Delta_k ^2 - 4\Delta_k^2 u_k^2v_k^2,
 \end{equation}
 where the pairing gap $\Delta_k$ is defined as
 \begin{equation}
@@ -88,8 +88,9 @@ Using the normalization condition to write $u_k^2=1-v_k^2$, and plugging it into
     \label{eq:gap}
     \Delta_k = - \sum_{k'}\frac{\Delta_{k'}\overline v_{k\tilde k k'\tilde{k'}}}{2E_{k'}}
 \end{equation}
-The system of equations (\ref{eq:gap}, \ref{eq:norm_uv}, \ref{eq:v2}, \ref{eq:qpe}, \ref{eq:epsilon}), together with the condition $\expval{\hat N}=N$ is closed and can be solved numerically, usually through an effective pairing interaction.
+The system of equations (\ref{eq:gap}, \ref{eq:norm_uv}, \ref{eq:v2}, \ref{eq:qpe}, \ref{eq:epsilon}), together with the condition on $\hat N$ -- ie $\expval{\hat N}=N$ -- is closed and can be solved numerically, usually through an effective pairing interaction.
 \subsection{Hartree-Fock-Bogoliubov theory}
+\label{sec:hfb}
 The most general ansatz to account for pairing interactions in Hartree-Fock theory is the Hartree-Fock-Bogoliubov (HFB) theory, it allows a treatment of the mean-field and pairing interactions in a unified way, the quasi-particles created on the vacuum are the most general ones, instead of being time-reversal paired particles.
 Let us start by writing a Bogoliubov transformation from the particle basis $c_i$ to a quasi-particle one 
 \begin{equation}
@@ -155,7 +156,7 @@ Using the Messiah-Bloch decomposition \cite{blochmessiah}, we can write the unit
         0 & C^*
     \end{pmatrix}
 \end{equation}
-where $D$ and $C$ are unitary matrices and $\overline U$ and $\overline V$ are real matrices, which have a particular blocked form, expressed through the coefficents $u_k, v_k$; the reader may refer to appendix \ref{app:UV} for the explicit representation. We can also define the matrices $U, V$ as 
+where $D$ and $C$ are unitary matrices and $\overline U$ and $\overline V$ are real matrices, which have a particular blocked form, expressed through the coefficents $u_k, v_k$; the reader may refer to appendix \ref{app:uv} for the explicit representation. We can also define the matrices $U, V$ as 
 \begin{equation}
     U=D\overline U C,\quad V=D^*\overline V C.
 \end{equation}
@@ -193,7 +194,7 @@ We can define the pairing tensor as
 \end{equation}
 which in matrix form reads, alongside the density matrix
 \begin{equation}
-    \kappa = V^*U^T,\quad \rho = V^*V^T.
+    \kappa = UV^\dagger,\quad \rho = V^*V^T.
 \end{equation}
 We can now apply the variational principle \eqref{eq:var_eq_res}
 \begin{equation}
@@ -230,7 +231,7 @@ and the pairing field $\Delta$ reads
 In the canonical basis, we are able to solve for the occupation numbers
 \begin{equation}
     \label{eq:occ_hfb}
-    u_k^2 = \frac 1 2 \bigg(1+\frac{h_{kk}+h_{\tilde k \tilde k}}{\sqrt{(h_{kk}+h_{\tilde k \tilde k})^2+4\Delta_{k\tilde k}}}\bigg)
+    u_k^2 = \frac 1 2 \bigg(1+\frac{h_{kk}+h_{\tilde k \tilde k}}{\sqrt{(h_{kk}+h_{\tilde k \tilde k})^2+4\Delta_{k\tilde k}^2}}\bigg)
 \end{equation}
 where $v_k^2 = 1 - u_k^2$ is guaranteed by the unitarity of the matrices.
 Starting from an initial guess, we solve the eigenvalue problem \eqref{eq:eighfb}, we extract the occupation numbers \eqref{eq:occ_hfb}, use them to build the new mean field \eqref{eq:mean_field_hfb} and pairing field \eqref{eq:pairing_field_hfb}, and repeat the process until convergence.
@@ -253,7 +254,7 @@ it's trivial to show that
 and 
 \begin{equation}
     \label{eq:commutationhfb}
-    \mathcal C = \mathcal C ^{-1}\implies \mathcal C\mathcal H_\text{HFB} = -\mathcal H_\text{HFB}\mathcal C.
+    \mathcal C = \mathcal C ^{-1}\implies \mathcal C\mathcal H_\text{HFB} = -\mathcal H_\text{HFB}^*\mathcal C.
 \end{equation}
 If we take the complex conjugate of equation \eqref{eq:eigsolhfb}, we get
 \begin{equation}

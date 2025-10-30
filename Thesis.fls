@@ -1811,6 +1811,15 @@ INPUT ./chapters/functional/functional.tex
 INPUT chapters/functional/functional.tex
 INPUT ./chapters/functional/functional.tex
 INPUT chapters/functional/functional.tex
+INPUT ./Images//./raggiera_polimi.eps
+INPUT ./Images//./raggiera_polimi.eps
+INPUT ./Images//./raggiera_polimi.eps
+INPUT ./Images//./raggiera_polimi.eps
+INPUT ./Images//./raggiera_polimi-eps-converted-to.pdf
+INPUT ./Images//./raggiera_polimi-eps-converted-to.pdf
+INPUT ./Images//./raggiera_polimi.eps
+INPUT ./Images//./raggiera_polimi-eps-converted-to.pdf
+INPUT ./Images//./raggiera_polimi-eps-converted-to.pdf
 INPUT ./chapters/functional/hartree_fock.tex
 INPUT chapters/functional/hartree_fock.tex
 INPUT ./chapters/functional/hartree_fock.tex
