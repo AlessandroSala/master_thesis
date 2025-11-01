@@ -19,6 +19,7 @@
 \usepackage{setspace} % For using single or double spacing
 \usepackage{emptypage} % To insert empty pages
 \usepackage{multicol} % To write in multiple columns (executive summary)
+\usepackage{enumerate}
 \setlength\columnsep{15pt} % Column separation in executive summary
 \setlength\parindent{0pt} % Indentation
 \raggedbottom  
@@ -207,6 +208,7 @@ Qui va l'Abstract in lingua italiana della tesi seguito dalla lista di parole ch
 % NUMBERED CHAPTERS % Regular chapters following
 % --------------------------------------------------------------------------
 \input{chapters/introduction/introduction.tex}
+\input{chapters/methods/methods.tex}
 \input{chapters/functional/functional.tex}
 \input{chapters/numerical/numerical.tex}
 \input{chapters/spherical_results/spherical_results.tex}
@@ -231,7 +233,7 @@ Qui va l'Abstract in lingua italiana della tesi seguito dalla lista di parole ch
 % LIST OF SYMBOLS
 % Write out the List of Symbols in this page
 \chapter*{List of Symbols} % You have to include a chapter for your list of symbols (
-\begin{table}[H]
+\begin{table}[h]
     \centering
     \begin{tabular}{lll}
         \textbf{Variable} & \textbf{Description} & \textbf{SI unit} \\\hline\\[-9px]

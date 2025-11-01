@@ -10,45 +10,45 @@ Warning--empty journal in bertulani2007nuclear
 Warning--empty year in hfbcsqrpa
 Warning--can't use both author and editor fields in LOBPCG
 Warning--empty journal in PainlessCGM
-You've used 56 entries,
+You've used 65 entries,
             2773 wiz_defined-function locations,
-            1052 strings with 16735 characters,
-and the built_in function-call counts, 26748 in all, are:
-= -- 2481
-> -- 1461
+            1115 strings with 18607 characters,
+and the built_in function-call counts, 31901 in all, are:
+= -- 2925
+> -- 1857
 < -- 34
-+ -- 502
-- -- 444
-* -- 2262
-:= -- 4211
-add.period$ -- 254
-call.type$ -- 56
-change.case$ -- 310
-chr.to.int$ -- 54
-cite$ -- 117
-duplicate$ -- 1154
-empty$ -- 2150
-format.name$ -- 522
-if$ -- 5587
-int.to.chr$ -- 3
++ -- 637
+- -- 567
+* -- 2767
+:= -- 5034
+add.period$ -- 290
+call.type$ -- 65
+change.case$ -- 378
+chr.to.int$ -- 60
+cite$ -- 135
+duplicate$ -- 1342
+empty$ -- 2499
+format.name$ -- 654
+if$ -- 6629
+int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 58
-newline$ -- 374
-num.names$ -- 224
-pop$ -- 534
+missing$ -- 67
+newline$ -- 428
+num.names$ -- 260
+pop$ -- 645
 preamble$ -- 1
-purify$ -- 259
+purify$ -- 318
 quote$ -- 0
-skip$ -- 853
+skip$ -- 995
 stack$ -- 0
-substring$ -- 1023
-swap$ -- 98
+substring$ -- 1203
+swap$ -- 112
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 581
+type$ -- 680
 warning$ -- 5
-while$ -- 233
+while$ -- 271
 width$ -- 0
-write$ -- 898
+write$ -- 1032
 (There were 6 warnings)

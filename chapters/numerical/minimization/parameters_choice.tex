@@ -8,7 +8,7 @@ The first parameter to be tuned is the tolerance on the CG step which approximat
 in algorithm \ref{alg:mod_gcg}, where $A$ is actually the single-particle Hamiltonian $h$.
 When the CG residual $(A+ \texttt{shift}\cdot I)W -  X_a\Lambda$ is smaller than the tolerance, the procedure stops and outputs the $W$ block.
 \\In figure \ref{fig:conv_tol}, the relative absolute error of the total energy is calculated against a reference benchmark value (details in the results chapter \ref{chap:res_sph}), for different values of the CG tolerance. It's clear that at least a tolerance of $10^{-3}$ is needed for good convergence, while tolerances $\ge 10^{-4}$ stop offering increasing returns, rendering a choice between $10^{-4}$ and $10^{-5}$ an optimal one.
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/conv_tol.pdf}
     \caption{HF calculation convergence with varying CG tolerance for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.} 
@@ -17,13 +17,13 @@ When the CG residual $(A+ \texttt{shift}\cdot I)W -  X_a\Lambda$ is smaller than
 \subsubsection{Inner GCG iterations}
 The number of inner GCG maximum iterations, here named `inverse power steps' to avoid confusion, is slightly more nuanced than the CG tolerance. The algorithm converges to the true eigenpairs as the power steps are performed, so one could think that a higher number of steps would bring to HF convergence faster, since the precision on the eigenvalues increases, but this is not the case.
 \\In figures \ref{fig:conv_steps_o} and \ref{fig:conv_steps_mg}, the convergence of the HF calculation is plotted for different number of steps, respectively, for the spherical nucleus $^{16}$O and the deformed nucleus $^{24}$Mg. 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{Images/conv_steps_o.pdf}
     \caption{HF calculation convergence with varying number of inverse power steps for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.}
     \label{fig:conv_steps_o}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{Images/conv_steps.pdf}
     \caption{HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg, box $[-10, 10]$ fm, step size $0.33$ fm.}

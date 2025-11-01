@@ -1,0 +1,27 @@
+\chapter{State of the art, objective and motivation}
+\label{chap:methods}
+\section{State of the art and motivation}
+The need to account for nuclear deformations has been highlighted in chapter \ref{chap:intro}, particularly in regard to heavy nuclei and the fission process in section \ref{sec:fission}. The solution of the many-body problem has always been a computational challenge, mainly mitigated by using expansions on bases or assuming certain symmetries to reduce the dimensionality of the problem.
+\\The problems that arise when using either of the aforementioned approaches call for the implementation of unconstrained codes.
+\paragraph{Basis expansions} 
+An efficient method to solve the many-body problem is to use basis expansions of the harmonic oscillator, similar to the nuclear system as mentioned in section \ref{sec:models}. Several implement this kind of procedure, one of which is used in the present work to benchmark our own implementation in section \ref{sec:hfbtho}. The main limitation of such approach is that weakly bound states and large deformations are not well represented, the former due fundamentally different asymptotic behaviours for $r\to \infty$, between the HO -- $e^{-r^2}$ -- and loosely bound or quasi-resonant states -- $e^{-r}$ \cite{Stoitsov2003_PRCC68_054312,Dobaczewski1996_PRCC53_2809}, while the latter needs a large number of HO shells to converge, leading to an exponential increase of the computational cost \cite{Marevic2022_CPC}.
+\paragraph{Symmetry assumptions} 
+Another approach to reduce the complexity of the procedure is to assume certain symmetries, as to reduce the dimensionality of the problem to save computational time. The main example of such codes is the spherical solution \cite{VauhBrinkOriginal,hfbcsqrpa} of the Hartree-Fock equations, but axially symmetric ones exist as well \cite{Pei2008_HFBAX}. The limitations of such codes are obvious, as they systematically prevent the representation of certain broken symmetries.
+\paragraph{Unconstrained codes}
+In recent years, codes that solve the Hartree-Fock or Hartree-Fock-Bogoliubov problem on an unconstrained 3D mesh have been developed \cite{Ryssens2015_EV8,Ryssens2016_MOCCa,Maruhn2014_Sky3D,Chen2022_HFBFFT}. These codes are able to represent broken symmetries, but they require a huge amount of computational power to be run at an acceptable accuracy, unless certain assumptions are made, such as plane reflection \cite{Ryssens2015_EV8,Ryssens2016_MOCCa}.
+Hence, the need to explore new, more computationally efficient methods to solve the many-body problem, as done in this thesis through the use of the General Conjugate Gradient method, detailed in section \ref{sec:gcg}.
+\section{Objectives}
+The aim of this work is to develop a new implementation of the Hartree-Fock method on an unconstrained 3D mesh, by the use of the General Conjugate Gradient method. The goals addressed by this work are the following:
+\begin{itemize}
+    \item assess the feasibility of the General Conjugate Gradient for the solution of large-scale eigenvalue problems;
+    \item solve the self-consistent Hartree-Fock equations on an unconstrained 3D mesh;
+    \item verify the numerical accuracy of the new implementation against existing spherical codes;
+    \item gauge the numerical accuracy of deformations, comparing results with well established deformed codes; and
+    \item attempt to produce novel results that specifically require an unconstrained implementaiton of this kind, and establish the advance brought to the field by this work.
+\end{itemize}
+\section{Methods}
+The methods used in this work are the following:
+\paragraph{Skyrme energy functional} The many-body problem is treated within the well established Hartree-Fock framework, detailed in section \ref{sec:hf}; as mentioned in the introduction in chapter \ref{chap:intro}, it is not sufficient, as a more general energy density functional approach has to be taken, which is developed in section \ref{sec:skyrme} for the Skyrme functional used in this work.
+\paragraph{Finite differences and General Conjugate Gradient} After the main equations to be solved have been derived, the numerical methods used to solve them are detailed in chapter \ref{chap:numerical}, starting with the numerical discretization of the equations in section \ref{sec:finite_diff} and then solving the eigenvalue problem using an implementation of the General Conjugate Gradient method in section \ref{sec:gcg}. Finally closing with some remarks about specific details about the code and the algorithm parameters in section \ref{sec:minimization}.
+
+

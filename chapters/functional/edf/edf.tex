@@ -46,7 +46,8 @@ which is found integrating by parts \eqref{eq:kin_functional}.
 \subsubsection{Skyrme functional}
 Since this work only deals with even-even nuclei, only time-even densities, which are the ones previously defined, are non-vanishing, due to the ground state being time-reversal invariant \cite{Bender2003}. This reduces the Skyrme functional to the following form \cite{stevenson2019low}
 \begin{align}
-    \mathcal E_\text{Skyrme} &= \sum_{t=0,1}\bigg\{C_t^\rho [\rho_0]\rho_t^2+C_t^{\Delta \rho}\rho_t\nabla^2\rho_t+C_t^{\nabla\cdot J}\rho_t\nabla\cdot \mathbf J_t + C_t^\tau\rho_t\tau_t\bigg\}\label{eq:skfunc}
+    \label{eq:skfunc}
+    \mathcal E_\text{Skyrme} &= \sum_{t=0,1}\bigg\{C_t^\rho [\rho_0]\rho_t^2+C_t^{\Delta \rho}\rho_t\nabla^2\rho_t+C_t^{\nabla\cdot J}\rho_t\nabla\cdot \mathbf J_t + C_t^\tau\rho_t\tau_t\bigg\}
 \end{align}
 where
 \begin{align}
@@ -108,5 +109,7 @@ The coulomb field $U_C$, which is present only in the single particle equation f
     &-\frac 1 8 (t_1 x_1 + t_2 x_2) \mathbf J + \frac 1 8 (t_1 - t_2) \mathbf J_q.
 \end{align}
 Unless otherwise specified, unlabelled densities denote isoscalar quantities (sum of neutron and proton).
-\subsection{Funcitonals}
-WRITE ABOUT DIFFERENT FUNCTIONALS FITS.
+\subsection{Functionals}
+The set of parameters $(t_0, t_1, t_2, t_3, x_0, x_1, x_2, \sigma, W_0)$ in the Skyrme functional \eqref{eq:skfunc} is not fixed and may vary for different parametrizations. These parameters are fitted on experimental data so that the EDF may produce accurate results.
+The first parametrization was given by D Vautherin and D M Brink \cite{VauhBrinkOriginal}, known as S I, was fitted on double magic nuclei and nuclear matter data. This was sufficient for their calculations but not enough to describe other nuclei. Fitting these parameters on further data over the years led to the introduction of other parameter sets such as S I, S II, S III \cite{CHABANAT1997710}. These were good functionals to reproduce ground states and certain aspects of nuclear structure, but they lacked the ability to account with good accuracy for deformation properties and fission barriers. The first modern functional to address this issue has been the SkM* \cite{bartel1982fission}.
+Nowadays functionals such as the SLy family \cite{chabanat2}, try to be as broad as possible, taking into account results from ab-initio theories, exotic nuclei, drip lines, nuclei far from stability and so on.

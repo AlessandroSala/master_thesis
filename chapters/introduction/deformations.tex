@@ -4,6 +4,7 @@ We shall now give a description of the nuclear shape in a formal framework. We w
 \subsection{Quadrupole deformation}
 Assuming the nuclear volume to be evaluated as
 \begin{equation}
+    \label{eq:volume}
     V(A) = \frac{4}{3}\pi R^3
 \end{equation}
 Let us suppose to consider variations of the nuclear radius $R$ in terms of spherical harmonics
@@ -12,9 +13,9 @@ Let us suppose to consider variations of the nuclear radius $R$ in terms of sphe
 \end{equation}
 where the moments $\alpha_{\lambda \mu}$ defined as
 \begin{equation}
-    \alpha_{\lambda \mu}=\int Y_{\lambda\mu}^*(\theta, \phi)R(\theta, \phi) d\Omega
+    \alpha_{\lambda \mu}=\int Y_{\lambda\mu}^*(\theta, \phi)R(\theta, \phi) d\Omega,
 \end{equation}
-are considered small, in the sense that $|\alpha_{\lambda \mu}| ^2 \ll |\alpha_{\lambda \mu}| $. We have that $Y_{00}$ is constant, so its moment does not produce an interesting variation. We can set $\alpha_{00}=0$. 
+are considered small, in the sense that $|\alpha_{\lambda \mu}| ^2 \ll |\alpha_{\lambda \mu}| $ as to conserve the volume in equation \eqref{eq:volume}. We have that $Y_{00}$ is constant, so its moment does not provide additional information to the constant radius. We can set $\alpha_{00}=0$. 
 Since $Y_{10}$, $Y_{11}$ and $Y_{1-1}$ are odd for $\theta + \pi$ and $\phi + \pi$, we have that $\alpha_{1\mu}$ vanishes in a reference frame in which the centre of mass is at the origin.
 \\Now, let us consider only $\alpha_{2\mu}$ coefficients and neglect higher degree terms, so that the deformation is purely quadrupolar, then the radius reads
 \begin{equation}
@@ -70,7 +71,7 @@ $H_0$ is the usual spherical harmonic potential, for which the eigenfunctions, e
 \end{align}
 thus in the limit of large $j$, states with the maximum total angular momentum projection $m_j$ are shifted upwards, while states with the minimum $m_j$ are shifted downwards; moreover, eigenstates with $\pm m_j$ are degenerate, as expected by the reflection symmetry of the Hamiltonian if the $z$ axis is inverted.
 Adding further empirical terms to reproduce experimental data, and the spin-orbit coupling, results in the formulation of the Nilsson model \cite{nilsson}. In figure \ref{fig:nilsson}, a graphical representation of the energy levels in the Nilsson model is shown \cite{wikipedia_equation_of_state}.
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{Images/nilsson.pdf}
     \caption{Nilsson model energy levels trends, as a function of $\varepsilon$.}
@@ -93,7 +94,7 @@ Under the parity operation $\mathcal P: \bm r \mapsto -\bm r$, coefficients of t
     \mathcal P \alpha_{\lambda \mu} = (-1)^{\lambda} \alpha_{\lambda \mu},
 \end{equation}
 hence a nuclear octpuole deformation, whose degree $\lambda=3$, would break parity symmetry. In figure \ref{fig:octupole_defs} a graphical representation of the spherical harmonics for $\lambda=3$ and $\mu=0,2$ is shown.
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
 \begin{minipage}{0.48\textwidth}
     \centering

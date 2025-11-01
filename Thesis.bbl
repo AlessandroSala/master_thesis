@@ -1,4 +1,4 @@
-\begin{thebibliography}{56}
+\begin{thebibliography}{65}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,12 @@
 \newblock {Atomic Mass Data Center}.
 \newblock URL \url{https://www-nds.iaea.org/amdc/}.
 \newblock Accessed: 19 October 2025.
+
+\bibitem[Bartel et~al.(1982)Bartel, Quentin, Brack, Guet, and Håkansson]{bartel1982fission}
+J.~Bartel, P.~Quentin, M.~Brack, C.~Guet, and H.-B. Håkansson.
+\newblock Fission barriers of heavy and superheavy nuclei in a self-consistent hartree-fock approach.
+\newblock \emph{Nuclear Physics A}, 386\penalty0 (1):\penalty0 79--100, 1982.
+\newblock \doi{10.1016/0375-9474(82)90302-6}.
 
 \bibitem[Bender et~al.(2003)Bender, Heenen, and Reinhard]{Bender2003}
 M.~Bender, P.-H. Heenen, and P.-G. Reinhard.
@@ -84,6 +90,12 @@ M.~Chen, T.~Li, B.~Schuetrumpf, P.-G. Reinhard, and W.~Nazarewicz.
 \newblock \doi{10.1016/j.cpc.2022.108344}.
 \newblock This paper describes the new 3D, symmetry-unrestricted coordinate-space solver HFBFFT, which is based on the Sky3D code.
 
+\bibitem[Chen et~al.(2022{\natexlab{c}})Chen, Li, Schütrumpf, Reinhard, and Nazarewicz]{Chen2022_HFBFFT}
+M.~Chen, T.~Li, B.~Schütrumpf, P.-G. Reinhard, and W.~Nazarewicz.
+\newblock Three-dimensional skyrme hartree-fock-bogoliubov solver in coordinate-space representation.
+\newblock \emph{Computer Physics Communications}, 284:\penalty0 108578, 2022{\natexlab{c}}.
+\newblock \doi{10.1016/j.cpc.2022.108578}.
+
 \bibitem[Colo' and Roca-Maza()]{hfbcsqrpa}
 G.~Colo' and X.~Roca-Maza.
 \newblock User guide for the hfbcs-qrpa(v1) code.
@@ -109,6 +121,12 @@ J.~Dobaczewski.
 \newblock \doi{10.1103/PhysRevC.62.017301}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.62.017301}.
 
+\bibitem[Dobaczewski et~al.(1996)Dobaczewski, Nazarewicz, Werner, Berger, Chinn, and Decharge]{Dobaczewski1996_PRCC53_2809}
+J.~Dobaczewski, W.~Nazarewicz, T.~R. Werner, J.~F. Berger, C.~R. Chinn, and J.~Decharge.
+\newblock Mean-field description of ground-state properties of drip-line nuclei: Pairing and continuum effects.
+\newblock \emph{Phys. Rev. C}, 53\penalty0 (1):\penalty0 2809, 1996.
+\newblock \doi{10.1103/PhysRevC.53.2809}.
+
 \bibitem[Dudek and Werner(1978)]{def_WS_dudek}
 J.~Dudek and T.~Werner.
 \newblock New parameters of the deformed woods-saxon potential for a=110-210 nuclei.
@@ -118,7 +136,7 @@ J.~Dudek and T.~Werner.
 
 \bibitem[Erler et~al.(2010)Erler, Klüpfel, and Reinhard]{Erler_2010}
 J.~Erler, P.~Klüpfel, and P.-G. Reinhard.
-\newblock Misfits in skyrme–hartree–fock.
+\newblock Misfits in skyrme-hartree-fock.
 \newblock \emph{Journal of Physics G: Nuclear and Particle Physics}, 37\penalty0 (6):\penalty0 064001, mar 2010.
 \newblock \doi{10.1088/0954-3899/37/6/064001}.
 \newblock URL \url{https://doi.org/10.1088/0954-3899/37/6/064001}.
@@ -230,25 +248,37 @@ Y.~Li, H.~Xie, R.~Xu, C.~You, and N.~Zhang.
 
 \bibitem[Lin et~al.(2013)Lin, Shao, and E]{LIN2013205}
 L.~Lin, S.~Shao, and W.~E.
-\newblock Efficient iterative method for solving the dirac–kohn–sham density functional theory.
+\newblock Efficient iterative method for solving the dirac-kohn-sham density functional theory.
 \newblock \emph{Journal of Computational Physics}, 245:\penalty0 205--217, 2013.
 \newblock ISSN 0021-9991.
 \newblock \doi{https://doi.org/10.1016/j.jcp.2013.03.030}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0021999113002088}.
 
-\bibitem[Marević et~al.(2022)Marević, Schunck, Ney, {Navarro Pérez}, Verriere, and O'Neal]{MAREVIC2022108367}
+\bibitem[Marević et~al.(2022{\natexlab{a}})Marević, Schunck, Ney, {Navarro Pérez}, Verriere, and O'Neal]{MAREVIC2022108367}
 P.~Marević, N.~Schunck, E.~Ney, R.~{Navarro Pérez}, M.~Verriere, and J.~O'Neal.
 \newblock Axially-deformed solution of the skyrme-hartree-fock-bogoliubov equations using the transformed harmonic oscillator basis (iv) hfbtho (v4.0): A new version of the program.
-\newblock \emph{Computer Physics Communications}, 276:\penalty0 108367, 2022.
+\newblock \emph{Computer Physics Communications}, 276:\penalty0 108367, 2022{\natexlab{a}}.
 \newblock ISSN 0010-4655.
 \newblock \doi{https://doi.org/10.1016/j.cpc.2022.108367}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465522000868}.
+
+\bibitem[Marević et~al.(2022{\natexlab{b}})Marević, Schunck, and Sato]{Marevic2022_CPC}
+P.~Marević, N.~Schunck, and K.~Sato.
+\newblock Axially-deformed solution of the skyrme-hartree-fock-bogoliubov problem in the harmonic-oscillator basis.
+\newblock \emph{Computer Physics Communications}, 283:\penalty0 108640, 2022{\natexlab{b}}.
+\newblock \doi{10.1016/j.cpc.2022.108640}.
 
 \bibitem[Martin(2004)]{Martin2004}
 R.~M. Martin.
 \newblock \emph{Electronic Structure: Basic Theory and Practical Methods}.
 \newblock Cambridge University Press, Cambridge, UK, 2004.
 \newblock ISBN 9780521534406.
+
+\bibitem[Maruhn et~al.(2014)Maruhn, Reinhard, Stevenson, and Umar]{Maruhn2014_Sky3D}
+J.~A. Maruhn, P.-G. Reinhard, P.~D. Stevenson, and A.~S. Umar.
+\newblock The tdhf code sky3d.
+\newblock \emph{Computer Physics Communications}, 185:\penalty0 2195--2216, 2014.
+\newblock \doi{10.1016/j.cpc.2014.05.005}.
 
 \bibitem[Mottelson(2006)]{nilsson}
 B.~Mottelson.
@@ -267,6 +297,12 @@ T.~Nottoli, I.~Gianni, A.~Levitt, and F.~Lipparini.
 J.~W. Pearson and J.~Pestana.
 \newblock Preconditioners for krylov subspace methods: An overview.
 \newblock \emph{GAMM-Mitteilungen}, 43\penalty0 (4):\penalty0 e202000015, 2020.
+
+\bibitem[Pei et~al.(2008)Pei, Stoitsov, Fann, Nazarewicz, Schunck, and Xu]{Pei2008_HFBAX}
+J.~C. Pei, M.~V. Stoitsov, G.~I. Fann, W.~Nazarewicz, N.~Schunck, and F.~R. Xu.
+\newblock Deformed coordinate-space hartree-fock-bogoliubov approach to weakly bound nuclei and large deformations.
+\newblock \emph{Physical Review C}, 78\penalty0 (6):\penalty0 064306, 2008.
+\newblock \doi{10.1103/PhysRevC.78.064306}.
 
 \bibitem[Pei et~al.(2011)Pei, Kruppa, and Nazarewicz]{Pei2012_HFBcontinuum}
 J.~C. Pei, A.~T. Kruppa, and W.~Nazarewicz.
@@ -287,13 +323,25 @@ P.~Ring and P.~Schuck.
 \newblock \emph{The nuclear many-body problem}.
 \newblock Springer Science \& Business Media, 2004.
 
-\bibitem[Ryssens et~al.(2015)Ryssens, Hellemans, Bender, and Heenen]{RYSSENS2015175}
+\bibitem[Ryssens et~al.(2015{\natexlab{a}})Ryssens, Hellemans, Bender, and Heenen]{RYSSENS2015175}
 W.~Ryssens, V.~Hellemans, M.~Bender, and P.-H. Heenen.
-\newblock Solution of the skyrme–hf+bcs equation on a 3d mesh, ii: A new version of the ev8 code.
-\newblock \emph{Computer Physics Communications}, 187:\penalty0 175--194, 2015.
+\newblock Solution of the skyrme-hf+bcs equation on a 3d mesh, ii: A new version of the ev8 code.
+\newblock \emph{Computer Physics Communications}, 187:\penalty0 175--194, 2015{\natexlab{a}}.
 \newblock ISSN 0010-4655.
 \newblock \doi{https://doi.org/10.1016/j.cpc.2014.10.001}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465514003361}.
+
+\bibitem[Ryssens et~al.(2015{\natexlab{b}})Ryssens, Hellemans, Bender, and Heenen]{Ryssens2015_EV8}
+W.~Ryssens, V.~Hellemans, M.~Bender, and P.-H. Heenen.
+\newblock Solution of the skyrme hf+bcs equation on a 3d mesh. ii. a new version of the ev8 code.
+\newblock \emph{Computer Physics Communications}, 187:\penalty0 175--194, 2015{\natexlab{b}}.
+\newblock \doi{10.1016/j.cpc.2014.10.001}.
+
+\bibitem[Ryssens et~al.(2016)Ryssens, Heenen, and Bender]{Ryssens2016_MOCCa}
+W.~Ryssens, P.-H. Heenen, and M.~Bender.
+\newblock Symmetry-unrestricted skyrme mean-field study of heavy nuclei: the mocca code.
+\newblock \emph{arXiv preprint}, 2016.
+\newblock arXiv:1611.01300 [nucl-th].
 
 \bibitem[Saad(1992)]{Saad1992}
 Y.~Saad.
@@ -331,6 +379,12 @@ A.~Staszczak, M.~Stoitsov, A.~Baran, and W.~Nazarewicz.
 P.~Stevenson and M.~Barton.
 \newblock Low-energy heavy-ion reactions and the skyrme effective interaction.
 \newblock \emph{Progress in Particle and Nuclear Physics}, 104:\penalty0 142--164, 2019.
+
+\bibitem[Stoitsov et~al.(2003)Stoitsov, Dobaczewski, Nazarewicz, Pittel, and Dean]{Stoitsov2003_PRCC68_054312}
+M.~V. Stoitsov, J.~Dobaczewski, W.~Nazarewicz, S.~Pittel, and D.~J. Dean.
+\newblock Systematic study of deformed nuclei at the drip lines and beyond.
+\newblock \emph{Phys. Rev. C}, 68\penalty0 (5):\penalty0 054312, 2003.
+\newblock \doi{10.1103/PhysRevC.68.054312}.
 
 \bibitem[Stroustrup(1986)]{stroustrup1986overview}
 B.~Stroustrup.

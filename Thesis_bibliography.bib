@@ -110,7 +110,7 @@
   url     = {https://doi.org/10.1007/s00214-023-03010-y}
 }
 @article{LIN2013205,
-  title    = {Efficient iterative method for solving the Dirac–Kohn–Sham density functional theory},
+  title    = {Efficient iterative method for solving the Dirac-Kohn-Sham density functional theory},
   journal  = {Journal of Computational Physics},
   volume   = {245},
   pages    = {205-217},
@@ -119,8 +119,8 @@
   doi      = {https://doi.org/10.1016/j.jcp.2013.03.030},
   url      = {https://www.sciencedirect.com/science/article/pii/S0021999113002088},
   author   = {Lin Lin and Sihong Shao and Weinan E},
-  keywords = {Relativistic density functional theory, Dirac–Kohn–Sham equations, Spin–orbit coupling, Iterative methods, LOBPCG-F, Variational collapse, Spectral pollution},
-  abstract = {We present for the first time an efficient iterative method to directly solve the four-component Dirac–Kohn–Sham (DKS) density functional theory. Due to the existence of the negative energy continuum in the DKS operator, the existing iterative techniques for solving the Kohn–Sham systems cannot be efficiently applied to solve the DKS systems. The key component of our method is a novel filtering step (F) which acts as a preconditioner in the framework of the locally optimal block preconditioned conjugate gradient (LOBPCG) method. The resulting method, dubbed the LOBPCG-F method, is able to compute the desired eigenvalues and eigenvectors in the positive energy band without computing any state in the negative energy band. The LOBPCG-F method introduces mild extra cost compared to the standard LOBPCG method and can be easily implemented. We demonstrate our method in the pseudopotential framework with a planewave basis set which naturally satisfies the kinetic balance prescription. Numerical results for Pt2, Au2, TlF, and Bi2Se3 indicate that the LOBPCG-F method is a robust and efficient method for investigating the relativistic effect in systems containing heavy elements.}
+  keywords = {Relativistic density functional theory, Dirac-Kohn-Sham equations, Spin-orbit coupling, Iterative methods, LOBPCG-F, Variational collapse, Spectral pollution},
+  abstract = {We present for the first time an efficient iterative method to directly solve the four-component Dirac-Kohn-Sham (DKS) density functional theory. Due to the existence of the negative energy continuum in the DKS operator, the existing iterative techniques for solving the Kohn-Sham systems cannot be efficiently applied to solve the DKS systems. The key component of our method is a novel filtering step (F) which acts as a preconditioner in the framework of the locally optimal block preconditioned conjugate gradient (LOBPCG) method. The resulting method, dubbed the LOBPCG-F method, is able to compute the desired eigenvalues and eigenvectors in the positive energy band without computing any state in the negative energy band. The LOBPCG-F method introduces mild extra cost compared to the standard LOBPCG method and can be easily implemented. We demonstrate our method in the pseudopotential framework with a planewave basis set which naturally satisfies the kinetic balance prescription. Numerical results for Pt2, Au2, TlF, and Bi2Se3 indicate that the LOBPCG-F method is a robust and efficient method for investigating the relativistic effect in systems containing heavy elements.}
 }
 @article{li2020efficient,
   title     = {Efficient solution for the Dirac equation in 3D lattice space with the conjugate gradient method},
@@ -425,7 +425,7 @@
               New version program summary
               Program title: hfbtho v4.0 CPC Library link to program files: https://doi.org/10.17632/c5g2f92by3.2 Code Ocean capsule: https://codeocean.com/capsule/5389629 Licensing provisions: GPLv3 Programming language: Fortran 2003 Journal reference of previous version: R.N. Pérez, N. Schunck, R.-D. Lasseri, C. Zhang and J. Sarich, Comput. Phys. Commun. 220 (2017) 363 Does the new version supersede the previous version: Yes Reasons for the new version: This version adds new capabilities to restore broken symmetries and determine corresponding quantum numbers of even-even nuclei Summary of revisions:1.Angular momentum projection for even-even nuclei in a deformed basis;2.Particle number projection for even-even nuclei in the quasiparticle basis;3.Implementation of the SeaLL1 functional;4.Expansion of the Coulomb potential onto Gaussians;5.MPI-parallelization of a single hfbtho execution;6.Code refactoring. Nature of problem: hfbtho is a physics computer code that is used to model the structure of the nucleus. It is an implementation of the energy density functional (EDF) approach to atomic nuclei, where the energy of the nucleus is obtained by integration over space of some phenomenological energy density, which is itself a functional of the neutron and proton intrinsic densities. In the present version of hfbtho, the energy density is derived either from the zero-range Skyrme or the finite-range Gogny effective two-body interaction between nucleons. Nuclear superfluidity is treated at the Hartree-Fock-Bogoliubov (HFB) approximation. Constraints on the nuclear shape allow probing the potential energy surface of the nucleus as needed, e.g., for the description of shape isomers or fission. A local scale transformation of the single-particle basis in which the HFB solutions are expanded provides a tool to properly compute the structure of weakly-bound nuclei. Restoration of the rotational, particle number, and reflection symmetry for even-even nuclei enables recovering the quantum numbers that are lost at the HFB approximation. Solution method: The program uses the axial harmonic oscillator (HO) or the transformed harmonic oscillator (THO) single-particle basis to expand quasiparticle wave functions. It iteratively diagonalizes the HFB Hamiltonian based on generalized Skyrme-like energy densities and zero-range pairing interactions or the finite-range Gogny force until a self-consistent solution is found. Lagrange parameters are used to impose constraints on HFB solutions, and their value is updated at each iteration from an approximation of the quasiparticle random phase approximation (QRPA) matrix. Symmetry restoration is implemented through standard projection techniques. Previous versions of the program were presented in [1-3]. Additional comments including restrictions and unusual features: Axial and time-reversal symmetries are assumed in HFB calculations; y-simplex symmetry and even particle numbers are assumed in angular momentum projection.
               References
-              [1]M. V. Stoitsov, J. Dobaczewski, W. Nazarewicz, P. Ring, Axially deformed solution of the Skyrme-Hartree-Fock-Bogolyubov equations using the transformed harmonic oscillator basis. The program hfbtho (v1.66p), Comput. Phys. Commun. 167 (1) (2005) 43.[2]M. Stoitsov, N. Schunck, M. Kortelainen, N. Michel, H. Nam, E. Olsen, J. Sarich, S. Wild, Axially deformed solution of the Skyrme-Hartree-Fock-Bogolyubov equations using the transformed harmonic oscillator basis (II) hfbtho v2.00d: A new version of the program, Comput. Phys. Commun. 184 (6) (2013) 1592.[3]R. N. Perez, N. Schunck, R.-D. Lasseri, C. Zhang, J. Sarich, Axially deformed solution of the Skyrme–Hartree–Fock–Bogolyubov equations using the transformed harmonic oscillator basis (III) hfbtho (v3.00): A new version of the program, Comput. Phys. Commun. 220 (2017) 363.}
+              [1]M. V. Stoitsov, J. Dobaczewski, W. Nazarewicz, P. Ring, Axially deformed solution of the Skyrme-Hartree-Fock-Bogolyubov equations using the transformed harmonic oscillator basis. The program hfbtho (v1.66p), Comput. Phys. Commun. 167 (1) (2005) 43.[2]M. Stoitsov, N. Schunck, M. Kortelainen, N. Michel, H. Nam, E. Olsen, J. Sarich, S. Wild, Axially deformed solution of the Skyrme-Hartree-Fock-Bogolyubov equations using the transformed harmonic oscillator basis (II) hfbtho v2.00d: A new version of the program, Comput. Phys. Commun. 184 (6) (2013) 1592.[3]R. N. Perez, N. Schunck, R.-D. Lasseri, C. Zhang, J. Sarich, Axially deformed solution of the Skyrme-Hartree-Fock-Bogolyubov equations using the transformed harmonic oscillator basis (III) hfbtho (v3.00): A new version of the program, Comput. Phys. Commun. 220 (2017) 363.}
 }
 @misc{wikipedia_equation_of_state,
   author       = "{Wikipedia contributors}",
@@ -456,6 +456,119 @@ author = {J Dudek and T Werner},
 title = {New parameters of the deformed Woods-Saxon potential for A=110-210 nuclei},
 journal = {Journal of Physics G: Nuclear Physics},
 abstract = {Two parameters of the spin-orbit part of the deformed Woods-Saxon potential, namely the strength parameter lambda and the radius parameter (r0)so, were adjusted to reproduce the spins and parities of even-odd and odd-even nuclei in the range 51&lt;or=Z&lt;or=83 and 61&lt;or=N&lt;or=127. Experimental evidence for the values of the nuclear deformation parameters beta 2 and beta 4 was taken into account. The parameters lambda and (r0)so were subjected to smooth variations in order to preserve the overall character of the single-particle spectrum and not to disturb the sequences of spins and parities of the neighbouring nuclei. The choice of the spin-orbit potential parameters for transitional nuclei is based essentially on the interpolation between the corresponding values for spherical and well deformed nuclei for which interpretation of the experimental data is more certain.}
+}
+@article{Dobaczewski1996_PRCC53_2809,
+  author  = {Dobaczewski, J. and Nazarewicz, W. and Werner, T. R. and Berger, J. F. and Chinn, C. R. and Decharge, J.},
+  title   = {Mean-field description of ground-state properties of drip-line nuclei: Pairing and continuum effects},
+  journal = {Phys. Rev. C},
+  volume  = {53},
+  number  = {1},
+  pages   = {2809},
+  year    = {1996},
+  doi     = {10.1103/PhysRevC.53.2809}
+}
+@article{Maruhn2014_Sky3D,
+  author       = {J. A. Maruhn and P.--G. Reinhard and P. D. Stevenson and A. S. Umar},
+  title        = {The TDHF code Sky3D},
+  journal      = {Computer Physics Communications},
+  volume       = {185},
+  pages        = {2195--2216},
+  year         = {2014},
+  doi          = {10.1016/j.cpc.2014.05.005}
+}
+
+@article{Pei2008_HFBAX,
+  author       = {J. C. Pei and M. V. Stoitsov and G. I. Fann and W. Nazarewicz and N. Schunck and F. R. Xu},
+  title        = {Deformed coordinate-space Hartree-Fock-Bogoliubov approach to weakly bound nuclei and large deformations},
+  journal      = {Physical Review C},
+  volume       = {78},
+  number       = {6},
+  pages        = {064306},
+  year         = {2008},
+  doi          = {10.1103/PhysRevC.78.064306}
+}
+
+@article{Ryssens2015_EV8,
+  author       = {W. Ryssens and V. Hellemans and M. Bender and P.-H. Heenen},
+  title        = {Solution of the Skyrme HF+BCS equation on a 3D mesh. II. A new version of the EV8 code},
+  journal      = {Computer Physics Communications},
+  volume       = {187},
+  pages        = {175--194},
+  year         = {2015},
+  doi          = {10.1016/j.cpc.2014.10.001}
+}
+
+@article{Ryssens2016_MOCCa,
+  author       = {W. Ryssens and P.-H. Heenen and M. Bender},
+  title        = {Symmetry-unrestricted Skyrme mean-field study of heavy nuclei: the MOCCa code},
+  journal      = {arXiv preprint},
+  year         = {2016},
+  note         = {arXiv:1611.01300 [nucl-th]}
+}
+@article{Bartel:1982,
+  author  = {Bartel, J. and Quentin, P. and Brack, M. and Guet, C. and H{\aa}kansson, H.-B.},
+  title   = {Towards a better description of nuclear deformation: The Skyrme-force plus a pairing interaction},
+  journal = {Nucl. Phys. A},
+  volume  = {386},
+  number  = {1},
+  year    = {1982},
+  pages   = {79-100},
+  doi     = {10.1016/0375-9474(82)90403-1}
+}
+@article{Chen2022_HFBFFT,
+  author       = {Mengzhi Chen and Tong Li and Bastian Schütrumpf and Paul-Gerhard Reinhard and Witold Nazarewicz},
+  title        = {Three-dimensional Skyrme Hartree-Fock-Bogoliubov solver in coordinate-space representation},
+  journal      = {Computer Physics Communications},
+  volume       = {284},
+  pages        = {108578},
+  year         = {2022},
+  doi          = {10.1016/j.cpc.2022.108578}
+}
+@article{fission_octupole_fragments,
+  author    = {Guillaume Scamps and Cédric Simenel},
+  title     = {Impact of pear-shaped fission fragments on mass-asymmetric fission in actinides},
+  journal   = {Nature},
+  year      = {2018},
+  volume    = {564},
+  number    = {7736},
+  pages     = {382--385},
+  doi       = {10.1038/s41586-018-0780-0},
+  url       = {https://doi.org/10.1038/s41586-018-0780-0},
+  abstract  = {Nuclear fission of heavy (actinide) nuclei results predominantly in asymmetric mass splits. Without quantum shell effects, which can give extra binding energy to their mass-asymmetric shapes, these nuclei would fission symmetrically. The strongest shell effects appear in spherical nuclei, such as the spherical ‘doubly magic’ nucleus 132Sn. However, systematic studies of fission have shown that heavy fission fragments have atomic numbers distributed around Z = 52 to Z = 56, indicating that strong shell effects in 132Sn are not the only factor. Here we show that the final mass asymmetry is determined by extra stability from octupole (pear-shaped) deformations, confirmed experimentally around 144Ba. Using a quantum many-body model of superfluid fission dynamics, we find that heavy fission fragments are produced predominantly with 52 to 56 protons, associated with substantial octupole deformation acquired during fission.},
+  issn      = {1476-4687}
+}
+
+@article{Marevic2022_CPC,
+  author  = {Marević, P. and Schunck, N. and Sato, K.},
+  title   = {Axially-deformed solution of the Skyrme-Hartree-Fock-Bogoliubov problem in the harmonic-oscillator basis},
+  journal = {Computer Physics Communications},
+  volume  = {283},
+  pages   = {108640},
+  year    = {2022},
+  doi     = {10.1016/j.cpc.2022.108640}
+}
+
+
+@article{Stoitsov2003_PRCC68_054312,
+  author  = {Stoitsov, M. V. and Dobaczewski, J. and Nazarewicz, W. and Pittel, S. and Dean, D. J.},
+  title   = {Systematic study of deformed nuclei at the drip lines and beyond},
+  journal = {Phys. Rev. C},
+  volume  = {68},
+  number  = {5},
+  pages   = {054312},
+  year    = {2003},
+  doi     = {10.1103/PhysRevC.68.054312}
+}
+
+@article{Tsukiyama2009_PRCC80_051301R,
+  author  = {Tsukiyama, K. and Hjorth-Jensen, M. and Hagen, G.},
+  title   = {Gamow shell-model calculations of drip-line oxygen isotopes},
+  journal = {Phys. Rev. C},
+  volume  = {80},
+  number  = {5},
+  pages   = {051301(R)},
+  year    = {2009},
+  doi     = {10.1103/PhysRevC.80.051301}
 }
 @article{defWSfissionbarriers,
   title = {Adiabatic fission barriers in superheavy nuclei},
@@ -606,7 +719,7 @@ abstract = {Two parameters of the spin-orbit part of the deformed Woods-Saxon po
 }
 
 @article{RYSSENS2015175,
-  title    = {Solution of the Skyrme–HF+BCS equation on a 3D mesh, II: A new version of the Ev8 code},
+  title    = {Solution of the Skyrme-HF+BCS equation on a 3D mesh, II: A new version of the Ev8 code},
   journal  = {Computer Physics Communications},
   volume   = {187},
   pages    = {175-194},
@@ -615,10 +728,10 @@ abstract = {Two parameters of the spin-orbit part of the deformed Woods-Saxon po
   doi      = {https://doi.org/10.1016/j.cpc.2014.10.001},
   url      = {https://www.sciencedirect.com/science/article/pii/S0010465514003361},
   author   = {W. Ryssens and V. Hellemans and M. Bender and P.-H. Heenen},
-  keywords = {Self-consistent mean field, Hartree–Fock, Hartree–Fock+BCS, Skyrme interaction, Quadrupole deformation},
-  abstract = {We describe a new version of the Ev8 code that solves the nuclear Skyrme–Hartree–Fock+BCS problem using a 3-dimensional cartesian mesh. Several new features have been implemented with respect to the earlier version published in 2005. In particular, the numerical accuracy has been improved for a given mesh size by (i) implementing a new solver to determine the Coulomb potential for protons, and (ii) implementing a more precise method to calculate the derivatives on a mesh that had already been implemented earlier in our beyond-mean-field codes. The code has been made very flexible to enable the use of a large variety of Skyrme energy density functionals that have been introduced in the last years. Finally, the treatment of the constraints that can be introduced in the mean-field equations has been improved. The code Ev8 is today the tool of choice to study the variation of the energy of a nucleus from its ground state to very elongated or triaxial deformations with a well-controlled accuracy.
+  keywords = {Self-consistent mean field, Hartree-Fock, Hartree-Fock+BCS, Skyrme interaction, Quadrupole deformation},
+  abstract = {We describe a new version of the Ev8 code that solves the nuclear Skyrme-Hartree-Fock+BCS problem using a 3-dimensional cartesian mesh. Several new features have been implemented with respect to the earlier version published in 2005. In particular, the numerical accuracy has been improved for a given mesh size by (i) implementing a new solver to determine the Coulomb potential for protons, and (ii) implementing a more precise method to calculate the derivatives on a mesh that had already been implemented earlier in our beyond-mean-field codes. The code has been made very flexible to enable the use of a large variety of Skyrme energy density functionals that have been introduced in the last years. Finally, the treatment of the constraints that can be introduced in the mean-field equations has been improved. The code Ev8 is today the tool of choice to study the variation of the energy of a nucleus from its ground state to very elongated or triaxial deformations with a well-controlled accuracy.
               Program summary
-              Program title: Ev8 Catalogue identifier: ADWA_v2_0 Program summary URL:http://cpc.cs.qub.ac.uk/summaries/ADWA_v2_0.html Program obtainable from: CPC Program Library, Queen’s University, Belfast, N. Ireland Licensing provisions: Standard CPC licence, http://cpc.cs.qub.ac.uk/licence/licence.html No. of lines in distributed program, including test data, etc.: 29956 No. of bytes in distributed program, including test data, etc.: 235072 Distribution format: tar.gz Programming language: FORTRAN-90. Computer: AMD Opteron 6274, AMD Opteron 6134, AMD Opteron 2378, Intel Core i7-4700HQ. Operating system: Unix, Linux, OS X. RAM: On the order of 64 megabytes for the examples provided. Classification: 17.22. Catalogue identifier of previous version: ADWA_v1_0 Journal reference of previous version: Comput. Phys. Comm. 171(2005)49 Does the new version supersede the previous version?: Yes, but when used in the same conditions both codes give the same result. Nature of problem: By means of the Hartree–Fock+BCS method for Skyrme-type energy density functionals, Ev8 allows the study of the evolution of the binding energy of even–even atomic nuclei for various shapes determined by the most general quadrupole and monopole constraints. Solution method: The program expands the single-particle wave-functions on a 3D Cartesian mesh. The nonlinear mean-field equations are solved by the imaginary time step method. A quadratic constraint is used to obtain states corresponding to given values of the monopole and quadrupole operators. Reasons for new version: The code has been generalized in several directions. The main changes concern the energy density functional that is more general than previously (including now tensor terms) and the accuracy of the final result that has been significantly improved by a new algorithm to determine the Coulomb potential. Several other changes should make the code more user friendly than it was before. Summary of revisions: 1. Skyrme energy functionals with tensor terms; 2. Improved accuracy for calculating derivatives; 3. Improved accuracy for solving Coulomb problem; 4. Improvement of the numerics of constraints; Restrictions: Ev8 assumes time-reversal invariance and nuclear shapes exhibiting three plane-reflection symmetries. Pairing correlations are treated at the BCS level of approximation. Running time: A few minutes for the examples provided, which concern rather heavy nuclei in modest boxes with an initial guess of Nilsson wavefunctions.}
+              Program title: Ev8 Catalogue identifier: ADWA_v2_0 Program summary URL:http://cpc.cs.qub.ac.uk/summaries/ADWA_v2_0.html Program obtainable from: CPC Program Library, Queen’s University, Belfast, N. Ireland Licensing provisions: Standard CPC licence, http://cpc.cs.qub.ac.uk/licence/licence.html No. of lines in distributed program, including test data, etc.: 29956 No. of bytes in distributed program, including test data, etc.: 235072 Distribution format: tar.gz Programming language: FORTRAN-90. Computer: AMD Opteron 6274, AMD Opteron 6134, AMD Opteron 2378, Intel Core i7-4700HQ. Operating system: Unix, Linux, OS X. RAM: On the order of 64 megabytes for the examples provided. Classification: 17.22. Catalogue identifier of previous version: ADWA_v1_0 Journal reference of previous version: Comput. Phys. Comm. 171(2005)49 Does the new version supersede the previous version?: Yes, but when used in the same conditions both codes give the same result. Nature of problem: By means of the Hartree-Fock+BCS method for Skyrme-type energy density functionals, Ev8 allows the study of the evolution of the binding energy of even-even atomic nuclei for various shapes determined by the most general quadrupole and monopole constraints. Solution method: The program expands the single-particle wave-functions on a 3D Cartesian mesh. The nonlinear mean-field equations are solved by the imaginary time step method. A quadratic constraint is used to obtain states corresponding to given values of the monopole and quadrupole operators. Reasons for new version: The code has been generalized in several directions. The main changes concern the energy density functional that is more general than previously (including now tensor terms) and the accuracy of the final result that has been significantly improved by a new algorithm to determine the Coulomb potential. Several other changes should make the code more user friendly than it was before. Summary of revisions: 1. Skyrme energy functionals with tensor terms; 2. Improved accuracy for calculating derivatives; 3. Improved accuracy for solving Coulomb problem; 4. Improvement of the numerics of constraints; Restrictions: Ev8 assumes time-reversal invariance and nuclear shapes exhibiting three plane-reflection symmetries. Pairing correlations are treated at the BCS level of approximation. Running time: A few minutes for the examples provided, which concern rather heavy nuclei in modest boxes with an initial guess of Nilsson wavefunctions.}
 }
 @article{Cusson1985,
   author  = {Cusson, R. Y. and Reinhard, P. -G. and Strayer, M. R. and Maruhn, J. A. and Greiner, W.},
@@ -641,9 +754,9 @@ abstract = {Two parameters of the spin-orbit part of the deformed Woods-Saxon po
   number    = {6},
   pages     = {064001},
   author    = {Erler, J and Klüpfel, P and Reinhard, P-G},
-  title     = {Misfits in Skyrme–Hartree–Fock},
+  title     = {Misfits in Skyrme-Hartree-Fock},
   journal   = {Journal of Physics G: Nuclear and Particle Physics},
-  abstract  = {We address very briefly five critical points in the context of the Skyrme–Hartree–Fock (SHF) scheme: (1) the impossibility of considering it as an interaction, (2) a possible inconsistency of correlation corrections such as, e.g., the centre-of-mass correction, (3) problems of describing the giant dipole resonance (GDR) simultaneously in light and heavy nuclei, (4) deficiencies in the extrapolation of binding energies to super-heavy elements (SHE) and (5) a yet inappropriate trend in fission lifetimes when going to the heaviest SHE. While the first two points have a more formal bias, the other three points have practical implications and wait for solution.}
+  abstract  = {We address very briefly five critical points in the context of the Skyrme-Hartree-Fock (SHF) scheme: (1) the impossibility of considering it as an interaction, (2) a possible inconsistency of correlation corrections such as, e.g., the centre-of-mass correction, (3) problems of describing the giant dipole resonance (GDR) simultaneously in light and heavy nuclei, (4) deficiencies in the extrapolation of binding energies to super-heavy elements (SHE) and (5) a yet inappropriate trend in fission lifetimes when going to the heaviest SHE. While the first two points have a more formal bias, the other three points have practical implications and wait for solution.}
 }
 @article{REINHARD1995467,
   title    = {Nuclear effective forces and isotope shifts},

@@ -1,6 +1,7 @@
 \section{$^{24}$Mg}
 In the following section, results for $^{24}$Mg are presented, it's a natural choice to study how well deformations are represented by our framework, since it's light, very deformed and shows no pairing interaction in its ground state.
 \subsection{\texttt{HFBTHO} code and calculation details}
+\label{sec:hfbtho}
 \subsubsection{\texttt{HFBTHO}}
 To benchmark the code in the case of nuclear deformation, the \texttt{HFBTHO} code was used \cite{MAREVIC2022108367}, it's a HFB code which minimizes the energy functional on a (Transformed) harmonic oscillator basis. Since $^{24}$Mg is a light nucleus, it still works well in this case.
 All calculations were performed using 12 oscillator shells and assuming a zero pairing interaction. 
@@ -39,14 +40,14 @@ Charge radii for the two codes are displayed but not compared, due to different 
     $\beta_2$ &[-] & 0.399 &0.390 & 0.390 & - & -  \\
     \bottomrule
   \end{tabular}
-  \caption{Results for $^{24}$Mg ground state, no pairing interaction, box $[-10, 10]$ fm, step size 0.33 fm, SKM* parametrization.}
+  \caption{Results for $^{24}$Mg ground state, no pairing interaction, box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrization.}
   \label{tab:mg_table}
 \end{table}
 \\The comparison shows good agreement between the two codes, with the same $\beta_2$ minimum and similar ground state properties.
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.0\linewidth]{Images/mg_gs_density_axial.pdf}
-  \caption{Magnesium ground state density $\rho(x, y, 0)$, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SKM* parametrization}
+  \caption{Magnesium ground state density $\rho(x, y, 0)$, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrization}
   \label{fig:mg_gs_density_axial}
 \end{figure}
 \subsubsection{Deformation curve}
@@ -54,7 +55,7 @@ In figure \ref{fig:mg_no_pair_deformation}, the deformation curve is shown for $
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\linewidth]{Images/mg_nopair_curve.pdf}
-  \caption{Magnesium deformation curve, no pairing interaction, calculation done on a box $[-10, 10]$ fm, step size 0.66 fm, SKM* parametrization, neglecting $J^2$ terms.}
+  \caption{Magnesium deformation curve, no pairing interaction, calculation done on a box $[-10, 10]$ fm, step size 0.66 fm, SkM* parametrization, neglecting $J^2$ terms.}
   \label{fig:mg_no_pair_deformation}
 \end{figure}
 \\Figure \ref{fig:mg_no_pair_deformation} shows the same trend for both codes, with a minimum of the energy in $\beta_2=0.390$, albeit a difference in the energies due to the corase mesh, a gap which is shown in table \ref{tab:mg_table} to shrink when increasing the accuracy of the step size.

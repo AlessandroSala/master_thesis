@@ -1,3 +1,26 @@
+\chapter*{Introduction}
+The study of atomic nuclei forms the bridge between fundamental areas of theoretical and computational physics and nuclear engineering. While experimental data has provided over the years invaluable information about nuclear structure, reactions and other important nuclear processes, the predictions provided by a theoretical understanding although still unsatisfactory due to the extremely vast landscape of nuclear physics, are essential for nuclear engineering.
+In particular, fission reactions, which are of the utmost importance in nuclear engineering, are still poorly understood, models relying on mean-fields and empirical descriptions of the nucleus are too coarse to help us understand the exact physical process, let alone make numerically accurate predictions, which is a major challenge for the simulation of new generation nuclear reactors, which use neutron rich nuclei and fuel materials much less understood than the traditional thermal reactors.
+In this regard, the most successful approach to the microscopic description of nuclei, is certainly the exact many-body system, which starting from the interactions among nucleons, aims at building a complete description of the nucleus.
+At the moment, there are two competing frameworks that try to tackle the problem, 
+\begin{enumerate}[i]
+\item the \textit{ab-initio} approach, where the interaction is in principle exact, derived from controlled approximations of quantum chromodynamics; and
+\item  the use of effective interactions and nuclear Density Functional Theory.
+\end{enumerate}
+Ab-initio methods, while technically speaking more rigorous, are still limited as of now, since they can only account for light, spherical nuclei.
+Energy density functionals and effective interactions, such as the Skyrme force, on the other hand are more flexible and less computationally expensive enabling a much wider representation of nuclei across the whole chart, including heavy nuclei, which are of crucial importance in nuclear engineering.
+D Vautherin and D M Brink laid the foundations of the nuclear Hartree-Fock theory using the Skyrme interaction in 1972, through spherically symmetric calculations, which are unable to account for nuclear deformations, essential for nuclei far from magic numbers and in the heavy region.
+Over the years, thanks to the increase in computational performance of modern hardware, codes that are able to represent more coordinates have been written, mainly using basis expansions of the harmonic oscillator, which presents many downsides, such as the inability to represent superdeformed states or nuclei near drip lines.
+In the past twenty years, the use of meshes to better account for such extremal cases has been introduced, still assuming certain simplifications, such as plane reflections, cylindrical symmetries and so on. The use of fully unconstrained Hartree-Fock methods, of critical importance for exotic deformations, is still a novel endevour that only a handful of implementations have tackled, due to the high computational cost.
+\\The aim of this work is to explore a new computational approach, the General Conjugate Gradient method, to efficiently solve spatially unconstrained Skyrme functionals. This thesis is organised as follows:
+\begin{itemize}
+    \item In chapter \ref{chap:intro}, a short, comprehensive introduction to nuclear physics is given, as to prime the reader on the essential physical properties of atomic nuclei, starting from phenomenological facts and empirical models. A formal description of nuclear deformations and fission is also given, to highlight the importance of symmetry breaking.
+    \item In chapter \ref{chap:methods}, a short summary of the methods used in this thesis is given, both theoretical and numerical, as well as a state-of-the-art comparison with other codes.
+    \item In chapter \ref{chap:hf}, the theoretical framework used in the present work is reviewed, by introducing aspects of Hartree-Fock theory, Density Functional Theory and the effective interaction used in this work.
+    \item In chapter \ref{chap:numerical}, the numerical methods used in this work are presented, along with actual implementations of them in writing the code.
+    \item In chapter \ref{chap:res_sph}, results for the spherically symmetric case are presented as a way of benchmarking the new implementation of this thesis, along with a description of the main physical quantities we compare.
+    \item In chapter \ref{chap:res_def}, benchmarks for the deformed nucleus $^{24}$Mg are shown, after which novel results regarding... are presented.
+\end{itemize}
 \chapter{Nuclear structure and deformations}
 In this chapter, a concise introduction to nuclear physics is provided, as a way to understand the essential physical properties of the system under study.
 First, in section \ref{sec:models}, we will review the main empirical facts about nuclides, such as particle density distribuion and binding energies and the  simple phenomenological models historically employed to describe them. Moving on to more advanced topics, that are able to complete the general description of nuclear structure, which are nuclear pairing in section \ref{sec:pairing_intro} and nuclear deformations in section \ref{sec:deformations}.
