@@ -122,19 +122,19 @@
 \contentsline {subsection}{\numberline {6.1.4}\texttt {EV8} code comparison}{91}{subsection.6.1.4}%
 \contentsline {section}{\numberline {6.2}Other results}{91}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Deformation curve for different functionals}{92}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}Novel Results}{92}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Other Results}{92}{section.6.3}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{97}{chapter*.306}%
+\contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{97}{chapter*.307}%
 \vspace {2em}
 \contentsline {chapter}{\numberline {A}Appendix}{107}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Spherical harmonics}{107}{section.A.1}%
 \contentsline {subsection}{\numberline {A.1.1}Algorithm}{108}{subsection.A.1.1}%
 \contentsline {section}{\numberline {A.2}5-point derivatives}{108}{section.A.2}%
 \contentsline {section}{\numberline {A.3}Functional derivatives}{108}{section.A.3}%
-\contentsline {paragraph}{Power dependence}{108}{paragraph*.316}%
-\contentsline {paragraph}{Divergence of a vector field}{109}{paragraph*.318}%
+\contentsline {paragraph}{Power dependence}{108}{paragraph*.317}%
+\contentsline {paragraph}{Divergence of a vector field}{109}{paragraph*.319}%
 \contentsline {section}{\numberline {A.4}$\overline U,\ \overline V$ matrix structure}{110}{section.A.4}%
-\contentsline {chapter}{List of Figures}{111}{appendix*.321}%
-\contentsline {chapter}{List of Tables}{113}{appendix*.323}%
-\contentsline {chapter}{List of Symbols}{115}{appendix*.325}%
-\contentsline {chapter}{Acknowledgements}{117}{appendix*.328}%
+\contentsline {chapter}{List of Figures}{111}{appendix*.322}%
+\contentsline {chapter}{List of Tables}{113}{appendix*.324}%
+\contentsline {chapter}{List of Symbols}{115}{appendix*.326}%
+\contentsline {chapter}{Acknowledgements}{117}{appendix*.329}%
