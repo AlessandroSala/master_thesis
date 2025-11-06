@@ -1,32 +1,32 @@
 \section{Pairing in Hartree-Fock theory}
 \label{sec:pairing_hf}
-In this section, we will discuss the two common approaches to include nuclear pairing in the HF theory. The aim of these few pages is to provide a brief overview of how the BCS equations are derived and understand the basics of the more general Hartree-Fock-Bogoliubov theory. The former method is the most widely implemented thanks to its low complexity \cite{hfbcsqrpa,oldEv8,skyax}, while the latter, more sophisticated and advanced, is the standard in modern codes \cite{hfodd, hfbftt,MAREVIC2022108367}. We will touch on it so that the reader may appreciate in the numerical chapter the natural extension of this work to the more general Bogoliubov ansatz. 
+In this section, we will discuss the two common approaches to include nuclear pairing in the HF theory. The aim of these few pages is to provide a brief overview of how the BCS equations are derived and understand the basics of the more general Hartree-Fock-Bogoliubov theory. The former method is the most widely implemented thanks to its low complexity \cite{hfbcsqrpa,oldEv8,skyax}, while the latter, more sophisticated and advanced, is the standard in modern codes \cite{hfodd, hfbftt,MAREVIC2022108367}. We will touch on it so that the reader may appreciate in the numerical chapter the natural extension of this work to the more general Bogoliubov ansatz. The reader may refer to introductory textbooks on many-body theory, such as Ref. \cite{ring2004nuclear} for an in-depth treatment of nuclear pairing.
 \subsection{BCS theory}
-The BCS approximation, from Bardeen-Cooper-Schrieffer, is the same theory used to describe Cooper pairs in superconductivity, applied to the nuclear case.
-The ansatz of BCS is that nucleons are paired in states whose total angular momentum is zero, such a wavefunction can be expressed as $\ket{JM}=\ket{00}$ and reads
+The BCS approximation, from Bardeen-Cooper-Schrieffer, is the same theory used to describe Cooper pairs in superconductors, applied to the nuclear case.
+The ansatz of BCS is that nucleons are paired in states whose total angular momentum is zero, so that the wavefunction of pair is $\ket{JM}=\ket{00}$ and reads
 \begin{equation}
     \label{eq:zero_mom}
     \ket{00} = \sum_{m_j} \bra{jm_j j-m_j}\ket{00}\ket{jm_j}\ket{j-m_j}
 \end{equation}
-Introducing the time-reversal operator $\hat {\mathcal T}:t\mapsto -t$, it acts on $\ket{00}$ as 
+Introducing the time-reversal operator $\hat {\mathcal T}:t\mapsto -t$, it acts on $\ket{jm_j}$ as 
 \begin{equation}
     \hat {\mathcal T} \ket{jm_j} = \widetilde{\ket{{jm_j}}} = (-1)^{j+m_j}\ket{j-m_j},
 \end{equation}
-using this relation, equation \eqref{eq:zero_mom} becomes 
+and using this relation, equation \eqref{eq:zero_mom} becomes 
 \begin{equation}
     \ket{00} =- \frac{1}{\sqrt{2j+1}}\sum_{m_j}\ket{jm_j}\widetilde{\ket{{jm_j}}}.
 \end{equation}
-Hence BCS amounts to replacing the Slater determinant with a more general wavefunction to describe the ground state, which reads
+The BCS ansatz amounts to replacing the Slater determinant with a more general wavefunction where pairs partially occupy time-reversal states. The BCS wavefunction reads
 \begin{equation}
     \label{eq:bcs_det}
     \bcs = \prod_{k>0}(u_k+ v_k a_{\tilde k}^\dagger a_k^\dagger) \ket{-}
 \end{equation}
-where $u_k$ and $v_k$ are real parameters whose meaning will shortly be clear, $k$ is short-hand for $\ket{jm}$, and $\tilde k = -k$ denotes the time-reversal state of $k$; the product runs over positive $k$ only. The BCS wavefunction is the creation in the vacuum of quasi-particles made of time-reversal paired particles, instead of individual ones. The normalization condition on the BCS wavefunction reads
+where $k$ is a shorthand notation for $\ket{jm}$, $\tilde k = -k$ denotes the time-reversal state of $k$, and $v_k$ and $u_k$ are variational parameters, we shall see shortly that $v_k^2$ is the probability of finding a particle in state $k$. The product runs over positive $k$ only. The BCS wavefunction is the creation in the vacuum of quasi-particles made of time-reversal paired particles, instead of individual ones. The normalization condition on the BCS wavefunction reads
 \begin{equation}
     \label{eq:bcs_norm}
     1=\braket{\text{BCS}} = \prod_{k>0} \bra{-}(u_{k}+v_{k}a_{k}a_{\tilde k})(u_k+v_k a_{\tilde k}^\dagger a_k^\dagger)\ket{-} =\prod_{k>0}(u_k^2+v_k^2)=1
 \end{equation}
-which implies, for every pair $k$, the condition
+which implies, for every pair $k$, the normalization condition
 \begin{equation}
     \label{eq:norm_uv}
     u_k^2+v_k^2=1.
@@ -35,11 +35,12 @@ Taking the expectation value of the particle number operator $\hat N = \sum_k a_
 \begin{equation}
     \bbcs \hat N \bcs = 2\sum_ {k>0} v_k^2,
 \end{equation}
-while the expectation value of the particle number dispersion reads
+where $v^2_k$ is the probability of finding a particle in state $k$, while the expectation value of the particle number dispersion reads
 \begin{equation}
 \expval{\Delta\hat N ^2} = \expval{\hat N^2} - \expval{\hat N}^2 = 4\sum_{k>0} v_k^2 u_k^2.
 \end{equation}
-The consequence of this result is profound. The BCS ansatz does not assume a fixed number of particles, rather it becomes an observable of the system, with an expectation value that depends on how the parameters $v_k^2$ are set, which represent the probability of finding a particle in the $k$-th state.
+The consequence of this result is profound. The BCS ansatz does not assume a fixed number of particles, rather it has an expectation value that depends on how the parameters $v_k^2$ are set, and presents fluctations around it.
+
 We can now write the many body Hamiltonian of the system as in equation \eqref{eq:mb_hamiltonian_sq}
 \begin{equation}
     \hat H = \sum_{k_1 k_2}t_{k_1k_2} a_{k_1}^\dagger a_{k_2} + \frac 1 4 \sum_{k_1 k_2 k_3 k_4}\overline{v}_{k_1k_2k_3k_4} a_{k_1}^\dagger a_{k_2}^\dagger a_{k_3} a_{k_4}
@@ -79,7 +80,7 @@ we can combine definitions \eqref{eq:delta_k} and \eqref{eq:qpe} with equation \
     \label{eq:v2}
     v_k^2 = \frac 1 2 \pm \frac{|\tilde \varepsilon_k|}{2E_k}.
 \end{equation}
-Since in the Hartree-Fock limit, where the occupations $v_k^2$ are equal to one below the fermi energy and zero above, and the gaps $\Delta_k$ vanish, rendering $E_k=\tilde \varepsilon_k$, we only select the solution
+Since in the Hartree-Fock limit, where the occupations $v_k^2$ are equal to one below the Fermi energy and zero above, and the gaps $\Delta_k$ vanish, rendering $E_k=\tilde \varepsilon_k$, we only select the solution
 \begin{equation}
 v_k^2 = \frac 1 2 - \frac{\tilde \varepsilon_k}{2E_k}.
 \end{equation}
@@ -91,13 +92,13 @@ Using the normalization condition to write $u_k^2=1-v_k^2$, and plugging it into
 The system of equations (\ref{eq:gap}, \ref{eq:norm_uv}, \ref{eq:v2}, \ref{eq:qpe}, \ref{eq:epsilon}), together with the condition on $\hat N$ -- ie $\expval{\hat N}=N$ -- is closed and can be solved numerically, usually through an effective pairing interaction.
 \subsection{Hartree-Fock-Bogoliubov theory}
 \label{sec:hfb}
-The most general ansatz to account for pairing interactions in Hartree-Fock theory is the Hartree-Fock-Bogoliubov (HFB) theory, it allows a treatment of the mean-field and pairing interactions in a unified way, the quasi-particles created on the vacuum are the most general ones, instead of being time-reversal paired particles.
+The most general ansatz to account for pairing interactions in Hartree-Fock theory is the Hartree-Fock-Bogoliubov (HFB) theory, that allows a treatment of the mean-field and pairing interactions in a unified way. The quasi-particles created on the vacuum aren't necessarily time-reversal pairs but the most general ones according to the symmetries of the system.
 Let us start by writing a Bogoliubov transformation from the particle basis $c_i$ to a quasi-particle one 
 \begin{equation}
     \label{eq:bogoliubov_trans}
     \beta_k^\dagger = \sum_l U_{lk} c_l^\dagger + V_{lk} c_l.
 \end{equation}
-If we take the Hermitian conjugate of the relation \eqref{eq:bogoliubov_trans}, we get the transformation for $\beta_k$, we are then able to write in matrix form
+If we take the Hermitian conjugate of the relation \eqref{eq:bogoliubov_trans}, we get the transformation for $\beta_k$, and we are then able to write the two in matrix form
 \begin{equation}
     \label{eq:bogoliubov_trans_mat}
     \begin{pmatrix}
@@ -117,7 +118,7 @@ If we take the Hermitian conjugate of the relation \eqref{eq:bogoliubov_trans}, 
         c^\dagger
     \end{pmatrix},
 \end{equation}
-where the matrix of matrices $\mathcal W$ reads
+where the super-matrix of matrices $\mathcal W$ reads
 \begin{equation}
     \label{eq:bogoliubov_mat}
     \mathcal W = \begin{pmatrix}
@@ -218,12 +219,12 @@ Here, $h$ is the single-particle Hamiltanian, which reads
 \begin{equation}
     h_{kk'} = t_{kk'} +\Gamma_{kk'},
 \end{equation}
-where $\Gamma_{kk'}$ is the mean field potential, given by
+and $\Gamma_{kk'}$ is the mean field potential, given by
 \begin{equation}
     \label{eq:mean_field_hfb}
     \Gamma_{kk'} = \sum_{ll'}\overline{v}_{kl'k'l}\rho_{ll'}
     \end{equation}
-and the pairing field $\Delta$ reads
+while the pairing field $\Delta$ reads
 \begin{equation}
     \label{eq:pairing_field_hfb}
     \Delta_{kk'} = \sum_{ll'}\overline{v}_{kk'll'}\kappa_{ll'}.

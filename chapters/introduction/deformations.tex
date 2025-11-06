@@ -1,27 +1,43 @@
 \section{Nuclear deformations}
 \label{sec:deformations}
-We shall now give a description of the nuclear shape in a formal framework. We will start by expanding the nuclear radius in terms of spherical harmonics, so that we can truncate and omit terms to describe certain configurations of the nucleus, so that we are able to illustrate the simple case of an axial quadrupole deformation. After that, we will briefly discuss the more general case of trixial, octupole, and parity breaking configurations.
-\subsection{Quadrupole deformation}
-Assuming the nuclear volume to be evaluated as
+If we were to observe the ratio between the first and second excited states energies of even-even nuclei, respectively $E(2^+)$ and $E(4^+)$, we would find that for nuclei where both $N$ and $Z$ are far from magic numbers, the ratio could be well approximated as 
 \begin{equation}
-    \label{eq:volume}
-    V(A) = \frac{4}{3}\pi R^3
+    \label{eq:ratio}
+    \frac{E(4^+)}{E(2^+)} \approx 3.33.
+    \end{equation}
+The ratio \eqref{eq:ratio} can be explained by the collective rotation of the nucleus, when rotaional symmetry is broken. Denoting by $J$ the total angular momentum of this rotation, the quantized rotor energy reads
+\begin{equation}
+    \label{eq:rotor_energy}
+    E_{\text{rot}} = \frac{\hbar^2}{2\mathcal I} J(J+1),
 \end{equation}
+where $\mathcal I$ is the nuclei's moment of inertia. Taking the ratio of equation \eqref{eq:rotor_energy} when $J=4$ and $J=2$, yields
+\begin{equation}
+    \label{eq:rotor_ratio}
+    \frac{20}{6} \approx 3.33.
+\end{equation}
+Since there are many nuclei that display this property, it becomes obvious that nuclear deformations play a central role in the description of nuclear structure; as such, we shall now give a description of the nuclear shape in a formal framework. We will start by expanding the nuclear radius in terms of spherical harmonics and develop the case of an axial deformation. After that, we will briefly discuss the more general case of trixial, octupole, and parity breaking configurations.
+\subsection{Quadrupole deformation}
 Let us suppose to consider variations of the nuclear radius $R$ in terms of spherical harmonics
 \begin{equation}
-    R(\theta, \phi) = R_0\bigg[1+\sum_{\lambda \mu}\alpha_{\lambda \mu}\,Y_{\lambda\mu}(\theta,\phi)\bigg]
+    R(\theta, \phi) = R_0\bigg[1+\sum_{\lambda \mu}\alpha_{\lambda \mu}\,Y_{\lambda\mu}(\theta,\phi)\bigg],
 \end{equation}
-where the moments $\alpha_{\lambda \mu}$ defined as
+where the moments $\alpha_{\lambda \mu}$, defined as
 \begin{equation}
-    \alpha_{\lambda \mu}=\int Y_{\lambda\mu}^*(\theta, \phi)R(\theta, \phi) d\Omega,
+    \alpha_{\lambda \mu}=\int Y_{\lambda\mu}^*(\theta, \phi)R(\theta, \phi) d\Omega
 \end{equation}
-are considered small, in the sense that $|\alpha_{\lambda \mu}| ^2 \ll |\alpha_{\lambda \mu}| $ as to conserve the volume in equation \eqref{eq:volume}. We have that $Y_{00}$ is constant, so its moment does not provide additional information to the constant radius. We can set $\alpha_{00}=0$. 
-Since $Y_{10}$, $Y_{11}$ and $Y_{1-1}$ are odd for $\theta + \pi$ and $\phi + \pi$, we have that $\alpha_{1\mu}$ vanishes in a reference frame in which the centre of mass is at the origin.
-\\Now, let us consider only $\alpha_{2\mu}$ coefficients and neglect higher degree terms, so that the deformation is purely quadrupolar, then the radius reads
+are considered small, in the sense that $|\alpha_{\lambda \mu}| ^2 \ll |\alpha_{\lambda \mu}| $, so that the volume of the system
+\begin{equation}
+    \label{eq:volume}
+    V = \iint_0^{R(\theta, \phi)}R^2 dRd\Omega = \frac 4 3 \pi R_0^3\bigg[1+\frac{3}{4\pi}\sum_{\lambda\mu}|\alpha_{\lambda \mu}|^2\bigg]
+\end{equation}
+is conserved.
+Since $Y_{00}$ is constant, including it in the expansion changes the total volume \eqref{eq:volume}, we then set $\alpha_{00}=0$. 
+If we consider only frames of reference where the nucleus has a center of mass fixed at the origin, we get vanishing $\alpha_{1\mu}$ coefficients.
+\\Now, let us consider only $\alpha_{2\mu}$ coefficients and neglect higher order terms, so that the deformation is purely quadrupolar, then the radius reads
 \begin{equation}
     R(\theta, \phi) = R_0\bigg[1+\sum_{\mu=-2}^2\alpha_{2\mu}\,Y_{2\mu}(\theta, \phi)\bigg].
 \end{equation}
-If we assume to be in the reference frame in which the inertia tensor, proportional to the coefficients $\alpha_{2\mu}$, is diagonal, which is known as intrinsic frame, then the sum 
+If we assume to be in the reference frame in which the inertia tensor, proportional to the coefficients $\alpha_{2\mu}$, is diagonal, which is called intrinsic frame, then the sum 
 \begin{equation*}\alpha_{21}Y^*_{21} + \alpha_{2-1}Y^*_{2-1}\end{equation*} vanishes. Since $R$ is a real valued function, we have the relation
 \begin{equation}
 \alpha_{\lambda \mu}Y_{\lambda\mu}+\alpha_{\lambda -\mu}Y_{\lambda-\mu}=2\Re{\alpha_{\lambda \mu}Y_{\lambda\mu}},
@@ -70,11 +86,12 @@ $H_0$ is the usual spherical harmonic potential, for which the eigenfunctions, e
 \\&= \frac \varepsilon 6 m\omega_0^2 \int r^2 u_{nl}(r)\frac{3m_j^2 - j(j+1)}{j(j+1)}dr,
 \end{align}
 thus in the limit of large $j$, states with the maximum total angular momentum projection $m_j$ are shifted upwards, while states with the minimum $m_j$ are shifted downwards; moreover, eigenstates with $\pm m_j$ are degenerate, as expected by the reflection symmetry of the Hamiltonian if the $z$ axis is inverted.
+
 Adding further empirical terms to reproduce experimental data, and the spin-orbit coupling, results in the formulation of the Nilsson model \cite{nilsson}. In figure \ref{fig:nilsson}, a graphical representation of the energy levels in the Nilsson model is shown \cite{wikipedia_equation_of_state}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{Images/nilsson.pdf}
-    \caption{Nilsson model energy levels trends, as a function of $\varepsilon$.}
+    \caption{Nilsson model energy levels trends, as a function of $\varepsilon$. Figure taken form \cite{wikipedia_equation_of_state}.}
     \label{fig:nilsson}
 \end{figure}
 \subsubsection{Deformed Woods-Saxon}
@@ -88,12 +105,22 @@ so that the solution is axially symmetric and the problem is reduced to just the
     U_\text{WS}(r, \theta) = -\frac{U_0(A, N)}{1+e^\frac{r - R(\theta)}{a}}.
 \end{equation}
 \subsection{Octupole deformations and parity breaking}
-While quadrupole deformations concern nuclei across the whole chart, octupole deformations are much less common, being found only in heavier nuclei.
-Under the parity operation $\mathcal P: \bm r \mapsto -\bm r$, coefficients of the spherical harmonics transform as
+While quadrupole deformations concern nuclei across the whole chart, octupole deformations are much less common, being found in ground states only for heavier nuclei. The evidence for such deformations is mainly provided by the large electric octupole transition probability $B(E3)$, which reads
+\begin{equation}
+    \label{eq:E3}
+    B(E3; 3^- \rightarrow 0^+) = \frac 1 {2J_i+1}|\bra{0^+} e r^3 \hat{\mathcal Q_3} \ket{3^-}|^2,
+\end{equation}
+where $J_i$ is the initial total angular momentum of the nucleus and $\hat{\mathcal Q}_3$ is the octupole operator defined as
+\begin{equation}
+    \hat{\mathcal Q}_3 = r^3 Y_{30}(\hat r).
+\end{equation}
+Evidence of such strong coupling was initially found in neutron-rich Barium isotopes, $^{144}$Ba \cite{Bucher_2016_144Ba} and $^{146}$Ba \cite{Bucher_2017_146Ba}, and a while later in Radium isotopes \cite{Butler_2020_Ra} and other heavy nuclei as well \cite{Butler_2016_octupole_collectivity}.
+
+Expansions on spherical harmonics, under the parity operation $\mathcal P: \bm r \mapsto -\bm r$, transform as
 \begin{equation}
     \mathcal P \alpha_{\lambda \mu} = (-1)^{\lambda} \alpha_{\lambda \mu},
 \end{equation}
-hence a nuclear octpuole deformation, whose degree $\lambda=3$, would break parity symmetry. In figure \ref{fig:octupole_defs} a graphical representation of the spherical harmonics for $\lambda=3$ and $\mu=0,2$ is shown.
+hence a nuclear octpuole deformation, whose order $\lambda=3$, would break the parity symmetry of the mean-field. In figure \ref{fig:octupole_defs} a graphical representation of the spherical harmonics for $\lambda=3$ and $\mu=0,2$ is shown.
 \begin{figure}[h]
     \centering
 \begin{minipage}{0.48\textwidth}

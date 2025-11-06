@@ -3,11 +3,12 @@ All $\texttt{hfbcs\_qrpa}$ calculations were performed using a mesh size of $0.1
 \\In the results shown here, for $^{16}$O, we are able to reach a $0.3$ fm step size, while for the heaviest, $^{90}$Zr, we are only able to reach $0.42$ fm. The reason behind this choice is that as the nucleus size increases, a bigger box is needed to ensure that all relevant states are able to decay to zero at the boundary. All the data reported in this chapter is computed with the SLy5 parametrization \cite{chabanat2}.
 \section{Results for \(^{16}\)O}
 The first results we will take a look at are the ones for $^{16}$O. It's the best candidate for gauging the solver's performance, as it is a very light, double magic nucleus, meaning it has no pairing interaction and a spherical shape.
-\\All calculations are performed on a box of size $[-9, 9]$ fm in all three directions and a step size of $0.3$ fm, correponding to $2\cdot 60^{3}$ mesh points.
+All calculations are performed on a box of size $[-9, 9]$ fm in all three directions and a step size of $0.3$ fm, correponding to $2\cdot 60^{3}$ mesh points.
 \subsection{Results neglecting Coulomb interaction}
 Since the Skyrme functional is complex and nuanced, results are shown for more and more terms in expression \eqref{eq:skfunc}. We start by including only $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$ and neglecting the others and the Coulomb interaction; results are reported in table \ref{tab:no_so_no_j_no_coul}.
 Without further terms, the spin-orbit field $\bm B(\bm r)$ vanishes, hence the $1p_{3/2}$ and $1p_{1/2}$ levels show degeneration in energy.
-\\Since $N=Z$, assuming equal masses the single-particle equations will be exactly equal between the two species, therefore only neutron results are reported. Note that $C_1$ terms reduce to being null in this case, that is until we either break the $N=Z$ equality or introduce the Coulomb interaction.
+
+Since $N=Z$, assuming equal masses the single-particle equations will be exactly equal between the two species, therefore only neutron results are reported. Note that $C_1$ terms reduce to being null in this case, that is until we either break the $N=Z$ equality or introduce the Coulomb interaction.
 \begin{table}[ht]
   \centering
   \begin{tabular}{lrrccc}
@@ -34,7 +35,9 @@ Without further terms, the spin-orbit field $\bm B(\bm r)$ vanishes, hence the $
   \caption{$^{16}$O including $C_0^{\rho}$, $C_1^{\rho}$, $C_0^{\tau}$, $C_1^{\tau}$ terms, neglecting Coulomb interaction.}
   \label{tab:no_so_no_j_no_coul}
 \end{table}
+
 In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are included just for the spin-orbit field $\bm B(\bm r)$, but not for the mean field $U(\bm r)$; from an interaction point of view, it's as if we were neglecting the spin-gradient coupling term \cite{chabanat2}. As expected, the $1p_{3/2}$ and $1p_{1/2}$ degeneration is removed, displaying the spin-orbit splitting, which lowers the total angular momentum $j=3/2$ level and raises the $j=1/2$ level.
+
 \begin{table}[ht]
   \centering
   \begin{tabular}{lrrccc}
@@ -61,7 +64,9 @@ In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ term
   \caption{$^{16}$O including $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$, $C_0^{\div \bm J}$, $C_1^{\div \bm J}$ terms, neglecting Coulomb interaction and $J^2$ terms.}
   \label{tab:compare_so}
 \end{table}
-\\Lastly, the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are also included in the calculation of the mean-field, resulting in the full implementation of the Skyrme functional. As shown in table \ref{tab:compare_j2}, the effect of this addition on the ground state is little, as the spin current $J_{\mu \nu}$ is small in light, closed shell nuclei.
+
+Lastly, the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are also included in the calculation of the mean-field, resulting in the full implementation of the Skyrme functional. As shown in table \ref{tab:compare_j2}, the effect of this addition on the ground state is little, as the spin current $J_{\mu \nu}$ is small in light, closed shell nuclei.
+
 \begin{table}[ht]
   \centering
   \begin{tabular}{lrrccc}

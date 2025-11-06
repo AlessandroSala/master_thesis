@@ -1,5 +1,40 @@
-\section{$^{24}$Mg}
-In the following section, results for $^{24}$Mg are presented, it's a natural choice to study how well deformations are represented by our framework, since it's light, very deformed and shows no pairing interaction in its ground state.
+\section{$^{24}$Mg Benchmarks}
+In the following section, the results for $^{24}$Mg are presented and used as a benchmark for the performance of our code in a deformed case.
+\subsection{Deformation parameters}
+When dealing with deformed nuclei, mean square radii are not sufficient to characterize the nuclear density. The main parameter used is the quadrupole deformation parameter $\beta_2$, similar to the one encountered in section \ref{sec:deformations}, it can be computed through the actual mean square radius with formula \eqref{eq:beta_real_radius}
+\begin{equation}
+    \label{eq:beta_real_radius}
+    \beta_2 = \frac{4\pi\expval{\mathcal Q_{2 0}}}{5A\expval{r^2}},
+\end{equation}
+where $\expval{r^2}$ is the total mean square radius of the nucleus 
+\begin{equation}
+    \expval{r^2} = \frac{\int (\rho_n + \rho_p )r^2 d\bm r}{\int (\rho_n + \rho_p )d\bm r} = \expval{x^2+y^2+z^2}
+\end{equation}
+or normalizing with respect to the parametetrised nuclear radius using formula \eqref{eq:nuc_radius}
+\begin{equation}
+  \label{eq:beta}
+  \beta_{2}' = \frac{4\pi\expval{\mathcal Q_{20}}}{3AR^2}
+\end{equation}
+where the relation 
+\begin{equation}
+  \expval{r^2} = \frac 3 5 \expval{|r|}^2
+\end{equation}
+is used, and the value for $r_0$ is taken to be $1.2$, in accordance with the one used in other codes \cite{Ryssens2015_EV8}.
+
+Using either of the two formulae (\ref{eq:beta_real_radius}, \ref{eq:beta}), for spherical nuclei, $\beta_2 = 0$, while for deformed ones, thanks to the normalization with respect to the total radius and mass, the $\beta_2$ parameter can be used to compare different nuclei across the chart.
+
+The choice of $\beta_2$ used in the following deformation curves depends on the code which is used to benchmark the results. For comparisons with \texttt{HFBTHO}, formula \eqref{eq:beta_real_radius} is used, while for \texttt{EV8} and results in other sections, formula \eqref{eq:beta} is used. In figure \ref{fig:beta_compare}, a comparison between the two formulae is presented; as shown by the shape of the curves, it's possible to observe that $\beta_2$ has an asymptotic behaviour for large deformations, since for large $\expval{z^2}$, assuming axial symmetry and constant volume $V$
+\begin{equation}
+\beta_2 \propto \frac{2z^2-2V/z}{z^2 + 2V/z}\underset{{z\to\infty}}{\to} 2, 
+\end{equation}
+while $\beta_2'$ remains unbiased by the mean square radius, since the normalization is taken to be a constant.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{Images/beta_compare.pdf}
+  \caption{Comparison between the two formulae for $\beta_2$.}
+  \label{fig:beta_compare}
+\end{figure}
+
 \subsection{\texttt{HFBTHO} code and calculation details}
 \label{sec:hfbtho}
 \subsubsection{\texttt{HFBTHO}}
@@ -7,21 +42,25 @@ To benchmark the code in the case of nuclear deformation, the \texttt{HFBTHO} co
 All calculations were performed using 12 oscillator shells and assuming a zero pairing interaction. 
 Default parameters were adopted for the quadrupole constraints. 
 Since the version of \texttt{HFBTHO} used in this work has been compiled with the $J^2$ terms disabled, we present the results from our code both with and without them. 
+
 The results obtained without them serve as a benchmark for the code, 
-while those including the $J^2$ contribution illustrate their impact on the calculated observables.
+while those including the $J^2$ contribution illustrate its impact on the ground state.
 \subsubsection{Code parameters and axial constraint}
 As for our code, calculations are performed on a box $[-10, 10]$ fm.
 In the case of the ground state calculation, a step size of $0.33$ fm is used, with a starting guess of a deformed Woods-Saxon with $\beta_2=0.4$.
-\\The calculation in the case of the deformation curve is carried out imposing the following constraints
+
+The calculation in the case of the deformation curve is carried out imposing the following constraints
 \begin{align}
-  \expval{\Re\mathcal Q_{22}} = 0
-  \\\expval{\Im \mathcal Q_{22}} = 0
-  \\\expval{Y_{20}} = q_{20}.
+  \expval{\Re\mathcal Q_{22}} = \expval{\Im \mathcal Q_{22}} = 0,
+  \\\expval{x} = \expval{y} = \expval{z} = 0,
+  \\\expval{\mathcal Q_{20}} = q_{20}.
 \end{align}
-These constraints altogether impose an axial deformation on the system. This is done because on a full mesh like in our case, the nucleus may deform on a different axis from the chosen one (z), resulting in spurious contributions to the real deformation curve; moreover, the axial symmetry of $\texttt{HFBTHO}$ doesn't allow broken axial symmetry configurations.
-\\Regarding the stiffness $c$ and damping parameter $\mu$ of ALM in section \ref{sec:alm}, $c=0.001$ and $\mu=0.1$ were used. As for convergence criteria, a tolerance of $0.001$ on the value of $\beta_2 - \beta_{2, \text{target}}$ was used.
+These constraints altogether impose an axial deformation on the system, the constraint on $\mathcal Q_{20}$ alone is not sufficient because on an unconstrained mesh like in our case, the nucleus may deform on a different axis from the chosen one ($z$) or the $\mathcal Q_{20}$ moment may be subject to spurious contributions of a center of mass not centered in the origin; moreover, the axial symmetry of $\texttt{HFBTHO}$ doesn't allow broken axial symmetry configurations.
+
+Regarding the stiffness $c$ and damping parameter $\mu$ of ALM described in section \ref{sec:alm}, $c=0.005$ and $\mu=0.02$ were used. As for convergence criteria, a tolerance of $0.001$ on the value of $\beta_2 - \beta_{2, \text{target}}$ was used.
 \subsubsection{Ground state}
-Table \ref{tab:mg_table} reports data of the comparison for the ground state of $^{24}$Mg, while figure \ref{fig:mg_gs_density_axial} shows the middle section of the total particle density.
+Table \ref{tab:mg_table} reports data of the comparison for the ground state of $^{24}$Mg. In figure \ref{fig:mg_gs_density_axial} a slice of the density at $y=0$ is shown, while in figure \ref{fig:mg_gs_top} the density viewed `from the top', ie $z=0$ is shown. 
+
 Charge radii for the two codes are displayed but not compared, due to different formulas used for their computation. $\expval{x^2}, \expval{y^2}$ and $\expval{z^2}$ is reported for our code but not for \texttt{HFBTHO} since it doesn't compute them.
 \begin{table}[ht]
   \centering
@@ -43,12 +82,19 @@ Charge radii for the two codes are displayed but not compared, due to different 
   \caption{Results for $^{24}$Mg ground state, no pairing interaction, box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrization.}
   \label{tab:mg_table}
 \end{table}
-\\The comparison shows good agreement between the two codes, with the same $\beta_2$ minimum and similar ground state properties.
+
+The comparison shows good agreement between the two codes, with the same $\beta_2$ minimum and similar ground state properties.
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.0\linewidth]{Images/mg_gs_density_axial.pdf}
-  \caption{Magnesium ground state density $\rho(x, y, 0)$, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrization}
+  \caption{Magnesium ground state density $\rho(x, 0, z)$, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrization}
   \label{fig:mg_gs_density_axial}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.0\linewidth]{Images/mg_gs_density_top}
+  \caption{Magnesium ground state density $\rho(x, y, 0)$, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrization.}
+  \label{fig:mg_gs_top}
 \end{figure}
 \subsubsection{Deformation curve}
 In figure \ref{fig:mg_no_pair_deformation}, the deformation curve is shown for $^{24}$Mg, without pairing. To counteract the sharp rise in CPU time, due to the high number of points in the curve, a coarser lattice than the one in the ground state calculation is used, hence the shift in energy of the curve.
@@ -58,4 +104,24 @@ In figure \ref{fig:mg_no_pair_deformation}, the deformation curve is shown for $
   \caption{Magnesium deformation curve, no pairing interaction, calculation done on a box $[-10, 10]$ fm, step size 0.66 fm, SkM* parametrization, neglecting $J^2$ terms.}
   \label{fig:mg_no_pair_deformation}
 \end{figure}
-\\Figure \ref{fig:mg_no_pair_deformation} shows the same trend for both codes, with a minimum of the energy in $\beta_2=0.390$, albeit a difference in the energies due to the corase mesh, a gap which is shown in table \ref{tab:mg_table} to shrink when increasing the accuracy of the step size.
+
+Figure \ref{fig:mg_no_pair_deformation} shows the same trend for both codes, with a minimum of the energy in $\beta_2=0.390$, albeit a difference in the energies due to the corase mesh, a gap which is shown in table \ref{tab:mg_table} to shrink when increasing the accuracy of the step size.
+\subsection{\texttt{EV8} code and calculation details}
+\label{sec:ev8}
+$\texttt{HFBTHO}$ can be used to judge how well our implementation fares against other codes for deformed nuclei, but its numerical methodologies are profoundly different from the ones used in our implementation. 
+
+An interesting alternative is the \texttt{EV8} code \cite{Ryssens2015_EV8}, which is a HF code that solves the problem on a 3D mesh. Unlike our case, quantities are represented only on a single octant of the box, which allows for quicker computational times, imposing plane reflection symmetry on the three planes, and the KS equations are solved using Fast Fourier Transforms (FFTs). .
+
+\subsection{\texttt{EV8} code comparison}
+Figure \ref{fig:ev8_compare_nopair} shows the comparison between the deformation curves of the two codes for $^{24}$Mg, with the $J^2$ terms included. The parameters for our calculation are the same as those used in the \texttt{HFBTHO} comparison in section \ref{sec:hfbtho}, regarding the input parameters of $\texttt{EV8}$, a step size of $0.8$ fm, and a number of points on each axis of $32$ is chosen.
+
+\begin{figure}[htp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Images/ev8_compare_nopair.pdf}
+  \caption{Comparison with the $\texttt{EV8}$ code for $^{24}$Mg, no pairing interaction, box $[-10, 10]$ fm, step size 0.6 fm, SLy4 parametrization.}
+  \label{fig:ev8_compare_nopair}
+\end{figure}
+
+\section{Other results}
+\subsection{Deformation curve for different functionals}
+In figure \ref{fig:functionals_compare}, the deformation curves for $^{24}$Mg are compared for different Skyrme functionals.

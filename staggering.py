@@ -21,33 +21,39 @@ def plot_separation_energies():
     # Key = Mass Number (A), Value = Total Binding Energy (B) in MeV
     binding_energies_mev = {
         # A: B(MeV)
-        108: 916.733,
-        109: 924.381,
-        110: 933.435,
-        111: 940.380,
-        112: 949.191,
-        113: 956.402,
-        114: 965.342,
-        115: 972.783,
-        116: 981.849,
-        117: 989.508,
-        118: 998.688,
-        119: 1006.554,
-        120: 1015.845,
-        121: 1023.905,
-        122: 1033.298,
-        123: 1041.540,
-        124: 1051.031,
-        125: 1058.913,
-        126: 1068.514,
-        127: 1076.436,
-        128: 1086.130,
-        129: 1094.167,
-        130: 1103.948,
-        131: 1112.083,
-        132: 1121.942,
+        107: 903.026,
+        108: 914.655,
+        109: 923.286,
+        110: 934.570,
+        111: 942.738,
+        112: 953.525,
+        113: 961.270,
+        114: 971.573,
+        115: 979.118,
+        116: 988.682,
+        117: 995.625,
+        118: 1004.951,
+        119: 1011.434,
+        120: 1020.539,
+        121: 1026.709,
+        122: 1035.523,
+        123: 1041.469,
+        124: 1049.958,
+        125: 1055.691,
+        126: 1063.884,
+        127: 1069.410,
+        128: 1077.373,
+        129: 1082.673,
+        130: 1090.286,
+        131: 1095.490,
+        132: 1102.843,
+        133: 1105.242,
+        134: 1108.873,
+        135: 1111.143,
+        136: 1114.792,
+        137: 1116.824,
     }
-    
+
     # Get a sorted list of available mass numbers
     all_a = sorted(binding_energies_mev.keys())
     
@@ -62,10 +68,10 @@ def plot_separation_energies():
     s2n_plot = []
     
     # Calculate S_n
-    for a in all_a[1:]: # Start from the second nucleus
-        if (a - 1) in binding_energies_mev:
-            sn = binding_energies_mev[a] - binding_energies_mev[a - 1]
-            a_plot_sn.append(a)
+    for a in all_a[0:]: # Start from the second nucleus
+        if (a + 1) in binding_energies_mev:
+            sn = binding_energies_mev[a+1] - binding_energies_mev[a ]
+            a_plot_sn.append(a-1)
             sn_plot.append(sn)
             
     # Calculate S_2n
@@ -80,16 +86,11 @@ def plot_separation_energies():
     
     # Plot S_n
     plt.plot(a_plot_sn, sn_plot, 'bo-', 
-             markersize=6, label='$S_n$ (one-neutron)')
-             
-    # Plot S_2n
-    plt.plot(a_plot_s2n, s2n_plot, 'rs-', 
-             markersize=6, label='$S_{2n}$ (two-neutron)')
+             markersize=6, label='$S_n$')
              
     # Style the plot
     plt.xlabel('Mass Number (A)', fontsize=14)
-    plt.ylabel('Separation Energy (MeV)', fontsize=14)
-    plt.title('Neutron Separation Energies in Sn (Z=50) Isotopes', fontsize=16)
+    plt.ylabel("$S_n$ [MeV]", fontsize=14)
     plt.legend(fontsize=12)
     plt.grid(True, linestyle=':', alpha=0.7)
     plt.minorticks_on()
@@ -102,6 +103,7 @@ def plot_separation_energies():
     plt.text(0.02, 0.02, 'Data from AME2020 (Wang et al., 2021)',
              transform=plt.gca().transAxes, fontsize=10,
              bbox=dict(boxstyle='round,pad=0.3', fc='white', alpha=0.5))
+    plt.ylim(0, 14)
              
     # Show the plot
     plt.tight_layout()

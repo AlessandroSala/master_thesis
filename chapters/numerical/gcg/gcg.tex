@@ -8,7 +8,7 @@ This section is devoted to the approximate solution of the eigenvalue problem, n
     \item the Rayleigh-Ritz procedure to find good approximations to the eigenpairs in a certain subspace; and
     \item the shift-and-invert method, to select the desired portion of the eigenvalue spectrum.
 \end{itemize}
-After describing these building blocks, some of the most commonly used eigensolvers are described in section \ref{sec:eigensolvers}, focusing on the core ideas and stating their limitations, to finally address the General Conjugate Gradient method, whose implementation in the present work is detailed in section \ref{sec:gcg}.
+After describing these building blocks, some of the most commonly used eigensolvers are described in section \ref{sec:eigensolvers}, focusing on the core ideas and stating their limitations, to finally address the Generalized Conjugate Gradient method, whose implementation in the present work is detailed in section \ref{sec:gcg}.
 \subsection{Conjugate Gradient and numerical techniques}
 \label{sec:techniques}
 \subsubsection{Conjugate Gradient method}
@@ -204,9 +204,9 @@ The last algorithm of this short list is LOBPCG, it's the newest and most sophis
 On the one hand, it's not possible to arbitrarily select the portion of the matrix spectrum to calculate, which is required for problems where variational collapse happens, like in HFB or the Dirac equation, which manifests particle/antiparticle solutions \cite{li2020efficient}.
 To solve this, an additional filtering step is required \cite{LIN2013205,li2020efficient}, which introduces a computational cost in the algorithm.
 \\Lastly, LOBPCG may fail when poor conditioning is present or when high precision on the eigenvalues is required \cite{GCG1}.
-\subsection{General Conjugate Gradient}
+\subsection{Generalized Conjugate Gradient}
 \label{sec:gcg}
-The General Conjugate Gradient is an iterative eigensolver designed with the aim of improving LOBPCG, it is a blocked algorithm, which uses the inverse power method and previous search directions to generate the search subspace. GCG is proven to be faster and more stable than LOBPCG \cite{GCG1}.
+The Generalized Conjugate Gradient is an iterative eigensolver designed with the aim of improving LOBPCG, it is a blocked algorithm, which uses the inverse power method and previous search directions to generate the search subspace. GCG is proven to be faster and more stable than LOBPCG \cite{GCG1}.
 \\The search subspace is built as
 \begin{equation}
     V = [X, P, W],
@@ -230,7 +230,7 @@ which is the projection of $X_\text{new}$ onto the orthogonal complement of $X$,
 where $\lambda_\text{nev}$ is the biggest eigenvalue of the RR procedure and $\lambda_1$ is the smallest of the active eigenpairs.
 \paragraph{Preconditioning} The use of a preconditioner is beyond the scope of this work, a simple diagonal preconditioner is used.
 \begin{algorithm}[h]
-\caption{General Conjugate Gradient algorithm}
+\caption{Generalized Conjugate Gradient algorithm}
 \begin{algorithmic}[1]
     \label{alg:mod_gcg}
 \STATE \textbf{Input:} Matrix \(A\) of dimensions $n\times n$, number of desired eigenpairs \( \texttt{nev} \), $X_\text{guess}$ initial guess of dimensions $n\times k$, with $= k \ge \text{nev}$, \(\texttt{max\_iter}\) maximum iterations

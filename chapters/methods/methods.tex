@@ -1,27 +1,92 @@
-\chapter{State of the art, objective and motivation}
+\chapter{State of the art, objectives and methods}
 \label{chap:methods}
 \section{State of the art and motivation}
-The need to account for nuclear deformations has been highlighted in chapter \ref{chap:intro}, particularly in regard to heavy nuclei and the fission process in section \ref{sec:fission}. The solution of the many-body problem has always been a computational challenge, mainly mitigated by using expansions on bases or assuming certain symmetries to reduce the dimensionality of the problem.
-\\The problems that arise when using either of the aforementioned approaches call for the implementation of unconstrained codes.
-\paragraph{Basis expansions} 
-An efficient method to solve the many-body problem is to use basis expansions of the harmonic oscillator, similar to the nuclear system as mentioned in section \ref{sec:models}. Several implement this kind of procedure, one of which is used in the present work to benchmark our own implementation in section \ref{sec:hfbtho}. The main limitation of such approach is that weakly bound states and large deformations are not well represented, the former due fundamentally different asymptotic behaviours for $r\to \infty$, between the HO -- $e^{-r^2}$ -- and loosely bound or quasi-resonant states -- $e^{-r}$ \cite{Stoitsov2003_PRCC68_054312,Dobaczewski1996_PRCC53_2809}, while the latter needs a large number of HO shells to converge, leading to an exponential increase of the computational cost \cite{Marevic2022_CPC}.
-\paragraph{Symmetry assumptions} 
-Another approach to reduce the complexity of the procedure is to assume certain symmetries, as to reduce the dimensionality of the problem to save computational time. The main example of such codes is the spherical solution \cite{VauhBrinkOriginal,hfbcsqrpa} of the Hartree-Fock equations, but axially symmetric ones exist as well \cite{Pei2008_HFBAX}. The limitations of such codes are obvious, as they systematically prevent the representation of certain broken symmetries.
-\paragraph{Unconstrained codes}
-In recent years, codes that solve the Hartree-Fock or Hartree-Fock-Bogoliubov problem on an unconstrained 3D mesh have been developed \cite{Ryssens2015_EV8,Ryssens2016_MOCCa,Maruhn2014_Sky3D,Chen2022_HFBFFT}. These codes are able to represent broken symmetries, but they require a huge amount of computational power to be run at an acceptable accuracy, unless certain assumptions are made, such as plane reflection \cite{Ryssens2015_EV8,Ryssens2016_MOCCa}.
-Hence, the need to explore new, more computationally efficient methods to solve the many-body problem, as done in this thesis through the use of the General Conjugate Gradient method, detailed in section \ref{sec:gcg}.
+The need to account for nuclear deformations has been highlighted already as a central theme in chapter \ref{chap:intro}, particularly in the context of heavy nuclei and of the complex fission dynamics discussed in section \ref{sec:fission}. Without allowing for deformation, several key features of nuclear systems -- such as the excitation spectrum when rotational bands are present -- cannot be captured, and limiting the description to only a subset of shapes often proves inadequate, as seen in the case of heavy nuclei in section \ref{sec:deformations}. Similar limitations arise in dynamical processes and nuclear reactions, where shape evolution plays an essential role. 
+
+The central issue in nuclear structure theory is that the Hamiltonian is not known exactly and must be approximated. At the same time, the problem is inherently a many-body one, which remains computationally demanding, requiring approximations to make calculations tractable. Symmetry assumptions such as spherical or axial symmetry have therefore been widely used in numerical implementations to simplify the calcualtions and reduce computational cost. However, these constraints become insufficient in situations where deformation is a defining aspect of the system.
+
+With the increasing availability of computational power and the development of modern numerical techniques, the field is now in a position to move beyond these restrictive assumptions. This motivates the development of new codes capable of treating the many-body problem without imposed symmetries, allowing the full range of nuclear deformations to emerge naturally from the underlying theory.
+
+\section{State of the Art}
+
+The approaches to the nuclear many-body problem can be broadly divided into two families: 
+(a) \textit{basis expansion methods}, which represent single-particle states in truncated harmonic oscillator bases, 
+and (b) \textit{coordinate-space (mesh) methods}, which discretize space directly. 
+In the following sections, we review these two classes of methods and motivate the need for more flexible and computationally efficient unconstrained solvers.
+
+\subsection{Basis expansion methods}
+
+Basis expansion approaches are among the most widely used techniques for solving the HF and HFB equations. 
+In these methods, single-particle wavefunctions are expanded on a finite HO basis, chosen for its completeness and qualitative similarity to the mean-field potential of bound nuclei, as explained in section \ref{sec:models}. 
+Codes such as \texttt{HFBTHO}, also used in this work for benchmarking our implementation in section \ref{sec:hfbtho}, are based on this framework.
+
+The HO basis, however efficient, introduces structural limitations.
+First, weakly bound and continuum-like states, crucial for nuclei near the drip lines, are poorly represented because their asymptotic behavior differs 
+fundamentally from that of HO functions. 
+Whereas HO states decay as $e^{-r^{2}}$, quasi-bound states decay as $e^{-r}$, 
+leading to slow convergence and difficulties in describing halos, neutron skins, and quasi-resonant states 
+\cite{Stoitsov2003_PRCC68_054312,Dobaczewski1996_PRCC53_2809}.  
+Second, large deformations in heavy nuclei may require many HO shells to reproduce the stretched spatial geometry, significantly increasing the computational cost.  
+The computational complexity grows rapidly with the maximum number of oscillator shells used in the calculation, resulting in demanding memory and CPU requirements for strongly deformed configurations \cite{Marevic2022_CPC}.
+
+In summary, despite their efficiency for near-spherical and moderately deformed nuclei, 
+basis-expansion methods become inadequate for describing nuclei near drip lines, far from stability and largely deformed.
+
+\subsection{Symmetry-Restricted mesh methods}
+
+A second major class of HF/HFB solvers uses a spatial mesh as the variational space.  
+Historically, fully unconstrained three-dimensional meshes were computationally prohibitive, which motivated the introduction of \textit{symmetry constraints} to reduce the dimensionality of the problem.  
+By enforcing specific spatial symmetries, the number of degrees of freedom is greatly reduced, making coordinate-space calculations tractable on available hardware.
+
+The most common choices are spherical and axial symmetry.  
+Spherical HF/HFB solvers \cite{VauhBrinkOriginal,hfbcsqrpa} reduce the equations to a radial problem, achieving excellent computational efficiency and precision for the structure of spherical or near-spherical nuclei.  
+Axially symmetric solvers \cite{Pei2008_HFBAX} generalize this approach to two dimensions, allowing axial deformations while still benefitting from significant computational cost reductions.
+
+However, the limitations of symmetry-restricted approaches are inherent to the constraints themselves, as they forbid the emergence of intrinsic shapes such as triaxial or more general octupole-deformed configurations.
+
+\subsection{Unconstrained coordinate-space (mesh) methods}
+To overcome the limitations of basis truncation and symmetry constraints, modern HF / HFB solvers have increasingly adopted coordinate-space discretizations, typically based on three-dimensional Cartesian meshes. 
+Notable examples include \texttt{MOCCa} \cite{Ryssens2016_MOCCa}, 
+\texttt{Sky3D} \cite{Maruhn2014_Sky3D}, and \texttt{HFBFFT} \cite{Chen2022_HFBFFT}. 
+These codes solve the mean-field equations directly in coordinate space, allowing arbitrary deformations and spontaneous symmetry breaking to emerge naturally.
+
+However, coordinate-space solvers come with their own challenges.  
+High spatial resolution is required to accomodate sufficient numerical accuracy, leading to large three-dimensional grids, thus substantial computational cost. 
+Even with modern resources, fully unconstrained calculations remain computationally intensive, and additional assumptions such as plane reflection symmetry are often introduced to reduce the domain size \cite{Ryssens2015_EV8,Ryssens2016_MOCCa}.
+
+Thus, while mesh-based solvers offer maximal flexibility, their computational demands motivate the search for more efficient numerical approaches.
+
+\subsection{Towards more efficient unconstrained methods}
+The limitations discussed above highlight the need for methods that combine the flexibility of coordinate-space solvers with improved computational efficiency.
+In this thesis, we investigate such an approach through the use of the \textit{Generalized Conjugate Gradient} (GCG) method, presented in detail in section~\ref{sec:gcg}.
+In the HF and energy-density-functional frameworks, the core of the many-body problem reduces to solving a set of single-particle Schrödinger or Kohn-Sham eigenvalue equations, coupled self-consistently through the mean field.
+These equations must be solved repeatedly during the iterative HF/HFB cycle, and their efficient solution dominates the overall computational cost.
+
+As shown in the present work, applying GCG to the HF single-particle problem provides a promising route towards efficient, symmetry-unrestricted many-body calculations while mitigating the main bottlenecks of fully coordinate-mesh methods.
+
 \section{Objectives}
-The aim of this work is to develop a new implementation of the Hartree-Fock method on an unconstrained 3D mesh, by the use of the General Conjugate Gradient method. The goals addressed by this work are the following:
+The aim of this work is to develop a new implementation of the Hartree-Fock method on an unconstrained 3D mesh, by the use of the Generalized Conjugate Gradient method. The goals addressed by this work are the following:
 \begin{itemize}
-    \item assess the feasibility of the General Conjugate Gradient for the solution of large-scale eigenvalue problems;
+    \item assess the feasibility of the Generalized Conjugate Gradient for the solution of large-scale eigenvalue problems;
     \item solve the self-consistent Hartree-Fock equations on an unconstrained 3D mesh;
     \item verify the numerical accuracy of the new implementation against existing spherical codes;
     \item gauge the numerical accuracy of deformations, comparing results with well established deformed codes; and
     \item attempt to produce novel results that specifically require an unconstrained implementaiton of this kind, and establish the advance brought to the field by this work.
 \end{itemize}
-\section{Methods}
-The methods used in this work are the following:
-\paragraph{Skyrme energy functional} The many-body problem is treated within the well established Hartree-Fock framework, detailed in section \ref{sec:hf}; as mentioned in the introduction in chapter \ref{chap:intro}, it is not sufficient, as a more general energy density functional approach has to be taken, which is developed in section \ref{sec:skyrme} for the Skyrme functional used in this work.
-\paragraph{Finite differences and General Conjugate Gradient} After the main equations to be solved have been derived, the numerical methods used to solve them are detailed in chapter \ref{chap:numerical}, starting with the numerical discretization of the equations in section \ref{sec:finite_diff} and then solving the eigenvalue problem using an implementation of the General Conjugate Gradient method in section \ref{sec:gcg}. Finally closing with some remarks about specific details about the code and the algorithm parameters in section \ref{sec:minimization}.
 
+\section{Methods}
+The methods used in this thesis can be grouped into two main components: the formulation of the energy density functional and the solution of the resulting self-consistent equations.
+
+\paragraph{Skyrme Energy Functional}  
+The many-body nuclear problem is approached within the Hartree--Fock framework, described in section~\ref{sec:hf}.  
+As discussed in chapter \ref{chap:intro}, a pure HF treatment is not sufficient for a quantitative description of nuclear structure, 
+and a more general energy density functional (EDF) formulation must be adopted.  
+In this work, we employ the Skyrme EDF, whose construction and resulting mean-field equations are developed in section~\ref{sec:skyrme}.  
+This provides the self-consistent single-particle Hamiltonian that forms the basis for the numerical treatment.
+
+\paragraph{Finite Differences and Generalized Conjugate Gradient}  
+Once the equations to solve have been derived, their numerical solution requires both a spatial discretization scheme and an efficient solver for the large-scale eigenvalue problem that arises at each iteration of the self-consistent procedure.
+Chapter~\ref{chap:numerical} details the methods adopted in this work, starting with the finite-difference discretization of derivatives in section~\ref{sec:finite_diff}.  
+The resulting discretized eigenvalue problem is then treated using the GCG method to extract the relevant low-lying eigenstates, as described in section~\ref{sec:gcg}.  
+Section~\ref{sec:minimization} discusses implementation-specific aspects of the code, including convergence criteria, mixing strategies, and the choice of parameters required to ensure stable and efficient minimization of the energy functional.
 
