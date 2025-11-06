@@ -184,23 +184,27 @@ We are now able to define the Bogoliubov ground state $\ket{\text{HFB}}$, as the
 \begin{equation}
     \beta_k \ket{\text{HFB}} = 0 \ \forall k = 1,\ldots,M
 \end{equation}
-where $M$ is determined by the physical situation \cite{ring2004nuclear}.
+where $M$ is the number of single-particle states in the chosen basis.
 The wavefunction that satisfies this condition reads
 \begin{equation}
 \ket{\text{HFB}}=\prod_k^M\beta_k \ket{-}.
 \end{equation}
-We can define the pairing tensor as
+The \textit{pairing tensor} is defined as
 \begin{equation}
     \kappa_{ll'} = \bra{\text{HFB}}c_{l'}c_l\ket{\text{HFB}},
 \end{equation}
-which in matrix form reads, alongside the density matrix
+which in matrix form reads
 \begin{equation}
-    \kappa = UV^\dagger,\quad \rho = V^*V^T.
+    \kappa = UV^\dagger,
+\end{equation}
+while the density matrix, defined in \eqref{eq:density_op}, in matrix form reads
+\begin{equation}
+    \quad \rho = V^*V^T.
 \end{equation}
 We can now apply the variational principle \eqref{eq:var_eq_res}
 \begin{equation}
     \label{eq:varhfb}
-    \delta \frac{\bra{\text{HFB}} \hat H-\lambda \hat N\ket{\text{HFB}}}{\bra{\text{HFB}}\ket{\text{HFB}}} = 0.
+    \delta \frac{\bra{\text{HFB}} \hat H-\lambda \hat N\ket{\text{HFB}}}{\bra{\text{HFB}}\ket{\text{HFB}}} = 0,
 \end{equation}
 which yields the eigenvalue problem
 \begin{equation}
@@ -215,7 +219,7 @@ which yields the eigenvalue problem
         U_k \\ V_k
     \end{pmatrix},
 \end{equation}
-Here, $h$ is the single-particle Hamiltanian, which reads
+here, $h$ is the single-particle Hamiltanian, which reads
 \begin{equation}
     h_{kk'} = t_{kk'} +\Gamma_{kk'},
 \end{equation}
@@ -232,7 +236,7 @@ while the pairing field $\Delta$ reads
 In the canonical basis, we are able to solve for the occupation numbers
 \begin{equation}
     \label{eq:occ_hfb}
-    u_k^2 = \frac 1 2 \bigg(1+\frac{h_{kk}+h_{\tilde k \tilde k}}{\sqrt{(h_{kk}+h_{\tilde k \tilde k})^2+4\Delta_{k\tilde k}^2}}\bigg)
+    u_k^2 = \frac 1 2 \Bigg(1+\frac{h_{kk}+h_{\tilde k \tilde k}}{\sqrt{(h_{kk}+h_{\tilde k \tilde k})^2+4\Delta_{k\tilde k}^2}}\Bigg)
 \end{equation}
 where $v_k^2 = 1 - u_k^2$ is guaranteed by the unitarity of the matrices.
 Starting from an initial guess, we solve the eigenvalue problem \eqref{eq:eighfb}, we extract the occupation numbers \eqref{eq:occ_hfb}, use them to build the new mean field \eqref{eq:mean_field_hfb} and pairing field \eqref{eq:pairing_field_hfb}, and repeat the process until convergence.

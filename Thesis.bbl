@@ -332,7 +332,7 @@ B.~Li, Z.~Ren, and P.~Zhao.
 
 \bibitem[Li et~al.(2020{\natexlab{b}})Li, Xie, Xu, You, and Zhang]{GCG1}
 Y.~Li, H.~Xie, R.~Xu, C.~You, and N.~Zhang.
-\newblock A parallel generalized conjugate gradient method for large scale eigenvalue problems.
+\newblock A parallel generalised conjugate gradient method for large scale eigenvalue problems.
 \newblock \emph{CCF Transactions on High Performance Computing}, 2\penalty0 (2):\penalty0 111--122, jun 2020{\natexlab{b}}.
 \newblock ISSN 2524-4930.
 \newblock \doi{10.1007/s42514-020-00029-6}.

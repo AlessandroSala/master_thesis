@@ -8,7 +8,7 @@ This section is devoted to the approximate solution of the eigenvalue problem, n
     \item the Rayleigh-Ritz procedure to find good approximations to the eigenpairs in a certain subspace; and
     \item the shift-and-invert method, to select the desired portion of the eigenvalue spectrum.
 \end{itemize}
-After describing these building blocks, some of the most commonly used eigensolvers are described in section \ref{sec:eigensolvers}, focusing on the core ideas and stating their limitations, to finally address the Generalized Conjugate Gradient method, whose implementation in the present work is detailed in section \ref{sec:gcg}.
+After describing these building blocks, some of the most commonly used eigensolvers are described in section \ref{sec:eigensolvers}, focusing on the core ideas and stating their limitations, to finally address the Generalised Conjugate Gradient method, whose implementation in the present work is detailed in section \ref{sec:gcg}.
 \subsection{Conjugate Gradient and numerical techniques}
 \label{sec:techniques}
 \subsubsection{Conjugate Gradient method}
@@ -146,7 +146,7 @@ To avoid singularity of the equation near convergence, since $u$ approximately s
 \begin{algorithm}[h]
 \caption{Jacobi-Davidson method}
 \begin{algorithmic}[1]
-\STATE Choose normalized initial vectors $\{u_k\}$, set $V = [u_1, \ldots, u_{k}]$
+\STATE Choose normalised initial vectors $\{u_k\}$, set $V = [u_1, \ldots, u_{k}]$
 \REPEAT
     \STATE Compute eigenpair: $T = V^\dagger A V$, solve $T y = \theta y$
     \STATE Set $u = V y$, residual $r = A u - \theta u$
@@ -171,7 +171,7 @@ which exploits the power iteration. After orthogonalizing the new approximation 
 \begin{algorithm}[h]
 \caption{Lanczos Method}
 \begin{algorithmic}[1]
-\STATE Choose normalized initial vector $v_1$, set $\beta_0 = 0$, $m=$ subspace size.
+\STATE Choose normalised initial vector $v_1$, set $\beta_0 = 0$, $m=$ subspace size.
 \REPEAT
 \FOR{$j = 1, 2, \dots, m$}
     \STATE $w \gets A v_j - \beta_{j-1} v_{j-1}$
@@ -204,9 +204,9 @@ The last algorithm of this short list is LOBPCG, it's the newest and most sophis
 On the one hand, it's not possible to arbitrarily select the portion of the matrix spectrum to calculate, which is required for problems where variational collapse happens, like in HFB or the Dirac equation, which manifests particle/antiparticle solutions \cite{li2020efficient}.
 To solve this, an additional filtering step is required \cite{LIN2013205,li2020efficient}, which introduces a computational cost in the algorithm.
 \\Lastly, LOBPCG may fail when poor conditioning is present or when high precision on the eigenvalues is required \cite{GCG1}.
-\subsection{Generalized Conjugate Gradient}
+\subsection{Generalised Conjugate Gradient}
 \label{sec:gcg}
-The Generalized Conjugate Gradient is an iterative eigensolver designed with the aim of improving LOBPCG, it is a blocked algorithm, which uses the inverse power method and previous search directions to generate the search subspace. GCG is proven to be faster and more stable than LOBPCG \cite{GCG1}.
+The Generalised Conjugate Gradient is an iterative eigensolver designed with the aim of improving LOBPCG, it is a blocked algorithm, which uses the inverse power method and previous search directions to generate the search subspace. GCG is proven to be faster and more stable than LOBPCG \cite{GCG1}.
 \\The search subspace is built as
 \begin{equation}
     V = [X, P, W],
@@ -219,7 +219,7 @@ where $X$, of dimensions $n\times k$ is the matrix containing the approximations
     P = X_\text{new} - X(X^\dagger X_\text{new})
 \end{equation}
 which is the projection of $X_\text{new}$ onto the orthogonal complement of $X$, used in step \ref{alg:directions} of algorithm \ref{alg:mod_gcg}.
-\paragraph{Complex matrix} The algorithm has been generalized to the complex case, where the matrix is complex Hermitian and, as such, the transposition operation is replaced by the conjugate transpose.
+\paragraph{Complex matrix} The algorithm has been generalised to the complex case, where the matrix is complex Hermitian and, as such, the transposition operation is replaced by the conjugate transpose.
 \paragraph{Blocking} The algorithm is designed to allow blocking of the eigenvectors, such that $X=[X_c, X_a, X_r]$, where $X_c$ are the converged eigenvectors, $X_a$ are the active eigenvectors on which we perform the inverse power iteration, with $\text{col}(X_a)$ being a fixed number, and $X_r$ are the remaining eigenvectors, which are to be inserted in $X_a$ as soon as some of its columns converge. This allows to save some computations by avoiding the expensive inverse power on pairs that have already converged. Since in a self-consistent calculation the matrix changes rapidly at each HF iteration, it is the case that the maximum number of iterations is reached before convergence of all eigenpairs, so we must work at all times on the remaining unconverged eigenvectors. For this reason, we only implement the $X=[X_c, X_a]$ scheme, where the only distinction we make is between converged eigenvectors $X_c$ and unconverged ones $X_a$.
 \paragraph{Orthogonalization} The original paper \cite{GCG1} suggests an improved orthogonalization procedure; being beyond the scope of this work, the simpler Gram-Schmidt \cite{GM} orthogonalization is used in the present work.
 \paragraph{Shift update} The shift update is either fixed, in case of known spectrum, eg for HFB $\texttt{shift} = 0$, or adaptive \cite{GCG1}, so that the inverse power step can find the lowest eigenvalues, using the update formula
@@ -230,7 +230,7 @@ which is the projection of $X_\text{new}$ onto the orthogonal complement of $X$,
 where $\lambda_\text{nev}$ is the biggest eigenvalue of the RR procedure and $\lambda_1$ is the smallest of the active eigenpairs.
 \paragraph{Preconditioning} The use of a preconditioner is beyond the scope of this work, a simple diagonal preconditioner is used.
 \begin{algorithm}[h]
-\caption{Generalized Conjugate Gradient algorithm}
+\caption{Generalised Conjugate Gradient algorithm}
 \begin{algorithmic}[1]
     \label{alg:mod_gcg}
 \STATE \textbf{Input:} Matrix \(A\) of dimensions $n\times n$, number of desired eigenpairs \( \texttt{nev} \), $X_\text{guess}$ initial guess of dimensions $n\times k$, with $= k \ge \text{nev}$, \(\texttt{max\_iter}\) maximum iterations

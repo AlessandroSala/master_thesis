@@ -58,16 +58,16 @@ Thus, while mesh-based solvers offer maximal flexibility, their computational de
 
 \subsection{Towards more efficient unconstrained methods}
 The limitations discussed above highlight the need for methods that combine the flexibility of coordinate-space solvers with improved computational efficiency.
-In this thesis, we investigate such an approach through the use of the \textit{Generalized Conjugate Gradient} (GCG) method, presented in detail in section~\ref{sec:gcg}.
+In this thesis, we investigate such an approach through the use of the \textit{Generalised Conjugate Gradient} (GCG) method, presented in detail in section~\ref{sec:gcg}.
 In the HF and energy-density-functional frameworks, the core of the many-body problem reduces to solving a set of single-particle Schrödinger or Kohn-Sham eigenvalue equations, coupled self-consistently through the mean field.
 These equations must be solved repeatedly during the iterative HF/HFB cycle, and their efficient solution dominates the overall computational cost.
 
 As shown in the present work, applying GCG to the HF single-particle problem provides a promising route towards efficient, symmetry-unrestricted many-body calculations while mitigating the main bottlenecks of fully coordinate-mesh methods.
 
 \section{Objectives}
-The aim of this work is to develop a new implementation of the Hartree-Fock method on an unconstrained 3D mesh, by the use of the Generalized Conjugate Gradient method. The goals addressed by this work are the following:
+The aim of this work is to develop a new implementation of the Hartree-Fock method on an unconstrained 3D mesh, by the use of the Generalised Conjugate Gradient method. The goals addressed by this work are the following:
 \begin{itemize}
-    \item assess the feasibility of the Generalized Conjugate Gradient for the solution of large-scale eigenvalue problems;
+    \item assess the feasibility of the Generalised Conjugate Gradient for the solution of large-scale eigenvalue problems;
     \item solve the self-consistent Hartree-Fock equations on an unconstrained 3D mesh;
     \item verify the numerical accuracy of the new implementation against existing spherical codes;
     \item gauge the numerical accuracy of deformations, comparing results with well established deformed codes; and
@@ -84,7 +84,7 @@ and a more general energy density functional (EDF) formulation must be adopted.
 In this work, we employ the Skyrme EDF, whose construction and resulting mean-field equations are developed in section~\ref{sec:skyrme}.  
 This provides the self-consistent single-particle Hamiltonian that forms the basis for the numerical treatment.
 
-\paragraph{Finite Differences and Generalized Conjugate Gradient}  
+\paragraph{Finite Differences and Generalised Conjugate Gradient}  
 Once the equations to solve have been derived, their numerical solution requires both a spatial discretization scheme and an efficient solver for the large-scale eigenvalue problem that arises at each iteration of the self-consistent procedure.
 Chapter~\ref{chap:numerical} details the methods adopted in this work, starting with the finite-difference discretization of derivatives in section~\ref{sec:finite_diff}.  
 The resulting discretized eigenvalue problem is then treated using the GCG method to extract the relevant low-lying eigenstates, as described in section~\ref{sec:gcg}.  

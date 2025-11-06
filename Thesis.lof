@@ -11,17 +11,18 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Comparison between the steepest descent method, on the left, and the conjugate gradient method, on the right, for a two-dimensional matrix. Ellipses represent contour lines of the quadratic form $f(x) = x^T A x - b^T x$, in the `stretched' space $Ax$ on the right. As shown in the figure, the conjugation of the search directions eliminates components of the error $e_i$, until the exact convergence in $n$ (2) steps.\relax }}{62}{figure.caption.224}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Pseudocode of the Hartree-Fock program.\relax }}{72}{figure.caption.264}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces HF calculation convergence with varying CG tolerance for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{73}{figure.caption.267}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces HF calculation convergence with varying number of inverse power steps for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{74}{figure.caption.269}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg, box $[-10, 10]$ fm, step size $0.33$ fm.\relax }}{74}{figure.caption.270}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Numerical stability map of the HF solver for $^{16}$O for different box and step sizes. Relative error is taken against a benchmark reference value.\relax }}{75}{figure.caption.271}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Comparison between the steepest descent method, on the left, and the conjugate gradient method, on the right, for a two-dimensional matrix. Ellipses represent contour lines of the quadratic form $f(x) = x^T A x - b^T x$, in the `stretched' space $Ax$ on the right. As shown in the figure, the conjugation of the search directions eliminates components of the error $e_i$, until the exact convergence in $n$ (2) steps.\relax }}{62}{figure.caption.226}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Pseudocode of the Hartree-Fock program.\relax }}{71}{figure.caption.266}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces HF calculation convergence with varying CG tolerance for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{73}{figure.caption.269}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces HF calculation convergence with varying number of inverse power steps for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{74}{figure.caption.271}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg, box $[-10, 10]$ fm, step size $0.33$ fm.\relax }}{74}{figure.caption.272}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Numerical stability map of the HF solver for $^{16}$O for different box and step sizes. Relative error is taken against a benchmark reference value.\relax }}{75}{figure.caption.273}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Comparison between the two formulae for $\beta _2$.\relax }}{88}{figure.caption.291}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Magnesium ground state density $\rho (x, 0, z)$, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrization\relax }}{91}{figure.caption.297}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Magnesium ground state density $\rho (x, y, 0)$, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrization.\relax }}{92}{figure.caption.298}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Magnesium deformation curve, no pairing interaction, calculation done on a box $[-10, 10]$ fm, step size 0.66 fm, SkM* parametrization, neglecting $J^2$ terms.\relax }}{93}{figure.caption.300}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Comparison with the $\texttt {EV8}$ code for $^{24}$Mg, no pairing interaction, box $[-10, 10]$ fm, step size 0.6 fm, SLy4 parametrization.\relax }}{94}{figure.caption.301}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Comparison between the two formulae for $\beta _2$ in a deformation curve for $^{24}$Mg. $\beta _2'$ refers to the deformation parameter normalised by the parametrized radius, while $\beta _2$ refers to the deformation parameter normalised by the actual mean square radius.\relax }}{88}{figure.caption.293}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Magnesium ground state density $\rho (x, 0, z)$, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrization\relax }}{91}{figure.caption.299}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Magnesium ground state density $\rho (x, y, 0)$, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrization.\relax }}{92}{figure.caption.300}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Magnesium deformation curve, no pairing interaction, calculation done on a box $[-10, 10]$ fm, step size 0.66 fm, SkM* parametrization, neglecting $J^2$ terms.\relax }}{93}{figure.caption.302}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Comparison with the $\texttt {EV8}$ code for $^{24}$Mg, no pairing interaction, box $[-10, 10]$ fm, step size 0.6 fm, SLy4 parametrization.\relax }}{94}{figure.caption.303}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Comparison between different Skyrme functionals of the $^{24}$Mg deformation curves, box $[-10, 10]$ fm, step size $0.6$ fm.\relax }}{95}{figure.caption.304}%
 \addvspace {10\p@ }

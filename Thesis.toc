@@ -37,71 +37,69 @@
 \contentsline {section}{\numberline {2.3}Objectives}{28}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Methods}{28}{section.2.4}%
 \contentsline {paragraph}{Skyrme Energy Functional}{28}{paragraph*.75}%
-\contentsline {paragraph}{Finite Differences and Generalized Conjugate Gradient}{28}{paragraph*.76}%
+\contentsline {paragraph}{Finite Differences and Generalised Conjugate Gradient}{28}{paragraph*.76}%
 \contentsline {chapter}{\numberline {3}Energy functional}{31}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Hartree-Fock theory}{31}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Variational principle}{31}{subsection.3.1.1}%
 \contentsline {subsubsection}{Ground state}{32}{subsubsection*.84}%
 \contentsline {subsection}{\numberline {3.1.2}Hartree-Fock equations}{32}{subsection.3.1.2}%
-\contentsline {paragraph}{Exchange interaction}{34}{paragraph*.92}%
-\contentsline {paragraph}{Self-consistent solution}{34}{paragraph*.93}%
 \contentsline {subsection}{\numberline {3.1.3}Symmetries in Hartree-Fock}{34}{subsection.3.1.3}%
-\contentsline {subsubsection}{Symmetry propagation}{36}{subsubsection*.103}%
-\contentsline {subsection}{\numberline {3.1.4}Density Functional Theory}{36}{subsection.3.1.4}%
-\contentsline {section}{\numberline {3.2}Pairing in Hartree-Fock theory}{37}{section.3.2}%
+\contentsline {subsubsection}{Symmetry propagation}{36}{subsubsection*.102}%
+\contentsline {subsection}{\numberline {3.1.4}Density Functional Theory}{37}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}Pairing in Hartree-Fock theory}{38}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}BCS theory}{38}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Hartree-Fock-Bogoliubov theory}{40}{subsection.3.2.2}%
-\contentsline {paragraph}{HFB quasi-particle spectrum}{43}{paragraph*.150}%
-\contentsline {section}{\numberline {3.3}Skyrme}{44}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Skyrme force}{44}{subsection.3.3.1}%
-\contentsline {subsubsection}{Modern parametrization}{45}{subsubsection*.162}%
-\contentsline {subsection}{\numberline {3.3.2}Energy density functional}{46}{subsection.3.3.2}%
-\contentsline {subsubsection}{Densities}{46}{subsubsection*.165}%
-\contentsline {subsubsection}{Kinetic functional}{47}{subsubsection*.172}%
-\contentsline {subsubsection}{Skyrme functional}{48}{subsubsection*.174}%
+\contentsline {subsection}{\numberline {3.2.2}Hartree-Fock-Bogoliubov theory}{41}{subsection.3.2.2}%
+\contentsline {paragraph}{HFB quasi-particle spectrum}{44}{paragraph*.152}%
+\contentsline {section}{\numberline {3.3}Skyrme}{45}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Skyrme force}{45}{subsection.3.3.1}%
+\contentsline {subsubsection}{Modern parametrization}{46}{subsubsection*.164}%
+\contentsline {subsection}{\numberline {3.3.2}Energy density functional}{47}{subsection.3.3.2}%
+\contentsline {subsubsection}{Densities}{47}{subsubsection*.167}%
+\contentsline {subsubsection}{Kinetic functional}{48}{subsubsection*.174}%
+\contentsline {subsubsection}{Skyrme functional}{48}{subsubsection*.176}%
 \contentsline {subsection}{\numberline {3.3.3}Functionals}{50}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Coulomb interaction}{50}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Energy calculation}{51}{section.3.5}%
-\contentsline {subsubsection}{Integrated energy}{52}{subsubsection*.191}%
-\contentsline {subsubsection}{Hartree-Fock energy}{52}{subsubsection*.192}%
-\contentsline {paragraph}{Sidenote}{53}{paragraph*.200}%
+\contentsline {section}{\numberline {3.4}Coulomb interaction}{51}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Energy calculation}{52}{section.3.5}%
+\contentsline {subsubsection}{Integrated energy}{52}{subsubsection*.193}%
+\contentsline {subsubsection}{Hartree-Fock energy}{52}{subsubsection*.194}%
+\contentsline {paragraph}{Sidenote}{54}{paragraph*.202}%
 \contentsline {chapter}{\numberline {4}Numerical methods}{55}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Finite differences}{55}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}3D mesh}{55}{subsection.4.1.1}%
-\contentsline {subsubsection}{Differential operators discretization}{56}{subsubsection*.203}%
+\contentsline {subsubsection}{Differential operators discretization}{56}{subsubsection*.205}%
 \contentsline {subsection}{\numberline {4.1.2}Schr\"odinger equation}{56}{subsection.4.1.2}%
-\contentsline {paragraph}{Linearity}{57}{paragraph*.205}%
-\contentsline {subsubsection}{Boundary conditions}{57}{subsubsection*.208}%
+\contentsline {paragraph}{Linearity}{57}{paragraph*.207}%
+\contentsline {subsubsection}{Boundary conditions}{57}{subsubsection*.210}%
 \contentsline {subsection}{\numberline {4.1.3}Poisson equation}{58}{subsection.4.1.3}%
-\contentsline {subsubsection}{Boundary conditions}{58}{subsubsection*.211}%
-\contentsline {subsubsection}{On higher order approximations and performance}{59}{subsubsection*.216}%
+\contentsline {subsubsection}{Boundary conditions}{58}{subsubsection*.213}%
+\contentsline {subsubsection}{On higher order approximations and performance}{59}{subsubsection*.218}%
 \contentsline {section}{\numberline {4.2}Eigenvalue problem}{59}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Conjugate Gradient and numerical techniques}{60}{subsection.4.2.1}%
-\contentsline {subsubsection}{Conjugate Gradient method}{60}{subsubsection*.217}%
-\contentsline {paragraph}{Steepest descent method}{60}{paragraph*.219}%
-\contentsline {paragraph}{Complex matrices}{61}{paragraph*.225}%
-\contentsline {subsubsection}{Preconditioning}{61}{subsubsection*.227}%
-\contentsline {subsubsection}{Rayleigh-Ritz procedure}{62}{subsubsection*.230}%
-\contentsline {subsubsection}{Shift and Invert}{63}{subsubsection*.232}%
-\contentsline {paragraph}{Smallest eigenvalue}{64}{paragraph*.237}%
+\contentsline {subsubsection}{Conjugate Gradient method}{60}{subsubsection*.219}%
+\contentsline {paragraph}{Steepest descent method}{60}{paragraph*.221}%
+\contentsline {paragraph}{Complex matrices}{61}{paragraph*.227}%
+\contentsline {subsubsection}{Preconditioning}{61}{subsubsection*.229}%
+\contentsline {subsubsection}{Rayleigh-Ritz procedure}{62}{subsubsection*.232}%
+\contentsline {subsubsection}{Shift and Invert}{63}{subsubsection*.234}%
+\contentsline {paragraph}{Smallest eigenvalue}{64}{paragraph*.239}%
 \contentsline {subsection}{\numberline {4.2.2}Iterative eigensolvers}{64}{subsection.4.2.2}%
-\contentsline {subsubsection}{Jacobi-Davidson}{64}{subsubsection*.239}%
-\contentsline {subsubsection}{Lanczos}{65}{subsubsection*.244}%
-\contentsline {subsubsection}{LOBPCG}{66}{subsubsection*.246}%
-\contentsline {subsection}{\numberline {4.2.3}Generalized Conjugate Gradient}{67}{subsection.4.2.3}%
-\contentsline {paragraph}{Eigenvalue problem}{67}{paragraph*.248}%
-\contentsline {paragraph}{Complex matrix}{67}{paragraph*.250}%
-\contentsline {paragraph}{Blocking}{67}{paragraph*.251}%
-\contentsline {paragraph}{Orthogonalization}{68}{paragraph*.252}%
-\contentsline {paragraph}{Shift update}{68}{paragraph*.253}%
-\contentsline {paragraph}{Preconditioning}{68}{paragraph*.255}%
+\contentsline {subsubsection}{Jacobi-Davidson}{64}{subsubsection*.241}%
+\contentsline {subsubsection}{Lanczos}{65}{subsubsection*.246}%
+\contentsline {subsubsection}{LOBPCG}{66}{subsubsection*.248}%
+\contentsline {subsection}{\numberline {4.2.3}Generalised Conjugate Gradient}{67}{subsection.4.2.3}%
+\contentsline {paragraph}{Eigenvalue problem}{67}{paragraph*.250}%
+\contentsline {paragraph}{Complex matrix}{67}{paragraph*.252}%
+\contentsline {paragraph}{Blocking}{67}{paragraph*.253}%
+\contentsline {paragraph}{Orthogonalization}{68}{paragraph*.254}%
+\contentsline {paragraph}{Shift update}{68}{paragraph*.255}%
+\contentsline {paragraph}{Preconditioning}{68}{paragraph*.257}%
 \contentsline {section}{\numberline {4.3}Code implementation details}{69}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Constraints}{69}{subsection.4.3.1}%
-\contentsline {subsubsection}{Augmented Lagrangian Method}{70}{subsubsection*.260}%
+\contentsline {subsubsection}{Augmented Lagrangian Method}{70}{subsubsection*.262}%
 \contentsline {subsection}{\numberline {4.3.2}Details on the implementation of the code}{71}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Optimal parameters choice}{71}{subsection.4.3.3}%
-\contentsline {subsubsection}{Inverse power step tolerance}{71}{subsubsection*.265}%
-\contentsline {subsubsection}{Inner GCG iterations}{71}{subsubsection*.268}%
+\contentsline {subsection}{\numberline {4.3.3}Optimal parameters choice}{72}{subsection.4.3.3}%
+\contentsline {subsubsection}{Inverse power step tolerance}{72}{subsubsection*.267}%
+\contentsline {subsubsection}{Inner GCG iterations}{72}{subsubsection*.270}%
 \contentsline {subsection}{\numberline {4.3.4}Numerical stability}{73}{subsection.4.3.4}%
 \contentsline {chapter}{\numberline {5}Results for spherical nuclei}{77}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Physical quantities}{77}{section.5.1}%
@@ -109,33 +107,34 @@
 \contentsline {section}{\numberline {5.2}Parameters and mesh choice}{78}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Results for \(^{16}\)O}{78}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Results neglecting Coulomb interaction}{79}{subsection.5.3.1}%
-\contentsline {subsubsection}{Results including Coulomb interaction}{80}{subsubsection*.279}%
+\contentsline {subsubsection}{Results including Coulomb interaction}{80}{subsubsection*.281}%
 \contentsline {section}{\numberline {5.4}Results for heavier nuclei}{81}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Comparison with experimental binding energies}{81}{subsection.5.4.1}%
 \contentsline {chapter}{\numberline {6}Results for deformed nuclei}{87}{chapter.6}%
 \contentsline {section}{\numberline {6.1}$^{24}$Mg Benchmarks}{87}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Deformation parameters}{87}{subsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}\texttt {HFBTHO} code and calculation details}{88}{subsection.6.1.2}%
-\contentsline {subsubsection}{\texttt {HFBTHO}}{89}{subsubsection*.292}%
-\contentsline {subsubsection}{Code parameters and axial constraint}{89}{subsubsection*.293}%
-\contentsline {subsubsection}{Ground state}{89}{subsubsection*.295}%
-\contentsline {subsubsection}{Deformation curve}{90}{subsubsection*.299}%
+\contentsline {subsubsection}{\texttt {HFBTHO}}{89}{subsubsection*.294}%
+\contentsline {subsubsection}{Code parameters and axial constraint}{89}{subsubsection*.295}%
+\contentsline {subsubsection}{Ground state}{89}{subsubsection*.297}%
+\contentsline {subsubsection}{Deformation curve}{90}{subsubsection*.301}%
 \contentsline {subsection}{\numberline {6.1.3}\texttt {EV8} code and calculation details}{90}{subsection.6.1.3}%
 \contentsline {subsection}{\numberline {6.1.4}\texttt {EV8} code comparison}{91}{subsection.6.1.4}%
 \contentsline {section}{\numberline {6.2}Other results}{91}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Deformation curve for different functionals}{92}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Novel Results}{92}{section.6.3}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{95}{chapter*.303}%
+\contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{97}{chapter*.306}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix}{105}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Spherical harmonics}{105}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Algorithm}{106}{subsection.A.1.1}%
-\contentsline {section}{\numberline {A.2}5-point derivatives}{106}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Functional derivatives}{106}{section.A.3}%
-\contentsline {paragraph}{Power dependence}{106}{paragraph*.313}%
-\contentsline {paragraph}{Divergence of a vector field}{107}{paragraph*.315}%
-\contentsline {section}{\numberline {A.4}$\overline U,\ \overline V$ matrix structure}{108}{section.A.4}%
-\contentsline {chapter}{List of Figures}{109}{appendix*.318}%
-\contentsline {chapter}{List of Tables}{111}{appendix*.320}%
-\contentsline {chapter}{List of Symbols}{113}{appendix*.322}%
-\contentsline {chapter}{Acknowledgements}{115}{appendix*.325}%
+\contentsline {chapter}{\numberline {A}Appendix}{107}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Spherical harmonics}{107}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Algorithm}{108}{subsection.A.1.1}%
+\contentsline {section}{\numberline {A.2}5-point derivatives}{108}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Functional derivatives}{108}{section.A.3}%
+\contentsline {paragraph}{Power dependence}{108}{paragraph*.316}%
+\contentsline {paragraph}{Divergence of a vector field}{109}{paragraph*.318}%
+\contentsline {section}{\numberline {A.4}$\overline U,\ \overline V$ matrix structure}{110}{section.A.4}%
+\contentsline {chapter}{List of Figures}{111}{appendix*.321}%
+\contentsline {chapter}{List of Tables}{113}{appendix*.323}%
+\contentsline {chapter}{List of Symbols}{115}{appendix*.325}%
+\contentsline {chapter}{Acknowledgements}{117}{appendix*.328}%

@@ -5,7 +5,7 @@ The energy functional to be minimized is of the form \cite{Bender2003}
 E_{\text{HF}} =  E_\text{Kin}+E_\text{Skyrme}+E_\text{Coul} = \int( \mathcal E_\text{Kin} + \mathcal E_\text{Skyrme} + \mathcal E_\text{Coul})d\bm r.
 \end{equation}
 \subsubsection{Densities}
-Functional \eqref{eq:full_functional} can be expressed through a series of particle densities. Let us define them and express them on the spin coordiantes up ($\uparrow$) and down ($\downarrow$) for the convinience in a mesh representation.
+Functional \eqref{eq:full_functional} can be expressed through a series of generlized particle densities. Let us define them and express them on the spin coordinates up ($\uparrow$) and down ($\downarrow$) for the convenience in a mesh representation.
 \\The starting point is the density matrix, defined as
 \begin{equation}
     \rho_q (\mathbf r \sigma, \mathbf r \sigma') = \sum_{\alpha} \phi_{\alpha, \sigma} (\mathbf r )\phi_{\alpha, \sigma'}^*(\mathbf r')
@@ -61,11 +61,12 @@ where
     \\C_0^{\nabla\cdot J} &= -\frac 3 4 W_0 \label{eq:C0nabladotJ}
     \\C_1^{\nabla\cdot J} &= -\frac 1 4 W_0 \label{eq:C1nabladotJ}.
 \end{align}
-Here, $t=0,1$ refers to the isoscalar and isovector components of the densities, eg
+Here, $t=0,1$ refers to the isoscalar and isovector components of the densities, that is
 \begin{align*}
     \rho_0 = \rho_p + \rho_n
-    \\\rho_1 = \rho_p - \rho_n.
+    \\\rho_1 = \rho_p - \rho_n
 \end{align*}
+and the same holds for all generalised densities.
 We can now derive the Kohn-Sham equations, by minimizing the functional under the constraint
 \begin{equation}
     \label{eq:spe_ks_constraint}
