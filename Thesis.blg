@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Thesis.aux
+The style file: abbrvnat.bst
+Database file #1: Thesis_bibliography.bib
+Warning--entry type for "AMDC_website" isn't style-file defined
+--line 352 of file Thesis_bibliography.bib
+Warning--empty year in AMDC_website
+Warning--empty journal in bertulani2007nuclear
+Warning--empty year in hfbcsqrpa
+Warning--can't use both author and editor fields in LOBPCG
+Warning--empty journal in PainlessCGM
+You've used 98 entries,
+            2773 wiz_defined-function locations,
+            1351 strings with 26624 characters,
+and the built_in function-call counts, 52749 in all, are:
+= -- 4656
+> -- 3698
+< -- 49
++ -- 1255
+- -- 1152
+* -- 4759
+:= -- 8435
+add.period$ -- 423
+call.type$ -- 98
+change.case$ -- 668
+chr.to.int$ -- 93
+cite$ -- 201
+duplicate$ -- 2013
+empty$ -- 3756
+format.name$ -- 1290
+if$ -- 10807
+int.to.chr$ -- 6
+int.to.str$ -- 1
+missing$ -- 102
+newline$ -- 627
+num.names$ -- 392
+pop$ -- 1162
+preamble$ -- 1
+purify$ -- 578
+quote$ -- 0
+skip$ -- 1593
+stack$ -- 0
+substring$ -- 1816
+swap$ -- 151
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1028
+warning$ -- 5
+while$ -- 407
+width$ -- 0
+write$ -- 1523
+(There were 6 warnings)
