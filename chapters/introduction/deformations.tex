@@ -5,7 +5,7 @@ If we were to observe the ratio between the first and second excited states ener
     \label{eq:ratio}
     \frac{E(4^+)}{E(2^+)} \approx 3.33.
     \end{equation}
-The ratio \eqref{eq:ratio} can be explained by the collective rotation of the nucleus, when rotaional symmetry is broken. Denoting by $J$ the total angular momentum of this rotation, the quantized rotor energy reads
+The ratio \eqref{eq:ratio} can be explained by the collective rotation of the nucleus, when rotational symmetry is broken. Denoting by $J$ the total angular momentum of this rotation, the quantized rotor energy reads
 \begin{equation}
     \label{eq:rotor_energy}
     E_{\text{rot}} = \frac{\hbar^2}{2\mathcal I} J(J+1),
@@ -17,7 +17,7 @@ where $\mathcal I$ is the nuclei's moment of inertia. Taking the ratio of equati
 \end{equation}
 Since there are many nuclei that display this property, it becomes obvious that nuclear deformations play a central role in the description of nuclear structure; as such, we shall now give a description of the nuclear shape in a formal framework. We will start by expanding the nuclear radius in terms of spherical harmonics and develop the case of an axial deformation. After that, we will briefly discuss the more general case of trixial, octupole, and parity breaking configurations.
 \subsection{Quadrupole deformation}
-Let us suppose to consider variations of the nuclear radius $R$ in terms of spherical harmonics
+Let us suppose to write variations of the nuclear radius $R$ in terms of spherical harmonics, which form a complete basis as is well known
 \begin{equation}
     R(\theta, \phi) = R_0\bigg[1+\sum_{\lambda \mu}\alpha_{\lambda \mu}\,Y_{\lambda\mu}(\theta,\phi)\bigg],
 \end{equation}
@@ -33,7 +33,8 @@ are considered small, in the sense that $|\alpha_{\lambda \mu}| ^2 \ll |\alpha_{
 is conserved.
 Since $Y_{00}$ is constant, including it in the expansion changes the total volume \eqref{eq:volume}, we then set $\alpha_{00}=0$. 
 If we consider only frames of reference where the nucleus has a center of mass fixed at the origin, we get vanishing $\alpha_{1\mu}$ coefficients.
-\\Now, let us consider only $\alpha_{2\mu}$ coefficients and neglect higher order terms, so that the deformation is purely quadrupolar, then the radius reads
+
+Now, let us consider only $\alpha_{2\mu}$ coefficients and neglect higher order terms, so that the deformation is purely quadrupolar. Then the radius reads
 \begin{equation}
     R(\theta, \phi) = R_0\bigg[1+\sum_{\mu=-2}^2\alpha_{2\mu}\,Y_{2\mu}(\theta, \phi)\bigg].
 \end{equation}
@@ -63,7 +64,7 @@ Assuming the value of $\beta$ to always be positive, in the case $\gamma=0$, $\d
 \\By using trigonometric identities, it is trivial to show that unique shapes are found only for $\gamma\in [0; \pi/3]$, if $\gamma$ takes a value different from $0$ or $\pi/3$, the shape is said to be triaxial, meaning $\delta R_z \neq \delta R_x \neq \delta R_y$, the nucleus has no more rotational symmetries and is only symmetric for reflections along the $(x, y)$, $(x, z)$ and $(y, z)$ planes, which also induces parity symmetry.
 \subsection{Nilsson model}
 To understand the effect on single-particle motion of a deformed potential, we can consider the case of an axially deformed harmonic oscillator potential, for which $ \omega_z \neq \omega_x = \omega_y = \omega_\perp$, meaning the oscillator frequency takes on a different value on the $z$ axis than in the $x$ and $y$ axes.
-\\To treat the deformation perturbatively, we can assume that the various frequencies deviate from the unperturbed $\omega_0=41/A^{1/3}$ MeV, in which case they may read
+\\To treat the deformation perturbatively, we can assume that the various frequencies deviate from the unperturbed $\hbar\omega_0=41/A^{1/3}$ MeV, in which case they may read
 \begin{align}
 \omega_z = \omega_0 - \frac 2 3 \varepsilon,\\
 \omega_\perp = \omega_0 + \frac 1 3 \varepsilon,
@@ -75,17 +76,17 @@ this definition of the frequencies satisfies the conservation of volume, at lowe
 \end{equation}
 We can thus write the single-particle Hamiltonian in the deformed potential as
 \begin{align}
-    H&=H_0 +\varepsilon H_1,\\
-    H_0 &= -\frac{\hbar^2}{2m}\nabla^2 + \frac 1 2 m \omega_0^2 r^2,\\
+    H&=H_0 +\varepsilon H_1,\nonumber \\
+    H_0 &= -\frac{\hbar^2}{2m}\nabla^2 + \frac 1 2 m \omega_0^2 r^2, \\
     \varepsilon H_1 &= \frac 1 3 \omega_0 ^2 \varepsilon (x^2 + y^2 -2z^2) = -\frac 1 3 \sqrt{\frac{16\pi}{5}}m\omega_0^2\varepsilon r^2 Y_{20}.
 \end{align}
 $H_0$ is the usual spherical harmonic potential, for which the eigenfunctions, expressed through the usual quantum numbers $\ket{nljm_j}$ are known. Assuming $\varepsilon$ to be small, we can evaluate the first order correction of $H_1$ to the system, which reads
 \begin{align}
-\Delta E &= \bra{nljm_j}\varepsilon H_1 \ket{nljm_j},
-\\&= -\frac 1 3 \sqrt{\frac{16 \pi}{5}}\varepsilon m \omega_0^2 \int r^2 u_{nl}(r)\bra{jm_j} Y_{20}\ket{jm_j} dr,
-\\&= \frac \varepsilon 6 m\omega_0^2 \int r^2 u_{nl}(r)\frac{3m_j^2 - j(j+1)}{j(j+1)}dr,
+\Delta E &= \bra{nljm_j}\varepsilon H_1 \ket{nljm_j},\nonumber
+\\&= -\frac 1 3 \sqrt{\frac{16 \pi}{5}}\varepsilon m \omega_0^2 \int r^2 u_{nl}(r)\bra{jm_j} Y_{20}\ket{jm_j} dr,\nonumber
+\\&= \frac \varepsilon 6 m\omega_0^2 \int r^2 u_{nl}(r)\frac{3m_j^2 - j(j+1)}{j(j+1)}dr.
 \end{align}
-thus in the limit of large $j$, states with the maximum total angular momentum projection $m_j$ are shifted upwards, while states with the minimum $m_j$ are shifted downwards; moreover, eigenstates with $\pm m_j$ are degenerate, as expected by the reflection symmetry of the Hamiltonian if the $z$ axis is inverted.
+Thus in the limit of large $j$, states with the maximum total angular momentum projection $m_j$ are shifted upwards, while states with the minimum $m_j$ are shifted downwards; moreover, eigenstates with $\pm m_j$ are degenerate, as expected by the reflection symmetry of the Hamiltonian if the $z$ axis is inverted.
 
 Adding further empirical terms to reproduce experimental data, and the spin-orbit coupling, results in the formulation of the Nilsson model \cite{nilsson}. In figure \ref{fig:nilsson}, a graphical representation of the energy levels in the Nilsson model is shown \cite{wikipedia_equation_of_state}.
 \begin{figure}[h]
@@ -105,7 +106,7 @@ so that the solution is axially symmetric and the problem is reduced to just the
     U_\text{WS}(r, \theta) = -\frac{U_0(A, N)}{1+e^\frac{r - R(\theta)}{a}}.
 \end{equation}
 \subsection{Octupole deformations and parity breaking}
-While quadrupole deformations concern nuclei across the whole chart, octupole deformations are much less common, being found in ground states only for heavier nuclei. The evidence for such deformations is mainly provided by the large electric octupole transition probability $B(E3)$, which reads
+While quadrupole deformations concern nuclei across the whole chart, octupole deformations are much less common so far. The evidence for such deformations in even-even nuclei is mainly provided by the existance of rotational bands $I=1^{-},3^{-},\ldots$ \cite{Kurcewicz2000} and the enhanced electric octupole transition probability $B(E3)$, which reads
 \begin{equation}
     \label{eq:E3}
     B(E3; 3^- \rightarrow 0^+) = \frac 1 {2J_i+1}|\bra{0^+} e r^3 \hat{\mathcal Q_3} \ket{3^-}|^2,
@@ -114,7 +115,7 @@ where $J_i$ is the initial total angular momentum of the nucleus and $\hat{\math
 \begin{equation}
     \hat{\mathcal Q}_3 = r^3 Y_{30}(\hat r).
 \end{equation}
-Evidence of such strong coupling was initially found in neutron-rich Barium isotopes, $^{144}$Ba \cite{Bucher_2016_144Ba} and $^{146}$Ba \cite{Bucher_2017_146Ba}, and a while later in Radium isotopes \cite{Butler_2020_Ra} and other heavy nuclei as well \cite{Butler_2016_octupole_collectivity}.
+Evidence of such bands was initially found in neutron-rich Barium isotopes, $^{144}$Ba \cite{Bucher_2016_144Ba} and $^{146}$Ba \cite{Bucher_2017_146Ba}, and a while later in Radium isotopes \cite{Butler_2020_Ra} and other heavy nuclei as well \cite{Butler_2016_octupole_collectivity}.
 
 Expansions on spherical harmonics, under the parity operation $\mathcal P: \bm r \mapsto -\bm r$, transform as
 \begin{equation}

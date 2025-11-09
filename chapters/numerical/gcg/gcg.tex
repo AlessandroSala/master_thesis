@@ -20,7 +20,7 @@ Solving linear systems of the form
 \end{equation}
 is crucial in many eigensolvers. The Conjugate Gradient (CG) is perhaps the most famous iterative solver in this sense, especially in connection with sparse matrices, as we will see in a moment.
 CG applies to cases where $A$ is a real, $n\times n$, positive-definite, symmetric matrix, and $x$ and $b$ are $n$-dimensional vectors.
-\\Many generalizations to this method exist, which relax the requirements on the matrix, like BiCGSTAB, CGRES and so on \cite{Saad1992}. We will describe the working principle of CG, but the same applies to all the others, with slight variations.
+\\Many generalisations to this method exist, which relax the requirements on the matrix, like BiCGSTAB, CGRES and so on \cite{Saad1992}. We will describe the working principle of CG, but the same applies to all the others, with slight variations.
 \paragraph{Steepest descent method}
 The quadratic form $f(x)$ derived from the system \eqref{eq:lin_sys} is
 \begin{equation}
@@ -155,7 +155,7 @@ To avoid singularity of the equation near convergence, since $u$ approximately s
     \ENDIF
     \STATE Solve approximately $(I - u_k u_k^\dagger)(A - \theta I)(I - u_k u_k^\dagger) t_k = -r_k$
         using preconditioned iterative solver, ensuring $t_k \perp u_k$
-    \STATE Normalize: $v_k = t_k / \|t_k\|$
+    \STATE Normalise: $v_k = t_k / \|t_k\|$
     \STATE Expand subspace, setting $V = [V, v]$
 \UNTIL{convergence}
 for $k = 1, \dots, \text{nev}$
@@ -195,7 +195,7 @@ which exploits the power iteration. After orthogonalizing the new approximation 
 \end{algorithmic}
 \end{algorithm}
 Lanczos is extremely efficient, memory- and CPU-wise for extremal eigenvalues, but this limits its applicability, as one may be interested in the inner portion of the eigenvalue spectrum, such in the case of Hartree-Fock-Bogoliubov (HFB).
-\\A shift-and-invert strategy would be unfeasible in the case of large scale problems, since all Lanczos steps need to be performed exactly to avoid instabilities, a well known problem in the Arnoldi generalization \cite{Saad1992}.
+\\A shift-and-invert strategy would be unfeasible in the case of large scale problems, since all Lanczos steps need to be performed exactly to avoid instabilities, a well known problem in the Arnoldi generalisation \cite{Saad1992}.
 \subsubsection{LOBPCG}
 The last algorithm of this short list is LOBPCG, it's the newest and most sophisticated one of the three.
 \\Introduced by A. V. Knyazev in 1991 \cite{LOBPCG}, it's a block, preconditioned conjugate gradient method, explicitly targeted at solving large-scale eigenvalue problems, and it has been used in modern solutions of the Schr\"odinger/KS equation in recent years \cite{LOBPCGDKS,Nottoli2023,LIN2013205,li2020efficient}.
@@ -234,11 +234,11 @@ where $\lambda_\text{nev}$ is the biggest eigenvalue of the RR procedure and $\l
 \begin{algorithmic}[1]
     \label{alg:mod_gcg}
 \STATE \textbf{Input:} Matrix \(A\) of dimensions $n\times n$, number of desired eigenpairs \( \texttt{nev} \), $X_\text{guess}$ initial guess of dimensions $n\times k$, with $= k \ge \text{nev}$, \(\texttt{max\_iter}\) maximum iterations
-\STATE Initialize block $X=[ X_\text{a}]$ $\gets X_\text{guess}$ and $X_c$ as an empty block
-\STATE Initialize blocks \( P \) and \( W \) as empty blocks
+\STATE Initialise block $X=[ X_\text{a}]$ $\gets X_\text{guess}$ and $X_c$ as an empty block
+\STATE Initialise blocks \( P \) and \( W \) as empty blocks
 \STATE Solve the Rayleigh Ritz problem \(X^\dagger A X C= C \Lambda \)
 \STATE Update \(X=X C\)
-\STATE Initialize $\texttt{shift}$, Initialize $\texttt{iter} = 0$ 
+\STATE Initialise $\texttt{shift}$, Initialise $\texttt{iter} = 0$ 
 \WHILE{$\text{col}(X_c) < \texttt{nev}$ and $\texttt{iter} < \texttt{max\_iter}$}
     \STATE Solve approximately \( (A+ \texttt{shift}\cdot I)W = X_a\Lambda \) with some CG steps, initial value $X_a$ to generate W as an approximation to $W = (A+\texttt{shift}\cdot I)^{-1}X_a\Lambda$ \label{alg:inv_pow_step} 
     \STATE Orthogonalize \( V=[X, P, W] \), of dimensions $n\times (k+k+a)$

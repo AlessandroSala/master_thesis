@@ -1,5 +1,45 @@
 \chapter{Results for deformed nuclei}
 \label{chap:res_def}
-Having established that the code works well for spherical nuclei, we can start treading in deformation territory.
+Having established that the code works as expected for spherical nuclei, we can extend the calculations to deformed systems. In this chapter, the GCG implementation is validated against well established deformed codes and some interesting results regarding $\alpha$-clustering and drip line nuclei are presented. 
+
+This chapter is organised as follows, first in section \ref{sec:beta}, the quadrupole deformation parameter $\beta_2$ is presented, and its two different definitions are compared. Then, in section \ref{sec:mg_benchmark}, results for the super-deformed $^{24}$Mg are presented and used as a benchmark for the performance of our code against the HO basis expansion code \texttt{HFBTHO} in section \ref{sec:hfbtho}, and then against the cartesian mesh code \texttt{EV8} in section \ref{sec:ev8}. 
+Finally, in section \ref{sec:novel}, results about further deformed nuclei are presented, more specifically, in section \ref{sec:ne20} results regarding an alpha-clustering study in $20^{20}$Ne are shown, and in section \ref{sec:si42} the results for the drip line nuclei $^{42}$Si and $^{28}$S are presented.
+
+\section{Deformation parameters}
+\label{sec:beta}
+When dealing with deformed nuclei, mean square radii are not sufficient to characterise the nuclear density. The main parameter used is the quadrupole deformation parameter $\beta_2$, similar to the one encountered in section \ref{sec:deformations}, it can be computed through the mean square radius as
+\begin{equation}
+    \label{eq:beta_real_radius}
+    \beta_2 = \frac{4\pi\expval{\mathcal Q_{2 0}}}{5A\expval{r^2}},
+\end{equation}
+where $\expval{r^2}$ is the total mean square radius of the nucleus 
+\begin{equation}
+    \expval{r^2} = \frac{\int (\rho_n + \rho_p )r^2 d\bm r}{\int (\rho_n + \rho_p )d\bm r} = \expval{x^2+y^2+z^2}.
+\end{equation}
+Alternatively, it is possible to normalise with respect to the parametetrised nuclear radius in formula \eqref{eq:nuc_radius}, which yields
+\begin{equation}
+  \label{eq:beta}
+  \beta_{2} = \frac{4\pi\expval{\mathcal Q_{20}}}{3AR^2}
+\end{equation}
+where the relation 
+\begin{equation}
+  \expval{r^2} = \frac 3 5 {R}^2
+\end{equation}
+is used, and the value for $r_0$ is taken to be $1.2$, in accordance with the one used in other codes \cite{Ryssens2015_EV8}.
+
+Using either of the two formulae (\ref{eq:beta_real_radius}, \ref{eq:beta}), because of the normalization with respect to the total radius and mass, the $\beta_2$ parameter allows the comparison of different nuclei across the chart.
+
+The choice of $\beta_2$ used in the following sections depends on the code which is used to benchmark the results. For comparisons with \texttt{HFBTHO}, formula \eqref{eq:beta_real_radius} is used, while for \texttt{EV8} comparisons and results in other sections, formula \eqref{eq:beta} is used. In figure \ref{fig:beta_compare}, a comparison between the two formulae is presented; as shown by the shape of the curves, it's possible to observe that the normalisation of $\beta_2$ with respect to the real radius has an asymptotic behaviour for large deformations, since for large $\expval{z^2}$, assuming axial symmetry and constant volume $V$
+\begin{equation}
+\beta_2 \propto \frac{2z^2-2V/z}{z^2 + 2V/z}\underset{{z\to\infty}}{\to} 2, 
+\end{equation}
+while normalising with respect to the parametrised radius $R$ has no such asymptotic behaviour, since $R$ is constant for any deformation.
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Images/beta_compare.pdf}
+  \caption{Comparison between the two formulae for $\beta_2$ in a deformation curve for $^{24}$Mg. $\beta_2'$ refers to the deformation parameter normalised by the parametrised radius, while $\beta_2$ refers to the deformation parameter normalised by the actual mean square radius.}
+  \label{fig:beta_compare}
+\end{figure}
+
 \input{chapters/deformed_results/sections/magnesiumnopair.tex}
 \input{chapters/deformed_results/sections/novel.tex}

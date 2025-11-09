@@ -1,8 +1,8 @@
 \section{Finite differences}
 \label{sec:finite_diff}
-The framework used to numerically solve the relevant PDEs of the problem, is the one of finite differences. The core idea is to discretize the domain on a 3D mesh, use Taylor expansions to approximate differential operators and then solve the resulting system of linear equations.
+The framework used to numerically solve the relevant PDEs of the problem, is the one of finite differences. The core idea is to discretise the domain on a 3D mesh, use Taylor expansions to approximate differential operators and then solve the resulting system of linear equations.
 \subsection{3D mesh}
-The first step of the process is representing the different fields in a numerical, discretized fashion.
+The first step of the process is representing the different fields in a numerical, discretised fashion.
 Generally speaking, we deal at most with 2-rank tensors, which depend on three space coordinates and one spin coordinate.
 \\Discretizing the 3D cartesian space with a 3-index mesh, choosing a box whose size along x, y, z is respectively $[-a_x, a_x]$, $[-a_y, a_y]$, $[-a_z, a_z]$, and a number of points $n_x, n_y, n_z$, the resulting lattice will be given by
 \begin{equation*}
@@ -92,7 +92,7 @@ The other fundamental PDE we need to solve is the Poisson equation encountered i
 It's simpler than the Schr\"odinger equation, as it only involves a Laplacian and it's not an eigenvalue problem. The right is side is given, and the solution is found by inverting the coefficients' matrix.
 \subsubsection{Boundary conditions}
 Unlike the Schr\"odinger equation, we do not expect the solution to rapidly decay near the boundaries; as reported in section \ref{sec:coulomb_treatment}, we have fixed, non-vanishing boundary conditions, which we have to properly impose on the system.
-\\We can choose a direction, say $x$, and look at the discretized equation at the boundaries $x=\pm a$. Since the indices $j,k$ won't vary, we can omit them, and ignore the other derivates in the following equations.
+\\We can choose a direction, say $x$, and look at the discretised equation at the boundaries $x=\pm a$. Since the indices $j,k$ won't vary, we can omit them, and ignore the other derivates in the following equations.
 \begin{align}
     \label{eq:poisson_disc}
     \nabla^2 V &= \partial_{xx} V + \partial_{yy}V + \partial_{zz}V\nonumber \\

@@ -60,8 +60,8 @@ While such models reproduce many global observables, they lack a true microscopi
 In particular, the collective coordinates $\boldsymbol{q}$ are not derived from the underlying many-body dynamics, and the empirical shell corrections cannot describe the self-consistent rearrangement of the mean field along the fission path.
 
 A more fundamental understanding is achieved within self-consistent mean-field approaches such as the Hartree-Fock or Hartree-Fock-Bogoliubov formalisms. The use of nuclear Density Functional Theory \cite{Bender2003,Schunck2016} allows one to define a universal EDF $E[\rho,\kappa]$ that encapsulates both mean-field and pairing correlations.  
-The resulting constrained HFB calculations produce the potential energy surface (PES) $E(\boldsymbol{q})$, mapping the energy of the system as a function of collective deformations such as the quadrupole ($Q_{20}$), octupole ($Q_{30}$), and triaxial ($Q_{22}$) moments.  
-The minima and saddle points of this multidimensional PES determine the fission barriers and shape isomeric states \cite{Dubray2012,Schunck2014}.
+The resulting constrained HF/HFB calculations produce the potential energy surface (PES) $E(\boldsymbol{q})$, mapping the energy of the system as a function of collective deformations such as the quadrupole ($Q_{20}$), octupole ($Q_{30}$), and triaxial ($Q_{22}$) moments.  
+The minima and saddle points of this multidimensional PES determine the fission barriers and shape isomeric states \cite{Dubray2012,Schunck2016}.
 
 However, static mean-field approaches are limited by their single-reference character: the HFB vacuum represents only one configuration at a time, typically corresponding to a local minimum of the PES.  
 In the vicinity of the fission barrier, where several configurations with different intrinsic quantum numbers coexist, this approximation breaks down.  
@@ -91,10 +91,10 @@ Fission involves strongly deformed, triaxial, and reflection-asymmetric shapes; 
 
 In the self-consistent mean-field framework, spontaneous symmetry breaking is a feature rather than a flaw: it allows the system to adopt a deformed intrinsic shape corresponding to a broken rotational or parity symmetry, while the symmetry of the total many-body Hamiltonian is preserved.  
 For example, an axially deformed HFB state violates rotational invariance, but the restoration of this symmetry through angular-momentum projection recovers the correct laboratory-frame properties.  
-Similarly, parity breaking through octupole deformation is essential to describe asymmetric fission fragment distributions. Triaxiality, for example, has been shown to lower the inner barrier of actinides by several MeV \cite{Warda2002,Schunck2014}.
+Similarly, parity breaking through octupole deformation is essential to describe asymmetric fission fragment distributions. Triaxiality, for example, has been shown to lower the inner barrier of actinides by several MeV \cite{Warda2002,Schunck2016}.
 Likewise, reflection-asymmetric (octupole) degrees of freedom are necessary to reproduce mass-asymmetric fission in heavy nuclei.
 
-Recent computational developments have made possible fully symmetry-unrestricted HFB and TDDFT calculations, in which all spatial and time-reversal symmetries can be broken if energetically favourable \cite{Simenel2018,Schunck2014}.  
+Recent computational developments have made possible fully symmetry-unrestricted HFB and TDDFT calculations, in which all spatial and time-reversal symmetries can be broken if energetically favourable \cite{Simenel2018,Schunck2016}.  
 Codes such as \texttt{HFODD} and \texttt{Sky3D} implement three-dimensional solvers capable of describing triaxial, octupole, and time-odd components of the density matrix.  
 These advances have revealed new fission pathways, scission configurations, and fragment-spin correlations inaccessible to axially symmetric models.
 

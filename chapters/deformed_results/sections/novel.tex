@@ -1,4 +1,82 @@
 \section{Other Results}
+\label{sec:novel}
+In this final section, some interesting results that may be obtained only when doing Hartree-Fock on cartesian meshes are presented.
+In section \ref{sec:ne20}, some results are presented for the $^{20}$Ne nucleus, in particular, the Nucleon Localization Function (NLF) is computed so that the formation of clusters may be studied. 
+In section \ref{sec:si42}, the results for two near drip line nuclei are presented, namely $^{42}$Si and $^{28}$S.
+\subsection{$\alpha$-clustering in light nuclei} 
+\label{sec:ne20}
+The formation of clusters in light nuclei has been a research focus in recent years \cite{Lombardo2023}. The hypothesis is that some light nuclei tend to form clusters of lighter particles, mainly $\alpha$-particles, as to minimise their energy, by displaying `molecular-like' bonds and resonances among the clusters. The formation of such clusters is still unclear, with the following results we show that in the framework presented in this work, the formation of clusters is present in $^{20}$Ne.
+
+In the context of many-body calculations, it is very well known that in ab-initio calculations the formation of clusters is strongly observed \cite{Ebran2012_Clusters,EKhan}, while their formation when using Skyrme energy functionals is still unclear, some reporting it to be absent \cite{EKhan}.
+
+\subsubsection{Nucleon localization function}
+The study of clusters is made possible by the use of the nucleon localization function (NLF) \cite{NLF}, it is a measure of the conditional probability of finding a nucleon in the short vicinity of another one in space. When dealing with spin-saturated nuclei, as is the case of $^{20}$Ne, the NLF reduces to
+\begin{equation}
+    \label{eq:nlf}
+    C_q(\bm r) = \bigg[1+ \bigg(\frac{\tau_q\rho_q -\frac 1 4 |\nabla\rho_q|^2}{\rho_q \tau_{q}^{\text{TF}}}\bigg)^2\bigg]^{-1}
+\end{equation}
+where $\tau_q^{\text{TF}}$ is the Thomas-Fermi kinetic energy density, defined as
+\begin{equation}
+  \tau_q^{\text{TF}}= \frac 3 5 (6\pi^2)^{2/3}\rho_q^{5/3}.
+\end{equation}
+\subsubsection{$\alpha-$clustering in $^{20}$Ne}
+In figure \ref{fig:clustering}, the total particle densities and proton NLF of $^{20}$Ne are shown for different Skyrme functionals. It is possible to observe that while some functionals like KDE33 show strong peaks in the particle densities, all of the presented functionals display well defined clusters in their respective NLF contours. Note that clustering in the intrisic frame of the nucleus does not necessarily imply clustering in the laboratory frame, for which projection methods are required \cite{clusterCondensation}.
+\begin{figure}[htbp]
+    \centering
+    %--- Row 1 ---
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/clustering/SLy4_density}
+        \caption{Particle density, SLy4 functional.}
+        \label{fig:ski3_density}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/clustering/SLy4_localization}
+        \caption{NLF, SLy4 functional.}
+        \label{fig:ski3_nlf}
+    \end{subfigure}
+
+    %--- Row 2 ---
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/clustering/skm_density}
+        \caption{Particle density, SkM* functional.}
+        \label{fig:skm_density}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/clustering/skm_localization}
+        \caption{NLF, SkM* functional.}
+        \label{fig:skm_nlf}
+    \end{subfigure}
+
+
+    %--- Row 3 ---
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/clustering/kde33_density}
+        \caption{Particle density, KDE33 functional.}
+        \label{fig:kde33_density}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/clustering/kde33_localization}
+        \caption{NLF, KDE33 functional.}
+        \label{fig:kde33_nlf}
+    \end{subfigure}
+    \caption{Particle densities and NLFs in $^{20}$Ne for different Skyrme functionals.}
+    \label{fig:clustering}
+\end{figure}
+
+\subsection{Drip line nuclei}
+The need of a mesh representation to account for weakly bound systems has been greatly remarked in previous chapters (see \ref{chap:intro}, \ref{chap:methods}). In this section, results regarding the two near drip line nuclei $^{42}$Si and $^{28}$S are presented, the former being a neutron-rich nucleus, the latter being a proton-rich nucleus. Being weakly bound systems, taking direct measurements of quantities like radii, deformations through spectroscopy etc, is not possible. 
+
+We shall compare the experimental neutron $S_n$ or proton $S_p$ separation energy with the theoretical value calculated using Koopmans' theorem \cite{Koopmans1934_Theorem}. The theorem states that in a frozen orbitals approximation, where the mean-field is assumed to remain constant after the removal of a particle, the energy required to remove that particle is equal to the eigenvalue of the last occupied single-particle orbital with an inverse sign. This is an approximation to the true separation energy, since it neglects mean-field relaxations and correlation effects. Using Koopmans' theorem is necessary since we have not included the treatment of odd nuclei in the present work, limiting accessibility to only nuclei with even proton and neutron numbers.
+
+\subsubsection{$^{42}$Si}
+\label{sec:si42}
+$^{42}$Si is a deformed, light, neutron-rich nucleus, having $Z=14$ and $N=28$, we may look at its ground state neglecting the pairing interaction thanks to the magic number of neutrons, and the closed sub-shell $1d_{5/2}$. In table \ref{tab:si42_table}, data computed with some functionals is reported, along with the experimental extrapolated binding energy and neutron separation energy. In figure \ref{fig:si42_density}, the particle density of $^{42}$Si is shown for the SLy4 functional. 
 
 \begin{table}[ht]
   \centering
@@ -6,7 +84,8 @@
     \toprule
     && SLy4 & SkM* & KDE33 & SkP & SkI3 & Exp. \\
     \midrule
-    $E_{\text{TOT}}$& [MeV]    & -313.129    & -320.760 &-326.102 & -317.163 & -338.047 & -311.22\\
+    $E$& [MeV]    & -313.129    & -320.760 &-326.102 & -317.163 & -338.047 & -311.22\\
+    $S_n$ &[MeV] & 4.349 & 4.990 & 4.132 & 4.221 & 5.439 & 4.458 \\
     $\expval{ r^2_n}^{1/2}$    &[fm] & 3.716 & 3.705    & 3.666 & 3.707  & 3.664& \\
     $\expval{ r^2_p}^{1/2}$    &[fm] & 3.294 &  3.276   & 3.247  & 3.284 & 3.200& \\
     $\expval{ r^2_{ch}}^{1/2}$    &[fm] & 3.380 & 3.362    & 3.334  & 3.370 & 3.287& \\
@@ -16,3 +95,38 @@
   \caption{Results for $^{42}$Si, box $[-11, 11]$ fm, step size 0.37 fm.}
   \label{tab:si42_table}
 \end{table}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{Images/si42_density_sly4}
+  \caption{$^{42}$Si density $\rho(x, 0, z)$, calculation done on a box $[-11, 11]$ fm, step size 0.37 fm, experimental data taken from \cite{AMDC_website}.}
+  \label{fig:si42_density}
+\end{figure}
+
+\subsubsection{$^{28}$S}
+$^{28}$S is a deformed, light, proton-rich nucleus, having $Z=16$ and $N=12$, we may look at its ground state neglecting the pairing interaction thanks to the closed sub-shell $2s_{1/2}$ and a number of neutrons analogous to the one in $^{24}$Mg. In table \ref{tab:s28_table}, data computed with some functionals is reported, along with the experimental extrapolated binding energy and proton separation energy. In figure \ref{fig:s28_density}, the particle density of $^{28}$S is shown for the SLy4 functional.
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lrccccc}
+    \toprule
+    && SLy4 & SkM* & KDE33 & SkI3 & Exp. \\
+    \midrule
+    $E$& [MeV]    & -209.688     & -211.642 &-221.668 & -226.337 & -209.406\\
+    $S_n$ &[MeV] & 3.370 & 3.330 & 3.135 & 3.332 & 2.556 \\
+    $\expval{ r^2_n}^{1/2}$      &[fm] & 3.013 & 2.997    & 2.964  & 2.930& \\
+    $\expval{ r^2_p}^{1/2}$      &[fm] & 3.235 & 3.225   & 3.185  & 3.168 & \\
+    $\expval{ r^2_{ch}}^{1/2}$   &[fm] & 3.318 & 3.308    & 3.269  & 3.252& \\
+    $\beta_2$ &[-]               & 0.314 & 0.289  & 0.293 &  0.315              & \\
+    \bottomrule
+  \end{tabular}
+  \caption{Results for $^{28}$S, box $[-10, 10]$ fm, step size 0.34 fm.}
+  \label{tab:s28_table}
+\end{table}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{Images/s28_density_sly4}
+  \caption{$^{28}$S density $\rho(x, 0, z)$, calculation done on a box $[-10, 10]$ fm, step size 0.34 fm, experimental data taken from \cite{AMDC_website}.}
+  \label{fig:s28_density}
+\end{figure}
+
+

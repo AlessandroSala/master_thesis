@@ -1,6 +1,6 @@
 \section{Nuclear structure models}
 \label{sec:models}
-The study of low energy hadron physics, has always been a challenging task. This is due to the known fact that the strong force, which is responsible for the interaction between nucleons, is not perturbative at low energies, as opposed to the atomic case for the Coulomb interaction, whose coupling can be assumed as constant at low energies, while the one for the strong interaction cannot. Nevertheless, both problems have in common the fact that they are related to many-body theory, thanks to which they share some challenges and the corresponding solutions, when present.
+The study of low-energy hadron physics, has always been a challenging task. This is due to the known fact that the strong force, which is responsible for the interaction between nucleons, is not perturbative at low energies, as opposed to the atomic case for the Coulomb interaction, whose coupling can be assumed as constant at all energies. Nevertheless, both problems have in common the fact that one is confronted with quantum many-body systems, thanks to which they share some challenges and the corresponding solutions, when present.
 \subsection{Phenomenology of the NN interaction}
 It is possible to obtain a good insight on nuclear structure, by using empirical data obtained experimentally on the bulk properties of nuclei, such as the binding energy and the particle density.
 \subsubsection{Binding energies}
@@ -11,7 +11,7 @@ Let us start with the binding energy. We can define it as the mass defect of the
 \end{equation}
 where $m_p$ is the proton mass, $m_n$ the neutron mass, and $M$ the nucleus mass.
 
-In figure \ref{fig:BE}, the binding energy per nucleon $E_B/A$ as a function of $A$ is presented. As shown in the figure, the binding energy per nucleon rapidly saturates and stalls around $7$ MeV just after $A=4$, this striking behaviour is due to nucleons interacting only with near neighbours, since the strong force is a short-range interaction. Otherwise, the trend would follow a behaviour similar to $\sim (A-1)$ as in the Coulomb interaction case, meaning the binding energy per nucleon would be linear with the mass number.
+In figure \ref{fig:BE}, the binding energy per nucleon $E_B/A$ as a function of $A$ is presented. As shown in the figure, the binding energy per nucleon rapidly saturates and stalls around $7$ MeV just after $A=4$; this striking behaviour is due to nucleons interacting only with near neighbours, since the strong force is a short-range interaction. Otherwise, the trend would follow a behaviour similar to $\sim A$ as in the Coulomb interaction case, meaning the binding energy per nucleon would be linear with the mass number.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/BE.png}
@@ -19,14 +19,15 @@ In figure \ref{fig:BE}, the binding energy per nucleon $E_B/A$ as a function of 
     \label{fig:BE}
 \end{figure}
 \subsubsection{Nuclear density}
-An important aspect of nuclear phenomenology that can be accessed experimentally is the nuclear density, most notably through elastic electron-nucleus scattering \cite{Hofstadter1956}. The measured form factor can be related to the Fourier transform of the charge density, from which the spatial distribution is reconstructed. The resulting densities are well reproduced by a Fermi-like distribution of the form
+An important aspect of nuclear phenomenology that can be accessed experimentally is the nuclear charge density, most notably through elastic electron-nucleus scattering \cite{Hofstadter1956}. The measured form factor can be related to the Fourier transform of the charge density, from which the spatial distribution is reconstructed. The resulting densities, as a rule, are reproduced by a Fermi-like distribution of the form
 \begin{equation}
 \label{eq:phen_density}
 \rho(r)=\frac{\rho_0}{1+e^{(r-R_0)/a}},
 \end{equation}
-where $R_0$ is the nuclear radius, which can be parametrized as $R_0\approx 1.2A^{1/3}$, and $a$ is the diffusivity, whose value determines how sharp the density drops from its saturation value $\approx \rho_0$ to $\approx 0$. The saturation density $\rho_0$ is generally universal for all nuclei, amounting to $\approx 0.16$ fm$^{-3}$.
+where $R_0$ is the nuclear radius, which can be parametrized as $R_0\approx 1.2A^{1/3}$, and $a$ is the diffusivity, whose value determines how sharp the density drops from its saturation value $\approx \rho_0$ to $\approx 0$. 
+Neutron, or mass densities are known less accurately. Regardless, proton and hadron scattering experiments suggest that neutron densities are very close to proton densities in the inner part, and the neutron excess is visible at the surface. The saturation density $\rho_0$ is generally universal for all nuclei, amounting to $\approx 0.16$ fm$^{-3}$.
 \subsection{Structure models}
-The theoretical description of nuclear structure has been proven to be a difficult task over the years. Due to the extremely rich phenomenology of nuclei and the challenges brought by the strong force, as we shall see, many models and further approximations to give a satisfactory description of all nuclides have been proposed.
+We shall now review the main phenomenological models that attempt to describe the nuclear structure.
 \subsubsection{Liquid drop model}
 One, if not the first successful model, is the liquid drop model. It is based on the assumption that the nucleus behaves as a liquid droplet, where forces among consituents saturate. This hypothesis, formulated by G. Gamow, culminated in the formalization of the semi-empirical mass formula (SEMF) by N Bohr and C F von Weizsäcker in 1935 \cite{Weizsacker1935}, which reads
 \begin{equation}
@@ -38,8 +39,8 @@ where $E_B$ is the binding energy of the nucleus. Each term has a different phys
     \item $a_V A$ is the volume energy of the nucleus, given by the approximately constant binding energy per nucleon, which makes the total energy proportional to $A$;
     \item $a_S A^{2/3}$ is the surface energy, a correction to the volume energy due to outer nucleons interacting with fewer nucleons than those in the inner bulk, meaning that $a_S$ is of the same order of $a_V$;
     \item $a_C Z(Z-1)/A^{1/3}$ is the approximation to the Coulomb energy repulsion of the nucleus, assuming the protons are uniformly distributed;
-    \item $a_A (N-Z)^2/A$ is the asymmetry energy, which is due to the Pauli exclusion principle, since protons and neutrons occupy their respective states, a high imbalance of one species or the other implies loosely bound nucleons, thus a higher energy contribution of those states; and
-    \item $\delta_P=a_P A^{-1/2}$ refers to the pairing contribution, due to the increase in binding energy of an even number of neutrons and/or protons, more details on the pairing energy are given in section \ref{sec:pairing_intro}.
+    \item $a_A (N-Z)^2/A$ is the asymmetry energy, which is due to the Pauli exclusion principle: since protons and neutrons occupy their respective states, a high imbalance of one species or the other implies that the more numerous species -- typically the neutrons -- is pushed to higher-energy levels; and
+    \item $\delta_P=a_P A^{-1/2}$ refers to the pairing contribution, due to the increase in binding energy of an even number of neutrons and/or protons. More details on the pairing energy are given in section \ref{sec:pairing_intro}.
 \end{itemize}
 \begin{figure}[h]
     \centering
@@ -47,7 +48,7 @@ where $E_B$ is the binding energy of the nucleus. Each term has a different phys
     \caption{Visual representation of the liquid drop model. Figure taken from \cite{ldmimg}.}
     \label{fig:liquid_drop_model}
 \end{figure}
-The SEMF can be fitted on experimental data to get a good estimate of binding energies \cite{Benzaid2020}, but it still lacks the ability of describing many aspects of nuclear structure, mainly, the nuclear shell structure, which can account for magic numbers and nuclear deformations.
+The SEMF can be fitted on experimental data to get a good estimate of binding energies \cite{Benzaid2020}, but it still lacks the ability of describing many aspects of nuclear structure, mainly, the nuclear shell structure, which can account for magic numbers and nuclear deformations, unless shell corrections are explicitly taken into account.
 
 An example of the SEMF parametrization is given in table \ref{tab:semb_coeff}, values are taken from \cite{Rohlf1994}.
 \begin{table}[h]
@@ -64,10 +65,10 @@ An example of the SEMF parametrization is given in table \ref{tab:semb_coeff}, v
 \end{table}
 
 \subsubsection{Shell corrections}
-The liquid drop model, while being a good approximation for the description of the nuclear binding energy, it only accounts for the Pauli exclusion principle and the saturation of the strong force, providing only a partial description of the full quantum mechanical nature of the nucleus, thus the need to account for shell effects.
-Unfortunately, unlike the `atomic' case, there is no single source of the field to which nucleons are sucject to, since it's generated by the nucleons themselves; nonetheless, the formulation of an empirical mean-field potential which reproduces experimental data has been proven to be successful in providing useful corrections.
+The liquid drop model, while being a good approximation for the description of the nuclear binding energy, it only accounts for the Pauli exclusion principle and the saturation of the strong force, providing only a partial description of the full quantum mechanical nature of the nucleus.
+Unfortunately, unlike the atomic case, there is no external source of the field to which nucleons are sucject to, since it's generated by the nucleons themselves; nonetheless, the formulation of an empirical mean-field potential which reproduces experimental data has been proven to be successful in providing useful corrections.
 
-The so called Woods-Saxon potential is an empirical field used for modelling the average field to which an independent nucleon would feel in a nucleus. It is formulated as to follow the shape of the nuclear density \eqref{eq:phen_density}, and it reads
+The so called Woods-Saxon potential is an empirical field used for modelling the average field to which an independent nucleon is subject to in a nucleus. It is formulated as to follow the shape of the nuclear density \eqref{eq:phen_density}, and it reads
 \begin{equation}
     \label{eq:sphWS}
     U(\bm r) = -\frac{U_0(A, N)}{1+e^\frac{r - R}{a}},
@@ -83,7 +84,7 @@ and the $+$ and $-$ signs refer to protons and neutrons respectively. $R$ refers
 \end{equation}
 and $a$ is the surface diffuseness, as in the density expression \eqref{eq:phen_density}.
 \paragraph{Spin-orbit coupling} 
-The success of the shell model is mainly due to the possibility of accounting for spin-orbit coupling, which is included through a term that reads
+The success of the shell model is mainly due to the possibility of including the spin-orbit coupling, which is incorporated through a term that reads
 \begin{equation}
     \label{eq:ls_coupling}
     U_{\text{LS}}(\bm r )=U_0^{\text{LS}}\bigg(\frac{r_0}{\hbar}\bigg)^2 \frac 1 r \dv{}{r}\bigg (\frac{1}{1+e^{\frac{r-R}{a}}}\bigg).
@@ -103,9 +104,9 @@ A typical parametrization of the values in the Woods-Saxon potential and the spi
   \label{tab:woods_saxon_params}
 \end{table}
 
-As shown in table \ref{tab:woods_saxon_params}, the spin-orbit coupling strength is high, compared to the atomic case, this causes a bigger splitting of the energy levels, leading to the formation of stable closed shells when the magic numbers 8, 20, 28, \ldots are reached, as shown in figure \ref{fig:shell_model}.
+As shown in table \ref{tab:woods_saxon_params}, the spin-orbit coupling strength is large, compared to the atomic case, this causes a bigger splitting of the energy levels, leading to the formation of stable closed shells when the magic numbers 8, 20, 28, \ldots are reached, as shown in figure \ref{fig:shell_model}.
 \paragraph{Coulomb interaction}
-In the spherical case, the coulomb interaction can be taken as the energy potential produced by a sphere of charge $Z$ and radius $R$, which reads
+In the spherical case, the Coulomb interaction can be taken, in a first approximation, as the energy potential produced by a sphere of charge $Z$ and radius $R$, which reads
 \begin{equation}
     U_{\text{C}}(r) = Ze^2
     \begin{cases}
@@ -117,7 +118,7 @@ The complete Hamiltonian then reads
 \begin{equation}
     \hat H = \hat T + U + U_{\text{LS}}+U_C,
 \end{equation}
-where $U_C$ is present only when solving for the proton shells. The solution to the eigenvalue problem $\hat H \psi = E\psi$ is of the form
+where $U_C$ is present only when solving for the proton shells. In the spherical case, the solution to the eigenvalue problem $\hat H \psi = E\psi$ is of the form
 \begin{equation}
    \psi_{nljm_j} = \frac{u_{nl}(r)}{r}[Y_{nl}(\hat {\bm r})\otimes \chi_{1/2}]_{jm_j} 
 \end{equation}
@@ -132,12 +133,12 @@ A small digression on the harmonic oscillator is in order. The solution of the s
 \begin{equation}
 U_{\text{HO}} (\bm r ) = \frac 1 2 m\omega^2 r^ 2,
 \end{equation}
-produces the spherical harmonic oscillator basis, which is very similar to the basis one would get solving for the Woods-Saxon potential, provided that $\omega$ is taken as $41/A^{1/3}$ MeV. As a matter of fact, the harmonic oscillator basis is often used to perform calculations in nuclear physics. We will see in section \ref{sec:minimization} that a harmonic oscillator basis is used as starting guess for the numerical solution of a Woods-Saxon potential.
+produces the spherical harmonic oscillator basis, which is very similar to the basis one would get solving for the Woods-Saxon potential, provided that $\hbar\omega$ is taken as $41/A^{1/3}$ MeV. As a matter of fact, the harmonic oscillator basis is often used to perform calculations in nuclear physics. We will see in section \ref{sec:minimisation} that a harmonic oscillator basis is used as starting guess for the numerical solution of a Woods-Saxon potential.
 \subsubsection{Shell structure}
-A graphical representation of the shells for a harmonic oscillator is shown in figure \ref{fig:shell_model}, where the contribution of the spin-orbit coupling is also accounted for; compared to the atomic case, shells whose total angular momentum is higher are lowered in energy, viceversa for lower total angular momentum, due to the sign of the spin-orbit coupling $U_0^\text{LS}$ of $U_\text{LS}(\bm r)$ in equation \eqref{eq:ls_coupling}.
+A graphical representation of the shells for a harmonic oscillator is shown in figure \ref{fig:shell_model}, where the contribution of the spin-orbit coupling is also accounted for; compared to the atomic case, shells whose total angular momentum is $j=l+1/2$ are lowered in energy, viceversa for total angular momentum $j=l-1/2$, due to the sign of the spin-orbit coupling $U_0^\text{LS}$ of $U_\text{LS}(\bm r)$ in equation \eqref{eq:ls_coupling}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/ShellModel.png}
-    \caption{Graphical representation of a harmonic oscillator shells, together with the spin-orbit coupling. Shells whose total angular momentum is higher are lowered in energy, viceversa for lower total angular momentum. Figure adapted from \cite{Colo_2021_NuclearPhysics}.}
+    \caption{Graphical representation of the harmonic oscillator shells, together with the spin-orbit coupling. Shells whose total angular momentum is $j=l+1/2$ are lowered in energy, viceversa for total angular momentum $j=l-1/2$. Figure adapted from \cite{Colo_2021_NuclearPhysics}.}
     \label{fig:shell_model}
 \end{figure}

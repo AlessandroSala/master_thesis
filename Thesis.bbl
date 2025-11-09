@@ -1,4 +1,4 @@
-\begin{thebibliography}{93}
+\begin{thebibliography}{98}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,11 +11,11 @@
 \newblock URL \url{https://www-nds.iaea.org/amdc/}.
 \newblock Accessed: 19 October 2025.
 
-\bibitem[Bartel et~al.(1982)Bartel, Quentin, Brack, Guet, and Håkansson]{bartel1982fission}
-J.~Bartel, P.~Quentin, M.~Brack, C.~Guet, and H.-B. Håkansson.
-\newblock Fission barriers of heavy and superheavy nuclei in a self-consistent hartree-fock approach.
-\newblock \emph{Nuclear Physics A}, 386\penalty0 (1):\penalty0 79--100, 1982.
-\newblock \doi{10.1016/0375-9474(82)90302-6}.
+\bibitem[Bartel et~al.(1982)Bartel, Quentin, Brack, Guet, and H{\aa}kansson]{Bartel1982}
+J.~Bartel, P.~Quentin, M.~Brack, C.~Guet, and H.-B. H{\aa}kansson.
+\newblock Towards a better description of nuclear deformation: The skyrme-force plus a pairing interaction.
+\newblock \emph{Nucl. Phys. A}, 386\penalty0 (1):\penalty0 79--100, 1982.
+\newblock \doi{10.1016/0375-9474(82)90403-1}.
 
 \bibitem[Bender et~al.(2003)Bender, Heenen, and Reinhard]{Bender2003}
 M.~Bender, P.-H. Heenen, and P.-G. Reinhard.
@@ -154,12 +154,6 @@ M.~Chen, T.~Li, B.~Schuetrumpf, P.-G. Reinhard, and W.~Nazarewicz.
 \newblock \doi{10.1016/j.cpc.2022.108344}.
 \newblock This paper describes the new 3D, symmetry-unrestricted coordinate-space solver HFBFFT, which is based on the Sky3D code.
 
-\bibitem[Chen et~al.(2022{\natexlab{c}})Chen, Li, Schütrumpf, Reinhard, and Nazarewicz]{Chen2022_HFBFFT}
-M.~Chen, T.~Li, B.~Schütrumpf, P.-G. Reinhard, and W.~Nazarewicz.
-\newblock Three-dimensional skyrme hartree-fock-bogoliubov solver in coordinate-space representation.
-\newblock \emph{Computer Physics Communications}, 284:\penalty0 108578, 2022{\natexlab{c}}.
-\newblock \doi{10.1016/j.cpc.2022.108578}.
-
 \bibitem[Colo' and Roca-Maza()]{hfbcsqrpa}
 G.~Colo' and X.~Roca-Maza.
 \newblock User guide for the hfbcs-qrpa(v1) code.
@@ -180,7 +174,7 @@ R.~Y. Cusson, P.~G. Reinhard, M.~R. Strayer, J.~A. Maruhn, and W.~Greiner.
 
 \bibitem[Dobaczewski(2000)]{blochmessiah}
 J.~Dobaczewski.
-\newblock Generalization of the bloch-messiah-zumino theorem.
+\newblock Generalisation of the bloch-messiah-zumino theorem.
 \newblock \emph{Phys. Rev. C}, 62:\penalty0 017301, May 2000.
 \newblock \doi{10.1103/PhysRevC.62.017301}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.62.017301}.
@@ -203,6 +197,19 @@ J.~Dudek and T.~Werner.
 \newblock \emph{Journal of Physics G: Nuclear Physics}, 4\penalty0 (10):\penalty0 1543, oct 1978.
 \newblock \doi{10.1088/0305-4616/4/10/006}.
 \newblock URL \url{https://doi.org/10.1088/0305-4616/4/10/006}.
+
+\bibitem[Ebran et~al.(2012)Ebran, Khan, Nik{\v{s}}i{\'c}, and Vretenar]{Ebran2012_Clusters}
+J.-P. Ebran, E.~Khan, T.~Nik{\v{s}}i{\'c}, and D.~Vretenar.
+\newblock How atomic nuclei cluster.
+\newblock \emph{Nature Communications}, 3:\penalty0 825, 2012.
+\newblock \doi{10.1038/nature11246}.
+
+\bibitem[Ebran et~al.(2020)Ebran, Girod, Khan, Lasseri, and Schuck]{clusterCondensation}
+J.-P. Ebran, M.~Girod, E.~Khan, R.~D. Lasseri, and P.~Schuck.
+\newblock $\ensuremath{\alpha}$-particle condensation: A nuclear quantum phase transition.
+\newblock \emph{Phys. Rev. C}, 102:\penalty0 014305, Jul 2020.
+\newblock \doi{10.1103/PhysRevC.102.014305}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.102.014305}.
 
 \bibitem[Erler et~al.(2010)Erler, Klüpfel, and Reinhard]{Erler_2010}
 J.~Erler, P.~Klüpfel, and P.-G. Reinhard.
@@ -288,6 +295,13 @@ J.~D. Jackson.
 \newblock John Wiley \& Sons, New York, 3rd edition, 1998.
 \newblock ISBN 978-0471309321.
 
+\bibitem[Khan et~al.(2022)Khan, Heitz, Mercier, and Ebran]{EKhan}
+E.~Khan, L.~Heitz, F.~Mercier, and J.-P. Ebran.
+\newblock $\ensuremath{\alpha}$-particle formation and clustering in nuclei.
+\newblock \emph{Phys. Rev. C}, 106:\penalty0 064330, Dec 2022.
+\newblock \doi{10.1103/PhysRevC.106.064330}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.106.064330}.
+
 \bibitem[Knyazev(1991)]{LOBPCG}
 A.~V. Knyazev.
 \newblock \emph{A Preconditioned Conjugate Gradient Method for Eigenvalue Problems and its Implementation in a Subspace}, pages 143--154.
@@ -302,6 +316,12 @@ W.~Kohn and L.~J. Sham.
 \newblock \emph{Phys. Rev.}, 140:\penalty0 A1133--A1138, Nov 1965.
 \newblock \doi{10.1103/PhysRev.140.A1133}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.140.A1133}.
+
+\bibitem[Koopmans(1934)]{Koopmans1934_Theorem}
+T.~Koopmans.
+\newblock Über die zuordnung von wellenfunktionen und eigenwerten zu den einzelnen elektronen eines atoms.
+\newblock \emph{Physica}, 1\penalty0 (7-12):\penalty0 104--113, 1934.
+\newblock \doi{10.1016/S0031-8914(34)90011-2}.
 
 \bibitem[Koponen et~al.(2021)Koponen, Pellikka, Tanimoto, Dendo, Lesinski, and Terasaki]{skyax}
 J.~A. Koponen, K.~Pellikka, S.~Tanimoto, K.~Dendo, T.~Lesinski, and K.~Terasaki.
@@ -320,9 +340,17 @@ A.~Krishnamoorthy and D.~Menon.
 \newblock Matrix inversion using cholesky decomposition.
 \newblock In \emph{2013 Signal Processing: Algorithms, Architectures, Arrangements, and Applications (SPA)}, pages 70--72, 2013.
 
+\bibitem[Kurcewicz(2000)]{Kurcewicz2000}
+W.~Kurcewicz.
+\newblock Octupole deformation in the actinide region.
+\newblock \emph{Hyperfine Interactions}, 129\penalty0 (1):\penalty0 175--184, 12 2000.
+\newblock ISSN 1572-9540.
+\newblock \doi{10.1023/A:1012609832646}.
+\newblock URL \url{https://doi.org/10.1023/A:1012609832646}.
+
 \bibitem[Lanczos(1952)]{lanczos1952solution}
 C.~Lanczos.
-\newblock Solution of systems of linear equations by minimized iterations.
+\newblock Solution of systems of linear equations by minimised iterations.
 \newblock \emph{J. Res. Nat. Bur. Standards}, 49\penalty0 (1):\penalty0 33--53, 1952.
 
 \bibitem[Li et~al.(2020{\natexlab{a}})Li, Ren, and Zhao]{li2020efficient}
@@ -347,6 +375,14 @@ L.~Lin, S.~Shao, and W.~E.
 \newblock \doi{https://doi.org/10.1016/j.jcp.2013.03.030}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0021999113002088}.
 
+\bibitem[Lombardo and Dell'Aquila(2023)]{Lombardo2023}
+I.~Lombardo and D.~Dell'Aquila.
+\newblock Clusters in light nuclei: history and recent developments.
+\newblock \emph{La Rivista del Nuovo Cimento}, 46\penalty0 (9):\penalty0 521--618, sep 2023.
+\newblock ISSN 1826-9850.
+\newblock \doi{10.1007/s40766-023-00047-4}.
+\newblock URL \url{https://doi.org/10.1007/s40766-023-00047-4}.
+
 \bibitem[Marević et~al.(2022{\natexlab{a}})Marević, Schunck, Ney, {Navarro Pérez}, Verriere, and O'Neal]{MAREVIC2022108367}
 P.~Marević, N.~Schunck, E.~Ney, R.~{Navarro Pérez}, M.~Verriere, and J.~O'Neal.
 \newblock Axially-deformed solution of the skyrme-hartree-fock-bogoliubov equations using the transformed harmonic oscillator basis (iv) hfbtho (v4.0): A new version of the program.
@@ -368,10 +404,12 @@ R.~M. Martin.
 \newblock ISBN 9780521534406.
 
 \bibitem[Maruhn et~al.(2014)Maruhn, Reinhard, Stevenson, and Umar]{Maruhn2014_Sky3D}
-J.~A. Maruhn, P.-G. Reinhard, P.~D. Stevenson, and A.~S. Umar.
+J.~Maruhn, P.-G. Reinhard, P.~Stevenson, and A.~Umar.
 \newblock The tdhf code sky3d.
-\newblock \emph{Computer Physics Communications}, 185:\penalty0 2195--2216, 2014.
-\newblock \doi{10.1016/j.cpc.2014.05.005}.
+\newblock \emph{Computer Physics Communications}, 185\penalty0 (7):\penalty0 2195--2216, 2014.
+\newblock ISSN 0010-4655.
+\newblock \doi{https://doi.org/10.1016/j.cpc.2014.04.008}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465514001313}.
 
 \bibitem[M{\"o}ller et~al.(2016)M{\"o}ller, Sierk, Ichikawa, and Sagawa]{Moller2016_ADNDT}
 P.~M{\"o}ller, A.~Sierk, T.~Ichikawa, and H.~Sagawa.
@@ -432,6 +470,13 @@ P.-G. Reinhard and H.~Flocard.
 \newblock \doi{https://doi.org/10.1016/0375-9474(94)00770-N}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/037594749400770N}.
 
+\bibitem[Reinhard et~al.(2011)Reinhard, Maruhn, Umar, and Oberacker]{NLF}
+P.-G. Reinhard, J.~A. Maruhn, A.~S. Umar, and V.~E. Oberacker.
+\newblock Localization in light nuclei.
+\newblock \emph{Phys. Rev. C}, 83:\penalty0 034312, Mar 2011.
+\newblock \doi{10.1103/PhysRevC.83.034312}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.83.034312}.
+
 \bibitem[Ring and Schuck(2004)]{ring2004nuclear}
 P.~Ring and P.~Schuck.
 \newblock \emph{The nuclear many-body problem}.
@@ -484,12 +529,6 @@ N.~Schunck, J.~Dobaczewski, J.~McDonnell, J.~Sarich, A.~Staszczak, and M.~V. Sto
 \newblock Solution of the $\text{HFB}$ equation in the oscillatory basis: the $\text{HFODD}$ code.
 \newblock \emph{Computer Physics Communications}, 183\penalty0 (1):\penalty0 166--191, 2012.
 \newblock \doi{10.1016/j.cpc.2011.09.018}.
-
-\bibitem[Schunck et~al.(2014)Schunck, Dobaczewski, Sadhukhan, McDonnell, Sheikh, Staszczak, and Verrière]{Schunck2014}
-N.~Schunck, J.~Dobaczewski, J.~Sadhukhan, J.~McDonnell, J.~A. Sheikh, A.~Staszczak, and M.~Verrière.
-\newblock Microscopic description of fission in nuclear dft.
-\newblock \emph{EPJ Web of Conferences}, 63:\penalty0 01001, 2014.
-\newblock \doi{10.1051/epjconf/20146301001}.
 
 \bibitem[Schwierz et~al.(2007)Schwierz, Wiedenh\"over, and Volya]{Schwierz2007}
 N.~Schwierz, I.~Wiedenh\"over, and A.~Volya.

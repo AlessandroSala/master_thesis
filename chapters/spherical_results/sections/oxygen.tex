@@ -1,14 +1,16 @@
 \section{Parameters and mesh choice}
+\label{sec:hfbcs}
 All $\texttt{hfbcs\_qrpa}$ calculations were performed using a mesh size of $0.1$ fm, no pairing interaction, and a radial mesh size whose radius is equal to the side of the box in our computation. The lattice of our code depends on the extension of the nucleus, which is directly determined by its mass $A$; since the number of subdivisions that allows reasonable CPU times on a laptop caps around $60-70$, step sizes vary across different calculations. 
-\\In the results shown here, for $^{16}$O, we are able to reach a $0.3$ fm step size, while for the heaviest, $^{90}$Zr, we are only able to reach $0.42$ fm. The reason behind this choice is that as the nucleus size increases, a bigger box is needed to ensure that all relevant states are able to decay to zero at the boundary. All the data reported in this chapter is computed with the SLy5 parametrization \cite{chabanat2}.
+In the results shown here, for $^{16}$O, we are able to reach a $0.3$ fm step size, while for the heaviest, $^{90}$Zr, we are only able to reach $0.42$ fm. The reason behind this choice is that as the nucleus size increases, a bigger box is needed to ensure that all relevant states are able to decay to zero at the boundary. All the data reported in this chapter is computed with the SLy5 parametrization \cite{chabanat2}.
 \section{Results for \(^{16}\)O}
-The first results we will take a look at are the ones for $^{16}$O. It's the best candidate for gauging the solver's performance, as it is a very light, double magic nucleus, meaning it has no pairing interaction and a spherical shape.
-All calculations are performed on a box of size $[-9, 9]$ fm in all three directions and a step size of $0.3$ fm, correponding to $2\cdot 60^{3}$ mesh points.
+\label{sec:oxygen}
+The first results we will take a look at are the ones for $^{16}$O. It is an ideal benchmark for gauging the solver's performance, as it is a very light, double magic nucleus, meaning it has no pairing interaction and a spherical shape.
+All calculations are performed on a box of size $[-9, 9]$ fm in all three directions and a step size of $0.3$ fm, corresponding to $2\cdot 60^{3}$ mesh points.
 \subsection{Results neglecting Coulomb interaction}
-Since the Skyrme functional is complex and nuanced, results are shown for more and more terms in expression \eqref{eq:skfunc}. We start by including only $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$ and neglecting the others and the Coulomb interaction; results are reported in table \ref{tab:no_so_no_j_no_coul}.
+Since the Skyrme functional is complex and nuanced, results are shown for more and more terms in expression \eqref{eq:skfunc}. We start by including only $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$ and neglecting the others, and the Coulomb interaction; results are reported in table \ref{tab:no_so_no_j_no_coul}.
 Without further terms, the spin-orbit field $\bm B(\bm r)$ vanishes, hence the $1p_{3/2}$ and $1p_{1/2}$ levels show degeneration in energy.
 
-Since $N=Z$, assuming equal masses the single-particle equations will be exactly equal between the two species, therefore only neutron results are reported. Note that $C_1$ terms reduce to being null in this case, that is until we either break the $N=Z$ equality or introduce the Coulomb interaction.
+Since $N=Z$, assuming equal masses the single-particle equations will be exactly equal between the two species, therefore only neutron results are reported. Note that $C_1$ terms vanish in this case, that is until we either break the $N=Z$ equality or introduce the Coulomb interaction.
 \begin{table}[ht]
   \centering
   \begin{tabular}{lrrccc}
@@ -36,7 +38,7 @@ Since $N=Z$, assuming equal masses the single-particle equations will be exactly
   \label{tab:no_so_no_j_no_coul}
 \end{table}
 
-In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are included just for the spin-orbit field $\bm B(\bm r)$, but not for the mean field $U(\bm r)$; from an interaction point of view, it's as if we were neglecting the spin-gradient coupling term \cite{chabanat2}. As expected, the $1p_{3/2}$ and $1p_{1/2}$ degeneration is removed, displaying the spin-orbit splitting, which lowers the total angular momentum $j=3/2$ level and raises the $j=1/2$ level.
+In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are included just for the spin-orbit field $\bm B(\bm r)$, but not for the mean field $U(\bm r)$; from an interaction point of view, it is as if we were neglecting the $J^2$ terms in the energy density \cite{chabanat2}. As expected, the $1p_{3/2}$ and $1p_{1/2}$ degeneration is removed, displaying the spin-orbit splitting, which lowers the total angular momentum $j=3/2$ level and raises the $j=1/2$ level.
 
 \begin{table}[ht]
   \centering
@@ -132,10 +134,12 @@ As the final addition to get a complete and accurate description of $^{16}$O, th
   \caption{$^{16}$O complete of the Skyrme functional and Coulomb interaction.}
   \label{tab:confronto}
 \end{table}
-\\As shown in tables \ref{tab:no_so_no_j_no_coul}, \ref{tab:compare_so}, \ref{tab:compare_j2}, and \ref{tab:confronto} results for $^{16}$O are in great agreement with the output of the \texttt{hfbcs\_qrpa} code for all the terms in the Skyrme functional.
+\\As shown in tables \ref{tab:no_so_no_j_no_coul}, \ref{tab:compare_so}, \ref{tab:compare_j2}, and \ref{tab:confronto} results for $^{16}$O are in great agreement with the output of the \texttt{hfbcs\_qrpa} code for all the terms in the energy functional.
 \section{Results for heavier nuclei}
-In the following section, results for some spherical nuclei heavier than $^{16}$O are presented in tables \ref{tab:compare_all_ca48}, \ref{tab:compare_all_ni56} and \ref{tab:compare_all_zr90}.
-Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight increase of the numerical error can be observed as the step size increaseas, which is compatible with the polynomial error in the finite difference method.
+\label{sec:heavier}
+In the following section, results for some spherical nuclei heavier than $^{16}$O are presented.
+$^{48}$Ca in table \ref{tab:compare_all_ca48}, $^{56}$Ni in table \ref{tab:compare_all_ni56}, and $^{90}$Zr in table \ref{tab:compare_all_zr90}.
+Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight increase of the numerical error can be observed as the step size increases, which is compatible with the polynomial error in the finite difference method. The increase of the cubic box size is necessary to accomodate larger nuclei, due to the increase in volume occupied, as to guarantee that less bound states decay to zero at the boundary.
 \begin{table}[ht]
   \centering
   \begin{tabular}{lrrccc}
@@ -279,9 +283,9 @@ Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight 
   \caption{$^{90}$Zr, box size [-15, 15] fm, step size 0.43 fm}
   \label{tab:compare_all_zr90}
 \end{table}
-\subsection{Comparison with experimental binding energies}
-The Skyrme functional is highly successful at producing theoretical values in great accordance with experimental data, just by fitting a small set of parameters \cite{Bender2003}. In table \ref{tab:exp_comp}, binding energies of some of the nuclei studied in this work are compared with experimental values, taken from the Atomic Mass Data Center \cite{AMDC_website}.
-\begin{table}[ht]
+\section{Comparison with experimental binding energies}
+The Skyrme functional is highly successful at producing theoretical values in great accordance with experimental data, just by fitting a small set of parameters \cite{Bender2003}. In table \ref{tab:exp_comp}, binding energies of some of the spherical nuclei presented so far are compared with experimental values, taken from the Atomic Mass Data Center \cite{AMDC_website}.
+\begin{table}[!ht]
   \centering
   \begin{tabular}{lcccc}
     \toprule

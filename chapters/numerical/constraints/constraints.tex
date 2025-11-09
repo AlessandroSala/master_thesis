@@ -25,7 +25,7 @@ This method was the one used in early constrained Hartree-Fock calculations \cit
     \label{eq:constr_quadratic}
     E' = E + \frac c 2 (\expval{{\mathcal Q}}-q_0)^2.
 \end{equation}
-This is a straightforward method; intuitively one penalizes (hence the name), any solution for which $\expval{{\mathcal Q}}\neq q_0$ by increasing its energy. However, the success of such procedure is heavily influenced by the choice of $c$, often leading to instabilities for large values.
+This is a straightforward method; intuitively one penalises (hence the name), any solution for which $\expval{{\mathcal Q}}\neq q_0$ by increasing its energy. However, the success of such procedure is heavily influenced by the choice of $c$, often leading to instabilities for large values.
 \\What happens is that for small values of $c$, the penalty may be insufficient to reach the target $q_0$, while for bigger values, the penalty may be so strong that the self-consistent calculation oscillates and fails.
 \subsubsection{Augmented Lagrangian Method}
 A modern, robust approach, used by HF/HFB codes \cite{RYSSENS2015175,CHEN2022108344} is given in the form of the Augmented Lagrangian Method (ALM) \cite{Staszczak2010}.
