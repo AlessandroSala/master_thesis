@@ -50,13 +50,14 @@ is also linear in $\varphi$.
     (U_q + \delta_{\text{q,proton}}U_c)\varphi
 \end{equation*}
 are just multiplicative, hence linear.
-\\Given that the whole equation is linear in $\varphi$, we can evaluate it on the chosen mesh, using finite differences to approximate the differential operators, yielding a linear eigenvalue problem of the form
+
+Given that the whole equation is linear in $\varphi$, we can evaluate it on the chosen mesh, using finite differences to approximate the differential operators, yielding a linear eigenvalue problem of the form
 \begin{align}
     \sum_{\alpha = 1}^{N} A_{\alpha\beta}\varphi_{\beta} &= E\varphi_\alpha
 \end{align}
 where the shorthand notation $N=2\cdot N_x\cdot N_y\cdot N_z$ is used to denote the size of the matrix A, which is $N\times N$.
 \subsubsection{Boundary conditions}
-We expect the nucleus to be a localized object, leading to vanishing Dirichlet boundary conditions for the Schr\"odinger equation.
+We expect the nucleus to be a localised object, leading to vanishing Dirichlet boundary conditions for the Schr\"odinger equation.
 Near the boundaries, the derivatives will involve points outside the box and setting these points to zero, is equivalent to solving 
 \begin{equation}
     \begin{bmatrix}

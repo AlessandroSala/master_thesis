@@ -1,20 +1,20 @@
 \section{Physical quantities}
 \label{sec:physical_quantities}
-After finding the energy functional minimum, we are able to compute different physical properties of the system. We can use these values as a numerical reference when comparing our results with other codes.
+After finding the energy minimum of the functional, we are able to compute different physical properties of the system. We can use these values as a numerical reference when comparing our results with other codes.
 \subsection{Mean square radii}
-An important set of quantities characterising the nuclear density is certainly the one of mean square radii.
+An important set of quantities characterising the nuclear density are certainly the mean square radii.
 The individual nuclear species' mean square radius is defined as
 \begin{equation}
     \label{eq:msr}
     \expval{r^2_q} = \frac{\int\rho_q(\bm r) r^2 d\bm r}{\int \rho_q(\bm r) d\bm r}.
 \end{equation}
-While the charge mean square radius formula is derived from the convolution of the neutron and proton particle densities with their respective internal charge distribution \cite{BERTOZZI1972408}, which yields
+The charge mean square radius formula is derived from the convolution of the neutron and proton particle densities with their respective internal charge distribution \cite{BERTOZZI1972408}, which yields
 \begin{equation}
     \label{eq:cmsr}
     \expval{r^2_{ch}} = \expval{r^2_p} + \expval{r^2}_P + \frac N Z \expval{r^2}_N + \frac 2 Z \bigg(\frac{ \hbar}{mc}\bigg)^2\sum_{\alpha q}\mu_q \expval{\bm \sigma\cdot \bm {\ell}}_{\alpha q}
 \end{equation}
 where $q$ runs over the nuclear species and $\alpha$ runs over all single particle states of spcies $q$. The vector $\bm \sigma$ is the vector operator of Pauli matrices, while $\bm {\ell}$ is the angular momentum operator $-i(\bm r \times \nabla)$.
-$\expval{r^2}_P$ and $\expval{r^2}_N$ refer to the square charge radii of the proton and the neutron, while $\mu_q$ to their respective magnetic dipole moment in units of nuclear magneton.
+$\expval{r^2}_P$ and $\expval{r^2}_N$ refer to the square charge radii of the proton and the neutron, while $\mu_q$ to their respective magnetic dipole moment in units of nuclear magneton $\mu_{N}$.
 All square charge radii computed in this work use the set of parameters in table \ref{tab:charge_par}, taken to be equal to the spherical benchmark code \texttt{hfbcs\_qrpa}.
 \begin{table}[ht]
   \centering
@@ -24,8 +24,8 @@ All square charge radii computed in this work use the set of parameters in table
     \midrule
     $\expval{r^2}_P$ & 0.64 & fm$^2$ \\
     $\expval{r^2}_N$ & -0.11 & fm$^2$ \\
-    $\mu_p$ & 2.792847 & - \\
-    $\mu_n$ & -1.913043 & - \\
+    $\mu_p$ & 2.792847 & $\mu_{N}$ \\
+    $\mu_n$ & -1.913043 & $\mu_{N}$ \\
     \bottomrule
   \end{tabular}
   \caption{Parameters used to compute the charge mean square radius.}

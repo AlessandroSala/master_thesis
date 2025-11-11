@@ -87,6 +87,7 @@ a mean field potential, which reads
 \end{equation}
 and a spin-orbit field, given by
 \begin{equation}
+    \label{eq:sofield}
     \mathbf B_q(\mathbf r) = \fdv{\mathcal E}{\boldsymbol{\mathbf J_q}}.
 \end{equation}
 The coulomb field $U_C$, which is present only in the single particle equation for protons, doesn't come from the Skyrme interaction, rather from the Coulomb part of the whole functional. It will be properly derived in section \ref{sec:coulomb_treatment}.
@@ -111,8 +112,6 @@ The coulomb field $U_C$, which is present only in the single particle equation f
 \end{align}
 Unless otherwise specified, unlabelled densities denote isoscalar quantities (sum of neutron and proton).
 \subsection{Functionals}
-The set of parameters $(t_0, t_1, t_2, t_3, x_0, x_1, x_2, \sigma, W_0)$ in the Skyrme functional \eqref{eq:skfunc} is not fixed and may vary for different parametrizations. These parameters are fitted on experimental data so that the EDF may produce accurate results.
+The set of parameters $(t_0, t_1, t_2, t_3, x_0, x_1, x_2, \sigma, W_0)$ in the Skyrme functional \eqref{eq:skfunc} is not universal and varies between different parametrisations. These parameters are fitted to experimental data so that the resulting EDF can reproduce known nuclear properties with good accuracy. 
 
-The first parametrization was given by D Vautherin and D M Brink \cite{VauhBrinkOriginal}, known as S I, was fitted on double magic nuclei and nuclear matter data. This was sufficient for their calculations but not enough to describe other nuclei. Fitting these parameters on further data over the years led to the introduction of other parameter sets such as S I, S II, S III \cite{CHABANAT1997710}. These were good functionals to reproduce ground states and certain aspects of nuclear structure, but they lacked the ability to account with good accuracy for deformation properties and fission barriers. The first modern functional to address this issue has been the SkM* \cite{Bartel1982}.
-
-Nowadays functionals such as the SLy family \cite{chabanat2}, try to be as broad as possible, taking into account results from ab-initio theories, exotic nuclei, drip lines, nuclei far from stability and so on.
+The last widely used family of Skyrme forces derived directly from an effective interaction is the SLy series, which was primarily fitted to properties of magic nuclei and to constraints from neutron-rich matter in neutron stars \cite{chabanat2}. Subsequently, the development of new parametrisations has been driven by the need to reproduce more accurately the masses and radii of nuclei across the nuclear chart, including open-shell and deformed systems. Notable examples include the classic SIII force \cite{Beiner1974}, the deformation-oriented SkM* parametrisation \cite{Bartel1982} to accurately reproduce the $^{240}$Pu fission barrier, and modern large-scale optimisations such as UNEDF0 \cite{KortUNEDF0}.

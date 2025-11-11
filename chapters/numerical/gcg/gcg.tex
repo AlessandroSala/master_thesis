@@ -1,7 +1,8 @@
 \section{Eigenvalue problem}
 This section is devoted to the approximate solution of the eigenvalue problem, needed for the Schr\"odinger equation \eqref{eq:spe_ks}. 
-\\Eigenvalue problems are ubiquitous in physics and engineering, and while solving one for a small matrix is trivial, it still requires roughly $O(n^3)$ operations \cite{golub13} to do so. More often than not, real computational applications result in large-scale matrices, which are completely out of question for exact eigenvalues calculations, thus requiring the use of approximate algorithms. 
-\\We will begin by describing common building blocks of iterative eigensolvers in section \ref{sec:techniques}, namely:
+Eigenvalue problems are ubiquitous in physics and engineering, and while solving one for a small matrix is trivial, it still requires roughly $O(n^3)$ operations \cite{golub13} to do so. More often than not, real computational applications result in large-scale matrices, which are completely out of question for exact eigenvalues calculations, thus requiring the use of approximate algorithms. 
+
+We will begin by describing common building blocks of iterative eigensolvers in section \ref{sec:techniques}, namely:
 \begin{itemize}
     \item the approximate solutions of linear systems by the use of the Conjugate Gradient method;
     \item matrix preconditioning to speed up convergence;
