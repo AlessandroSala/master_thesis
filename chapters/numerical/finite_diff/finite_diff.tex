@@ -4,7 +4,7 @@ The framework used to numerically solve the relevant PDEs of the problem, is the
 \subsection{3D mesh}
 The first step of the process is representing the different fields in a numerical, discretised fashion.
 Generally speaking, we deal at most with 2-rank tensors, which depend on three space coordinates and one spin coordinate.
-\\Discretizing the 3D cartesian space with a 3-index mesh, choosing a box whose size along x, y, z is respectively $[-a_x, a_x]$, $[-a_y, a_y]$, $[-a_z, a_z]$, and a number of points $n_x, n_y, n_z$, the resulting lattice will be given by
+\\Discretizing the 3D Cartesian space with a 3-index mesh, choosing a box whose size along x, y, z is respectively $[-a_x, a_x]$, $[-a_y, a_y]$, $[-a_z, a_z]$, and a number of points $n_x, n_y, n_z$, the resulting lattice will be given by
 \begin{equation*}
 V=\{(-a_x+ih_x, -a_y+ih_y, -a_z+ih_z)\} = \{(x_i, y_j,z_k)\} 
 \end{equation*}

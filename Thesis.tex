@@ -80,7 +80,7 @@
 \usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref} % Adds clickable links at references
 \usepackage{cleveref}
 \usepackage[square, numbers, sort&compress]{natbib} % Square brackets, citing references with numbers, citations sorted by appearance in the text and compressed
-\bibliographystyle{abbrvnat} % You may use a different style adapted to your field
+\bibliographystyle{unsrtnat} % You may use a different style adapted to your field
 
 % OTHER PACKAGES
 \usepackage{pdfpages} % To include a pdf file
@@ -153,22 +153,26 @@
 
 % ABSTRACT IN ENGLISH
 \chapter*{Abstract}
-Skyrme functionals have been successfully used in the field of nuclear physics, to perform microscopic nuclear structure calculations within the framework of effective Hamiltonians and Nuclear Density Functional Theory. 
-Due to past computational limitations, calculations were typically restricted to certain symmetric systems - spherical, cylindrical - or bases expansions, which prove to be inadequate for some applications.
-Only in recent years the use of unconstrained, cartesian meshes has been explored for these calculations, which still requires a major computational effort, often in the form of large computer clusters.
-Improving the efficiency of the approximate diagonalization of large-scale matrices is still a major open problem, not only in the field of nuclear physics, but in physics and engineering as a whole.
-The present work aims at exploring a novel algorithm, the General Conjugate Gradient, to solve the Kohn-Sham equations within a fully functioning, self-consistent, unconstrained, Skyrme energy functional minimization.
-The General Conjugate Gradient algorithm is shown to be a robust, and most importantly efficient alternative for the unconstrained minimization of the energy functional, both in well tested spherical systems, as well as in deformed ones.
+Energy Density Functionals have been used for a few decades in nuclear structure physics, with a large degree of success. Skyrme functionals are one widely used class that has been applied to the study of masses, radii, deformations, spectroscopy reactions and decays.
+Due to past computational limitations, calculations were often restricted to given symmetric systems, where nuclei have been assumed to be spherically, or axially symmetric. Many codes assume basis expansions that turn out to be not so effective.
+Only in recent years calculations in a Cartesian mesh without any imposed symmetry have been explored, which still require a major computational effort, often in the form of large computer clusters.
+Improving the efficiency of the diagonalization of large-scale matrices is still a major open problem, not only in the field of nuclear physics, but in physics and engineering as a whole.
+The present work aims at exploring a novel algorithm, the Generalised Conjugate Gradient, to solve the Kohn--Sham equations consistent with the Skyrme EDF, within an unconstrained minimization.
+The Generalised Conjugate Gradient algorithm is shown to be a robust, and most importantly efficient alternative for the unconstrained minimization of the energy functional, both in well tested spherical systems, as well as in deformed ones.
 \\
 \\
-\textbf{Keywords:} Skyrme functionals, General Conjugate Gradient, Density Functional Theory, deformed nuclei % Keywords
+\textbf{Keywords:} Skyrme functionals, Generalised Conjugate Gradient, Density Functional Theory, deformed nuclei % Keywords
 
 % ABSTRACT IN ITALIAN
 \chapter*{Abstract in lingua italiana}
-Qui va l'Abstract in lingua italiana della tesi seguito dalla lista di parole chiave.
+Negli ultimi decenni, i Funzionali di Densità di Energia hanno ottenuto un notevole successo nello studio della struttura nucleare. Tra questi, i funzionali di Skyrme rappresentano una delle classi più ampie e utilizzate per l'analisi di raggi, masse, deformazioni, spettroscopia, reazioni e decadimenti nucleari.
+In passato, le limitazioni computazionali hanno imposto di considerare soltanto sistemi con simmetria sferica o assiale. Inoltre, molti codici si basano su espansioni in basi complete, che non sempre garantiscono un risultato ottimale.
+Negli ultimi anni sono stati esplorati approcci basati su griglie cartesiane prive di restrizioni di simmetria, i quali tuttavia restano una sfida computazionale significativa, spesso richiedendo l'impiego di cluster per l'esecuzione dei calcoli.
+L'efficientamento della diagonalizzazione di matrici di grandi dimensioni costituisce ancora oggi un problema aperto e di fondamentale importanza, non solo nella fisica nucleare, ma più in generale in fisica e nell'ingegneria.
+Il presente lavoro esplora l'applicazione dell'algoritmo Generalised Conjugate Gradient (GCG) per la risoluzione delle equazioni di Kohn--Sham derivate dalla minimizzazione di un funzionale di Skyrme, senza assunzioni di simmetria. I risultati mostrano che il GCG rappresenta una soluzione robusta ed efficiente per la minimizzazione di funzionali di energia, sia in sistemi sferici, sia deformati.
 \\
 \\
-\textbf{Parole chiave:} qui, vanno, le parole chiave, della tesi % Keywords (italian)
+\textbf{Parole chiave:} Gradiente coniugato, Teoria del funzionale della densità, nuclei deformati, funzionali di Skyrme % Keywords (italian)
 
 %----------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES/SYMBOLS

@@ -1,6 +1,6 @@
-\section{Pairing in Hartree-Fock theory}
+\section{Pairing in Hartree--Fock theory}
 \label{sec:pairing_hf}
-In this section, we will discuss the two common approaches to include nuclear pairing in the HF theory. The aim of these few pages is to provide a brief overview of how the BCS equations are derived and understand the basics of the more general Hartree-Fock-Bogoliubov theory. The former method is the most widely implemented thanks to its low complexity \cite{hfbcsqrpa,oldEv8,skyax}, while the latter, more sophisticated and advanced, is the standard in modern codes \cite{hfodd, hfbftt,MAREVIC2022108367}. We will touch on it so that the reader may appreciate in the numerical chapter the natural extension of this work to the more general Bogoliubov ansatz. The reader may refer to introductory textbooks on many-body theory, such as Ref. \cite{ring2004nuclear} for an in-depth treatment of nuclear pairing.
+In this section, we will discuss the two common approaches to include nuclear pairing in the HF theory. The aim of these few pages is to provide a brief overview of how the BCS equations are derived and understand the basics of the more general Hartree--Fock--Bogoliubov theory. The former method is the most widely implemented thanks to its low complexity \cite{hfbcsqrpa,oldEv8,skyax}, while the latter, more sophisticated and advanced, is the standard in modern codes \cite{hfodd, hfbftt,MAREVIC2022108367}. We will touch on it so that the reader may appreciate in the numerical chapter the natural extension of this work to the more general Bogoliubov ansatz. The reader may refer to introductory textbooks on many-body theory, such as Ref. \cite{ring2004nuclear} for an in-depth treatment of nuclear pairing.
 \subsection{BCS theory}
 The BCS approximation, from Bardeen-Cooper-Schrieffer, is the same theory used to describe Cooper pairs in superconductors, applied to the nuclear case.
 The ansatz of BCS is that nucleons are paired in states whose total angular momentum is zero, so that the wavefunction of pair is $\ket{JM}=\ket{00}$ and reads
@@ -80,7 +80,7 @@ we can combine definitions \eqref{eq:delta_k} and \eqref{eq:qpe} with equation \
     \label{eq:v2}
     v_k^2 = \frac 1 2 \pm \frac{|\tilde \varepsilon_k|}{2E_k}.
 \end{equation}
-Since in the Hartree-Fock limit, where the occupations $v_k^2$ are equal to one below the Fermi energy and zero above, and the gaps $\Delta_k$ vanish, rendering $E_k=\tilde \varepsilon_k$, we only select the solution
+Since in the Hartree--Fock limit, where the occupations $v_k^2$ are equal to one below the Fermi energy and zero above, and the gaps $\Delta_k$ vanish, rendering $E_k=\tilde \varepsilon_k$, we only select the solution
 \begin{equation}
 v_k^2 = \frac 1 2 - \frac{\tilde \varepsilon_k}{2E_k}.
 \end{equation}
@@ -90,9 +90,9 @@ Using the normalization condition to write $u_k^2=1-v_k^2$, and plugging it into
     \Delta_k = - \sum_{k'}\frac{\Delta_{k'}\overline v_{k\tilde k k'\tilde{k'}}}{2E_{k'}}
 \end{equation}
 The system of equations (\ref{eq:gap}, \ref{eq:norm_uv}, \ref{eq:v2}, \ref{eq:qpe}, \ref{eq:epsilon}), together with the condition on $\hat N$ -- ie $\expval{\hat N}=N$ -- is closed and can be solved numerically, usually through an effective pairing interaction.
-\subsection{Hartree-Fock-Bogoliubov theory}
+\subsection{Hartree--Fock--Bogoliubov theory}
 \label{sec:hfb}
-The most general ansatz to account for pairing interactions in Hartree-Fock theory is the Hartree-Fock-Bogoliubov (HFB) theory, that allows a treatment of the mean-field and pairing interactions in a unified way. The quasi-particles created on the vacuum aren't necessarily time-reversal pairs but the most general ones according to the symmetries of the system.
+The most general ansatz to account for pairing interactions in Hartree--Fock theory is the Hartree--Fock--Bogoliubov (HFB) theory, that allows a treatment of the mean-field and pairing interactions in a unified way. The quasi-particles created on the vacuum aren't necessarily time-reversal pairs but the most general ones according to the symmetries of the system.
 Let us start by writing a Bogoliubov transformation from the particle basis $c_i$ to a quasi-particle one 
 \begin{equation}
     \label{eq:bogoliubov_trans}

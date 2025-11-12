@@ -1,7 +1,7 @@
-\subsection{Microscopic theory and approaches to nuclear fission}
+\section{Microscopic theory and approaches to nuclear fission}
 \label{sec:microscopic_fission}
 Having described the framework of nuclear DFT and the treatment of pairing correlations within the HFB formalism, we wish to spend a few pages in regards to the microscopic theory of fission. As we shall see, the application of these frameworks to the description of nuclear fission is one of the main drives for the development of new, spatially unconstrained solvers.
-\subsubsection{Microscopic theory}
+\subsection{Microscopic theory}
 The use of phenomenological macroscopic-microscopic models has long provided valuable insight into fission processes, allowing for the prediction of barrier heights and fragment yields through parametrised shape degrees of freedom and empirical shell corrections \cite{Brack1972,Bjornholm1980,Krappe2012}.  
 In these models, the total energy is expressed as
 \begin{equation}
@@ -34,7 +34,7 @@ Beyond-mean-field extensions also restore symmetries that are spontaneously brok
 For instance, particle-number, parity, and angular-momentum projection techniques \cite{Bender2004,Samyn2005} are required to recover good quantum numbers and remove spurious symmetry mixing.  
 In multi-reference DFT \cite{Bender2003}, these symmetry restorations can be combined with configuration mixing, yielding highly accurate fission barrier calculations.  
 
-\subsubsection{Time-dependent DFT and the TDHF formalism}
+\subsection{Time-dependent DFT and the TDHF formalism}
 
 Static HF/HFB solutions provide a sequence of constrained energy minima along deformation coordinates, but they cannot describe the real-time evolution of the system. A fully dynamical extension is obtained within time-dependent Density Functional Theory (TDDFT), whose nuclear implementation corresponds to the time-dependent HF (TDHF) or time-dependent HFB(TDHFB) equations \cite{Negele1982}.
 
@@ -83,7 +83,7 @@ Time-dependent methods offer several key advantages for the description of fissi
 
 Despite these advantages, TDHF has fundamental limitations. Being restricted to a single Slater determinant, it cannot describe quantum tunnelling (necessary for spontaneous fission) nor generate fragment mass and charge distributions. Its dynamics is deterministic, yielding only the mean trajectory in collective space. Extensions such as the time-dependent random-phase approximation (TDRPA), the stochastic mean-field approach \cite{Ayik2008}, and the time-dependent GCM with Gaussian overlap approximation \cite{Goutte2005} introduce fluctuations and correlations around the TDHF path, enabling more realistic descriptions of fission fragment observables.
 
-\subsubsection{Unconstrained Calculations and Symmetry Breaking}
+\subsection{Unconstrained Calculations and Symmetry Breaking}
 
 An equally important aspect of microscopic fission theory is the treatment of spatial symmetries.  
 Historically, many calculations imposed constraints such as axial symmetry or reflection symmetry with respect to a plane to reduce the computational cost of solving the HFB equations.  

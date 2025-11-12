@@ -13,7 +13,7 @@ Without further terms, the spin-orbit field $\bm B(\bm r)$ \eqref{eq:sofield} va
 Since $N=Z$, assuming equal masses the single-particle equations will be exactly equal between the two species, therefore only neutron values are reported. Note that $C_1$ terms vanish in this case, that is until we either break the $N=Z$ equality or introduce the Coulomb interaction.
 \begin{table}[ht]
   \centering
-  \begin{tabular}{lrrccc}
+  \begin{tabular}{lrcccc}
     \multicolumn{6}{c}{\textbf{Physical quantities}}\\
     \addlinespace[0.3em]
     \toprule
@@ -42,7 +42,7 @@ In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ term
 
 \begin{table}[ht]
   \centering
-  \begin{tabular}{lrrccc}
+  \begin{tabular}{lrcccc}
     \multicolumn{6}{c}{\textbf{Physical quantities}}\\
     \addlinespace[0.3em]
     \toprule
@@ -71,7 +71,7 @@ Lastly, the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are also included in
 
 \begin{table}[ht]
   \centering
-  \begin{tabular}{lrrccc}
+  \begin{tabular}{lrcccc}
     \multicolumn{6}{c}{\textbf{Physical quantities}}\\
     \addlinespace[0.3em]
     \toprule
@@ -95,12 +95,12 @@ Lastly, the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are also included in
   \caption{$^{16}$O neglecting Coulomb interaction. \explaindelta}
   \label{tab:compare_j2}
 \end{table}
-\subsubsection{Results including Coulomb interaction}
+\subsection{Results including Coulomb interaction}
 As the final step to get a complete description of $^{16}$O, the Coulomb interaction is included as detailed in section \ref{sec:coulomb_treatment}. Results are shown in table \ref{tab:confronto}.
 
 \begin{table}[ht]
   \centering
-  \begin{tabular}{lrrccc}
+  \begin{tabular}{lrcccc}
     \multicolumn{6}{c}{\textbf{Physical quantities}}\\
     \addlinespace[0.3em]
     \toprule
@@ -144,7 +144,7 @@ $^{48}$Ca in table \ref{tab:compare_all_ca48}, $^{56}$Ni in table \ref{tab:compa
 Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight increase of the numerical error can be observed as the step size increases, which is compatible with the polynomial error in the finite difference method. The increase of the cubic box size is necessary to accomodate larger nuclei, due to the increase in volume occupied, as to guarantee that less bound states decay to zero at the boundary. Running the code on HPC computers or clusters enables the use of finer meshes, ie more lattice points, a smaller step size and an increase in the numerical precision.
 \begin{table}[ht]
   \centering
-  \begin{tabular}{lrrccc}
+  \begin{tabular}{lrcccc}
     \multicolumn{6}{c}{\textbf{Physical quantities}}\\
     \addlinespace[0.3em]
     \toprule
@@ -189,7 +189,7 @@ Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight 
 
 \begin{table}[ht]
   \centering
-  \begin{tabular}{lrrccc}
+  \begin{tabular}{lrcccc}
     \multicolumn{6}{c}{\textbf{Physical quantities}}\\
     \addlinespace[0.3em]
     \toprule
@@ -235,7 +235,7 @@ Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight 
 
 \begin{table}[ht]
   \centering
-  \begin{tabular}{lrrccc}
+  \begin{tabular}{lrcccc}
     \multicolumn{6}{c}{\textbf{Physical quantities}}\\
     \addlinespace[0.3em]
     \toprule
@@ -285,7 +285,7 @@ Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight 
   \caption{$^{90}$Zr, box size [-15, 15] fm, step size 0.43 fm. \explaindelta}
   \label{tab:compare_all_zr90}
 \end{table}
-\section{Comparison with experimental binding energies}
+\section{Comparison with experimental values}
 The Skyrme functional is highly successful at producing theoretical values in great accordance with experimental data, just by fitting a small set of parameters \cite{Bender2003}. In table \ref{tab:exp_comp}, binding energies of some of the spherical nuclei presented so far are compared with experimental values, taken from the Atomic Mass Data Center \cite{AMDC_website}.
 \begin{table}[!ht]
   \centering
@@ -296,9 +296,9 @@ The Skyrme functional is highly successful at producing theoretical values in gr
     $E_{\text{th}}$ (MeV) & 128.40 & 415.95 & 482.80 & 783.59 \\
     $E_{\text{exp}}$ (MeV) & 127.62 & 414.33 & 483.99 & 783.89 \\ 
     $r_{\text{ch, th}}$ (fm) & 2.781 & 3.527 & 3.772 & 4.277 \\
-    $r_{\text{ch, exp}}$ (fm) & 2.699 & 3.477 & 3.750 & 4.269 \\
+    $r_{\text{ch, exp}}$ (fm) & 2.699 & 3.477 & 3.763 & 4.269 \\
     \bottomrule
   \end{tabular}
-  \caption{Comparison of experimental binding energies and charge radii with theoretical values using the SLy5 functional. Data taken from \cite{ANGELI201369}.}
+  \caption{Comparison of experimental binding energies and charge radii with theoretical values using the SLy5 functional. Data taken from \cite{ANGELI201369,chabanat2}.}
   \label{tab:exp_comp}
 \end{table}

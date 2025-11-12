@@ -1,22 +1,23 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {1.1}{\ignorespaces A typical parametrisation of the coefficients in the SEMF \eqref {eq:semf}. Values from \cite {Rohlf1994}.\relax }}{8}{table.caption.18}%
-\contentsline {table}{\numberline {1.2}{\ignorespaces Typical Woods-Saxon potential parameters. Values from \cite {Schwierz2007}.\relax }}{9}{table.caption.25}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Typical Woods--Saxon potential parameters. Values from \cite {Schwierz2007}.\relax }}{9}{table.caption.25}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Parameters used to compute the charge mean square radius.\relax }}{80}{table.caption.285}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces $^{16}$O including $C_0^{\rho }$, $C_1^{\rho }$, $C_0^{\tau }$, $C_1^{\tau }$ terms and neglecting Coulomb interaction. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{81}{table.caption.286}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces $^{16}$O including $C_0^\rho $, $C_1^\rho $, $C_0^\tau $, $C_1^\tau $, $C_0^{\div \bm {J}}$, $C_1^{\div \bm {J}}$ terms, neglecting the Coulomb interaction and $J^2$ terms. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{82}{table.caption.287}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces $^{16}$O neglecting Coulomb interaction. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{83}{table.caption.288}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces $^{16}$O complete of the Skyrme functional and Coulomb interaction. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{84}{table.caption.290}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces $^{48}$Ca, box size [-12, 12] fm, step size 0.34 fm. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{85}{table.caption.291}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces $^{56}$Ni, box size [-13, 13] fm, step size 0.37 fm. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{86}{table.caption.292}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces $^{90}$Zr, box size [-15, 15] fm, step size 0.43 fm. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{87}{table.caption.293}%
-\contentsline {table}{\numberline {5.9}{\ignorespaces Comparison of experimental binding energies and charge radii with theoretical values using the SLy5 functional. Data taken from \cite {ANGELI201369}.\relax }}{88}{table.caption.294}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Parameters used to compute the charge mean square radius. Values taken from \cite {CHABANAT1997710}.\relax }}{80}{table.caption.282}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces $^{16}$O including $C_0^{\rho }$, $C_1^{\rho }$, $C_0^{\tau }$, $C_1^{\tau }$ terms and neglecting Coulomb interaction. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{81}{table.caption.283}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces $^{16}$O including $C_0^\rho $, $C_1^\rho $, $C_0^\tau $, $C_1^\tau $, $C_0^{\div \bm {J}}$, $C_1^{\div \bm {J}}$ terms, neglecting the Coulomb interaction and $J^2$ terms. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{82}{table.caption.284}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces $^{16}$O neglecting Coulomb interaction. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{83}{table.caption.285}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces $^{16}$O complete of the Skyrme functional and Coulomb interaction. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{84}{table.caption.286}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces $^{48}$Ca, box size [-12, 12] fm, step size 0.34 fm. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{85}{table.caption.287}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces $^{56}$Ni, box size [-13, 13] fm, step size 0.37 fm. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{86}{table.caption.288}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces $^{90}$Zr, box size [-15, 15] fm, step size 0.43 fm. $\Delta $ refers to the difference between the two codes in absolute value, while $\Delta \%$ refers to the relative difference in percent.\relax }}{87}{table.caption.289}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces Comparison of experimental binding energies and charge radii with theoretical values using the SLy5 functional. Data taken from \cite {ANGELI201369,chabanat2}.\relax }}{88}{table.caption.290}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Results for $^{24}$Mg ground state, no pairing interaction, box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrisation.\relax }}{92}{table.caption.306}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Results for $^{42}$Si, box $[-11, 11]$ fm, step size 0.37 fm.\relax }}{102}{table.caption.320}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Results for $^{28}$S, box $[-10, 10]$ fm, step size 0.34 fm.\relax }}{102}{table.caption.323}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Results for $^{24}$Mg ground state, no pairing interaction, box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrisation.\relax }}{92}{table.caption.300}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Single-particle energy levels in the ground state of $^{24}$Mg. As predicted by the Nilsson model, levels with a lower $|m_j|$ projection are lowered in energy, while those with a higher projection are raised, with respect to the spherical (degenerate) case.\relax }}{93}{table.caption.301}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Results for $^{42}$Si, box $[-11, 11]$ fm, step size 0.37 fm.\relax }}{100}{table.caption.313}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Results for $^{28}$S, box $[-10, 10]$ fm, step size 0.34 fm.\relax }}{101}{table.caption.316}%
 \addvspace {10\p@ }

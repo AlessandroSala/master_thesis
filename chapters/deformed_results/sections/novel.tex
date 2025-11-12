@@ -1,13 +1,11 @@
-\section{Other Results}
+\section{Original results}
 \label{sec:novel}
-In this final section, some interesting results that may be obtained only when doing Hartree-Fock on cartesian meshes are presented.
-In section \ref{sec:ne20}, some results are presented for the $^{20}$Ne nucleus, in particular, the Nucleon Localisation Function (NLF) is computed so that the formation of clusters may be studied. 
-In section \ref{sec:si42}, the results for two near drip line nuclei are presented, namely $^{42}$Si and $^{28}$S.
+In this final section, some original results for nuclei of interest are discussed.
+In section \ref{sec:ne20}, some results are presented for the $^{20}$Ne nucleus, in particular, the Nucleon Localisation Function (NLF) is computed to highlight the formation of clusters.
+In section \ref{sec:si42}, results for two near drip line nuclei are presented, namely $^{42}$Si and $^{28}$S.
 \subsection{$\alpha$-clustering in light nuclei} 
 \label{sec:ne20}
-The formation of clusters in light nuclei has been a research focus in recent years \cite{Lombardo2023}. The hypothesis is that some light nuclei tend to form clusters of lighter particles, mainly $\alpha$-particles, as to minimise their energy, by displaying `molecular-like' bonds and resonances among the clusters. The formation of such clusters is still unclear, with the following results we show that in the framework presented in this work, the formation of clusters is present in $^{20}$Ne.
-
-In the context of many-body calculations, it is very well known that in ab-initio calculations the formation of clusters is strongly observed \cite{Ebran2012_Clusters,EKhan}, while their formation when using Skyrme energy functionals is still unclear, some reporting it to be absent \cite{EKhan}.
+The formation of clusters in light nuclei has been a research focus object in recent years. The interest stems from different reasons. The formation of clusters at low density is a strong indicator of specific correlations (n-p correlations or alpha-particle, ie `quartetting' correlations) and a strong test for theory. At the same time, clustering may have impact on reactions and astrophysical processes \cite{Lombardo2023}. It has to be noted that cluster formation during fission has been highlighted \cite{Vretenar}. One of the hypothesis is that some light nuclei tend to form clusters of lighter particles, mainly $\alpha$-particles, as to minimise their energy, by displaying `molecular-like' bonds and resonances among the clusters. The phenomenon is not yet understood, with the following results we show that in the framework presented in this work, the formation of clusters is present in $^{20}$Ne.
 
 \subsubsection{Nucleon localisation function}
 The study of clusters is made possible by the use of the nucleon localisation function (NLF) \cite{NLF}, it is a measure of the conditional probability of finding a nucleon in the short vicinity of another one in space. When dealing with spin-saturated nuclei, as is the case of $^{20}$Ne, the NLF reduces to
@@ -20,7 +18,7 @@ where $\tau_q^{\text{TF}}$ is the Thomas-Fermi kinetic energy density, defined a
   \tau_q^{\text{TF}}= \frac 3 5 (6\pi^2)^{2/3}\rho_q^{5/3}.
 \end{equation}
 \subsubsection{$\alpha-$clustering in $^{20}$Ne}
-In figure \ref{fig:clustering}, the total particle densities and proton NLF of $^{20}$Ne are shown for different Skyrme functionals. It is possible to observe that while some functionals like KDE33 show strong peaks in the particle densities, all of the presented functionals display well defined clusters in their respective NLF contours. Note that clustering in the intrisic frame of the nucleus does not necessarily imply clustering in the laboratory frame, for which projection methods are required \cite{clusterCondensation}.
+In figure \ref{fig:clustering}, the total particle densities and proton NLF of $^{20}$Ne are shown for different Skyrme functionals. It is possible to observe that while some functionals like KDE33 show strong peaks in the particle densities, all the considered functionals display well defined clusters in their respective NLF contours. Note that clustering in the intrisic frame of the nucleus does not necessarily imply clustering in the laboratory frame, for which projection methods are required \cite{clusterCondensation}.
 \begin{figure}[htbp]
     \centering
     %--- Row 1 ---
@@ -70,13 +68,13 @@ In figure \ref{fig:clustering}, the total particle densities and proton NLF of $
 \end{figure}
 
 \subsection{Drip line nuclei}
-The need of a mesh representation to account for weakly bound systems has been greatly remarked in previous chapters (see \ref{chap:intro}, \ref{chap:methods}). In this section, results regarding the two near drip line nuclei $^{42}$Si and $^{28}$S are presented, the former being a neutron-rich nucleus, the latter being a proton-rich nucleus. Being weakly bound systems, taking direct measurements of quantities like radii, deformations through spectroscopy etc, is not possible. 
+The need of a mesh representation to account for weakly bound systems has been largely emphasised in previous chapters (see \ref{chap:intro}, \ref{chap:methods}). In this section, results regarding the two nuclei near drip line $^{42}$Si and $^{28}$S are presented, the former being a neutron-rich nucleus, the latter being a proton-rich nucleus. Being weakly bound systems, taking direct measurements of quantities like radii, deformations through spectroscopy etc, is not yet possible. 
 
-We shall compare the experimental neutron $S_n$ or proton $S_p$ separation energy with the theoretical value calculated using Koopmans' theorem \cite{Koopmans1934_Theorem}. The theorem states that in a frozen orbitals approximation, where the mean-field is assumed to remain constant after the removal of a particle, the energy required to remove that particle is equal to the eigenvalue of the last occupied single-particle orbital with an inverse sign. This is an approximation to the true separation energy, since it neglects mean-field relaxations and correlation effects. Using Koopmans' theorem is necessary since we have not included the treatment of odd nuclei in the present work, limiting accessibility to only nuclei with even proton and neutron numbers.
+We shall compare the experimental neutron $S_n$ or proton $S_p$ separation energy with the theoretical value calculated using Koopmans' theorem \cite{Koopmans1934_Theorem}. The theorem states that in a frozen orbitals approximation, where the mean-field is assumed to remain constant after the removal of a particle, the energy required to remove that particle is equal to the eigenvalue of the last occupied single-particle orbital with an opposite sign.
 
 \subsubsection{$^{42}$Si}
 \label{sec:si42}
-$^{42}$Si is a deformed, light, neutron-rich nucleus, having $Z=14$ and $N=28$, we may look at its ground state neglecting the pairing interaction thanks to the magic number of neutrons, and the closed sub-shell $1d_{5/2}$. In table \ref{tab:si42_table}, data computed with some functionals is reported, along with the experimental extrapolated binding energy and neutron separation energy. In figure \ref{fig:si42_density}, the particle density of $^{42}$Si is shown for the SLy4 functional. 
+$^{42}$Si is a deformed, light, neutron-rich nucleus, having $Z=14$ and $N=28$. We may look at its ground state neglecting the pairing interaction thanks to the magic number of neutrons, and the closed sub-shell $1d_{5/2}$. In table \ref{tab:si42_table}, data computed with some functionals is reported, along with the experimental extrapolated binding energy and neutron separation energy. In figure \ref{fig:si42_density}, the particle density of $^{42}$Si is shown for the SLy4 functional. 
 
 \begin{table}[ht]
   \centering
@@ -103,7 +101,7 @@ $^{42}$Si is a deformed, light, neutron-rich nucleus, having $Z=14$ and $N=28$, 
 \end{figure}
 
 \subsubsection{$^{28}$S}
-$^{28}$S is a deformed, light, proton-rich nucleus, having $Z=16$ and $N=12$, we may look at its ground state neglecting the pairing interaction thanks to the closed sub-shell $2s_{1/2}$ and a number of neutrons analogous to the one in $^{24}$Mg. In table \ref{tab:s28_table}, data computed with some functionals is reported, along with the experimental extrapolated binding energy and proton separation energy. In figure \ref{fig:s28_density}, the particle density of $^{28}$S is shown for the SLy4 functional.
+$^{28}$S is a deformed, light, proton-rich nucleus, having $Z=16$ and $N=12$. We may look at its ground state neglecting the pairing interaction thanks to the closed sub-shell $2s_{1/2}$ and a number of neutrons analogous to the one in $^{24}$Mg. In table \ref{tab:s28_table}, data computed with some functionals is reported, along with the experimental extrapolated binding energy and proton separation energy. In figure \ref{fig:s28_density}, the particle density of $^{28}$S is shown for the SLy4 functional.
 
 \begin{table}[ht]
   \centering

@@ -195,7 +195,7 @@ which exploits the power iteration. After orthogonalizing the new approximation 
 \UNTIL convergence for $k = 1, \dots, \text{nev}$
 \end{algorithmic}
 \end{algorithm}
-Lanczos is extremely efficient, memory- and CPU-wise for extremal eigenvalues, but this limits its applicability, as one may be interested in the inner portion of the eigenvalue spectrum, such in the case of Hartree-Fock-Bogoliubov (HFB).
+Lanczos is extremely efficient, memory- and CPU-wise for extremal eigenvalues, but this limits its applicability, as one may be interested in the inner portion of the eigenvalue spectrum, such in the case of Hartree--Fock--Bogoliubov (HFB).
 \\A shift-and-invert strategy would be unfeasible in the case of large scale problems, since all Lanczos steps need to be performed exactly to avoid instabilities, a well known problem in the Arnoldi generalisation \cite{Saad1992}.
 \subsubsection{LOBPCG}
 The last algorithm of this short list is LOBPCG, it's the newest and most sophisticated one of the three.

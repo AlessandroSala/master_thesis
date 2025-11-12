@@ -1,54 +1,54 @@
 This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Thesis.aux
-The style file: abbrvnat.bst
+The style file: unsrtnat.bst
 Database file #1: Thesis_bibliography.bib
 Warning--entry type for "AMDC_website" isn't style-file defined
---line 415 of file Thesis_bibliography.bib
-Warning--empty year in AMDC_website
+--line 438 of file Thesis_bibliography.bib
 Warning--empty journal in bertulani2007nuclear
+Warning--empty year in AMDC_website
 Warning--empty year in hfbcsqrpa
-Warning--can't use both author and editor fields in LOBPCG
 Warning--empty journal in PainlessCGM
+Warning--can't use both author and editor fields in LOBPCG
 You've used 106 entries,
-            2773 wiz_defined-function locations,
-            1414 strings with 28395 characters,
-and the built_in function-call counts, 56891 in all, are:
-= -- 5044
-> -- 3943
-< -- 53
-+ -- 1338
-- -- 1227
-* -- 5138
-:= -- 9093
-add.period$ -- 462
+            2481 wiz_defined-function locations,
+            1373 strings with 28591 characters,
+and the built_in function-call counts, 45132 in all, are:
+= -- 3735
+> -- 2724
+< -- 54
++ -- 1037
+- -- 820
+* -- 3935
+:= -- 7553
+add.period$ -- 465
 call.type$ -- 106
-change.case$ -- 717
+change.case$ -- 204
 chr.to.int$ -- 101
-cite$ -- 217
-duplicate$ -- 2177
-empty$ -- 4070
-format.name$ -- 1377
-if$ -- 11662
+cite$ -- 111
+duplicate$ -- 2009
+empty$ -- 3798
+format.name$ -- 972
+if$ -- 9379
 int.to.chr$ -- 6
-int.to.str$ -- 1
-missing$ -- 110
-newline$ -- 682
-num.names$ -- 424
-pop$ -- 1231
+int.to.str$ -- 107
+missing$ -- 109
+newline$ -- 685
+num.names$ -- 318
+pop$ -- 707
 preamble$ -- 1
-purify$ -- 619
+purify$ -- 106
 quote$ -- 0
-skip$ -- 1715
+skip$ -- 1127
 stack$ -- 0
-substring$ -- 1991
-swap$ -- 162
+substring$ -- 1978
+swap$ -- 268
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1116
+type$ -- 712
 warning$ -- 5
-while$ -- 442
+while$ -- 334
 width$ -- 0
-write$ -- 1657
+write$ -- 1662
 (There were 6 warnings)

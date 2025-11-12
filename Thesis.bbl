@@ -5,39 +5,33 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Angeli and Marinova(2013)]{ANGELI201369}
-I.~Angeli and K.~Marinova.
-\newblock Table of experimental nuclear ground state charge radii: An update.
-\newblock \emph{Atomic Data and Nuclear Data Tables}, 99\penalty0 (1):\penalty0 69--95, 2013.
-\newblock ISSN 0092-640X.
-\newblock \doi{https://doi.org/10.1016/j.adt.2011.12.006}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0092640X12000265}.
+\bibitem[Myers and Swiatecki(1996)]{MyersSwiatecki1996_NPA}
+W.~D. Myers and W.~J. Swiatecki.
+\newblock Nuclear properties according to the lublin-strasbourg drop model.
+\newblock \emph{Nuclear Physics A}, 601:\penalty0 141--167, 1996.
 
-\bibitem[{Atomic Mass Data Center}()]{AMDC_website}
-{Atomic Mass Data Center}.
-\newblock {Atomic Mass Data Center}.
-\newblock URL \url{https://www-nds.iaea.org/amdc/}.
-\newblock Accessed: 19 October 2025.
+\bibitem[M{\"o}ller et~al.(2016)M{\"o}ller, Sierk, Ichikawa, and Sagawa]{Moller2016_ADNDT}
+P.~M{\"o}ller, A.~Sierk, T.~Ichikawa, and H.~Sagawa.
+\newblock Nuclear ground-state masses and deformations: Frdm(2012).
+\newblock \emph{Atomic Data and Nuclear Data Tables}, 109--110:\penalty0 1--204, 2016.
 
-\bibitem[Ayik(2008)]{Ayik2008}
-S.~Ayik.
-\newblock A stochastic mean-field approach for nuclear dynamics.
-\newblock \emph{Physics Letters B}, 658\penalty0 (3):\penalty0 174--178, 2008.
-\newblock \doi{10.1016/j.physletb.2007.09.072}.
+\bibitem[Schunck and Robledo(2016)]{Schunck2016}
+N.~Schunck and L.~M. Robledo.
+\newblock Microscopic theory of nuclear fission: a review.
+\newblock \emph{Reports on Progress in Physics}, 79\penalty0 (11):\penalty0 116301, 2016.
+\newblock \doi{10.1088/0034-4885/79/11/116301}.
 
-\bibitem[Bartel et~al.(1982)Bartel, Quentin, Brack, Guet, and Håkansson]{Bartel1982}
-J.~Bartel, P.~Quentin, M.~Brack, C.~Guet, and H.-B. Håkansson.
-\newblock Towards a better parametrisation of skyrme-like effective forces: A critical study of the skm force.
-\newblock \emph{Nuclear Physics A}, 386\penalty0 (1):\penalty0 79--100, 1982.
-\newblock ISSN 0375-9474.
-\newblock \doi{https://doi.org/10.1016/0375-9474(82)90403-1}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0375947482904031}.
+\bibitem[Hagen et~al.(2014)Hagen, Papenbrock, Hjorth-Jensen, and Dean]{Hagen2014}
+G.~Hagen, T.~Papenbrock, M.~Hjorth-Jensen, and D.~J. Dean.
+\newblock Coupled-cluster computations of atomic nuclei.
+\newblock \emph{Reports on Progress in Physics}, 77:\penalty0 096302, 2014.
 
-\bibitem[Beiner et~al.(1975)Beiner, Flocard, van Giai, and Quentin]{Beiner1974}
-M.~Beiner, H.~Flocard, N.~van Giai, and P.~Quentin.
-\newblock {Nuclear ground state properties and selfconsistent calculations with the Skyrme interactions: 1. Spherical description}.
-\newblock \emph{Nucl. Phys. A}, 238:\penalty0 29--69, 1975.
-\newblock \doi{10.1016/0375-9474(75)90338-3}.
+\bibitem[Colò(2020)]{NDFT}
+G.~Colò.
+\newblock Nuclear density functional theory.
+\newblock \emph{Advances in Physics: X}, 5\penalty0 (1):\penalty0 1740061, 2020.
+\newblock \doi{10.1080/23746149.2020.1740061}.
+\newblock URL \url{https://doi.org/10.1080/23746149.2020.1740061}.
 
 \bibitem[Bender et~al.(2003)Bender, Heenen, and Reinhard]{Bender2003}
 M.~Bender, P.-H. Heenen, and P.-G. Reinhard.
@@ -45,64 +39,24 @@ M.~Bender, P.-H. Heenen, and P.-G. Reinhard.
 \newblock \emph{Reviews of Modern Physics}, 75\penalty0 (1):\penalty0 121--180, 2003.
 \newblock \doi{10.1103/RevModPhys.75.121}.
 
-\bibitem[Bender et~al.(2004)Bender, Heenen, and Reinhard]{Bender2004}
-M.~Bender, P.-H. Heenen, and P.-G. Reinhard.
-\newblock Configuration mixing of angular-momentum projected self-consistent mean-field states for low-spin states in ${}^{240}$pu.
-\newblock \emph{Physical Review C}, 69\penalty0 (6):\penalty0 064303, 2004.
-\newblock \doi{10.1103/PhysRevC.69.064303}.
+\bibitem[Vautherin and Brink(1972)]{VauhBrinkOriginal}
+D.~Vautherin and D.~M. Brink.
+\newblock Hartree--fock calculations with skyrme's interaction. i. spherical nuclei.
+\newblock \emph{Phys. Rev. C}, 5:\penalty0 626--647, Mar 1972.
+\newblock \doi{10.1103/PhysRevC.5.626}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.5.626}.
 
-\bibitem[Bender et~al.(2021)Bender, Bernard, Bertsch, Chiba, Dobaczewski, Dubray, Giuliani, Hagino, Nazarewicz, Schunck, et~al.]{Bender2020}
-M.~Bender, R.~Bernard, G.~F. Bertsch, S.~Chiba, J.~Dobaczewski, N.~Dubray, S.~A. Giuliani, K.~Hagino, W.~Nazarewicz, N.~Schunck, et~al.
-\newblock Future of nuclear fission theory.
-\newblock \emph{Journal of Physics G: Nuclear and Particle Physics}, 48\penalty0 (4):\penalty0 043001, 2021.
-\newblock \doi{10.1088/1361-6471/abcf62}.
+\bibitem[Schunck et~al.(2012)Schunck, Dobaczewski, McDonnell, Sarich, Staszczak, and Stoitsov]{hfodd}
+N.~Schunck, J.~Dobaczewski, J.~McDonnell, J.~Sarich, A.~Staszczak, and M.~V. Stoitsov.
+\newblock Solution of the $\text{HFB}$ equation in the oscillatory basis: the $\text{HFODD}$ code.
+\newblock \emph{Computer Physics Communications}, 183\penalty0 (1):\penalty0 166--191, 2012.
+\newblock \doi{10.1016/j.cpc.2011.09.018}.
 
-\bibitem[Benzaid et~al.(2020)Benzaid, Bentridi, Kerraci, and Amrani]{Benzaid2020}
-D.~Benzaid, S.~Bentridi, A.~Kerraci, and N.~Amrani.
-\newblock {Bethe--Weizsäcker semiempirical mass formula coefficients 2019 update based on AME2016}.
-\newblock \emph{Nuclear Science and Techniques}, 31\penalty0 (1):\penalty0 5, 2020.
-\newblock \doi{10.1007/s41365-019-0718-8}.
-
-\bibitem[Bertozzi et~al.(1972)Bertozzi, Friar, Heisenberg, and Negele]{BERTOZZI1972408}
-W.~Bertozzi, J.~Friar, J.~Heisenberg, and J.~Negele.
-\newblock Contributions of neutrons to elastic electron scattering from nuclei.
-\newblock \emph{Physics Letters B}, 41\penalty0 (4):\penalty0 408--414, 1972.
-\newblock ISSN 0370-2693.
-\newblock \doi{https://doi.org/10.1016/0370-2693(72)90662-4}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0370269372906624}.
-
-\bibitem[Bertsch et~al.(2018)Bertsch, Robledo, and Younes]{Bertsch2018}
-G.~F. Bertsch, L.~M. Robledo, and W.~Younes.
-\newblock Fission potential energy surfaces from constrained self-consistent mean-field theory.
-\newblock \emph{Physical Review C}, 97\penalty0 (2):\penalty0 024306, 2018.
-\newblock \doi{10.1103/PhysRevC.97.024306}.
-
-\bibitem[Bertulani(2007)]{bertulani2007nuclear}
-C.~A. Bertulani.
-\newblock Nuclear physics in a nutshell.
-\newblock 2007.
-
-\bibitem[Bj{\"o}rck(1994)]{GM}
-{\AA}.~Bj{\"o}rck.
-\newblock Numerics of gram-schmidt orthogonalization.
-\newblock \emph{Linear Algebra and Its Applications}, 197:\penalty0 297--316, 1994.
-
-\bibitem[Bjørnholm and Lynn(1980)]{Bjornholm1980}
-S.~Bjørnholm and J.~E. Lynn.
-\newblock The double-humped fission barrier.
-\newblock \emph{Reviews of Modern Physics}, 52\penalty0 (4):\penalty0 725--931, 1980.
-\newblock \doi{10.1103/RevModPhys.52.725}.
-
-\bibitem[Bohr and Wheeler(1939)]{BohrWheeler1939_PR56_426}
-N.~Bohr and J.~A. Wheeler.
-\newblock The mechanism of nuclear fission.
-\newblock \emph{Physical Review}, 56:\penalty0 426--450, 1939.
-
-\bibitem[Bonche et~al.(1985)Bonche, Flocard, and Heenen]{bonche1985self}
-P.~Bonche, H.~Flocard, and P.-H. Heenen.
-\newblock Self-consistent calculation of nuclear rotations: The complete yrast line of 24mg.
-\newblock \emph{Nuclear Physics A}, 443\penalty0 (1):\penalty0 39--63, 1985.
-\newblock \doi{10.1016/0375-9474(85)90224-7}.
+\bibitem[Marević et~al.(2022{\natexlab{a}})Marević, Schunck, and Sato]{Marevic2022_CPC}
+P.~Marević, N.~Schunck, and K.~Sato.
+\newblock Axially-deformed solution of the skyrme-hartree--fock--bogoliubov problem in the harmonic-oscillator basis.
+\newblock \emph{Computer Physics Communications}, 283:\penalty0 108640, 2022{\natexlab{a}}.
+\newblock \doi{10.1016/j.cpc.2022.108640}.
 
 \bibitem[Bonche et~al.(2005)Bonche, Flocard, and Heenen]{oldEv8}
 P.~Bonche, H.~Flocard, and P.~H. Heenen.
@@ -110,16 +64,127 @@ P.~Bonche, H.~Flocard, and P.~H. Heenen.
 \newblock \emph{Computer Physics Communications}, 171\penalty0 (1):\penalty0 49--62, 2005.
 \newblock \doi{10.1016/j.cpc.2005.03.001}.
 
-\bibitem[Brack et~al.(1972{\natexlab{a}})Brack, Damgaard, Jensen, Pauli, Strutinsky, and Wong]{Brack1972_RMP44_320}
-M.~Brack, J.~Damgaard, A.~J. Jensen, H.~C. Pauli, V.~M. Strutinsky, and C.~Y. Wong.
-\newblock Funny hills: the shell-correction approach to nuclear shell effects and its applications to the fission process.
-\newblock \emph{Reviews of Modern Physics}, 44:\penalty0 320--405, 1972{\natexlab{a}}.
+\bibitem[Ryssens et~al.(2016)Ryssens, Heenen, and Bender]{Ryssens2016_MOCCa}
+W.~Ryssens, P.-H. Heenen, and M.~Bender.
+\newblock Symmetry-unrestricted skyrme mean-field study of heavy nuclei: the mocca code.
+\newblock \emph{arXiv preprint}, 2016.
+\newblock arXiv:1611.01300 [nucl-th].
 
-\bibitem[Brack et~al.(1972{\natexlab{b}})Brack, Damgaard, Jensen, Pauli, Strutinsky, and Wong]{Brack1972}
-M.~Brack, J.~Damgaard, A.~S. Jensen, H.~C. Pauli, V.~M. Strutinsky, and C.~Y. Wong.
-\newblock Funny hills: The shell-correction approach to nuclear shell effects and its applications to the fission process.
-\newblock \emph{Reviews of Modern Physics}, 44\penalty0 (2):\penalty0 320--405, 1972{\natexlab{b}}.
-\newblock \doi{10.1103/RevModPhys.44.320}.
+\bibitem[Chen et~al.(2022{\natexlab{a}})Chen, Li, Schuetrumpf, Reinhard, and Nazarewicz]{hfbftt}
+Mengzhi Chen, Tong Li, Bastian Schuetrumpf, Paul-Gerhard Reinhard, and Witold Nazarewicz.
+\newblock Three-dimensional skyrme hartree--fock--bogoliubov solver in coordinate-space representation.
+\newblock \emph{Computer Physics Communications}, 275:\penalty0 108344, 2022{\natexlab{a}}.
+\newblock \doi{10.1016/j.cpc.2022.108344}.
+\newblock This paper describes the new 3D, symmetry-unrestricted coordinate-space solver HFBFFT, which is based on the Sky3D code.
+
+\bibitem[Maruhn et~al.(2014)Maruhn, Reinhard, Stevenson, and Umar]{Maruhn2014_Sky3D}
+J.A. Maruhn, P.-G. Reinhard, P.D. Stevenson, and A.S. Umar.
+\newblock The tdhf code sky3d.
+\newblock \emph{Computer Physics Communications}, 185\penalty0 (7):\penalty0 2195--2216, 2014.
+\newblock ISSN 0010-4655.
+\newblock \doi{https://doi.org/10.1016/j.cpc.2014.04.008}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465514001313}.
+
+\bibitem[Ryssens et~al.(2015{\natexlab{a}})Ryssens, Hellemans, Bender, and Heenen]{Ryssens2015_EV8}
+W.~Ryssens, V.~Hellemans, M.~Bender, and P.-H. Heenen.
+\newblock Solution of the skyrme hf+bcs equation on a 3d mesh. ii. a new version of the ev8 code.
+\newblock \emph{Computer Physics Communications}, 187:\penalty0 175--194, 2015{\natexlab{a}}.
+\newblock \doi{10.1016/j.cpc.2014.10.001}.
+
+\bibitem[Bertulani(2007)]{bertulani2007nuclear}
+Carlos~A Bertulani.
+\newblock Nuclear physics in a nutshell.
+\newblock 2007.
+
+\bibitem[Obertelli and Sagawa(2021)]{obertelli2021modern}
+Alexandre Obertelli and Hiroyuki Sagawa.
+\newblock \emph{Modern nuclear physics}.
+\newblock Springer, 2021.
+
+\bibitem[Ring and Schuck(2004)]{ring2004nuclear}
+Peter Ring and Peter Schuck.
+\newblock \emph{The nuclear many-body problem}.
+\newblock Springer Science \& Business Media, 2004.
+
+\bibitem[Hofstadter(1956)]{Hofstadter1956}
+Robert Hofstadter.
+\newblock Electron scattering and nuclear structure.
+\newblock \emph{Reviews of Modern Physics}, 28:\penalty0 214--254, 1956.
+\newblock \doi{10.1103/RevModPhys.28.214}.
+
+\bibitem[von Weizsäcker(1935)]{Weizsacker1935}
+C.~F. von Weizsäcker.
+\newblock {Zur Theorie der Kernmassen}.
+\newblock \emph{Zeitschrift f{\"u}r Physik}, 96\penalty0 (7-8):\penalty0 431--458, 1935.
+\newblock \doi{10.1007/BF01337700}.
+
+\bibitem[FR(2012)]{ldmimg}
+Daniel FR.
+\newblock {Liquid drop model.svg: Illustration of the terms of the semi-empirical mass formula in the liquid drop model of the atomic nucleus}.
+\newblock Wikimedia Commons, the free media repository, 2012.
+\newblock URL \url{https://commons.wikimedia.org/wiki/File:Liquid_drop_model.svg}.
+\newblock Original work by Honina, derivative by Daniel FR. Licensed under CC BY-SA 3.0.
+
+\bibitem[Benzaid et~al.(2020)Benzaid, Bentridi, Kerraci, and Amrani]{Benzaid2020}
+Djelloul Benzaid, Salaheddine Bentridi, Abdelkader Kerraci, and Naima Amrani.
+\newblock {Bethe--Weizsäcker semiempirical mass formula coefficients 2019 update based on AME2016}.
+\newblock \emph{Nuclear Science and Techniques}, 31\penalty0 (1):\penalty0 5, 2020.
+\newblock \doi{10.1007/s41365-019-0718-8}.
+
+\bibitem[Rohlf(1994)]{Rohlf1994}
+J.~W. Rohlf.
+\newblock \emph{Modern Physics from Alpha to Z0}.
+\newblock John Wiley \& Sons, 1994.
+
+\bibitem[Schwierz et~al.(2007)Schwierz, Wiedenh\"over, and Volya]{Schwierz2007}
+N.~Schwierz, I.~Wiedenh\"over, and A.~Volya.
+\newblock Parameterization of the woods--saxon potential for shell-model calculations.
+\newblock \emph{arXiv preprint arXiv:0709.3525}, 2007.
+\newblock nucl-th/0709.3525.
+
+\bibitem[Gianluca(2021)]{Colo_2021_NuclearPhysics}
+Colo' Gianluca.
+\newblock Nuclear physics - lecture notes (academic year 2021/22).
+\newblock Online PDF, Dipartimento di Fisica, Universita' degli Studi di Milano / INFN Milano, 2021.
+\newblock Accessed from https://www0.mi.infn.it/\~{}colo/Didattica/Nucleare/2021\_22/nuclphys3.pdf.
+
+\bibitem[{Atomic Mass Data Center}()]{AMDC_website}
+{Atomic Mass Data Center}.
+\newblock {Atomic Mass Data Center}.
+\newblock URL \url{https://www-nds.iaea.org/amdc/}.
+\newblock Accessed: 19 October 2025.
+
+\bibitem[Mottelson(2006)]{nilsson}
+Ben Mottelson.
+\newblock The nilsson model and sven g{\"o}sta nilsson.
+\newblock \emph{Physica Scripta}, 125, 2006.
+
+\bibitem[{Wikipedia contributors}(2025)]{wikipedia_equation_of_state}
+{Wikipedia contributors}.
+\newblock Nilsson model graphical representation -- wikipedia.
+\newblock \url{https://en.wikipedia.org/w/index.php?curid=60892381}, 2025.
+
+\bibitem[Dudek and Werner(1978)]{def_WS_dudek}
+J~Dudek and T~Werner.
+\newblock New parameters of the deformed woods--saxon potential for a=110-210 nuclei.
+\newblock \emph{Journal of Physics G: Nuclear Physics}, 4\penalty0 (10):\penalty0 1543, oct 1978.
+\newblock \doi{10.1088/0305-4616/4/10/006}.
+\newblock URL \url{https://doi.org/10.1088/0305-4616/4/10/006}.
+
+\bibitem[Jachimowicz et~al.(2017)Jachimowicz, Kowal, and Skalski]{defWSfissionbarriers}
+P.~Jachimowicz, M.~Kowal, and J.~Skalski.
+\newblock Adiabatic fission barriers in superheavy nuclei.
+\newblock \emph{Phys. Rev. C}, 95:\penalty0 014303, Jan 2017.
+\newblock \doi{10.1103/PhysRevC.95.014303}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.95.014303}.
+
+\bibitem[Kurcewicz(2000)]{Kurcewicz2000}
+Wiktor Kurcewicz.
+\newblock Octupole deformation in the actinide region.
+\newblock \emph{Hyperfine Interactions}, 129\penalty0 (1):\penalty0 175--184, 12 2000.
+\newblock ISSN 1572-9540.
+\newblock \doi{10.1023/A:1012609832646}.
+\newblock URL \url{https://doi.org/10.1023/A:1012609832646}.
 
 \bibitem[Bucher et~al.(2016)Bucher, Zhu, Wu, Janssens, Cline, Hayes, Albers, Ayangeakaa, Butler, Campbell, Carpenter, Chiara, Clark, Crawford, Cromaz, David, Dickerson, Gregor, Harker, Hoffman, Kay, Kondev, Korichi, Lauritsen, Macchiavelli, Pardo, Richard, Riley, Savard, Scheck, Seweryniak, Smith, Vondrasek, and Wiens]{Bucher_2016_144Ba}
 B.~Bucher, S.~Zhu, C.-Y. Wu, R.~V.~F. Janssens, D.~Cline, A.~B. Hayes, M.~Albers, A.~D. Ayangeakaa, P.~A. Butler, C.~M. Campbell, M.~P. Carpenter, C.~J. Chiara, J.~A. Clark, H.~L. Crawford, M.~Cromaz, H.~M. David, C.~Dickerson, E.~T. Gregor, J.~Harker, C.~R. Hoffman, B.~P. Kay, F.~G. Kondev, A.~Korichi, T.~Lauritsen, A.~O. Macchiavelli, R.~C. Pardo, A.~Richard, M.~A. Riley, G.~Savard, M.~Scheck, D.~Seweryniak, M.~K. Smith, R.~Vondrasek, and A.~Wiens.
@@ -133,8 +198,187 @@ B.~Bucher, S.~Zhu, C.-Y. Wu, R.~V.~F. Janssens, R.~Bernard, L.~M. Robledo, T.~R.
 \newblock \emph{Phys. Rev. Lett.}, 118\penalty0 (15):\penalty0 152504, 2017.
 \newblock \doi{10.1103/PhysRevLett.118.152504}.
 
+\bibitem[Butler et~al.(2020)Butler, Gaffney, Spagnoletti, Abrahams, Bowry, Cederk{\"a}ll, de~Angelis, Witte, Garrett, Goldkuhle, Henrich, Illana, Johnston, Joss, Keatings, Kelly, Komorowska, Konki, Kr{\"o}ll, Lozano, Singh, O'Donnell, Ojala, Page, Pedersen, Raison, Reiter, Rodriguez, Rosiak, Rothe, Scheck, Seidlitz, Shneidman, Siebeck, Sinclair, Smith, Stryjczyk, Duppen, Vinals, Virtanen, Warr, Wrzosek-Lipska, and Zieli\'nska]{Butler_2020_Ra}
+P.~A. Butler, L.~P. Gaffney, P.~Spagnoletti, K.~Abrahams, M.~Bowry, J.~Cederk{\"a}ll, G.~de~Angelis, H.~De Witte, P.~E. Garrett, A.~Goldkuhle, C.~Henrich, A.~Illana, K.~Johnston, D.~T. Joss, J.~M. Keatings, N.~A. Kelly, M.~Komorowska, J.~Konki, T.~Kr{\"o}ll, M.~Lozano, B.~S.~Nara Singh, D.~O'Donnell, J.~Ojala, R.~D. Page, L.~G. Pedersen, C.~Raison, P.~Reiter, J.~A. Rodriguez, D.~Rosiak, S.~Rothe, M.~Scheck, M.~Seidlitz, T.~M. Shneidman, B.~Siebeck, J.~Sinclair, J.~F. Smith, M.~Stryjczyk, P.~Van Duppen, S.~Vinals, V.~Virtanen, N.~Warr, K.~Wrzosek-Lipska, and M.~Zieli\'nska.
+\newblock Evolution of octupole deformation in radium nuclei from coulomb excitation of radioactive $^{222,228}\mathrm{Ra}$ beams.
+\newblock \emph{Phys. Rev. Lett.}, 124\penalty0 (4):\penalty0 042503, 2020.
+\newblock \doi{10.1103/PhysRevLett.124.042503}.
+
+\bibitem[Butler(2016)]{Butler_2016_octupole_collectivity}
+P.~A. Butler.
+\newblock Octupole collectivity in nuclei.
+\newblock \emph{Progress in Particle and Nuclear Physics (review / conference chapter)}, 2016.
+\newblock review / summary of Coulomb-excitation results and octupole collectivity.
+
+\bibitem[Bohr and Wheeler(1939)]{BohrWheeler1939_PR56_426}
+Niels Bohr and John~A. Wheeler.
+\newblock The mechanism of nuclear fission.
+\newblock \emph{Physical Review}, 56:\penalty0 426--450, 1939.
+
+\bibitem[Strutinsky(1967)]{Strutinsky1967_NPA95_420}
+V.~M. Strutinsky.
+\newblock Shell effects in nuclear masses and deformation energies.
+\newblock \emph{Nuclear Physics A}, 95:\penalty0 420--442, 1967.
+
+\bibitem[Brack et~al.(1972{\natexlab{a}})Brack, Damgaard, Jensen, Pauli, Strutinsky, and Wong]{Brack1972_RMP44_320}
+M.~Brack, J.~Damgaard, A.~J. Jensen, H.~C. Pauli, V.~M. Strutinsky, and C.~Y. Wong.
+\newblock Funny hills: the shell-correction approach to nuclear shell effects and its applications to the fission process.
+\newblock \emph{Reviews of Modern Physics}, 44:\penalty0 320--405, 1972{\natexlab{a}}.
+
+\bibitem[Bender et~al.(2021)Bender, Bernard, Bertsch, Chiba, Dobaczewski, Dubray, Giuliani, Hagino, Nazarewicz, Schunck, et~al.]{Bender2020}
+M.~Bender, R.~Bernard, G.~F. Bertsch, S.~Chiba, J.~Dobaczewski, N.~Dubray, S.~A. Giuliani, K.~Hagino, W.~Nazarewicz, N.~Schunck, et~al.
+\newblock Future of nuclear fission theory.
+\newblock \emph{Journal of Physics G: Nuclear and Particle Physics}, 48\penalty0 (4):\penalty0 043001, 2021.
+\newblock \doi{10.1088/1361-6471/abcf62}.
+
+\bibitem[Goddard et~al.(2015)Goddard, Stevenson, and Rios]{FissionPathPairing}
+Philip Goddard, Paul Stevenson, and Arnau Rios.
+\newblock Fission dynamics within time-dependent hartree--fock: Deformation-induced fission.
+\newblock \emph{Phys. Rev. C}, 92:\penalty0 054610, Nov 2015.
+\newblock \doi{10.1103/PhysRevC.92.054610}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.92.054610}.
+
+\bibitem[Stoitsov et~al.(2003)Stoitsov, Dobaczewski, Nazarewicz, Pittel, and Dean]{Stoitsov2003_PRCC68_054312}
+M.~V. Stoitsov, J.~Dobaczewski, W.~Nazarewicz, S.~Pittel, and D.~J. Dean.
+\newblock Systematic study of deformed nuclei at the drip lines and beyond.
+\newblock \emph{Phys. Rev. C}, 68\penalty0 (5):\penalty0 054312, 2003.
+\newblock \doi{10.1103/PhysRevC.68.054312}.
+
+\bibitem[Dobaczewski et~al.(1996)Dobaczewski, Nazarewicz, Werner, Berger, Chinn, and Decharge]{Dobaczewski1996_PRCC53_2809}
+J.~Dobaczewski, W.~Nazarewicz, T.~R. Werner, J.~F. Berger, C.~R. Chinn, and J.~Decharge.
+\newblock Mean-field description of ground-state properties of drip-line nuclei: Pairing and continuum effects.
+\newblock \emph{Phys. Rev. C}, 53\penalty0 (1):\penalty0 2809, 1996.
+\newblock \doi{10.1103/PhysRevC.53.2809}.
+
+\bibitem[Colo' and Roca-Maza()]{hfbcsqrpa}
+Gianluca Colo' and Xavier Roca-Maza.
+\newblock User guide for the hfbcs-qrpa(v1) code.
+
+\bibitem[Pei et~al.(2008)Pei, Stoitsov, Fann, Nazarewicz, Schunck, and Xu]{Pei2008_HFBAX}
+J.~C. Pei, M.~V. Stoitsov, G.~I. Fann, W.~Nazarewicz, N.~Schunck, and F.~R. Xu.
+\newblock Deformed coordinate-space hartree--fock--bogoliubov approach to weakly bound nuclei and large deformations.
+\newblock \emph{Physical Review C}, 78\penalty0 (6):\penalty0 064306, 2008.
+\newblock \doi{10.1103/PhysRevC.78.064306}.
+
+\bibitem[Chen et~al.(2022{\natexlab{b}})Chen, Li, Schuetrumpf, Reinhard, and Nazarewicz]{CHEN2022108344}
+Mengzhi Chen, Tong Li, Bastian Schuetrumpf, Paul-Gerhard Reinhard, and Witold Nazarewicz.
+\newblock Three-dimensional skyrme hartree--fock--bogoliubov solver in coordinate-space representation.
+\newblock \emph{Computer Physics Communications}, 276:\penalty0 108344, 2022{\natexlab{b}}.
+\newblock ISSN 0010-4655.
+\newblock \doi{https://doi.org/10.1016/j.cpc.2022.108344}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465522000625}.
+
+\bibitem[Skyrme(1958)]{SKYRME1958615}
+T.H.R. Skyrme.
+\newblock The effective nuclear potential.
+\newblock \emph{Nuclear Physics}, 9\penalty0 (4):\penalty0 615--634, 1958.
+\newblock ISSN 0029-5582.
+\newblock \doi{https://doi.org/10.1016/0029-5582(58)90345-6}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0029558258903456}.
+
+\bibitem[Hohenberg and Kohn(1964)]{HK}
+P.~Hohenberg and W.~Kohn.
+\newblock Inhomogeneous electron gas.
+\newblock \emph{Phys. Rev.}, 136:\penalty0 B864--B871, Nov 1964.
+\newblock \doi{10.1103/PhysRev.136.B864}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.136.B864}.
+
+\bibitem[Kohn and Sham(1965)]{KS}
+W.~Kohn and L.~J. Sham.
+\newblock Self-consistent equations including exchange and correlation effects.
+\newblock \emph{Phys. Rev.}, 140:\penalty0 A1133--A1138, Nov 1965.
+\newblock \doi{10.1103/PhysRev.140.A1133}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.140.A1133}.
+
+\bibitem[Martin(2004)]{Martin2004}
+Richard~M. Martin.
+\newblock \emph{Electronic Structure: Basic Theory and Practical Methods}.
+\newblock Cambridge University Press, Cambridge, UK, 2004.
+\newblock ISBN 9780521534406.
+
+\bibitem[Koponen et~al.(2021)Koponen, Pellikka, Tanimoto, Dendo, Lesinski, and Terasaki]{skyax}
+J.~A. Koponen, K.~Pellikka, S.~Tanimoto, K.~Dendo, T.~Lesinski, and K.~Terasaki.
+\newblock The axial hartree--fock + $\text{BCS}$ code $\text{SkyAx}$.
+\newblock \emph{Computer Physics Communications}, 267:\penalty0 108034, 2021.
+\newblock \doi{10.1016/j.cpc.2021.108034}.
+
+\bibitem[Marević et~al.(2022{\natexlab{b}})Marević, Schunck, Ney, {Navarro Pérez}, Verriere, and O'Neal]{MAREVIC2022108367}
+P.~Marević, N.~Schunck, E.M. Ney, R.~{Navarro Pérez}, M.~Verriere, and J.~O'Neal.
+\newblock Axially-deformed solution of the skyrme-hartree--fock--bogoliubov equations using the transformed harmonic oscillator basis (iv) hfbtho (v4.0): A new version of the program.
+\newblock \emph{Computer Physics Communications}, 276:\penalty0 108367, 2022{\natexlab{b}}.
+\newblock ISSN 0010-4655.
+\newblock \doi{https://doi.org/10.1016/j.cpc.2022.108367}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465522000868}.
+
+\bibitem[Dobaczewski(2000)]{blochmessiah}
+J.~Dobaczewski.
+\newblock Generalisation of the bloch-messiah-zumino theorem.
+\newblock \emph{Phys. Rev. C}, 62:\penalty0 017301, May 2000.
+\newblock \doi{10.1103/PhysRevC.62.017301}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.62.017301}.
+
+\bibitem[Pei et~al.(2011)Pei, Kruppa, and Nazarewicz]{Pei2012_HFBcontinuum}
+J.~C. Pei, A.~T. Kruppa, and W.~Nazarewicz.
+\newblock Quasi-particle continuum and resonances in the hartree--fock--bogoliubov theory.
+\newblock \emph{Physical Review C}, 84\penalty0 (2):\penalty0 024311, 2011.
+\newblock \doi{10.1103/PhysRevC.84.024311}.
+
+\bibitem[Brack et~al.(1972{\natexlab{b}})Brack, Damgaard, Jensen, Pauli, Strutinsky, and Wong]{Brack1972}
+M.~Brack, J.~Damgaard, A.~S. Jensen, H.~C. Pauli, V.~M. Strutinsky, and C.~Y. Wong.
+\newblock Funny hills: The shell-correction approach to nuclear shell effects and its applications to the fission process.
+\newblock \emph{Reviews of Modern Physics}, 44\penalty0 (2):\penalty0 320--405, 1972{\natexlab{b}}.
+\newblock \doi{10.1103/RevModPhys.44.320}.
+
+\bibitem[Bjørnholm and Lynn(1980)]{Bjornholm1980}
+S.~Bjørnholm and J.~E. Lynn.
+\newblock The double-humped fission barrier.
+\newblock \emph{Reviews of Modern Physics}, 52\penalty0 (4):\penalty0 725--931, 1980.
+\newblock \doi{10.1103/RevModPhys.52.725}.
+
+\bibitem[Krappe and Pomorski(2012)]{Krappe2012}
+H.~J. Krappe and K.~Pomorski.
+\newblock \emph{Theory of Nuclear Fission: A Textbook}.
+\newblock Springer, 2012.
+\newblock \doi{10.1007/978-3-642-23515-3}.
+
+\bibitem[Dubray and Regnier(2012)]{Dubray2012}
+N.~Dubray and D.~Regnier.
+\newblock Numerical search of discontinuities in self-consistent potential energy surfaces.
+\newblock \emph{Computer Physics Communications}, 183\penalty0 (10):\penalty0 2035--2041, 2012.
+\newblock \doi{10.1016/j.cpc.2012.04.001}.
+
+\bibitem[Goutte et~al.(2005)Goutte, Berger, Casoli, and Gogny]{Goutte2005}
+H.~Goutte, J.-F. Berger, P.~Casoli, and D.~Gogny.
+\newblock Microscopic approach of fission dynamics applied to fragment kinetic energy and mass distributions in ${}^{238}$u.
+\newblock \emph{Physical Review C}, 71\penalty0 (2):\penalty0 024316, 2005.
+\newblock \doi{10.1103/PhysRevC.71.024316}.
+
+\bibitem[Regnier et~al.(2019)Regnier, Dubray, Verrière, and Schunck]{Regnier2019}
+D.~Regnier, N.~Dubray, M.~Verrière, and N.~Schunck.
+\newblock Microscopic description of complex fission phenomena using the time-dependent generator coordinate method.
+\newblock \emph{Physical Review C}, 99\penalty0 (2):\penalty0 024611, 2019.
+\newblock \doi{10.1103/PhysRevC.99.024611}.
+
+\bibitem[Bender et~al.(2004)Bender, Heenen, and Reinhard]{Bender2004}
+M.~Bender, P.-H. Heenen, and P.-G. Reinhard.
+\newblock Configuration mixing of angular-momentum projected self-consistent mean-field states for low-spin states in ${}^{240}$pu.
+\newblock \emph{Physical Review C}, 69\penalty0 (6):\penalty0 064303, 2004.
+\newblock \doi{10.1103/PhysRevC.69.064303}.
+
+\bibitem[Samyn et~al.(2005)Samyn, Goriely, and Pearson]{Samyn2005}
+M.~Samyn, S.~Goriely, and J.~M. Pearson.
+\newblock Fission barriers in the d1s gogny force with particle-number and parity restoration.
+\newblock \emph{Physical Review C}, 72\penalty0 (4):\penalty0 044316, 2005.
+\newblock \doi{10.1103/PhysRevC.72.044316}.
+
+\bibitem[Negele(1982)]{Negele1982}
+John~W. Negele.
+\newblock The mean-field theory of nuclear structure and dynamics.
+\newblock \emph{Reviews of Modern Physics}, 54\penalty0 (4):\penalty0 913--1015, 1982.
+\newblock \doi{10.1103/RevModPhys.54.913}.
+
 \bibitem[Bulgac and Roche(2008)]{Bulgac2008}
-A.~Bulgac and K.~J. Roche.
+A~Bulgac and K~J Roche.
 \newblock Time-dependent density functional theory applied to superfluid nuclei.
 \newblock \emph{Journal of Physics: Conference Series}, 125\penalty0 (1):\penalty0 012064, jul 2008.
 \newblock \doi{10.1088/1742-6596/125/1/012064}.
@@ -146,17 +390,29 @@ A.~Bulgac, P.~Magierski, K.~J. Roche, and I.~Stetcu.
 \newblock \emph{Physical Review Letters}, 116\penalty0 (12):\penalty0 122504, 2016.
 \newblock \doi{10.1103/PhysRevLett.116.122504}.
 
-\bibitem[Butler(2016)]{Butler_2016_octupole_collectivity}
-P.~A. Butler.
-\newblock Octupole collectivity in nuclei.
-\newblock \emph{Progress in Particle and Nuclear Physics (review / conference chapter)}, 2016.
-\newblock review / summary of Coulomb-excitation results and octupole collectivity.
+\bibitem[Ayik(2008)]{Ayik2008}
+S.~Ayik.
+\newblock A stochastic mean-field approach for nuclear dynamics.
+\newblock \emph{Physics Letters B}, 658\penalty0 (3):\penalty0 174--178, 2008.
+\newblock \doi{10.1016/j.physletb.2007.09.072}.
 
-\bibitem[Butler et~al.(2020)Butler, Gaffney, Spagnoletti, Abrahams, Bowry, Cederk{\"a}ll, de~Angelis, Witte, Garrett, Goldkuhle, Henrich, Illana, Johnston, Joss, Keatings, Kelly, Komorowska, Konki, Kr{\"o}ll, Lozano, Singh, O'Donnell, Ojala, Page, Pedersen, Raison, Reiter, Rodriguez, Rosiak, Rothe, Scheck, Seidlitz, Shneidman, Siebeck, Sinclair, Smith, Stryjczyk, Duppen, Vinals, Virtanen, Warr, Wrzosek-Lipska, and Zieli\'nska]{Butler_2020_Ra}
-P.~A. Butler, L.~P. Gaffney, P.~Spagnoletti, K.~Abrahams, M.~Bowry, J.~Cederk{\"a}ll, G.~de~Angelis, H.~D. Witte, P.~E. Garrett, A.~Goldkuhle, C.~Henrich, A.~Illana, K.~Johnston, D.~T. Joss, J.~M. Keatings, N.~A. Kelly, M.~Komorowska, J.~Konki, T.~Kr{\"o}ll, M.~Lozano, B.~S.~N. Singh, D.~O'Donnell, J.~Ojala, R.~D. Page, L.~G. Pedersen, C.~Raison, P.~Reiter, J.~A. Rodriguez, D.~Rosiak, S.~Rothe, M.~Scheck, M.~Seidlitz, T.~M. Shneidman, B.~Siebeck, J.~Sinclair, J.~F. Smith, M.~Stryjczyk, P.~V. Duppen, S.~Vinals, V.~Virtanen, N.~Warr, K.~Wrzosek-Lipska, and M.~Zieli\'nska.
-\newblock Evolution of octupole deformation in radium nuclei from coulomb excitation of radioactive $^{222,228}\mathrm{Ra}$ beams.
-\newblock \emph{Phys. Rev. Lett.}, 124\penalty0 (4):\penalty0 042503, 2020.
-\newblock \doi{10.1103/PhysRevLett.124.042503}.
+\bibitem[Warda et~al.(2002)Warda, Egido, Robledo, and Pomorski]{Warda2002}
+M.~Warda, J.~L. Egido, L.~M. Robledo, and K.~Pomorski.
+\newblock Microscopic description of the fission path of actinides with the gogny force.
+\newblock \emph{Physical Review C}, 66\penalty0 (1):\penalty0 014310, 2002.
+\newblock \doi{10.1103/PhysRevC.66.014310}.
+
+\bibitem[Bertsch et~al.(2018)Bertsch, Robledo, and Younes]{Bertsch2018}
+G.~F. Bertsch, L.~M. Robledo, and W.~Younes.
+\newblock Fission potential energy surfaces from constrained self-consistent mean-field theory.
+\newblock \emph{Physical Review C}, 97\penalty0 (2):\penalty0 024306, 2018.
+\newblock \doi{10.1103/PhysRevC.97.024306}.
+
+\bibitem[Simenel and Umar(2018)]{Simenel2018}
+C.~Simenel and A.~S. Umar.
+\newblock Nuclear quantum many-body dynamics: From collective vibrations to heavy-ion collisions.
+\newblock \emph{Progress in Particle and Nuclear Physics}, 103:\penalty0 19--66, 2018.
+\newblock \doi{10.1016/j.ppnp.2018.01.004}.
 
 \bibitem[Chabanat et~al.(1997)Chabanat, Bonche, Haensel, Meyer, and Schaeffer]{CHABANAT1997710}
 E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
@@ -166,356 +422,12 @@ E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
 \newblock \doi{https://doi.org/10.1016/S0375-9474(97)00596-4}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0375947497005964}.
 
-\bibitem[Chabanat et~al.(1998)Chabanat, Bonche, Haensel, Meyer, and Schaeffer]{chabanat2}
-E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
-\newblock A skyrme parametrisation from subnuclear to neutron star densities part ii. nuclei far from stabilities.
-\newblock \emph{Nuclear Physics A}, 635\penalty0 (1):\penalty0 231--256, 1998.
-\newblock ISSN 0375-9474.
-\newblock \doi{https://doi.org/10.1016/S0375-9474(98)00180-8}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0375947498001808}.
-
-\bibitem[Chen et~al.(2022{\natexlab{a}})Chen, Li, Schuetrumpf, Reinhard, and Nazarewicz]{CHEN2022108344}
-M.~Chen, T.~Li, B.~Schuetrumpf, P.-G. Reinhard, and W.~Nazarewicz.
-\newblock Three-dimensional skyrme hartree-fock-bogoliubov solver in coordinate-space representation.
-\newblock \emph{Computer Physics Communications}, 276:\penalty0 108344, 2022{\natexlab{a}}.
-\newblock ISSN 0010-4655.
-\newblock \doi{https://doi.org/10.1016/j.cpc.2022.108344}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465522000625}.
-
-\bibitem[Chen et~al.(2022{\natexlab{b}})Chen, Li, Schuetrumpf, Reinhard, and Nazarewicz]{hfbftt}
-M.~Chen, T.~Li, B.~Schuetrumpf, P.-G. Reinhard, and W.~Nazarewicz.
-\newblock Three-dimensional skyrme hartree-fock-bogoliubov solver in coordinate-space representation.
-\newblock \emph{Computer Physics Communications}, 275:\penalty0 108344, 2022{\natexlab{b}}.
-\newblock \doi{10.1016/j.cpc.2022.108344}.
-\newblock This paper describes the new 3D, symmetry-unrestricted coordinate-space solver HFBFFT, which is based on the Sky3D code.
-
-\bibitem[Colo' and Roca-Maza()]{hfbcsqrpa}
-G.~Colo' and X.~Roca-Maza.
-\newblock User guide for the hfbcs-qrpa(v1) code.
-
-\bibitem[Colò(2020)]{NDFT}
-G.~Colò.
-\newblock Nuclear density functional theory.
-\newblock \emph{Advances in Physics: X}, 5\penalty0 (1):\penalty0 1740061, 2020.
-\newblock \doi{10.1080/23746149.2020.1740061}.
-\newblock URL \url{https://doi.org/10.1080/23746149.2020.1740061}.
-
-\bibitem[Cusson et~al.(1985)Cusson, Reinhard, Strayer, Maruhn, and Greiner]{Cusson1985}
-R.~Y. Cusson, P.~G. Reinhard, M.~R. Strayer, J.~A. Maruhn, and W.~Greiner.
-\newblock Density as a constraint and the separation of internal excitation energy in tdhf.
-\newblock \emph{Zeitschrift für Physik A Atoms and Nuclei}, 320:\penalty0 475--482, 1985.
-\newblock \doi{10.1007/BF01415725}.
-\newblock URL \url{https://doi.org/10.1007/BF01415725}.
-
-\bibitem[Dobaczewski(2000)]{blochmessiah}
-J.~Dobaczewski.
-\newblock Generalisation of the bloch-messiah-zumino theorem.
-\newblock \emph{Phys. Rev. C}, 62:\penalty0 017301, May 2000.
-\newblock \doi{10.1103/PhysRevC.62.017301}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.62.017301}.
-
-\bibitem[Dobaczewski et~al.(1996)Dobaczewski, Nazarewicz, Werner, Berger, Chinn, and Decharge]{Dobaczewski1996_PRCC53_2809}
-J.~Dobaczewski, W.~Nazarewicz, T.~R. Werner, J.~F. Berger, C.~R. Chinn, and J.~Decharge.
-\newblock Mean-field description of ground-state properties of drip-line nuclei: Pairing and continuum effects.
-\newblock \emph{Phys. Rev. C}, 53\penalty0 (1):\penalty0 2809, 1996.
-\newblock \doi{10.1103/PhysRevC.53.2809}.
-
-\bibitem[Dubray and Regnier(2012)]{Dubray2012}
-N.~Dubray and D.~Regnier.
-\newblock Numerical search of discontinuities in self-consistent potential energy surfaces.
-\newblock \emph{Computer Physics Communications}, 183\penalty0 (10):\penalty0 2035--2041, 2012.
-\newblock \doi{10.1016/j.cpc.2012.04.001}.
-
-\bibitem[Dudek and Werner(1978)]{def_WS_dudek}
-J.~Dudek and T.~Werner.
-\newblock New parameters of the deformed woods-saxon potential for a=110-210 nuclei.
-\newblock \emph{Journal of Physics G: Nuclear Physics}, 4\penalty0 (10):\penalty0 1543, oct 1978.
-\newblock \doi{10.1088/0305-4616/4/10/006}.
-\newblock URL \url{https://doi.org/10.1088/0305-4616/4/10/006}.
-
-\bibitem[Ebran et~al.(2012)Ebran, Khan, Nik{\v{s}}i{\'c}, and Vretenar]{Ebran2012_Clusters}
-J.-P. Ebran, E.~Khan, T.~Nik{\v{s}}i{\'c}, and D.~Vretenar.
-\newblock How atomic nuclei cluster.
-\newblock \emph{Nature Communications}, 3:\penalty0 825, 2012.
-\newblock \doi{10.1038/nature11246}.
-
-\bibitem[Ebran et~al.(2020)Ebran, Girod, Khan, Lasseri, and Schuck]{clusterCondensation}
-J.-P. Ebran, M.~Girod, E.~Khan, R.~D. Lasseri, and P.~Schuck.
-\newblock $\ensuremath{\alpha}$-particle condensation: A nuclear quantum phase transition.
-\newblock \emph{Phys. Rev. C}, 102:\penalty0 014305, Jul 2020.
-\newblock \doi{10.1103/PhysRevC.102.014305}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.102.014305}.
-
 \bibitem[Erler et~al.(2010)Erler, Klüpfel, and Reinhard]{Erler_2010}
-J.~Erler, P.~Klüpfel, and P.-G. Reinhard.
-\newblock Misfits in skyrme-hartree-fock.
+J~Erler, P~Klüpfel, and P-G Reinhard.
+\newblock Misfits in skyrme-hartree--fock.
 \newblock \emph{Journal of Physics G: Nuclear and Particle Physics}, 37\penalty0 (6):\penalty0 064001, mar 2010.
 \newblock \doi{10.1088/0954-3899/37/6/064001}.
 \newblock URL \url{https://doi.org/10.1088/0954-3899/37/6/064001}.
-
-\bibitem[Flocard et~al.(1973)Flocard, Quentin, Kerman, and Vautherin]{FLOCARD1973433}
-H.~Flocard, P.~Quentin, A.~Kerman, and D.~Vautherin.
-\newblock Nuclear deformation energy curves with the constrained hartree-fock method.
-\newblock \emph{Nuclear Physics A}, 203\penalty0 (3):\penalty0 433--472, 1973.
-\newblock ISSN 0375-9474.
-\newblock \doi{https://doi.org/10.1016/0375-9474(73)90357-6}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0375947473903576}.
-
-\bibitem[FR(2012)]{ldmimg}
-D.~FR.
-\newblock {Liquid drop model.svg: Illustration of the terms of the semi-empirical mass formula in the liquid drop model of the atomic nucleus}.
-\newblock Wikimedia Commons, the free media repository, 2012.
-\newblock URL \url{https://commons.wikimedia.org/wiki/File:Liquid_drop_model.svg}.
-\newblock Original work by Honina, derivative by Daniel FR. Licensed under CC BY-SA 3.0.
-
-\bibitem[Gianluca(2021)]{Colo_2021_NuclearPhysics}
-C.~Gianluca.
-\newblock Nuclear physics - lecture notes (academic year 2021/22).
-\newblock Online PDF, Dipartimento di Fisica, Universita' degli Studi di Milano / INFN Milano, 2021.
-\newblock Accessed from https://www0.mi.infn.it/\~{}colo/Didattica/Nucleare/2021\_22/nuclphys3.pdf.
-
-\bibitem[Goddard et~al.(2015)Goddard, Stevenson, and Rios]{FissionPathPairing}
-P.~Goddard, P.~Stevenson, and A.~Rios.
-\newblock Fission dynamics within time-dependent hartree-fock: Deformation-induced fission.
-\newblock \emph{Phys. Rev. C}, 92:\penalty0 054610, Nov 2015.
-\newblock \doi{10.1103/PhysRevC.92.054610}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.92.054610}.
-
-\bibitem[Golub and van Loan(2013)]{golub13}
-G.~H. Golub and C.~F. van Loan.
-\newblock \emph{Matrix Computations}.
-\newblock JHU Press, fourth edition, 2013.
-\newblock ISBN 1421407949 9781421407944.
-\newblock URL \url{http://www.cs.cornell.edu/cv/GVL4/golubandvanloan.htm}.
-
-\bibitem[Goutte et~al.(2005)Goutte, Berger, Casoli, and Gogny]{Goutte2005}
-H.~Goutte, J.-F. Berger, P.~Casoli, and D.~Gogny.
-\newblock Microscopic approach of fission dynamics applied to fragment kinetic energy and mass distributions in ${}^{238}$u.
-\newblock \emph{Physical Review C}, 71\penalty0 (2):\penalty0 024316, 2005.
-\newblock \doi{10.1103/PhysRevC.71.024316}.
-
-\bibitem[Gu et~al.(2013)Gu, Liang, Long, Van~Giai, and Meng]{SlaterApp}
-H.-Q. Gu, H.~Liang, W.~H. Long, N.~Van~Giai, and J.~Meng.
-\newblock Slater approximation for coulomb exchange effects in nuclear covariant density functional theory.
-\newblock \emph{Phys. Rev. C}, 87:\penalty0 041301, Apr 2013.
-\newblock \doi{10.1103/PhysRevC.87.041301}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.87.041301}.
-
-\bibitem[Guennebaud et~al.(2010)Guennebaud, Jacob, et~al.]{eigenweb}
-G.~Guennebaud, B.~Jacob, et~al.
-\newblock Eigen.
-\newblock http://eigen.tuxfamily.org, 2010.
-
-\bibitem[Hagen et~al.(2014)Hagen, Papenbrock, Hjorth-Jensen, and Dean]{Hagen2014}
-G.~Hagen, T.~Papenbrock, M.~Hjorth-Jensen, and D.~J. Dean.
-\newblock Coupled-cluster computations of atomic nuclei.
-\newblock \emph{Reports on Progress in Physics}, 77:\penalty0 096302, 2014.
-
-\bibitem[Hofstadter(1956)]{Hofstadter1956}
-R.~Hofstadter.
-\newblock Electron scattering and nuclear structure.
-\newblock \emph{Reviews of Modern Physics}, 28:\penalty0 214--254, 1956.
-\newblock \doi{10.1103/RevModPhys.28.214}.
-
-\bibitem[Hohenberg and Kohn(1964)]{HK}
-P.~Hohenberg and W.~Kohn.
-\newblock Inhomogeneous electron gas.
-\newblock \emph{Phys. Rev.}, 136:\penalty0 B864--B871, Nov 1964.
-\newblock \doi{10.1103/PhysRev.136.B864}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.136.B864}.
-
-\bibitem[Jachimowicz et~al.(2017)Jachimowicz, Kowal, and Skalski]{defWSfissionbarriers}
-P.~Jachimowicz, M.~Kowal, and J.~Skalski.
-\newblock Adiabatic fission barriers in superheavy nuclei.
-\newblock \emph{Phys. Rev. C}, 95:\penalty0 014303, Jan 2017.
-\newblock \doi{10.1103/PhysRevC.95.014303}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.95.014303}.
-
-\bibitem[Jackson(1998)]{Jackson1998}
-J.~D. Jackson.
-\newblock \emph{Classical Electrodynamics}.
-\newblock John Wiley \& Sons, New York, 3rd edition, 1998.
-\newblock ISBN 978-0471309321.
-
-\bibitem[Khan et~al.(2022)Khan, Heitz, Mercier, and Ebran]{EKhan}
-E.~Khan, L.~Heitz, F.~Mercier, and J.-P. Ebran.
-\newblock $\ensuremath{\alpha}$-particle formation and clustering in nuclei.
-\newblock \emph{Phys. Rev. C}, 106:\penalty0 064330, Dec 2022.
-\newblock \doi{10.1103/PhysRevC.106.064330}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.106.064330}.
-
-\bibitem[Knyazev(1991)]{LOBPCG}
-A.~V. Knyazev.
-\newblock \emph{A Preconditioned Conjugate Gradient Method for Eigenvalue Problems and its Implementation in a Subspace}, pages 143--154.
-\newblock Birkh{\"a}user Basel, Basel, 1991.
-\newblock ISBN 978-3-0348-6332-2.
-\newblock \doi{10.1007/978-3-0348-6332-2_11}.
-\newblock URL \url{https://doi.org/10.1007/978-3-0348-6332-2_11}.
-
-\bibitem[Kohn and Sham(1965)]{KS}
-W.~Kohn and L.~J. Sham.
-\newblock Self-consistent equations including exchange and correlation effects.
-\newblock \emph{Phys. Rev.}, 140:\penalty0 A1133--A1138, Nov 1965.
-\newblock \doi{10.1103/PhysRev.140.A1133}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.140.A1133}.
-
-\bibitem[Koopmans(1934)]{Koopmans1934_Theorem}
-T.~Koopmans.
-\newblock Über die zuordnung von wellenfunktionen und eigenwerten zu den einzelnen elektronen eines atoms.
-\newblock \emph{Physica}, 1\penalty0 (7-12):\penalty0 104--113, 1934.
-\newblock \doi{10.1016/S0031-8914(34)90011-2}.
-
-\bibitem[Koponen et~al.(2021)Koponen, Pellikka, Tanimoto, Dendo, Lesinski, and Terasaki]{skyax}
-J.~A. Koponen, K.~Pellikka, S.~Tanimoto, K.~Dendo, T.~Lesinski, and K.~Terasaki.
-\newblock The axial hartree--fock + $\text{BCS}$ code $\text{SkyAx}$.
-\newblock \emph{Computer Physics Communications}, 267:\penalty0 108034, 2021.
-\newblock \doi{10.1016/j.cpc.2021.108034}.
-
-\bibitem[Kortelainen et~al.(2010)Kortelainen, Lesinski, Mor\'e, Nazarewicz, Sarich, Schunck, Stoitsov, and Wild]{KortUNEDF0}
-M.~Kortelainen, T.~Lesinski, J.~Mor\'e, W.~Nazarewicz, J.~Sarich, N.~Schunck, M.~V. Stoitsov, and S.~Wild.
-\newblock Nuclear energy density optimization.
-\newblock \emph{Phys. Rev. C}, 82:\penalty0 024313, Aug 2010.
-\newblock \doi{10.1103/PhysRevC.82.024313}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.82.024313}.
-
-\bibitem[Krappe and Pomorski(2012)]{Krappe2012}
-H.~J. Krappe and K.~Pomorski.
-\newblock \emph{Theory of Nuclear Fission: A Textbook}.
-\newblock Springer, 2012.
-\newblock \doi{10.1007/978-3-642-23515-3}.
-
-\bibitem[Krishnamoorthy and Menon(2013)]{cholesky}
-A.~Krishnamoorthy and D.~Menon.
-\newblock Matrix inversion using cholesky decomposition.
-\newblock In \emph{2013 Signal Processing: Algorithms, Architectures, Arrangements, and Applications (SPA)}, pages 70--72, 2013.
-
-\bibitem[Kurcewicz(2000)]{Kurcewicz2000}
-W.~Kurcewicz.
-\newblock Octupole deformation in the actinide region.
-\newblock \emph{Hyperfine Interactions}, 129\penalty0 (1):\penalty0 175--184, 12 2000.
-\newblock ISSN 1572-9540.
-\newblock \doi{10.1023/A:1012609832646}.
-\newblock URL \url{https://doi.org/10.1023/A:1012609832646}.
-
-\bibitem[Lanczos(1952)]{lanczos1952solution}
-C.~Lanczos.
-\newblock Solution of systems of linear equations by minimised iterations.
-\newblock \emph{J. Res. Nat. Bur. Standards}, 49\penalty0 (1):\penalty0 33--53, 1952.
-
-\bibitem[Li et~al.(2020{\natexlab{a}})Li, Ren, and Zhao]{li2020efficient}
-B.~Li, Z.~Ren, and P.~Zhao.
-\newblock Efficient solution for the dirac equation in 3d lattice space with the conjugate gradient method.
-\newblock \emph{Physical Review C}, 102\penalty0 (4):\penalty0 044307, 2020{\natexlab{a}}.
-
-\bibitem[Li et~al.(2020{\natexlab{b}})Li, Xie, Xu, You, and Zhang]{GCG1}
-Y.~Li, H.~Xie, R.~Xu, C.~You, and N.~Zhang.
-\newblock A parallel generalised conjugate gradient method for large scale eigenvalue problems.
-\newblock \emph{CCF Transactions on High Performance Computing}, 2\penalty0 (2):\penalty0 111--122, jun 2020{\natexlab{b}}.
-\newblock ISSN 2524-4930.
-\newblock \doi{10.1007/s42514-020-00029-6}.
-\newblock URL \url{https://doi.org/10.1007/s42514-020-00029-6}.
-\newblock The corresponding computing package can be downloaded from the web site: \url{https://github.com/pase2017/GCGE-1.0}.
-
-\bibitem[Lin et~al.(2013)Lin, Shao, and E]{LIN2013205}
-L.~Lin, S.~Shao, and W.~E.
-\newblock Efficient iterative method for solving the dirac-kohn-sham density functional theory.
-\newblock \emph{Journal of Computational Physics}, 245:\penalty0 205--217, 2013.
-\newblock ISSN 0021-9991.
-\newblock \doi{https://doi.org/10.1016/j.jcp.2013.03.030}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0021999113002088}.
-
-\bibitem[Lombardo and Dell'Aquila(2023)]{Lombardo2023}
-I.~Lombardo and D.~Dell'Aquila.
-\newblock Clusters in light nuclei: history and recent developments.
-\newblock \emph{La Rivista del Nuovo Cimento}, 46\penalty0 (9):\penalty0 521--618, sep 2023.
-\newblock ISSN 1826-9850.
-\newblock \doi{10.1007/s40766-023-00047-4}.
-\newblock URL \url{https://doi.org/10.1007/s40766-023-00047-4}.
-
-\bibitem[Marević et~al.(2022{\natexlab{a}})Marević, Schunck, Ney, {Navarro Pérez}, Verriere, and O'Neal]{MAREVIC2022108367}
-P.~Marević, N.~Schunck, E.~Ney, R.~{Navarro Pérez}, M.~Verriere, and J.~O'Neal.
-\newblock Axially-deformed solution of the skyrme-hartree-fock-bogoliubov equations using the transformed harmonic oscillator basis (iv) hfbtho (v4.0): A new version of the program.
-\newblock \emph{Computer Physics Communications}, 276:\penalty0 108367, 2022{\natexlab{a}}.
-\newblock ISSN 0010-4655.
-\newblock \doi{https://doi.org/10.1016/j.cpc.2022.108367}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465522000868}.
-
-\bibitem[Marević et~al.(2022{\natexlab{b}})Marević, Schunck, and Sato]{Marevic2022_CPC}
-P.~Marević, N.~Schunck, and K.~Sato.
-\newblock Axially-deformed solution of the skyrme-hartree-fock-bogoliubov problem in the harmonic-oscillator basis.
-\newblock \emph{Computer Physics Communications}, 283:\penalty0 108640, 2022{\natexlab{b}}.
-\newblock \doi{10.1016/j.cpc.2022.108640}.
-
-\bibitem[Martin(2004)]{Martin2004}
-R.~M. Martin.
-\newblock \emph{Electronic Structure: Basic Theory and Practical Methods}.
-\newblock Cambridge University Press, Cambridge, UK, 2004.
-\newblock ISBN 9780521534406.
-
-\bibitem[Maruhn et~al.(2014)Maruhn, Reinhard, Stevenson, and Umar]{Maruhn2014_Sky3D}
-J.~Maruhn, P.-G. Reinhard, P.~Stevenson, and A.~Umar.
-\newblock The tdhf code sky3d.
-\newblock \emph{Computer Physics Communications}, 185\penalty0 (7):\penalty0 2195--2216, 2014.
-\newblock ISSN 0010-4655.
-\newblock \doi{https://doi.org/10.1016/j.cpc.2014.04.008}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465514001313}.
-
-\bibitem[M{\"o}ller et~al.(2016)M{\"o}ller, Sierk, Ichikawa, and Sagawa]{Moller2016_ADNDT}
-P.~M{\"o}ller, A.~Sierk, T.~Ichikawa, and H.~Sagawa.
-\newblock Nuclear ground-state masses and deformations: Frdm(2012).
-\newblock \emph{Atomic Data and Nuclear Data Tables}, 109--110:\penalty0 1--204, 2016.
-
-\bibitem[Mottelson(2006)]{nilsson}
-B.~Mottelson.
-\newblock The nilsson model and sven g{\"o}sta nilsson.
-\newblock \emph{Physica Scripta}, 125, 2006.
-
-\bibitem[Myers and Swiatecki(1996)]{MyersSwiatecki1996_NPA}
-W.~D. Myers and W.~J. Swiatecki.
-\newblock Nuclear properties according to the lublin-strasbourg drop model.
-\newblock \emph{Nuclear Physics A}, 601:\penalty0 141--167, 1996.
-
-\bibitem[Negele(1982)]{Negele1982}
-J.~W. Negele.
-\newblock The mean-field theory of nuclear structure and dynamics.
-\newblock \emph{Reviews of Modern Physics}, 54\penalty0 (4):\penalty0 913--1015, 1982.
-\newblock \doi{10.1103/RevModPhys.54.913}.
-
-\bibitem[Nottoli et~al.(2023)Nottoli, Gianni, Levitt, and Lipparini]{Nottoli2023}
-T.~Nottoli, I.~Gianni, A.~Levitt, and F.~Lipparini.
-\newblock A robust, open-source implementation of the locally optimal block preconditioned conjugate gradient for large eigenvalue problems in quantum chemistry.
-\newblock \emph{Theoretical Chemistry Accounts}, 142\penalty0 (8):\penalty0 69, 2023.
-\newblock ISSN 1432-2234.
-\newblock \doi{10.1007/s00214-023-03010-y}.
-\newblock URL \url{https://doi.org/10.1007/s00214-023-03010-y}.
-
-\bibitem[Obertelli and Sagawa(2021)]{obertelli2021modern}
-A.~Obertelli and H.~Sagawa.
-\newblock \emph{Modern nuclear physics}.
-\newblock Springer, 2021.
-
-\bibitem[Pearson and Pestana(2020)]{pearson2020preconditioners}
-J.~W. Pearson and J.~Pestana.
-\newblock Preconditioners for krylov subspace methods: An overview.
-\newblock \emph{GAMM-Mitteilungen}, 43\penalty0 (4):\penalty0 e202000015, 2020.
-
-\bibitem[Pei et~al.(2008)Pei, Stoitsov, Fann, Nazarewicz, Schunck, and Xu]{Pei2008_HFBAX}
-J.~C. Pei, M.~V. Stoitsov, G.~I. Fann, W.~Nazarewicz, N.~Schunck, and F.~R. Xu.
-\newblock Deformed coordinate-space hartree-fock-bogoliubov approach to weakly bound nuclei and large deformations.
-\newblock \emph{Physical Review C}, 78\penalty0 (6):\penalty0 064306, 2008.
-\newblock \doi{10.1103/PhysRevC.78.064306}.
-
-\bibitem[Pei et~al.(2011)Pei, Kruppa, and Nazarewicz]{Pei2012_HFBcontinuum}
-J.~C. Pei, A.~T. Kruppa, and W.~Nazarewicz.
-\newblock Quasi-particle continuum and resonances in the hartree-fock-bogoliubov theory.
-\newblock \emph{Physical Review C}, 84\penalty0 (2):\penalty0 024311, 2011.
-\newblock \doi{10.1103/PhysRevC.84.024311}.
-
-\bibitem[Regnier et~al.(2019)Regnier, Dubray, Verrière, and Schunck]{Regnier2019}
-D.~Regnier, N.~Dubray, M.~Verrière, and N.~Schunck.
-\newblock Microscopic description of complex fission phenomena using the time-dependent generator coordinate method.
-\newblock \emph{Physical Review C}, 99\penalty0 (2):\penalty0 024611, 2019.
-\newblock \doi{10.1103/PhysRevC.99.024611}.
 
 \bibitem[Reinhard and Flocard(1995)]{REINHARD1995467}
 P.-G. Reinhard and H.~Flocard.
@@ -525,91 +437,176 @@ P.-G. Reinhard and H.~Flocard.
 \newblock \doi{https://doi.org/10.1016/0375-9474(94)00770-N}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/037594749400770N}.
 
-\bibitem[Reinhard et~al.(2011)Reinhard, Maruhn, Umar, and Oberacker]{NLF}
-P.-G. Reinhard, J.~A. Maruhn, A.~S. Umar, and V.~E. Oberacker.
-\newblock Localisation in light nuclei.
-\newblock \emph{Phys. Rev. C}, 83:\penalty0 034312, Mar 2011.
-\newblock \doi{10.1103/PhysRevC.83.034312}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.83.034312}.
+\bibitem[Stevenson and Barton(2019)]{stevenson2019low}
+P.D. Stevenson and M.C. Barton.
+\newblock Low-energy heavy-ion reactions and the skyrme effective interaction.
+\newblock \emph{Progress in Particle and Nuclear Physics}, 104:\penalty0 142--164, 2019.
+\newblock ISSN 0146-6410.
+\newblock \doi{https://doi.org/10.1016/j.ppnp.2018.09.002}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0146641018300851}.
 
-\bibitem[Ring and Schuck(2004)]{ring2004nuclear}
-P.~Ring and P.~Schuck.
-\newblock \emph{The nuclear many-body problem}.
-\newblock Springer Science \& Business Media, 2004.
+\bibitem[Chabanat et~al.(1998)Chabanat, Bonche, Haensel, Meyer, and Schaeffer]{chabanat2}
+E.~Chabanat, P.~Bonche, P.~Haensel, J.~Meyer, and R.~Schaeffer.
+\newblock A skyrme parametrisation from subnuclear to neutron star densities part ii. nuclei far from stabilities.
+\newblock \emph{Nuclear Physics A}, 635\penalty0 (1):\penalty0 231--256, 1998.
+\newblock ISSN 0375-9474.
+\newblock \doi{https://doi.org/10.1016/S0375-9474(98)00180-8}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0375947498001808}.
 
-\bibitem[Rohlf(1994)]{Rohlf1994}
-J.~W. Rohlf.
-\newblock \emph{Modern Physics from Alpha to Z0}.
-\newblock John Wiley \& Sons, 1994.
+\bibitem[Beiner et~al.(1975)Beiner, Flocard, van Giai, and Quentin]{Beiner1974}
+M.~Beiner, H.~Flocard, Nyguyen van Giai, and P.~Quentin.
+\newblock {Nuclear ground state properties and selfconsistent calculations with the Skyrme interactions: 1. Spherical description}.
+\newblock \emph{Nucl. Phys. A}, 238:\penalty0 29--69, 1975.
+\newblock \doi{10.1016/0375-9474(75)90338-3}.
 
-\bibitem[Ryssens et~al.(2015{\natexlab{a}})Ryssens, Hellemans, Bender, and Heenen]{RYSSENS2015175}
-W.~Ryssens, V.~Hellemans, M.~Bender, and P.-H. Heenen.
-\newblock Solution of the skyrme-hf+bcs equation on a 3d mesh, ii: A new version of the ev8 code.
-\newblock \emph{Computer Physics Communications}, 187:\penalty0 175--194, 2015{\natexlab{a}}.
-\newblock ISSN 0010-4655.
-\newblock \doi{https://doi.org/10.1016/j.cpc.2014.10.001}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465514003361}.
+\bibitem[Bartel et~al.(1982)Bartel, Quentin, Brack, Guet, and Håkansson]{Bartel1982}
+J.~Bartel, P.~Quentin, M.~Brack, C.~Guet, and H.-B. Håkansson.
+\newblock Towards a better parametrisation of skyrme-like effective forces: A critical study of the skm force.
+\newblock \emph{Nuclear Physics A}, 386\penalty0 (1):\penalty0 79--100, 1982.
+\newblock ISSN 0375-9474.
+\newblock \doi{https://doi.org/10.1016/0375-9474(82)90403-1}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0375947482904031}.
 
-\bibitem[Ryssens et~al.(2015{\natexlab{b}})Ryssens, Hellemans, Bender, and Heenen]{Ryssens2015_EV8}
-W.~Ryssens, V.~Hellemans, M.~Bender, and P.-H. Heenen.
-\newblock Solution of the skyrme hf+bcs equation on a 3d mesh. ii. a new version of the ev8 code.
-\newblock \emph{Computer Physics Communications}, 187:\penalty0 175--194, 2015{\natexlab{b}}.
-\newblock \doi{10.1016/j.cpc.2014.10.001}.
+\bibitem[Kortelainen et~al.(2010)Kortelainen, Lesinski, Mor\'e, Nazarewicz, Sarich, Schunck, Stoitsov, and Wild]{KortUNEDF0}
+M.~Kortelainen, T.~Lesinski, J.~Mor\'e, W.~Nazarewicz, J.~Sarich, N.~Schunck, M.~V. Stoitsov, and S.~Wild.
+\newblock Nuclear energy density optimization.
+\newblock \emph{Phys. Rev. C}, 82:\penalty0 024313, Aug 2010.
+\newblock \doi{10.1103/PhysRevC.82.024313}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.82.024313}.
 
-\bibitem[Ryssens et~al.(2016)Ryssens, Heenen, and Bender]{Ryssens2016_MOCCa}
-W.~Ryssens, P.-H. Heenen, and M.~Bender.
-\newblock Symmetry-unrestricted skyrme mean-field study of heavy nuclei: the mocca code.
-\newblock \emph{arXiv preprint}, 2016.
-\newblock arXiv:1611.01300 [nucl-th].
+\bibitem[Gu et~al.(2013)Gu, Liang, Long, Van~Giai, and Meng]{SlaterApp}
+Huai-Qiang Gu, Haozhao Liang, Wen~Hui Long, Nguyen Van~Giai, and Jie Meng.
+\newblock Slater approximation for coulomb exchange effects in nuclear covariant density functional theory.
+\newblock \emph{Phys. Rev. C}, 87:\penalty0 041301, Apr 2013.
+\newblock \doi{10.1103/PhysRevC.87.041301}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.87.041301}.
+
+\bibitem[Jackson(1998)]{Jackson1998}
+John~David Jackson.
+\newblock \emph{Classical Electrodynamics}.
+\newblock John Wiley \& Sons, New York, 3rd edition, 1998.
+\newblock ISBN 978-0471309321.
+
+\bibitem[Zhou(1993)]{Zhou1993}
+Pei-bai Zhou.
+\newblock \emph{Finite Difference Method}, pages 63--94.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 1993.
+\newblock ISBN 978-3-642-50319-1.
+\newblock \doi{10.1007/978-3-642-50319-1_3}.
+\newblock URL \url{https://doi.org/10.1007/978-3-642-50319-1_3}.
+
+\bibitem[Golub and van Loan(2013)]{golub13}
+Gene~H. Golub and Charles~F. van Loan.
+\newblock \emph{Matrix Computations}.
+\newblock JHU Press, fourth edition, 2013.
+\newblock ISBN 1421407949 9781421407944.
+\newblock URL \url{http://www.cs.cornell.edu/cv/GVL4/golubandvanloan.htm}.
 
 \bibitem[Saad(1992)]{Saad1992}
-Y.~Saad.
+Yousef Saad.
 \newblock \emph{Numerical Methods for Large Eigenvalue Problems}.
 \newblock Manchester University Press, Manchester, UK, 1992.
 
-\bibitem[Samyn et~al.(2005)Samyn, Goriely, and Pearson]{Samyn2005}
-M.~Samyn, S.~Goriely, and J.~M. Pearson.
-\newblock Fission barriers in the d1s gogny force with particle-number and parity restoration.
-\newblock \emph{Physical Review C}, 72\penalty0 (4):\penalty0 044316, 2005.
-\newblock \doi{10.1103/PhysRevC.72.044316}.
-
-\bibitem[Schunck and Robledo(2016)]{Schunck2016}
-N.~Schunck and L.~M. Robledo.
-\newblock Microscopic theory of nuclear fission: a review.
-\newblock \emph{Reports on Progress in Physics}, 79\penalty0 (11):\penalty0 116301, 2016.
-\newblock \doi{10.1088/0034-4885/79/11/116301}.
-
-\bibitem[Schunck et~al.(2012)Schunck, Dobaczewski, McDonnell, Sarich, Staszczak, and Stoitsov]{hfodd}
-N.~Schunck, J.~Dobaczewski, J.~McDonnell, J.~Sarich, A.~Staszczak, and M.~V. Stoitsov.
-\newblock Solution of the $\text{HFB}$ equation in the oscillatory basis: the $\text{HFODD}$ code.
-\newblock \emph{Computer Physics Communications}, 183\penalty0 (1):\penalty0 166--191, 2012.
-\newblock \doi{10.1016/j.cpc.2011.09.018}.
-
-\bibitem[Schwierz et~al.(2007)Schwierz, Wiedenh\"over, and Volya]{Schwierz2007}
-N.~Schwierz, I.~Wiedenh\"over, and A.~Volya.
-\newblock Parameterization of the woods-saxon potential for shell-model calculations.
-\newblock \emph{arXiv preprint arXiv:0709.3525}, 2007.
-\newblock nucl-th/0709.3525.
-
 \bibitem[Shewchuk(1994)]{PainlessCGM}
-J.~R. Shewchuk.
+Jonathan~Richard Shewchuk.
 \newblock An introduction to the conjugate gradient method without the agonizing pain.
 \newblock 1994.
 \newblock URL \url{http://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf}.
 
-\bibitem[Simenel and Umar(2018)]{Simenel2018}
-C.~Simenel and A.~S. Umar.
-\newblock Nuclear quantum many-body dynamics: From collective vibrations to heavy-ion collisions.
-\newblock \emph{Progress in Particle and Nuclear Physics}, 103:\penalty0 19--66, 2018.
-\newblock \doi{10.1016/j.ppnp.2018.01.004}.
+\bibitem[Krishnamoorthy and Menon(2013)]{cholesky}
+Aravindh Krishnamoorthy and Deepak Menon.
+\newblock Matrix inversion using cholesky decomposition.
+\newblock In \emph{2013 Signal Processing: Algorithms, Architectures, Arrangements, and Applications (SPA)}, pages 70--72, 2013.
 
-\bibitem[Skyrme(1958)]{SKYRME1958615}
-T.~Skyrme.
-\newblock The effective nuclear potential.
-\newblock \emph{Nuclear Physics}, 9\penalty0 (4):\penalty0 615--634, 1958.
-\newblock ISSN 0029-5582.
-\newblock \doi{https://doi.org/10.1016/0029-5582(58)90345-6}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0029558258903456}.
+\bibitem[Pearson and Pestana(2020)]{pearson2020preconditioners}
+John~W Pearson and Jennifer Pestana.
+\newblock Preconditioners for krylov subspace methods: An overview.
+\newblock \emph{GAMM-Mitteilungen}, 43\penalty0 (4):\penalty0 e202000015, 2020.
+
+\bibitem[Lanczos(1952)]{lanczos1952solution}
+Cornelius Lanczos.
+\newblock Solution of systems of linear equations by minimised iterations.
+\newblock \emph{J. Res. Nat. Bur. Standards}, 49\penalty0 (1):\penalty0 33--53, 1952.
+
+\bibitem[Knyazev(1991)]{LOBPCG}
+A.~V. Knyazev.
+\newblock \emph{A Preconditioned Conjugate Gradient Method for Eigenvalue Problems and its Implementation in a Subspace}, pages 143--154.
+\newblock Birkh{\"a}user Basel, Basel, 1991.
+\newblock ISBN 978-3-0348-6332-2.
+\newblock \doi{10.1007/978-3-0348-6332-2_11}.
+\newblock URL \url{https://doi.org/10.1007/978-3-0348-6332-2_11}.
+
+\bibitem[Woo et~al.(2023)Woo, Kim, and Kim]{LOBPCGDKS}
+Jeheon Woo, Seonghwan Kim, and Woo~Youn Kim.
+\newblock Gaussian-approximated poisson preconditioner for iterative diagonalization in real-space density functional theory.
+\newblock \emph{The Journal of Physical Chemistry A}, 127\penalty0 (17):\penalty0 3883--3893, 2023.
+\newblock \doi{10.1021/acs.jpca.2c09111}.
+\newblock URL \url{https://doi.org/10.1021/acs.jpca.2c09111}.
+\newblock PMID: 37094552.
+
+\bibitem[Nottoli et~al.(2023)Nottoli, Gianni, Levitt, and Lipparini]{Nottoli2023}
+Tommaso Nottoli, Ivan Gianni, Antoine Levitt, and Filippo Lipparini.
+\newblock A robust, open-source implementation of the locally optimal block preconditioned conjugate gradient for large eigenvalue problems in quantum chemistry.
+\newblock \emph{Theoretical Chemistry Accounts}, 142\penalty0 (8):\penalty0 69, 2023.
+\newblock ISSN 1432-2234.
+\newblock \doi{10.1007/s00214-023-03010-y}.
+\newblock URL \url{https://doi.org/10.1007/s00214-023-03010-y}.
+
+\bibitem[Lin et~al.(2013)Lin, Shao, and E]{LIN2013205}
+Lin Lin, Sihong Shao, and Weinan E.
+\newblock Efficient iterative method for solving the dirac-kohn--sham density functional theory.
+\newblock \emph{Journal of Computational Physics}, 245:\penalty0 205--217, 2013.
+\newblock ISSN 0021-9991.
+\newblock \doi{https://doi.org/10.1016/j.jcp.2013.03.030}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0021999113002088}.
+
+\bibitem[Li et~al.(2020{\natexlab{a}})Li, Ren, and Zhao]{li2020efficient}
+B~Li, ZX~Ren, and PW~Zhao.
+\newblock Efficient solution for the dirac equation in 3d lattice space with the conjugate gradient method.
+\newblock \emph{Physical Review C}, 102\penalty0 (4):\penalty0 044307, 2020{\natexlab{a}}.
+
+\bibitem[Li et~al.(2020{\natexlab{b}})Li, Xie, Xu, You, and Zhang]{GCG1}
+Yu~Li, Hehu Xie, Ran Xu, Chun’guang You, and Ning Zhang.
+\newblock A parallel generalised conjugate gradient method for large scale eigenvalue problems.
+\newblock \emph{CCF Transactions on High Performance Computing}, 2\penalty0 (2):\penalty0 111--122, jun 2020{\natexlab{b}}.
+\newblock ISSN 2524-4930.
+\newblock \doi{10.1007/s42514-020-00029-6}.
+\newblock URL \url{https://doi.org/10.1007/s42514-020-00029-6}.
+\newblock The corresponding computing package can be downloaded from the web site: \url{https://github.com/pase2017/GCGE-1.0}.
+
+\bibitem[Bj{\"o}rck(1994)]{GM}
+{\AA}ke Bj{\"o}rck.
+\newblock Numerics of gram-schmidt orthogonalization.
+\newblock \emph{Linear Algebra and Its Applications}, 197:\penalty0 297--316, 1994.
+
+\bibitem[Bonche et~al.(1985)Bonche, Flocard, and Heenen]{bonche1985self}
+P.~Bonche, H.~Flocard, and P.-H. Heenen.
+\newblock Self-consistent calculation of nuclear rotations: The complete yrast line of 24mg.
+\newblock \emph{Nuclear Physics A}, 443\penalty0 (1):\penalty0 39--63, 1985.
+\newblock \doi{10.1016/0375-9474(85)90224-7}.
+
+\bibitem[Flocard et~al.(1973)Flocard, Quentin, Kerman, and Vautherin]{FLOCARD1973433}
+H.~Flocard, P.~Quentin, A.K. Kerman, and D.~Vautherin.
+\newblock Nuclear deformation energy curves with the constrained hartree--fock method.
+\newblock \emph{Nuclear Physics A}, 203\penalty0 (3):\penalty0 433--472, 1973.
+\newblock ISSN 0375-9474.
+\newblock \doi{https://doi.org/10.1016/0375-9474(73)90357-6}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0375947473903576}.
+
+\bibitem[Cusson et~al.(1985)Cusson, Reinhard, Strayer, Maruhn, and Greiner]{Cusson1985}
+R.~Y. Cusson, P.~G. Reinhard, M.~R. Strayer, J.~A. Maruhn, and W.~Greiner.
+\newblock Density as a constraint and the separation of internal excitation energy in tdhf.
+\newblock \emph{Zeitschrift für Physik A Atoms and Nuclei}, 320:\penalty0 475--482, 1985.
+\newblock \doi{10.1007/BF01415725}.
+\newblock URL \url{https://doi.org/10.1007/BF01415725}.
+
+\bibitem[Ryssens et~al.(2015{\natexlab{b}})Ryssens, Hellemans, Bender, and Heenen]{RYSSENS2015175}
+W.~Ryssens, V.~Hellemans, M.~Bender, and P.-H. Heenen.
+\newblock Solution of the skyrme-hf+bcs equation on a 3d mesh, ii: A new version of the ev8 code.
+\newblock \emph{Computer Physics Communications}, 187:\penalty0 175--194, 2015{\natexlab{b}}.
+\newblock ISSN 0010-4655.
+\newblock \doi{https://doi.org/10.1016/j.cpc.2014.10.001}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0010465514003361}.
 
 \bibitem[Staszczak et~al.(2010)Staszczak, Stoitsov, Baran, and Nazarewicz]{Staszczak2010}
 A.~Staszczak, M.~Stoitsov, A.~Baran, and W.~Nazarewicz.
@@ -618,65 +615,71 @@ A.~Staszczak, M.~Stoitsov, A.~Baran, and W.~Nazarewicz.
 \newblock \doi{10.1140/epja/i2010-11018-9}.
 \newblock URL \url{https://doi.org/10.1140/epja/i2010-11018-9}.
 
-\bibitem[Stevenson and Barton(2019)]{stevenson2019low}
-P.~Stevenson and M.~Barton.
-\newblock Low-energy heavy-ion reactions and the skyrme effective interaction.
-\newblock \emph{Progress in Particle and Nuclear Physics}, 104:\penalty0 142--164, 2019.
-
-\bibitem[Stoitsov et~al.(2003)Stoitsov, Dobaczewski, Nazarewicz, Pittel, and Dean]{Stoitsov2003_PRCC68_054312}
-M.~V. Stoitsov, J.~Dobaczewski, W.~Nazarewicz, S.~Pittel, and D.~J. Dean.
-\newblock Systematic study of deformed nuclei at the drip lines and beyond.
-\newblock \emph{Phys. Rev. C}, 68\penalty0 (5):\penalty0 054312, 2003.
-\newblock \doi{10.1103/PhysRevC.68.054312}.
-
 \bibitem[Stroustrup(1986)]{stroustrup1986overview}
-B.~Stroustrup.
+Bjarne Stroustrup.
 \newblock An overview of c++.
 \newblock In \emph{Proceedings of the 1986 SIGPLAN workshop on Object-oriented programming}, pages 7--18, 1986.
 
-\bibitem[Strutinsky(1967)]{Strutinsky1967_NPA95_420}
-V.~M. Strutinsky.
-\newblock Shell effects in nuclear masses and deformation energies.
-\newblock \emph{Nuclear Physics A}, 95:\penalty0 420--442, 1967.
+\bibitem[Guennebaud et~al.(2010)Guennebaud, Jacob, et~al.]{eigenweb}
+Ga{\"e}l Guennebaud, Beno{\^i}t Jacob, et~al.
+\newblock Eigen.
+\newblock http://eigen.tuxfamily.org, 2010.
 
-\bibitem[Vautherin and Brink(1972)]{VauhBrinkOriginal}
-D.~Vautherin and D.~M. Brink.
-\newblock Hartree-fock calculations with skyrme's interaction. i. spherical nuclei.
-\newblock \emph{Phys. Rev. C}, 5:\penalty0 626--647, Mar 1972.
-\newblock \doi{10.1103/PhysRevC.5.626}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.5.626}.
+\bibitem[Bertozzi et~al.(1972)Bertozzi, Friar, Heisenberg, and Negele]{BERTOZZI1972408}
+W.~Bertozzi, J.~Friar, J.~Heisenberg, and J.W. Negele.
+\newblock Contributions of neutrons to elastic electron scattering from nuclei.
+\newblock \emph{Physics Letters B}, 41\penalty0 (4):\penalty0 408--414, 1972.
+\newblock ISSN 0370-2693.
+\newblock \doi{https://doi.org/10.1016/0370-2693(72)90662-4}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0370269372906624}.
 
-\bibitem[von Weizsäcker(1935)]{Weizsacker1935}
-C.~F. von Weizsäcker.
-\newblock {Zur Theorie der Kernmassen}.
-\newblock \emph{Zeitschrift f{\"u}r Physik}, 96\penalty0 (7-8):\penalty0 431--458, 1935.
-\newblock \doi{10.1007/BF01337700}.
+\bibitem[Angeli and Marinova(2013)]{ANGELI201369}
+I.~Angeli and K.P. Marinova.
+\newblock Table of experimental nuclear ground state charge radii: An update.
+\newblock \emph{Atomic Data and Nuclear Data Tables}, 99\penalty0 (1):\penalty0 69--95, 2013.
+\newblock ISSN 0092-640X.
+\newblock \doi{https://doi.org/10.1016/j.adt.2011.12.006}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0092640X12000265}.
 
-\bibitem[Warda et~al.(2002)Warda, Egido, Robledo, and Pomorski]{Warda2002}
-M.~Warda, J.~L. Egido, L.~M. Robledo, and K.~Pomorski.
-\newblock Microscopic description of the fission path of actinides with the gogny force.
-\newblock \emph{Physical Review C}, 66\penalty0 (1):\penalty0 014310, 2002.
-\newblock \doi{10.1103/PhysRevC.66.014310}.
+\bibitem[Hilaire and Girod(2006)]{HilaireGirod2006}
+S.~Hilaire and M.~Girod.
+\newblock Hartree--fock--bogoliubov results based on the gogny force, 2006.
+\newblock URL \url{https://www-phynu.cea.fr/science_en_ligne/carte_potentiels_microscopiques/carte_potentiel_nucleaire_eng.htm}.
+\newblock Part of the "AMEDEE" database.
 
-\bibitem[{Wikipedia contributors}(2025)]{wikipedia_equation_of_state}
-{Wikipedia contributors}.
-\newblock Nilsson model graphical representation -- wikipedia.
-\newblock \url{https://en.wikipedia.org/w/index.php?curid=60892381}, 2025.
+\bibitem[Lombardo and Dell'Aquila(2023)]{Lombardo2023}
+Ivano Lombardo and Daniele Dell'Aquila.
+\newblock Clusters in light nuclei: history and recent developments.
+\newblock \emph{La Rivista del Nuovo Cimento}, 46\penalty0 (9):\penalty0 521--618, sep 2023.
+\newblock ISSN 1826-9850.
+\newblock \doi{10.1007/s40766-023-00047-4}.
+\newblock URL \url{https://doi.org/10.1007/s40766-023-00047-4}.
 
-\bibitem[Woo et~al.(2023)Woo, Kim, and Kim]{LOBPCGDKS}
-J.~Woo, S.~Kim, and W.~Y. Kim.
-\newblock Gaussian-approximated poisson preconditioner for iterative diagonalization in real-space density functional theory.
-\newblock \emph{The Journal of Physical Chemistry A}, 127\penalty0 (17):\penalty0 3883--3893, 2023.
-\newblock \doi{10.1021/acs.jpca.2c09111}.
-\newblock URL \url{https://doi.org/10.1021/acs.jpca.2c09111}.
-\newblock PMID: 37094552.
+\bibitem[Li et~al.(2023)Li, Vretenar, Ren, Nik\ifmmode \check{s}\else \v{s}\fi{}i\ifmmode~\acute{c}\else \'{c}\fi{}, Zhao, Zhao, and Meng]{Vretenar}
+B.~Li, D.~Vretenar, Z.~X. Ren, T.~Nik\ifmmode \check{s}\else \v{s}\fi{}i\ifmmode~\acute{c}\else \'{c}\fi{}, J.~Zhao, P.~W. Zhao, and J.~Meng.
+\newblock Fission dynamics, dissipation, and clustering at finite temperature.
+\newblock \emph{Phys. Rev. C}, 107:\penalty0 014303, Jan 2023.
+\newblock \doi{10.1103/PhysRevC.107.014303}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.107.014303}.
 
-\bibitem[Zhou(1993)]{Zhou1993}
-P.-b. Zhou.
-\newblock \emph{Finite Difference Method}, pages 63--94.
-\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 1993.
-\newblock ISBN 978-3-642-50319-1.
-\newblock \doi{10.1007/978-3-642-50319-1_3}.
-\newblock URL \url{https://doi.org/10.1007/978-3-642-50319-1_3}.
+\bibitem[Reinhard et~al.(2011)Reinhard, Maruhn, Umar, and Oberacker]{NLF}
+P.-G. Reinhard, J.~A. Maruhn, A.~S. Umar, and V.~E. Oberacker.
+\newblock Localisation in light nuclei.
+\newblock \emph{Phys. Rev. C}, 83:\penalty0 034312, Mar 2011.
+\newblock \doi{10.1103/PhysRevC.83.034312}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.83.034312}.
+
+\bibitem[Ebran et~al.(2020)Ebran, Girod, Khan, Lasseri, and Schuck]{clusterCondensation}
+J.-P. Ebran, M.~Girod, E.~Khan, R.~D. Lasseri, and P.~Schuck.
+\newblock $\ensuremath{\alpha}$-particle condensation: A nuclear quantum phase transition.
+\newblock \emph{Phys. Rev. C}, 102:\penalty0 014305, Jul 2020.
+\newblock \doi{10.1103/PhysRevC.102.014305}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevC.102.014305}.
+
+\bibitem[Koopmans(1934)]{Koopmans1934_Theorem}
+Tjalling Koopmans.
+\newblock Über die zuordnung von wellenfunktionen und eigenwerten zu den einzelnen elektronen eines atoms.
+\newblock \emph{Physica}, 1\penalty0 (7-12):\penalty0 104--113, 1934.
+\newblock \doi{10.1016/S0031-8914(34)90011-2}.
 
 \end{thebibliography}

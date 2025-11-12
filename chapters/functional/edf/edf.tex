@@ -5,21 +5,22 @@ The energy functional to be minimised is of the form \cite{Bender2003}
 E_{\text{HF}} =  E_\text{Kin}+E_\text{Skyrme}+E_\text{Coul} = \int( \mathcal E_\text{Kin} + \mathcal E_\text{Skyrme} + \mathcal E_\text{Coul})d\bm r.
 \end{equation}
 \subsubsection{Densities}
-Functional \eqref{eq:full_functional} can be expressed through a series of generlized particle densities. Let us define them and express them on the spin coordinates up ($\uparrow$) and down ($\downarrow$) for the convenience in a mesh representation.
-\\The starting point is the density matrix, defined as
+The energy functional \eqref{eq:full_functional} can be expressed through a series of generlized particle densities. Let us define them and express them on the spin coordinates up ($\uparrow$) and down ($\downarrow$) for the convenience in a mesh representation.
+
+The starting point is the density matrix, defined as
 \begin{equation}
     \rho_q (\mathbf r \sigma, \mathbf r \sigma') = \sum_{\alpha} \phi_{\alpha, \sigma} (\mathbf r )\phi_{\alpha, \sigma'}^*(\mathbf r')
 \end{equation}
 where the index $\alpha$ goes through all single particle states of the particles of type $q$ (protons, neutrons) and the index $\sigma$ refers to the spin coordinate. The particle density is defined as 
 \begin{align}
-    \rho_q(\mathbf r) \coloneq\rho_q(\mathbf r, \mathbf r')\bigg|_{\mathbf{r} = \mathbf{r'}} \coloneq \sum_{\sigma}\rho(\mathbf r\sigma, \mathbf r'\sigma) \bigg|_{\mathbf{r} = \mathbf{r'}} &=\sum_{\alpha} \phi_{\uparrow}(\mathbf r)\phi_{\uparrow}^*(\mathbf r')+\phi_{\downarrow}(\mathbf r)\phi_{\downarrow}^*(\mathbf r') \bigg|_{\mathbf{r} = \mathbf{r'}} \nonumber
+    \rho_q(\mathbf r) &\coloneq\rho_q(\mathbf r, \mathbf r')\bigg|_{\mathbf{r} = \mathbf{r'}}   \nonumber\\& \coloneq \sum_{\sigma}\rho(\mathbf r\sigma, \mathbf r'\sigma) \bigg|_{\mathbf{r} = \mathbf{r'}} \nonumber\\&=\sum_{\alpha} \phi_{\uparrow}(\mathbf r)\phi_{\uparrow}^*(\mathbf r')+\phi_{\downarrow}(\mathbf r)\phi_{\downarrow}^*(\mathbf r') \bigg|_{\mathbf{r} = \mathbf{r'}} \nonumber
     \\&=\sum_{\alpha} |\phi_{\uparrow}(\mathbf r)|^2+|\phi_{\downarrow}(\mathbf r)|^2.
     \label{eq:part_density}
 \end{align}
 The kinetic density reads
 \begin{align}
     \tau_q(\mathbf r) &\coloneq \sum_{\alpha} \nabla'\cdot\nabla\rho_q(\mathbf r, \mathbf r')\bigg|_{\mathbf r'=\mathbf r} \nonumber
-    \\&= \sum_{\sigma, \alpha} \nabla \phi_\sigma (\mathbf r)\cdot \nabla \phi_\sigma^*(\mathbf r')\bigg|_{\mathbf r = \mathbf r'} = \sum_{\sigma, \alpha} |\nabla \phi_\sigma(\mathbf r)|^2 \nonumber
+    \\&= \sum_{\sigma, \alpha} \nabla \phi_\sigma (\mathbf r)\cdot \nabla \phi_\sigma^*(\mathbf r')\bigg|_{\mathbf r = \mathbf r'} \nonumber\\&= \sum_{\sigma, \alpha} |\nabla \phi_\sigma(\mathbf r)|^2 \nonumber
     \\&= \sum_{\alpha}|\nabla \phi_\uparrow(\mathbf r)|^2 + |\nabla \phi_\downarrow(\mathbf r)|^2 \label{eq:kin_density}.
 \end{align}
 The spin density  reads
@@ -67,12 +68,12 @@ Here, $t=0,1$ refers to the isoscalar and isovector components of the densities,
     \\\rho_1 = \rho_p - \rho_n
 \end{align*}
 and the same holds for all generalised densities.
-We can now derive the Kohn-Sham equations, by minimising the functional under the constraint
+We can now derive the Kohn--Sham equations, by minimising the functional under the constraint
 \begin{equation}
     \label{eq:spe_ks_constraint}
     \bra{\varphi_i}\ket{\varphi_j}=\delta_{ij}.
 \end{equation}
-The resulting Kohn-Sham equations are of the form
+The resulting Kohn--Sham equations are of the form
 \begin{equation}
     \label{eq:spe_ks}
     \bigg[-\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg) + U_q(\mathbf r) + \delta_{\text{q,proton}}U_C(\mathbf r)-i\mathbf B_q(\mathbf r)\cdot(\nabla \times \boldsymbol\sigma) \bigg]\varphi_\alpha=\varepsilon_\alpha\varphi_\alpha
@@ -91,7 +92,8 @@ and a spin-orbit field, given by
     \mathbf B_q(\mathbf r) = \fdv{\mathcal E}{\boldsymbol{\mathbf J_q}}.
 \end{equation}
 The coulomb field $U_C$, which is present only in the single particle equation for protons, doesn't come from the Skyrme interaction, rather from the Coulomb part of the whole functional. It will be properly derived in section \ref{sec:coulomb_treatment}.
-\\Following the rules for functional derivatives, outlined in the appendix \ref{app:func_der} we get
+
+Following the rules for functional derivatives, outlined in the appendix \ref{app:func_der} we get
 \begin{align}
     \frac{\hbar^2}{2m_q^*(\mathbf r)} =& +\frac{\hbar^2}{2m} \nonumber
     \\&+ \frac 1 8 [t_1(2+x_1)+t_2(2+x_2)]\rho(\mathbf r) \nonumber
