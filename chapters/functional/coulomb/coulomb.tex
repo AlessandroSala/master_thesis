@@ -2,14 +2,13 @@
 \label{sec:coulomb_treatment}
 Unlike the Skyrme interaction, the Coulomb force is finite-range, giving rise to an unwanted integral operator in the single-particle Hamiltonian.
 A well known and widely used device is the Slater approximation \cite{SlaterApp}, which gives a local exchange interaction.
-
 In this approximation, the Coulomb energy reads
 \begin{align*}
-    E_\text{Coul} = \int \mathcal E_\text{Coul}(\mathbf r) d\bm r
+    E_\text{Coul} = \int \mathcal E_\text{Coul}(\mathbf r) d\bm r,
 \end{align*}
 where the energy density is given by
 \begin{align}
-    \mathcal E_\text{Coul}(\bm r) = \frac{e^2}{2}\bigg[\int  \frac{\rho_p(\mathbf r )\rho_p(\mathbf r ' )}{|\mathbf r-\mathbf r'|}d\mathbf r'  - \frac 3 2 \bigg(\frac 3 \pi \bigg) ^{\frac 1 3}\rho_p^{4/3}(\mathbf r)\bigg].
+    \mathcal E_\text{Coul}(\bm r) = \frac{e^2}{2}\bigg[\int  \frac{\rho_p(\mathbf r )\rho_p(\mathbf r ' )}{|\mathbf r-\mathbf r'|}d\mathbf r'  - \frac 3 2 \bigg(\frac 3 \pi \bigg) ^{\frac 1 3}\rho_p^{4/3}(\mathbf r)\bigg],
 \end{align}
 which results in the Coulomb potential field
 \begin{equation}
@@ -26,16 +25,15 @@ An alternative approach is to solve the Poisson equation (from now on, $V_c$ ref
 \end{equation}
 Given the proton density, we can impose Dirichlet boundary conditions, which can be extracted from a quadrupole expansion of the charge density \cite{Jackson1998}
 \begin{equation}
-V_c (\mathbf r) = 4\pi e^2 \sum_{\lambda=0}^2\sum_{\mu=-\lambda}^\lambda \frac{\expval{Q_{\lambda\mu}} Y_{\lambda\mu}}{r^{1+\lambda}}\text{ on }\partial \Omega
+V_c (\mathbf r) = 4\pi e^2 \sum_{\lambda=0}^2\sum_{\mu=-\lambda}^\lambda \frac{\expval{Q_{\lambda\mu}} Y_{\lambda\mu}}{r^{1+\lambda}}\text{ on }\partial \Omega,
 \end{equation}
 where $\expval{Q_{\lambda\mu}}$ is defined as 
 \begin{equation}
-    \expval{Q_{\lambda\mu}} = \int r^\lambda Y_{\lambda\mu}^* (\mathbf r)\rho_p(\mathbf r ) d^3 \mathbf r
+    \expval{Q_{\lambda\mu}} = \int r^\lambda Y_{\lambda\mu}^* (\mathbf r)\rho_p(\mathbf r ) d^3 \mathbf r.
 \end{equation}
 Since we expect a charge density confined to the nuclear shape, higher order terms in the expansion can be neglected, provided that the box is sufficiently large.
-
-In a reference frame where the nucleus center of mass is at the origin, the expansion reduces to
+In a reference frame where the nucleus centre of mass is at the origin, the expansion reduces to
 \begin{equation}
     V_{c}(\mathbf r ) = \frac{Ze^2}{r} + e^2\sum_{\mu=-2}^{2}\frac{\expval{Q_{2\mu}}Y_{2\mu}}{r^3} \text{ on } \partial \Omega.
 \end{equation}
-The reader can refer to appendix \ref{sec:spherical_harmonics} for the definition and numerical evaluation of the spherical harmonics $Y_{\lambda\mu}$.
+The reader may refer to appendix \ref{sec:spherical_harmonics} for the definition and numerical evaluation of the spherical harmonics $Y_{\lambda\mu}$.

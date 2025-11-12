@@ -2,7 +2,7 @@
 \label{sec:skyrme}
 Now that the theoretical framework is clear, we can use the Skyrme microscopic effective interaction to do nuclear structure calculations.
 \subsection{Skyrme force}
-It was first proposed by Tony Skyrme in 1958 \cite{SKYRME1958615} as a zero range force between nucleons, comprising a two body attractive term that reads
+The Skyrme interaction was first proposed by Tony Skyrme in 1958 \cite{SKYRME1958615} as a zero range force between nucleons, comprising a two body attractive term that reads
 \begin{align*}
 v^{(2)}(\mathbf{r}_1, \mathbf{r}_2) &= t_0 \left(1 + x_0 P_\sigma \right) \delta(\mathbf{r}) \\
 &\quad + \frac{1}{2} t_1 \left(1 + x_1 P_\sigma \right) \left[ \mathbf{P}'^2 \delta(\mathbf{r}) + \delta(\mathbf{r}) \mathbf{P}^2 \right] \\
@@ -11,17 +11,17 @@ v^{(2)}(\mathbf{r}_1, \mathbf{r}_2) &= t_0 \left(1 + x_0 P_\sigma \right) \delta
 \end{align*}
 and a three body term, that is
 \begin{equation*}
-    v^{(3)}(\bm r_1, \bm r_2, \bm r_3) = t_3\delta(\bm r_1-\bm r_2)\delta(\bm r_2 -\bm r_3)
+    v^{(3)}(\bm r_1, \bm r_2, \bm r_3) = t_3\delta(\bm r_1-\bm r_2)\delta(\bm r_2 -\bm r_3),
 %v^{(3)}(\mathbf r_1, \mathbf r_2)=\frac 1 6 t_3 \left(1 + x_3 P_\sigma \right) \left[ \rho(\mathbf{R}) \right]^\sigma \delta(\mathbf{r}) 
 \end{equation*}
 which mimics the repulsive three-body force; without it, a collapse of the nuclear density would occur.
 The different operators are defined as
 \begin{equation}
-\mathbf{r} = \mathbf{r}_1 - \mathbf{r}_2\quad \mathbf{R} = \frac{\mathbf{r}_1+\mathbf{r}_2}{2},
+\mathbf{r} = \mathbf{r}_1 - \mathbf{r}_2,\quad \mathbf{R} = \frac{\mathbf{r}_1+\mathbf{r}_2}{2},
 \end{equation}
-which are respectively the relative position of two particles and their center of mass coordinate, assuming equal masses,
+which are respectively the relative position of two particles and their centre of mass coordinate, assuming equal masses,
 \begin{equation}
-\mathbf{P} = \frac{-i(\nabla_1 - \nabla_2)}{2},
+\mathbf{P} = \frac{-i(\nabla_1 - \nabla_2)}{2}
 \end{equation}
 which is the so called relative wave-number operator, corresponding to the relative momentum of the two interacting particles.
 \begin{equation}
@@ -35,7 +35,7 @@ represents the spin-exchange operator.
 Primed operators refer to the adjoint acting on the left.
 It is trivial to show that the three-body term, in the case of even-even nuclei, is equivalent to a two-body, density-dependent interaction \cite{VauhBrinkOriginal}
 \begin{equation}
-v^{(3)}(\bm r_1, \bm r_2) = \frac 1 6 t_3 (1+P_\sigma)  \delta(\bm r )\rho(\bm R)
+v^{(3)}(\bm r_1, \bm r_2) = \frac 1 6 t_3 (1+P_\sigma)  \delta(\bm r )\rho(\bm R).
 \end{equation}
 The zero-range feature is apparent in the choice of the Dirac delta $\delta(\mathbf r)$, which allows the writing of the Fock term detailed in \eqref{eq:fock} as a purely local one.
 %\\Taking the expectation value of the many body hamiltonian, in the Hilbert space of Slater determinants, yields an energy density which can be expressed as a function of $\rho_q, \tau_q, \bm J_q$ \cite{VauhBrinkOriginal}.
@@ -55,4 +55,4 @@ On top of that, additional, empirical tuning of the resulting energy density nee
     \label{eq:skyrme_int_en_dens}
     \expval{H} = \bra{\Psi} H \ket{\Psi} = \int \mathcal H(\bm r) d\mathbf r
 \end{equation}
-and use it as a starting point to build an energy density functional and employ DFT.
+and use it as a starting point to build an Energy Density Functional and employ DFT.

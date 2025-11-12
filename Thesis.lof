@@ -11,20 +11,20 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Comparison between the steepest descent method and the conjugate gradient method.}}{64}{figure.caption.231}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Pseudocode of the Hartree--Fock program.\relax }}{75}{figure.caption.271}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces HF calculation convergence with varying CG tolerance for $^{16}$O.}}{76}{figure.caption.274}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces HF calculation convergence with varying number of inverse power steps for $^{16}$O.}}{76}{figure.caption.276}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg.}}{77}{figure.caption.277}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Numerical stability map of the HF solver for $^{16}$O for different box and step sizes.}}{78}{figure.caption.278}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Comparison between the steepest descent method and the conjugate gradient method.}}{64}{figure.caption.230}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Pseudocode of the Hartree--Fock program.\relax }}{75}{figure.caption.270}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces HF calculation convergence with varying CG tolerance for $^{16}$O.}}{76}{figure.caption.273}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces HF calculation convergence with varying number of inverse power steps for $^{16}$O.}}{76}{figure.caption.275}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg.}}{77}{figure.caption.276}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Numerical stability map of the HF solver for $^{16}$O for different box and step sizes.}}{78}{figure.caption.277}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Comparison between the two formulae for $\beta _2$.}}{91}{figure.caption.297}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces $^{24}$Mg ground state density $\rho (x, 0, z)$.}}{94}{figure.caption.302}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces $^{24}$Mg ground state density $\rho (x, y, 0)$.}}{95}{figure.caption.303}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces $^{24}$Mg Deformation curves comparison with \texttt {EV8}.}}{96}{figure.caption.305}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Comparison between the SkM* and the SLy4 Skyrme functionals of the $^{24}$Mg deformation curves.}}{97}{figure.caption.306}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Particle densities and NLFs in $^{20}$Ne for different Skyrme functionals.}}{99}{figure.caption.311}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces $^{42}$Si density $\rho (x, 0, z)$.}}{101}{figure.caption.314}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces $^{28}$S density $\rho (x, 0, z)$.}}{101}{figure.caption.317}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Comparison between the two formulae for $\beta _2$.}}{91}{figure.caption.296}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces $^{24}$Mg ground state density $\rho (x, 0, z)$.}}{94}{figure.caption.301}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces $^{24}$Mg ground state density $\rho (x, y, 0)$.}}{95}{figure.caption.302}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces $^{24}$Mg Deformation curves comparison with \texttt {EV8}.}}{96}{figure.caption.304}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Comparison between the SkM* and the SLy4 Skyrme functionals of the $^{24}$Mg deformation curves.}}{97}{figure.caption.305}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Particle densities and NLFs in $^{20}$Ne for different Skyrme functionals.}}{99}{figure.caption.310}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces $^{42}$Si density $\rho (x, 0, z)$.}}{101}{figure.caption.313}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces $^{28}$S density $\rho (x, 0, z)$.}}{101}{figure.caption.316}%
 \addvspace {10\p@ }

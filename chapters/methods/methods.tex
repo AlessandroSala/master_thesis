@@ -66,13 +66,12 @@ These codes solve the HF or HFB equations directly in coordinate space, allowing
 However, coordinate-space solvers come with their own challenges.  
 High spatial resolution is required to accomodate sufficient numerical accuracy, leading to large three-dimensional grids, thus substantial computational cost. 
 Even with modern resources, fully unconstrained calculations remain computationally intensive, and additional assumptions such as plane reflection symmetry are often introduced to reduce the domain size \cite{Ryssens2015_EV8,Ryssens2016_MOCCa}.
-
 Thus, while mesh-based solvers offer maximal flexibility, their computational demands motivate the search for more efficient numerical approaches.
 
 \subsection{Towards more efficient unconstrained methods}
 The limitations discussed above highlight the need for methods that combine the flexibility of coordinate-space solvers with improved computational efficiency.
 In this thesis, we investigate such an approach through the use of the \textit{Generalised Conjugate Gradient} (GCG) method, presented in detail in section~\ref{sec:gcg}.
-In the HF and energy-density-functional frameworks, the core of the many-body problem reduces to solving a set of single-particle Schrödinger or Kohn--Sham eigenvalue equations, coupled self-consistently through the mean field.
+In the HF and energy-density-functional frameworks, the core of the many-body problem reduces to solving a set of single-particle Schrödinger or Kohn--Sham eigenvalue equations, coupled self-consistently through the mean-field.
 These equations must be solved repeatedly during the iterative HF/HFB cycle, and their efficient solution dominates the overall computational cost.
 
 As shown in the present work, applying GCG to the HF single-particle problem provides a promising route towards efficient, symmetry-unrestricted many-body calculations while mitigating the main bottlenecks of fully coordinate-mesh methods.

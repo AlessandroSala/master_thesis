@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.30)  12 NOV 2025 19:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.30)  12 NOV 2025 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1423,7 +1423,7 @@ Chapter 4.
 (./chapters/numerical/finite_diff/finite_diff.tex [57
 
 ] [58] [59] [60]) (./chapters/numerical/gcg/gcg.tex [61] [62]
-<Images/cg.pdf, id=1674, 500.87125pt x 280.04625pt>
+<Images/cg.pdf, id=1668, 500.87125pt x 280.04625pt>
 File: Images/cg.pdf Graphic file (type pdf)
 <use Images/cg.pdf>
 Package pdftex.def Info: Images/cg.pdf  used on input line 60.
@@ -1442,7 +1442,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Images/conv_tol.pdf, id=1906, 578.16pt x 433.62pt>
+<Images/conv_tol.pdf, id=1900, 578.16pt x 433.62pt>
 File: Images/conv_tol.pdf Graphic file (type pdf)
 <use Images/conv_tol.pdf>
 Package pdftex.def Info: Images/conv_tol.pdf  used on input line 15.
@@ -1451,12 +1451,12 @@ Package pdftex.def Info: Images/conv_tol.pdf  used on input line 15.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [73]
-<Images/conv_steps_o.pdf, id=1920, 1084.05pt x 578.16pt>
+<Images/conv_steps_o.pdf, id=1914, 1084.05pt x 578.16pt>
 File: Images/conv_steps_o.pdf Graphic file (type pdf)
 <use Images/conv_steps_o.pdf>
 Package pdftex.def Info: Images/conv_steps_o.pdf  used on input line 25.
 (pdftex.def)             Requested size: 455.24411pt x 242.79907pt.
-<Images/conv_steps.pdf, id=1921, 1084.05pt x 578.16pt>
+<Images/conv_steps.pdf, id=1915, 1084.05pt x 578.16pt>
 File: Images/conv_steps.pdf Graphic file (type pdf)
 <use Images/conv_steps.pdf>
 Package pdftex.def Info: Images/conv_steps.pdf  used on input line 31.
@@ -1469,7 +1469,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./chapters/numerical/minimisation/stability.tex
-<Images/stability.pdf, id=1924, 433.62pt x 433.62pt>
+<Images/stability.pdf, id=1918, 433.62pt x 433.62pt>
 File: Images/stability.pdf Graphic file (type pdf)
 <use Images/stability.pdf>
 Package pdftex.def Info: Images/stability.pdf  used on input line 6.
@@ -1498,7 +1498,7 @@ Chapter 6.
 
 
 ]
-<Images/beta_compare.pdf, id=2231, 578.16pt x 433.62pt>
+<Images/beta_compare.pdf, id=2225, 578.16pt x 433.62pt>
 File: Images/beta_compare.pdf Graphic file (type pdf)
 <use Images/beta_compare.pdf>
 Package pdftex.def Info: Images/beta_compare.pdf  used on input line 40.
@@ -1522,7 +1522,7 @@ LaTeX Font Warning: Font shape `T1/cmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 6.
 
 [92]
-<Images/mg_gs_density_axial.pdf, id=2306, 462.52798pt x 346.89601pt>
+<Images/mg_gs_density_axial.pdf, id=2300, 462.52798pt x 346.89601pt>
 File: Images/mg_gs_density_axial.pdf Graphic file (type pdf)
 <use Images/mg_gs_density_axial.pdf>
 Package pdftex.def Info: Images/mg_gs_density_axial.pdf  used on input line 78.
@@ -1531,7 +1531,7 @@ Package pdftex.def Info: Images/mg_gs_density_axial.pdf  used on input line 78.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Images/mg_gs_density_top.pdf, id=2307, 462.52798pt x 346.89601pt>
+<Images/mg_gs_density_top.pdf, id=2301, 462.52798pt x 346.89601pt>
 File: Images/mg_gs_density_top.pdf Graphic file (type pdf)
 <use Images/mg_gs_density_top.pdf>
 Package pdftex.def Info: Images/mg_gs_density_top.pdf  used on input line 84.
@@ -1539,13 +1539,13 @@ Package pdftex.def Info: Images/mg_gs_density_top.pdf  used on input line 84.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Images/ev8_compare_nopair.pdf, id=2311, 433.62pt x 433.62pt>
+<Images/ev8_compare_nopair.pdf, id=2305, 433.62pt x 433.62pt>
 File: Images/ev8_compare_nopair.pdf Graphic file (type pdf)
 <use Images/ev8_compare_nopair.pdf>
 Package pdftex.def Info: Images/ev8_compare_nopair.pdf  used on input line 100.
 (pdftex.def)             Requested size: 364.19667pt x 364.21185pt.
 [93]
-<Images/functionals_compare.pdf, id=2322, 433.62pt x 433.62pt>
+<Images/functionals_compare.pdf, id=2316, 433.62pt x 433.62pt>
 File: Images/functionals_compare.pdf Graphic file (type pdf)
 <use Images/functionals_compare.pdf>
 Package pdftex.def Info: Images/functionals_compare.pdf  used on input line 110.
@@ -1564,43 +1564,43 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 6.
 
 [95 <./Images/mg_gs_density_top.pdf>] [96 <./Images/ev8_compare_nopair.pdf>] [97 <./Images/functionals_compare.pdf>]
-<Images/clustering/SLy4_density.pdf, id=2526, 441.17459pt x 369.781pt>
+<Images/clustering/SLy4_density.pdf, id=2520, 441.17459pt x 369.781pt>
 File: Images/clustering/SLy4_density.pdf Graphic file (type pdf)
 <use Images/clustering/SLy4_density.pdf>
 Package pdftex.def Info: Images/clustering/SLy4_density.pdf  used on input line 27.
 (pdftex.def)             Requested size: 204.85846pt x 171.70375pt.
-<Images/clustering/SLy4_localization.pdf, id=2527, 441.13431pt x 369.781pt>
+<Images/clustering/SLy4_localization.pdf, id=2521, 441.13431pt x 369.781pt>
 File: Images/clustering/SLy4_localization.pdf Graphic file (type pdf)
 <use Images/clustering/SLy4_localization.pdf>
 Package pdftex.def Info: Images/clustering/SLy4_localization.pdf  used on input line 33.
 (pdftex.def)             Requested size: 204.85846pt x 171.72069pt.
-<Images/clustering/skm_density.pdf, id=2528, 441.17459pt x 369.781pt>
+<Images/clustering/skm_density.pdf, id=2522, 441.17459pt x 369.781pt>
 File: Images/clustering/skm_density.pdf Graphic file (type pdf)
 <use Images/clustering/skm_density.pdf>
 Package pdftex.def Info: Images/clustering/skm_density.pdf  used on input line 41.
 (pdftex.def)             Requested size: 204.85846pt x 171.70375pt.
-<Images/clustering/skm_localization.pdf, id=2529, 441.13431pt x 369.781pt>
+<Images/clustering/skm_localization.pdf, id=2523, 441.13431pt x 369.781pt>
 File: Images/clustering/skm_localization.pdf Graphic file (type pdf)
 <use Images/clustering/skm_localization.pdf>
 Package pdftex.def Info: Images/clustering/skm_localization.pdf  used on input line 47.
 (pdftex.def)             Requested size: 204.85846pt x 171.72069pt.
-<Images/clustering/kde33_density.pdf, id=2530, 441.17459pt x 369.781pt>
+<Images/clustering/kde33_density.pdf, id=2524, 441.17459pt x 369.781pt>
 File: Images/clustering/kde33_density.pdf Graphic file (type pdf)
 <use Images/clustering/kde33_density.pdf>
 Package pdftex.def Info: Images/clustering/kde33_density.pdf  used on input line 56.
 (pdftex.def)             Requested size: 204.85846pt x 171.70375pt.
-<Images/clustering/kde33_localization.pdf, id=2531, 441.13431pt x 369.781pt>
+<Images/clustering/kde33_localization.pdf, id=2525, 441.13431pt x 369.781pt>
 File: Images/clustering/kde33_localization.pdf Graphic file (type pdf)
 <use Images/clustering/kde33_localization.pdf>
 Package pdftex.def Info: Images/clustering/kde33_localization.pdf  used on input line 62.
 (pdftex.def)             Requested size: 204.85846pt x 171.72069pt.
  [98] [99 <./Images/clustering/SLy4_density.pdf> <./Images/clustering/SLy4_localization.pdf> <./Images/clustering/skm_density.pdf> <./Images/clustering/skm_localization.pdf> <./Images/clustering/kde33_density.pdf> <./Images/clustering/kde33_localization.pdf>]
-<Images/si42_density_sly4.pdf, id=2761, 462.52798pt x 346.89601pt>
+<Images/si42_density_sly4.pdf, id=2755, 462.52798pt x 346.89601pt>
 File: Images/si42_density_sly4.pdf Graphic file (type pdf)
 <use Images/si42_density_sly4.pdf>
 Package pdftex.def Info: Images/si42_density_sly4.pdf  used on input line 98.
 (pdftex.def)             Requested size: 364.19667pt x 273.16087pt.
-<Images/s28_density_sly4.pdf, id=2766, 462.52798pt x 346.89601pt>
+<Images/s28_density_sly4.pdf, id=2760, 462.52798pt x 346.89601pt>
 File: Images/s28_density_sly4.pdf Graphic file (type pdf)
 <use Images/s28_density_sly4.pdf>
 Package pdftex.def Info: Images/s28_density_sly4.pdf  used on input line 125.
@@ -1769,21 +1769,21 @@ Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used 
 
 ] (./Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 9064ED69261053F7287C8A032FE520B9;15470.
+(rerunfilecheck)             Checksum: 411FE2A61769DA25D0385388893DF651;15470.
  ) 
 Here is how much of TeX's memory you used:
- 49327 strings out of 476041
- 1074793 string characters out of 5793174
+ 49319 strings out of 476041
+ 1074667 string characters out of 5793174
  1902388 words of memory out of 6000000
- 67966 multiletter control sequences out of 15000+600000
+ 67964 multiletter control sequences out of 15000+600000
  541253 words of font info for 109 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
  150i,20n,141p,1644b,3071s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on Thesis.pdf (138 pages, 10555461 bytes).
+Output written on Thesis.pdf (138 pages, 10555119 bytes).
 PDF statistics:
- 3442 PDF objects out of 3580 (max. 8388607)
- 2590 compressed objects within 26 object streams
- 969 named destinations out of 1000 (max. 500000)
+ 3435 PDF objects out of 3580 (max. 8388607)
+ 2583 compressed objects within 26 object streams
+ 963 named destinations out of 1000 (max. 500000)
  852 words of extra memory for PDF output out of 10000 (max. 10000000)
 
