@@ -83,8 +83,8 @@
 \contentsline {subsubsection}{Conjugate Gradient method}{62}{subsubsection*.224}%
 \contentsline {paragraph}{Steepest descent method}{62}{paragraph*.226}%
 \contentsline {paragraph}{Complex matrices}{63}{paragraph*.232}%
-\contentsline {subsubsection}{Preconditioning}{63}{subsubsection*.234}%
-\contentsline {subsubsection}{Rayleigh-Ritz procedure}{64}{subsubsection*.237}%
+\contentsline {subsubsection}{Preconditioning}{64}{subsubsection*.234}%
+\contentsline {subsubsection}{Rayleigh-Ritz procedure}{65}{subsubsection*.237}%
 \contentsline {subsubsection}{Shift and Invert}{65}{subsubsection*.239}%
 \contentsline {paragraph}{Smallest eigenvalue}{66}{paragraph*.244}%
 \contentsline {subsection}{\numberline {4.2.2}Iterative eigensolvers}{66}{subsection.4.2.2}%
@@ -94,16 +94,16 @@
 \contentsline {subsection}{\numberline {4.2.3}Generalised Conjugate Gradient}{69}{subsection.4.2.3}%
 \contentsline {paragraph}{Eigenvalue problem}{69}{paragraph*.255}%
 \contentsline {paragraph}{Complex matrix}{69}{paragraph*.257}%
-\contentsline {paragraph}{Blocking}{69}{paragraph*.258}%
+\contentsline {paragraph}{Blocking}{70}{paragraph*.258}%
 \contentsline {paragraph}{Orthogonalization}{70}{paragraph*.259}%
 \contentsline {paragraph}{Shift update}{70}{paragraph*.260}%
 \contentsline {paragraph}{Preconditioning}{70}{paragraph*.262}%
-\contentsline {section}{\numberline {4.3}Code implementation details}{71}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Code implementation details}{70}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Constraints}{71}{subsection.4.3.1}%
 \contentsline {subsubsection}{Augmented Lagrangian Method}{72}{subsubsection*.267}%
 \contentsline {subsection}{\numberline {4.3.2}Details on the implementation of the code}{73}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Optimal parameters choice}{74}{subsection.4.3.3}%
-\contentsline {subsubsection}{Inverse power step tolerance}{74}{subsubsection*.272}%
+\contentsline {subsection}{\numberline {4.3.3}Optimal parameters choice}{73}{subsection.4.3.3}%
+\contentsline {subsubsection}{Inverse power step tolerance}{73}{subsubsection*.272}%
 \contentsline {subsubsection}{Inner GCG iterations}{74}{subsubsection*.275}%
 \contentsline {subsection}{\numberline {4.3.4}Numerical stability}{75}{subsection.4.3.4}%
 \contentsline {chapter}{\numberline {5}Results for spherical nuclei}{79}{chapter.5}%
@@ -128,9 +128,9 @@
 \contentsline {subsection}{\numberline {6.3.1}$\alpha $-clustering in light nuclei}{95}{subsection.6.3.1}%
 \contentsline {subsubsection}{Nucleon localisation function}{98}{subsubsection*.307}%
 \contentsline {subsubsection}{$\alpha -$clustering in $^{20}$Ne}{98}{subsubsection*.310}%
-\contentsline {subsection}{\numberline {6.3.2}Drip line nuclei}{98}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.2}Nuclei near the drip lines}{98}{subsection.6.3.2}%
 \contentsline {subsubsection}{$^{42}$Si}{100}{subsubsection*.312}%
-\contentsline {subsubsection}{$^{28}$S}{101}{subsubsection*.315}%
+\contentsline {subsubsection}{$^{28}$S}{100}{subsubsection*.315}%
 \contentsline {chapter}{Conclusion and future developments}{103}{chapter*.319}%
 \vspace {2em}
 \contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{107}{chapter*.321}%

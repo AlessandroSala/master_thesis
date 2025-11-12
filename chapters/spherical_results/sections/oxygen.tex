@@ -5,7 +5,7 @@ In the results shown here, for $^{16}$O, we are able to reach a $0.3$ fm step si
 \section{Results for \(^{16}\)O}
 \label{sec:oxygen}
 The first results we will take a look at are the ones for $^{16}$O. It is an ideal benchmark for gauging the solver's performance, as it is a very light, double magic nucleus, meaning it has no pairing and a spherical shape.
-All calculations are performed in a box of size $[-9, 9]$ fm in all three directions and a step size of $0.3$ fm, corresponding to $2\cdot 60^{3}$ mesh points.
+All calculations are performed in a box of size $[-9,+9]$ fm in all three directions and a step size of $0.3$ fm, corresponding to $2\cdot 60^{3}$ mesh points.
 \subsection{Results neglecting Coulomb interaction}
 Since the Skyrme functional includes many terms of increasing complexity, results are shown for more and more terms in expression \eqref{eq:skfunc}. We start by including only $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$ and neglecting the others, and the Coulomb interaction; results are reported in table \ref{tab:no_so_no_j_no_coul}.
 Without further terms, the spin-orbit field $\bm B(\bm r)$ \eqref{eq:sofield} vanishes, hence the $1p_{3/2}$ and $1p_{1/2}$ levels show degeneration in energy.
@@ -34,7 +34,7 @@ Since $N=Z$, assuming equal masses the single-particle equations will be exactly
     1p$_{1/2}$ &[MeV] & -18.573 & -18.572 & 0.001 & \num{5.38e-3}\\
     \bottomrule
   \end{tabular}
-  \caption{$^{16}$O including $C_0^{\rho}$, $C_1^{\rho}$, $C_0^{\tau}$, $C_1^{\tau}$ terms and neglecting Coulomb interaction. \explaindelta}
+  \caption[$^{16}$O including $C_0^{\rho}$, $C_1^{\rho}$, $C_0^{\tau}$, $C_1^{\tau}$ terms and neglecting the Coulomb interaction.]{$^{16}$O including $C_0^{\rho}$, $C_1^{\rho}$, $C_0^{\tau}$, $C_1^{\tau}$ terms and neglecting the Coulomb interaction. \explaindelta}
   \label{tab:no_so_no_j_no_coul}
 \end{table}
 
@@ -63,7 +63,7 @@ In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ term
     1p$_{1/2}$ &[MeV] & -14.335 & -14.335 & - & -\\
     \bottomrule
   \end{tabular}
-  \caption{$^{16}$O including $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$, $C_0^{\div \bm J}$, $C_1^{\div \bm J}$ terms, neglecting the Coulomb interaction and $J^2$ terms. \explaindelta}
+  \caption[$^{16}$O including $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$, $C_0^{\div \bm J}$, $C_1^{\div \bm J}$ terms, neglecting the Coulomb interaction and $J^2$ terms.]{$^{16}$O including $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$, $C_0^{\div \bm J}$, $C_1^{\div \bm J}$ terms, neglecting the Coulomb interaction and $J^2$ terms. \explaindelta}
   \label{tab:compare_so}
 \end{table}
 
@@ -92,7 +92,7 @@ Lastly, the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are also included in
     1p$_{1/2}$ &[MeV] & -14.361 & -14.361 & - & -\\
     \bottomrule
   \end{tabular}
-  \caption{$^{16}$O neglecting Coulomb interaction. \explaindelta}
+  \caption[$^{16}$O neglecting the Coulomb interaction.]{$^{16}$O neglecting the Coulomb interaction. \explaindelta}
   \label{tab:compare_j2}
 \end{table}
 \subsection{Results including Coulomb interaction}
@@ -132,7 +132,7 @@ As the final step to get a complete description of $^{16}$O, the Coulomb interac
     1p$_{1/2}$ &[MeV] & -11.081 & -11.082 & 0.001 & \num{9.02e-3}\\
     \bottomrule
   \end{tabular}
-  \caption{$^{16}$O complete of the Skyrme functional and Coulomb interaction. \explaindelta}
+  \caption[$^{16}$O complete of the Skyrme functional and Coulomb interaction.]{$^{16}$O complete of the Skyrme functional and Coulomb interaction. \explaindelta}
   \label{tab:confronto}
 \end{table}
 
@@ -183,7 +183,7 @@ Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight 
     1d$_{3/2}$ &[MeV] & -15.337 & -15.340 & 0.003 & \num{1.96e-2}\\
     \bottomrule
   \end{tabular}
-  \caption{$^{48}$Ca, box size [-12, 12] fm, step size 0.34 fm. \explaindelta}
+  \caption[Results for the spherical $^{48}$Ca.]{$^{48}$Ca, box size [-12,+12] fm, step size 0.34 fm. \explaindelta}
   \label{tab:compare_all_ca48}
 \end{table}
 
@@ -229,7 +229,7 @@ Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight 
     1f$_{7/2}$ &[MeV] & -6.934 & -6.935 & 0.001 & \num{1.44e-2}\\
     \bottomrule
   \end{tabular}
-  \caption{$^{56}$Ni, box size [-13, 13] fm, step size 0.37 fm. \explaindelta}
+  \caption[Results for the spherical $^{56}$Ni.]{$^{56}$Ni, box size [-13,+13] fm, step size 0.37 fm. \explaindelta}
   \label{tab:compare_all_ni56}
 \end{table}
 
@@ -282,7 +282,7 @@ Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight 
     2p$_{1/2}$ &[MeV] & -8.108 &  -8.104 & 0.004 & \num{4.94e-2}\\
     \bottomrule
   \end{tabular}
-  \caption{$^{90}$Zr, box size [-15, 15] fm, step size 0.43 fm. \explaindelta}
+  \caption[Results for the spherical $^{90}$Zr.]{$^{90}$Zr, box size [-15,+15] fm, step size 0.43 fm. \explaindelta}
   \label{tab:compare_all_zr90}
 \end{table}
 \section{Comparison with experimental values}
@@ -299,6 +299,6 @@ The Skyrme functional is highly successful at producing theoretical values in gr
     $r_{\text{ch, exp}}$ (fm) & 2.699 & 3.477 & 3.763 & 4.269 \\
     \bottomrule
   \end{tabular}
-  \caption{Comparison of experimental binding energies and charge radii with theoretical values using the SLy5 functional. Data taken from \cite{ANGELI201369,chabanat2}.}
+  \caption[Comparison of experimental binding energies and charge radii with theoretical values calculated using the SLy5 functional.]{Comparison of experimental binding energies and charge radii with theoretical values calculated using the SLy5 functional. Data taken from \cite{ANGELI201369,chabanat2}.}
   \label{tab:exp_comp}
 \end{table}

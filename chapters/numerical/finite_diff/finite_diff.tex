@@ -4,28 +4,30 @@ The framework used to numerically solve the relevant PDEs of the problem, is the
 \subsection{3D mesh}
 The first step of the process is representing the different fields in a numerical, discretised fashion.
 Generally speaking, we deal at most with 2-rank tensors, which depend on three space coordinates and one spin coordinate.
-\\Discretizing the 3D Cartesian space with a 3-index mesh, choosing a box whose size along x, y, z is respectively $[-a_x, a_x]$, $[-a_y, a_y]$, $[-a_z, a_z]$, and a number of points $n_x, n_y, n_z$, the resulting lattice will be given by
+Discretizing the 3D Cartesian space with a 3-index mesh, choosing a box whose size along x, y, z is respectively $[-a_x, +a_x]$, $[-a_y, +a_y]$, $[-a_z, +a_z]$, and a number of points $n_x, n_y, n_z$, the resulting lattice will be given by
 \begin{equation*}
 V=\{(-a_x+ih_x, -a_y+ih_y, -a_z+ih_z)\} = \{(x_i, y_j,z_k)\} 
 \end{equation*}
 Where the indices and step sizes are
+
 \begin{align*}
   i&=0,\ldots,n_x-1\quad h_x = \frac{2a_x}{n_x-1}\\
   j&=0,\ldots,n_y-1\quad h_y = \frac{2a_y}{n_y-1}\\
   k&=0,\ldots,n_z-1\quad h_z = \frac{2a_z}{n_z-1}
 \end{align*}
+
 The following implementation assumes $a=a_x=a_y=a_z=a$ and $n=n_x=n_y=n_z=n$, without losing generality.
-\\Including the spin degree of freedom, we can finally represent the fields in a numerical way through
+Including the spin degree of freedom, we can finally represent the fields in a numerical way through
 \begin{equation}
     \varphi(\bm r, \sigma) \mapsto \varphi(x_i, y_j, z_k, s) = \varphi_{ijks}
 \end{equation}
 \subsubsection{Differential operators discretization}
 By using Taylor series, it's possible to write approximations to derivatives \cite{Zhou1993}, in any point of the lattice, of any (reasonable) order of accuracy, involving only near neighbouring points. In the present work, 5-points derivatives are used, meaning Taylor expansions are written for $\varphi(x\pm h)$ and $\varphi(x\pm 2h)$ to compute the differential operators. Formulae for first and second derivates are given in appendix \ref{app:5p_derivatives}.
-\\From the theory background of chapter \ref{chap:hf}, we discern two main kinds of PDEs: the Schr\"odinger-like KS equation, and the Poisson equation.
+From the theory background of chapter \ref{chap:hf}, we discern two main kinds of PDEs: the Schr\"odinger-like KS equation, and the Poisson equation.
 \subsection{Schr\"odinger equation}
-Starting from the Schr\"odinger equation \eqref{eq:spe_ks}, reported here for clarity
+Starting from the Schr\"odinger equation \eqref{eq:spe_ks}, reported here for clarity:
 \begin{equation*}
-    \bigg[-\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg) + U_q(\mathbf r) + \delta_{\text{q,proton}}U_C(\mathbf r)-i\mathbf B_q(\mathbf r)\cdot(\nabla \times \boldsymbol\sigma) \bigg]\varphi=\varepsilon\varphi
+    \bigg[-\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg) + U_q(\mathbf r) + \delta_{\text{q,proton}}U_C(\mathbf r)-i\mathbf B_q(\mathbf r)\cdot(\nabla \times \boldsymbol\sigma) \bigg]\varphi=\varepsilon\varphi,
 \end{equation*}
 it can be compactly written as
 \begin{equation}
@@ -39,13 +41,13 @@ Breaking down each part of the equation, the kinetic term
 \nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg)\varphi = \frac{\hbar^2}{2m^{*}_q(\mathbf r)} \nabla^2\varphi + \nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\bigg)\cdot \nabla\varphi
 \end{equation}
 is evidently linear in $\varphi$. 
-\\The spin-orbit term of \eqref{eq:spe_ks}, which we write as
+The spin-orbit term of \eqref{eq:spe_ks}, which we write as
 \begin{align*}
     \hat {{h}}_{\text{SO}}&=-i\mathbf B_q (\bm r )\cdot (\nabla \times \pauli ) 
     \\&=-i[\mathbf B_{q,x}(\bm r)(\sigma_z\partial_y - \sigma_y\partial_z) + \mathbf B_{q,y}(\bm r)(\sigma_x\partial_z - \sigma_z\partial_x) + \mathbf B_{q,z}(\bm r)(\sigma_y\partial_x - \sigma_x\partial_y)]
 \end{align*}
 is also linear in $\varphi$.
-\\Finally, the mean field terms $U_q, U_c$ 
+Finally, the mean field terms $U_q, U_c$ 
 \begin{equation*}
     (U_q + \delta_{\text{q,proton}}U_c)\varphi
 \end{equation*}
@@ -93,7 +95,7 @@ The other fundamental PDE we need to solve is the Poisson equation encountered i
 It's simpler than the Schr\"odinger equation, as it only involves a Laplacian and it's not an eigenvalue problem. The right is side is given, and the solution is found by inverting the coefficients' matrix.
 \subsubsection{Boundary conditions}
 Unlike the Schr\"odinger equation, we do not expect the solution to rapidly decay near the boundaries; as reported in section \ref{sec:coulomb_treatment}, we have fixed, non-vanishing boundary conditions, which we have to properly impose on the system.
-\\We can choose a direction, say $x$, and look at the discretised equation at the boundaries $x=\pm a$. Since the indices $j,k$ won't vary, we can omit them, and ignore the other derivates in the following equations.
+We can choose a direction, say $x$, and look at the discretised equation at the boundaries $x=\pm a$. Since the indices $j,k$ won't vary, we can omit them, and ignore the other derivates in the following equations.
 \begin{align}
     \label{eq:poisson_disc}
     \nabla^2 V &= \partial_{xx} V + \partial_{yy}V + \partial_{zz}V\nonumber \\

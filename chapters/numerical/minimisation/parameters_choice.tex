@@ -13,7 +13,7 @@ In figure \ref{fig:conv_tol}, the relative absolute error of the total energy is
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/conv_tol.pdf}
-    \caption{HF calculation convergence with varying CG tolerance for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.} 
+    \caption[HF calculation convergence with varying CG tolerance for $^{16}$O.]{HF calculation convergence with varying CG tolerance for $^{16}$O, box $[-9,+9]$ fm, step size $0.3$ fm.} 
     \label{fig:conv_tol}
 \end{figure}
 
@@ -23,13 +23,13 @@ In figures \ref{fig:conv_steps_o} and \ref{fig:conv_steps_mg}, the convergence o
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{Images/conv_steps_o.pdf}
-    \caption{HF calculation convergence with varying number of inverse power steps for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.}
+    \caption[HF calculation convergence with varying number of inverse power steps for $^{16}$O.]{HF calculation convergence with varying number of inverse power steps for $^{16}$O, box $[-9,+9]$ fm, step size $0.3$ fm.}
     \label{fig:conv_steps_o}
 \end{figure}
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{Images/conv_steps.pdf}
-    \caption{HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg, box $[-10, 10]$ fm, step size $0.33$ fm.}
+    \caption[HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg.]{HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg, box $[-10,+10]$ fm, step size $0.33$ fm.}
     \label{fig:conv_steps_mg}
 \end{figure}
 It's evident that in both cases, a steps number greater than $3$ leads to oscillating behaviour near convergence, without accelerating it, while in the case of the spherical nucleus, just one step is enough to quickly, and reliably reach convergence. In any case, it's clear that delaying the inverse power steps to later HF iterations is safer in terms of stability.

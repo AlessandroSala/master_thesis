@@ -1,30 +1,30 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Binding energy per nucleon as a function of $A$. Due to the short range of the strong force, this value saturates around $7$ MeV, with a steady, dim decrease after $^{56}$Fe. Figure taken from \cite {NDFT}.\relax }}{6}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Visual representation of the liquid drop model. Figure taken from \cite {ldmimg}.\relax }}{8}{figure.caption.17}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Graphical representation of the harmonic oscillator shells, together with the spin-orbit coupling. Shells whose total angular momentum is $j=l+1/2$ are lowered in energy, viceversa for total angular momentum $j=l-1/2$. Figure adapted from \cite {Colo_2021_NuclearPhysics}.\relax }}{11}{figure.caption.34}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Odd-even staggering for Sn isotopes. Data taken from \cite {AMDC_website}.\relax }}{13}{figure.caption.37}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Nilsson model energy levels trends, as a function of $\varepsilon $. Figure taken from \cite {wikipedia_equation_of_state}.\relax }}{17}{figure.caption.53}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Graphical representation of possible octupole deformations. On the left, the axially symmetric $Y_{30}$ deformation, on the right, the non-axial octupole deformation $Y_{32}$.\relax }}{18}{figure.caption.60}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Fission path of $^{226}$Ra, blue lines indicate axial octupole configurations, black lines indicate axial quadrupole and parity conserving configurations, red lines indicate triaxial, parity conserving configurations. Figure taken from \cite {Ryssens2016_MOCCa}.\relax }}{19}{figure.caption.61}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Visual representation of the fission process. Figure taken from \cite {Bender2020}.\relax }}{20}{figure.caption.62}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Binding energy per nucleon as a function of $A$.}}{6}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Visual representation of the liquid drop model.}}{8}{figure.caption.17}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Graphical representation of the harmonic oscillator shells, together with the spin-orbit coupling.}}{11}{figure.caption.34}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Odd-even staggering for Sn isotopes.}}{13}{figure.caption.37}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Nilsson model single-particle energy levels trends.}}{17}{figure.caption.53}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Graphical representation of possible octupole deformations.}}{18}{figure.caption.60}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Fission path of $^{226}$Ra, with different imposed spatial constraints.}}{19}{figure.caption.61}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Visual representation of the fission process.}}{20}{figure.caption.62}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Comparison between the steepest descent method, on the left, and the conjugate gradient method, on the right, for a two-dimensional matrix. Ellipses represent contour lines of the quadratic form $f(x) = x^T A x - b^T x$, in the `stretched' space $Ax$ on the right. As shown in the figure, the conjugation of the search directions eliminates components of the error $e_i$, until the exact convergence in $n$ (2) steps.\relax }}{64}{figure.caption.231}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Pseudocode of the Hartree--Fock program.\relax }}{73}{figure.caption.271}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces HF calculation convergence with varying CG tolerance for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{75}{figure.caption.274}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces HF calculation convergence with varying number of inverse power steps for $^{16}$O, box $[-9, 9]$ fm, step size $0.3$ fm.\relax }}{76}{figure.caption.276}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg, box $[-10, 10]$ fm, step size $0.33$ fm.\relax }}{76}{figure.caption.277}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Numerical stability map of the HF solver for $^{16}$O for different box and step sizes. Relative error is taken against a benchmark reference value.\relax }}{77}{figure.caption.278}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Comparison between the steepest descent method and the conjugate gradient method.}}{64}{figure.caption.231}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Pseudocode of the Hartree--Fock program.\relax }}{74}{figure.caption.271}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces HF calculation convergence with varying CG tolerance for $^{16}$O.}}{75}{figure.caption.274}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces HF calculation convergence with varying number of inverse power steps for $^{16}$O.}}{76}{figure.caption.276}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces HF calculation convergence with varying number of inverse power steps for the deformed nucleus $^{24}$Mg.}}{77}{figure.caption.277}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Numerical stability map of the HF solver for $^{16}$O for different box and step sizes.}}{78}{figure.caption.278}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Comparison between the two formulae for $\beta _2$ in a deformation curve for $^{24}$Mg. $\beta _2'$ refers to the deformation parameter normalised by the parametrised radius, while $\beta _2$ refers to the deformation parameter normalised by the actual mean square radius.\relax }}{91}{figure.caption.297}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces $^{24}$Mg ground state density $\rho (x, 0, z)$, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrisation.\relax }}{94}{figure.caption.302}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces $^{24}$Mg ground state density $\rho (x, y, 0)$, calculation done on a box $[-10, 10]$ fm, step size 0.33 fm, SkM* parametrisation.\relax }}{95}{figure.caption.303}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Comparison with the $\texttt {EV8}$ code for $^{24}$Mg, no pairing interaction, box $[-10, 10]$ fm, step size 0.6 fm, SLy4 parametrisation.\relax }}{96}{figure.caption.305}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Comparison between the SkM* and the SLy4 Skyrme functionals of the $^{24}$Mg deformation curves, box $[-10, 10]$ fm, step size $0.6$ fm.\relax }}{97}{figure.caption.306}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Particle densities and NLFs in $^{20}$Ne for different Skyrme functionals.\relax }}{99}{figure.caption.311}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces $^{42}$Si density $\rho (x, 0, z)$, calculation done on a box $[-11, 11]$ fm, step size 0.37 fm, experimental data taken from \cite {AMDC_website}.\relax }}{100}{figure.caption.314}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces $^{28}$S density $\rho (x, 0, z)$, calculation done on a box $[-10, 10]$ fm, step size 0.34 fm, experimental data taken from \cite {AMDC_website}.\relax }}{101}{figure.caption.317}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Comparison between the two formulae for $\beta _2$.}}{91}{figure.caption.297}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces $^{24}$Mg ground state density $\rho (x, 0, z)$.}}{94}{figure.caption.302}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces $^{24}$Mg ground state density $\rho (x, y, 0)$.}}{95}{figure.caption.303}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces $^{24}$Mg Deformation curves comparison with \texttt {EV8}.}}{96}{figure.caption.305}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Comparison between the SkM* and the SLy4 Skyrme functionals of the $^{24}$Mg deformation curves.}}{97}{figure.caption.306}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Particle densities and NLFs in $^{20}$Ne for different Skyrme functionals.}}{99}{figure.caption.311}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces $^{42}$Si density $\rho (x, 0, z)$.}}{101}{figure.caption.314}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces $^{28}$S density $\rho (x, 0, z)$.}}{101}{figure.caption.317}%
 \addvspace {10\p@ }

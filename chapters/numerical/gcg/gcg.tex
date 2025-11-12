@@ -1,5 +1,7 @@
 \section{Eigenvalue problem}
-This section is devoted to the approximate solution of the eigenvalue problem, needed for the Schr\"odinger equation \eqref{eq:spe_ks}. 
+\label{sec:eigenvalue_problem}
+This section is devoted to the approximate solution of the eigenvalue problem, needed for the Schr"odinger equation \eqref{eq:spe_ks}. The analysis and implementation work presented was developed within the additional thesis activity carried out for the Honours Programme \emph{Scientific Research in Industrial Engineering -- Nuclear Science and Technology}.
+
 Eigenvalue problems are ubiquitous in physics and engineering, and while solving one for a small matrix is trivial, it still requires roughly $O(n^3)$ operations \cite{golub13} to do so. More often than not, real computational applications result in large-scale matrices, which are completely out of question for exact eigenvalues calculations, thus requiring the use of approximate algorithms. 
 
 We will begin by describing common building blocks of iterative eigensolvers in section \ref{sec:techniques}, namely:
@@ -56,7 +58,7 @@ CG converges to the exact solution in $n$ steps, moreover, it represents a great
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{Images/cg}
-\caption{Comparison between the steepest descent method, on the left, and the conjugate gradient method, on the right, for a two-dimensional matrix. Ellipses represent contour lines of the quadratic form $f(x) = x^T A x - b^T x$, in the `stretched' space $Ax$ on the right. As shown in the figure, the conjugation of the search directions eliminates components of the error $e_i$, until the exact convergence in $n$ (2) steps.}
+\caption[Comparison between the steepest descent method and the conjugate gradient method.]{Comparison between the steepest descent method on the left, and the conjugate gradient method on the right, for a two-dimensional matrix. Ellipses represent contour lines of the quadratic form $f(x) = x^T A x - b^T x$, in the `stretched' space $Ax$ on the right. As shown in the figure, the conjugation of the search directions eliminates components of the error $e_i$, until the exact convergence in $n$ (2) steps.}
 \label{fig:cg}
 \end{figure}
 \paragraph{Complex matrices} Algorithm \eqref{eq:cg_method} and the CG method in general can be used for complex matrices, under the condition that $A$ is Hermitian and positive-definite when using the complex inner product, meaning that
