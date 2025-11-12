@@ -12,7 +12,7 @@ Introducing the time-reversal operator $\hat {\mathcal T}:t\mapsto -t$, it acts 
 \begin{equation}
     \hat {\mathcal T} \ket{jm_j} = \widetilde{\ket{{jm_j}}} = (-1)^{j+m_j}\ket{j-m_j},
 \end{equation}
-and using this relation, equation \eqref{eq:zero_mom} becomes 
+and using this relation, Equation~\eqref{eq:zero_mom} becomes 
 \begin{equation}
     \ket{00} =- \frac{1}{\sqrt{2j+1}}\sum_{m_j}\ket{jm_j}\widetilde{\ket{{jm_j}}}.
 \end{equation}
@@ -41,7 +41,7 @@ where $v^2_k$ is the probability of finding a particle in state $k$, while the e
 \end{equation}
 The consequence of this result is profound. The BCS ansatz does not assume a fixed number of particles, rather it has an expectation value that depends on how the parameters $v_k^2$ are set, and presents fluctations around it.
 
-We can now write the many body Hamiltonian of the system as in equation \eqref{eq:mb_hamiltonian_sq}
+We can now write the many body Hamiltonian of the system as in Equation~\eqref{eq:mb_hamiltonian_sq}
 \begin{equation}
     \hat H = \sum_{k_1 k_2}t_{k_1k_2} a_{k_1}^\dagger a_{k_2} + \frac 1 4 \sum_{k_1 k_2 k_3 k_4}\overline{v}_{k_1k_2k_3k_4} a_{k_1}^\dagger a_{k_2}^\dagger a_{k_3} a_{k_4}
 \end{equation}
@@ -75,7 +75,7 @@ Introducing the quasi-particle energy
     \label{eq:qpe}
     E_k = \sqrt{\tilde \varepsilon_k^2 +\Delta_k^2}
 \end{equation}
-we can combine definitions \eqref{eq:delta_k} and \eqref{eq:qpe} with equation \eqref{eq:epsilon}, under the normalization condition \eqref{eq:norm_uv}, to get an equation for $v_k^2$
+we can combine definitions \eqref{eq:delta_k} and \eqref{eq:qpe} with Equation~\eqref{eq:epsilon}, under the normalization condition \eqref{eq:norm_uv}, to get an equation for $v_k^2$
 \begin{equation}
     \label{eq:v2}
     v_k^2 = \frac 1 2 \pm \frac{|\tilde \varepsilon_k|}{2E_k}.
@@ -130,7 +130,7 @@ Taking the product $\mathcal W^\dagger \mathcal W$ and imposing separate fermion
 \begin{equation}
     \mathcal W^\dagger \mathcal W = \mathcal W \mathcal W^\dagger =  I.
 \end{equation}
-We can now invert equation \eqref{eq:bogoliubov_trans_mat} by multiplying both sides on the left by $\mathcal W$, which yields 
+We can now invert Equation~\eqref{eq:bogoliubov_trans_mat} by multiplying both sides on the left by $\mathcal W$, which yields 
 \begin{equation*}
     \mathcal W \begin{pmatrix}
         \beta\\
@@ -240,7 +240,7 @@ In the canonical basis, we are able to solve for the occupation numbers
 \end{equation}
 where $v_k^2 = 1 - u_k^2$ is guaranteed by the unitarity of the matrices.
 Starting from an initial guess, we solve the eigenvalue problem \eqref{eq:eighfb}, we extract the occupation numbers \eqref{eq:occ_hfb}, use them to build the new mean field \eqref{eq:mean_field_hfb} and pairing field \eqref{eq:pairing_field_hfb}, and repeat the process until convergence.
-\paragraph{HFB quasi-particle spectrum} Let us assume that $\Psi = (U,\  V )^T$ is a solution of equation \eqref{eq:eighfb} with eigenvalue $E$
+\paragraph{HFB quasi-particle spectrum} Let us assume that $\Psi = (U,\  V )^T$ is a solution of Equation~\eqref{eq:eighfb} with eigenvalue $E$
 \begin{equation}
     \label{eq:eigsolhfb}
     \mathcal H_\text{HFB}\Psi = E\Psi.
@@ -251,7 +251,7 @@ Let the particle-hole matrix $\mathcal C$ be defined as
         0 & I \\ I&0
     \end{pmatrix},
 \end{align}
-it's trivial to show that 
+it is trivial to show that 
 \begin{equation}
     \label{eq:hfb_anticomm}
     \mathcal C \mathcal H_\text{HFB} \mathcal C = -\mathcal H_\text{HFB}^*,
@@ -261,7 +261,7 @@ and
     \label{eq:commutationhfb}
     \mathcal C = \mathcal C ^{-1}\implies \mathcal C\mathcal H_\text{HFB} = -\mathcal H_\text{HFB}^*\mathcal C.
 \end{equation}
-If we take the complex conjugate of equation \eqref{eq:eigsolhfb}, we get
+If we take the complex conjugate of Equation~\eqref{eq:eigsolhfb}, we get
 \begin{equation}
     \label{eq:eigsolhfb_conj}
     \mathcal H_\text{HFB}^*\Psi ^* = E\Psi^*,
@@ -271,7 +271,7 @@ if we multiply both sides on the left by $\mathcal C$ and use \eqref{eq:commutat
     -\mathcal H_\text{HFB}\mathcal C\Psi ^* &= E\mathcal C\Psi^*,\\
     \mathcal H_\text{HFB}\mathcal C\Psi ^* &= -E\mathcal C\Psi^*,
 \end{align}
-meaning that $\mathcal C \Psi^*$ is a solution of the eigenvalue problem \eqref{eq:eighfb} as well, with eigenvalue $-E$, hence for every quasi-particle energy we have a corresponding opposite-sign one; moreover, it can be proven that the HFB hamiltonian is unbounded, both from below and above \cite{Pei2012_HFBcontinuum}. This feature poses a challenge for numerical solutions of the HFB problem, as we shall see in chapter \ref{chap:numerical}.
+meaning that $\mathcal C \Psi^*$ is a solution of the eigenvalue problem \eqref{eq:eighfb} as well, with eigenvalue $-E$, hence for every quasi-particle energy we have a corresponding opposite-sign one; moreover, it can be proven that the HFB hamiltonian is unbounded, both from below and above \cite{Pei2012_HFBcontinuum}. This feature poses a challenge for numerical solutions of the HFB problem, as we shall see in Chapter~\ref{chap:numerical}.
 
 
 

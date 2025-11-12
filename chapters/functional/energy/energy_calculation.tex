@@ -6,7 +6,7 @@ The obvious way would be to evaluate the functional for a given density. We will
     E_\text{int} = E[\rho, \tau, J_{\mu\nu}]= \int \mathcal E d\mathbf r
 \end{align*}
 \subsubsection{Hartree--Fock energy}
-An alternative approach can be used, as in a stationary point $\delta E = 0$, the single particle eigenvalue equation \eqref{eq:spe_ks} stands true, summarised as 
+An alternative approach can be used, as in a stationary point $\delta E = 0$, the single particle eigenvalue Equation~\eqref{eq:spe_ks} stands true, summarised as 
 \begin{align}
     \label{eq:simple_spe}
     ( t + U)\varphi_k = \varepsilon_k \varphi_k
@@ -26,7 +26,7 @@ Since $U$ is calculated as the functional derivative with respect to the density
     \label{eq:sum_spe_new}
     \rho U = \rho \fdv{\mathcal E_\text{Skyrme}}{\rho} = \rho(1+\sigma )A \rho^\sigma = (1+\sigma)A \rho^{\sigma+1} = \mathcal E_\text{Skyrme} + \sigma \mathcal E_\text{Skyrme} = \mathcal E_\text{Skyrme} - \mathcal E_\text{rea}
 \end{align}
-If we explicit $\rho U$ in equation \eqref{eq:sum_spe} using \eqref{eq:sum_spe_new}, we get to
+If we explicit $\rho U$ in Equation~\eqref{eq:sum_spe} using \eqref{eq:sum_spe_new}, we get to
 \begin{align*}
     \sum_k t_k + \int (\mathcal E_\text{Skyrme}-\mathcal E_\text{rea}) d\bm r = \sum_k \varepsilon_k 
 \end{align*}
@@ -52,4 +52,4 @@ The actual functional, including the Coulomb exchange term, has different $\rho$
     \mathcal E_\text{Skyrme} = \sum_j A_j \rho^{\sigma_j+1} \implies E_\text{rea} = -\sum_j \sigma_j A_j \rho^{\sigma_j+1} 
 \end{equation*}
 This means that only terms with a $\sigma_j\neq 0, -1$ actually contribute to the rearrangement energy.
-Since equation \eqref{eq:hf_energy} is valid only for $\delta E = 0$, it's useful to check its equivalence with the integrated energy at convergence, so one can be sure to actually be in a stationary point.
+Since Equation~\eqref{eq:hf_energy} is valid only for $\delta E = 0$, it is useful to check its equivalence with the integrated energy at convergence, so one can be sure to actually be in a stationary point.

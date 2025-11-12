@@ -14,7 +14,7 @@ Which yields the Lagrangian
     E' = E + \lambda (\expval{{\mathcal Q}}-q_0)
 \end{equation}
 where $\lambda$ is a Lagrange multiplier determined by the condition $\expval {{\mathcal Q}} = q_0$. 
-After finding the minimum of $E'$, it's trivial to show that for a given $\lambda$, we get \cite{FLOCARD1973433}
+After finding the minimum of $E'$, it is trivial to show that for a given $\lambda$, we get \cite{FLOCARD1973433}
 \begin{equation}
 \dv{E}{\expval{{\mathcal Q}}} = -\lambda. 
 \end{equation}
@@ -52,6 +52,6 @@ where $q_0(\lambda)$ is updated at each iteration with the formula
 \end{align}
 Here, a slight deviation from the original ALM is present. Since the original work \cite{Staszczak2010} doesn't provide guidance regarding what is considered an \textit{iteration}, we employ the strategy \cite{CHEN2022108344} of using a damping factor $\mu\in [0, 1]$, so $\lambda$ can be updated at each HF iteration for fast convergence, without large oscillations or instabilities of any kind.
 
-This method is what powers the deformation curves that are shown in chapter \ref{chap:res_def}, allowing to explore the energy surface with arbitrary precision in reaching the value of $q_0$ at convergence, provided that enough HF iterations are performed.
+This method is what powers the deformation curves that are shown in Chapter~\ref{chap:res_def}, allowing to explore the energy surface with arbitrary precision in reaching the value of $q_0$ at convergence, provided that enough HF iterations are performed.
 Note that, since $\lambda^{(0)}=0$, for $\mu=0$ ALM reduces to the standard QPM.
 

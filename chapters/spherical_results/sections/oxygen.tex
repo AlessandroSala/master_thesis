@@ -7,7 +7,7 @@ In the results shown here, for $^{16}$O, we are able to reach a $0.3$ fm step si
 The first results we will take a look at are the ones for $^{16}$O. It is an ideal benchmark for gauging the solver's performance, as it is a very light, double magic nucleus, meaning it has no pairing and a spherical shape.
 All calculations are performed in a box of size $[-9,+9]$ fm in all three directions and a step size of $0.3$ fm, corresponding to $2\cdot 60^{3}$ mesh points.
 \subsection{Results neglecting Coulomb interaction}
-Since the Skyrme functional includes many terms of increasing complexity, results are shown for more and more terms in expression \eqref{eq:skfunc}. We start by including only $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$ and neglecting the others, and the Coulomb interaction; results are reported in table \ref{tab:no_so_no_j_no_coul}.
+Since the Skyrme functional includes many terms of increasing complexity, results are shown for more and more terms in expression \eqref{eq:skfunc}. We start by including only $C_0^\rho$, $C_1^\rho$, $C_0^\tau$, $C_1^\tau$ and neglecting the others, and the Coulomb interaction; results are reported in Table~\ref{tab:no_so_no_j_no_coul}.
 Without further terms, the spin-orbit field $\bm B(\bm r)$ \eqref{eq:sofield} vanishes, hence the $1p_{3/2}$ and $1p_{1/2}$ levels show degeneration in energy.
 
 Since $N=Z$, assuming equal masses the single-particle equations will be exactly equal between the two species, therefore only neutron values are reported. Note that $C_1$ terms vanish in this case, that is until we either break the $N=Z$ equality or introduce the Coulomb interaction.
@@ -38,7 +38,7 @@ Since $N=Z$, assuming equal masses the single-particle equations will be exactly
   \label{tab:no_so_no_j_no_coul}
 \end{table}
 
-In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are included just for the spin-orbit field $\bm B(\bm r)$, but not for the mean field $U(\bm r)$; it is as if we were neglecting the $J^2$ terms in the energy density \cite{chabanat2}. As expected, the $1p_{3/2}$ and $1p_{1/2}$ degeneration is removed, displaying the spin-orbit splitting, which lowers the total angular momentum $j=3/2$ level and raises the $j=1/2$ level.
+In Table~\ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are included just for the spin-orbit field $\bm B(\bm r)$, but not for the mean field $U(\bm r)$; it is as if we were neglecting the $J^2$ terms in the energy density \cite{chabanat2}. As expected, the $1p_{3/2}$ and $1p_{1/2}$ degeneration is removed, displaying the spin-orbit splitting, which lowers the total angular momentum $j=3/2$ level and raises the $j=1/2$ level.
 
 \begin{table}[ht]
   \centering
@@ -67,7 +67,7 @@ In table \ref{tab:compare_so} the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ term
   \label{tab:compare_so}
 \end{table}
 
-Lastly, the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are also included in the calculation of the mean-field, resulting in the full implementation of the Skyrme functional. As shown in table \ref{tab:compare_j2}, the effect of this addition on the ground state is little, as the spin current $J_{\mu \nu}$ is small in light, closed shell nuclei.
+Lastly, the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are also included in the calculation of the mean-field, resulting in the full implementation of the Skyrme functional. As shown in Table~\ref{tab:compare_j2}, the effect of this addition on the ground state is little, as the spin current $J_{\mu \nu}$ is small in light, closed shell nuclei.
 
 \begin{table}[ht]
   \centering
@@ -96,7 +96,7 @@ Lastly, the $C_0^{\div \bm J}$ and $C_1^{\div \bm J}$ terms are also included in
   \label{tab:compare_j2}
 \end{table}
 \subsection{Results including Coulomb interaction}
-As the final step to get a complete description of $^{16}$O, the Coulomb interaction is included as detailed in section \ref{sec:coulomb_treatment}. Results are shown in table \ref{tab:confronto}.
+As the final step to get a complete description of $^{16}$O, the Coulomb interaction is included as detailed in Section~\ref{sec:coulomb_treatment}. Results are shown in Table~\ref{tab:confronto}.
 
 \begin{table}[ht]
   \centering
@@ -140,7 +140,7 @@ As shown in tables \ref{tab:no_so_no_j_no_coul}, \ref{tab:compare_so}, \ref{tab:
 \section{Results for heavier nuclei}
 \label{sec:heavier}
 In the following section, results for some spherical nuclei heavier than $^{16}$O are presented.
-$^{48}$Ca in table \ref{tab:compare_all_ca48}, $^{56}$Ni in table \ref{tab:compare_all_ni56}, and $^{90}$Zr in table \ref{tab:compare_all_zr90}.
+$^{48}$Ca in Table~\ref{tab:compare_all_ca48}, $^{56}$Ni in Table~\ref{tab:compare_all_ni56}, and $^{90}$Zr in Table~\ref{tab:compare_all_zr90}.
 Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight increase of the numerical error can be observed as the step size increases, which is compatible with the polynomial error in the finite difference method. The increase of the cubic box size is necessary to accomodate larger nuclei, due to the increase in volume occupied, as to guarantee that less bound states decay to zero at the boundary. Running the code on HPC computers or clusters enables the use of finer meshes, ie more lattice points, a smaller step size and an increase in the numerical precision.
 \begin{table}[ht]
   \centering
@@ -286,7 +286,7 @@ Our code still shows good agreement with the \texttt{hfbcs\_qrpa} one. A slight 
   \label{tab:compare_all_zr90}
 \end{table}
 \section{Comparison with experimental values}
-The Skyrme functional is highly successful at producing theoretical values in great accordance with experimental data, just by fitting a small set of parameters \cite{Bender2003}. In table \ref{tab:exp_comp}, binding energies of some of the spherical nuclei presented so far are compared with experimental values, taken from the Atomic Mass Data Center \cite{AMDC_website}.
+The Skyrme functional is highly successful at producing theoretical values in great accordance with experimental data, just by fitting a small set of parameters \cite{Bender2003}. In Table~\ref{tab:exp_comp}, binding energies of some of the spherical nuclei presented so far are compared with experimental values, taken from the Atomic Mass Data Center \cite{AMDC_website}.
 \begin{table}[!ht]
   \centering
   \begin{tabular}{lcccc}

@@ -1,17 +1,17 @@
 \section{Eigenvalue problem}
 \label{sec:eigenvalue_problem}
-This section is devoted to the approximate solution of the eigenvalue problem, needed for the Schr"odinger equation \eqref{eq:spe_ks}. The analysis and implementation work presented was developed within the additional thesis activity carried out for the Honours Programme \emph{Scientific Research in Industrial Engineering -- Nuclear Science and Technology}.
+This section is devoted to the approximate solution of the eigenvalue problem, needed for the Schr"odinger Equation~\eqref{eq:spe_ks}. The analysis and implementation work presented was developed within the additional thesis activity carried out for the Honours Programme \emph{Scientific Research in Industrial Engineering -- Nuclear Science and Technology}.
 
 Eigenvalue problems are ubiquitous in physics and engineering, and while solving one for a small matrix is trivial, it still requires roughly $O(n^3)$ operations \cite{golub13} to do so. More often than not, real computational applications result in large-scale matrices, which are completely out of question for exact eigenvalues calculations, thus requiring the use of approximate algorithms. 
 
-We will begin by describing common building blocks of iterative eigensolvers in section \ref{sec:techniques}, namely:
+We will begin by describing common building blocks of iterative eigensolvers in Section~\ref{sec:techniques}, namely:
 \begin{itemize}
     \item the approximate solutions of linear systems by the use of the Conjugate Gradient method;
     \item matrix preconditioning to speed up convergence;
     \item the Rayleigh-Ritz procedure to find good approximations to the eigenpairs in a certain subspace; and
     \item the shift-and-invert method, to select the desired portion of the eigenvalue spectrum.
 \end{itemize}
-After describing these building blocks, some of the most commonly used eigensolvers are described in section \ref{sec:eigensolvers}, focusing on the core ideas and stating their limitations, to finally address the Generalised Conjugate Gradient method, whose implementation in the present work is detailed in section \ref{sec:gcg}.
+After describing these building blocks, some of the most commonly used eigensolvers are described in Section~\ref{sec:eigensolvers}, focusing on the core ideas and stating their limitations, to finally address the Generalised Conjugate Gradient method, whose implementation in the present work is detailed in Section~\ref{sec:gcg}.
 \subsection{Conjugate Gradient and numerical techniques}
 \label{sec:techniques}
 \subsubsection{Conjugate Gradient method}
@@ -54,7 +54,7 @@ In this case, the algorithm is called Conjugate Gradient Method and is formulate
     \\d_{i+1} = r_{i+1} + \beta_{i+1} d_i
 \end{align}
 where iterations are truncated if the norm of the residual $r_i$ is smaller than a certain threshold. It can be proven that the orthonormalization of the new search direction, with respect to all the previous ones, can be done only through the rescaling factor $\beta_{i+1}$ \cite{PainlessCGM}.
-CG converges to the exact solution in $n$ steps, moreover, it represents a great method for sparse matrices, because it can be proven to be of complexity $O(m)$, where $m$ is the number of non-zero elements in $A$ \cite{PainlessCGM}. In figure \ref{fig:cg}, a visual representation of the conjugation of search directions and the subsequent exact solution is shown for a two-dimensional problem.
+CG converges to the exact solution in $n$ steps, moreover, it represents a great method for sparse matrices, because it can be proven to be of complexity $O(m)$, where $m$ is the number of non-zero elements in $A$ \cite{PainlessCGM}. In Figure~\ref{fig:cg}, a visual representation of the conjugation of search directions and the subsequent exact solution is shown for a two-dimensional problem.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{Images/cg}
@@ -168,7 +168,7 @@ for $k = 1, \dots, \text{nev}$
 \end{algorithm}
 Although simple, this method is computationally efficient only by using preconditioning, which is known to be unstable in many cases \cite{Saad1992}.
 \subsubsection{Lanczos}
-Lanczos algorithm \cite{lanczos1952solution} is probably the most used iterative eigensolver for hermitian matrices. It's a Krylov subspace search method, meaning the Rayleigh-Ritz procedure is done on a subspace formed as 
+Lanczos algorithm \cite{lanczos1952solution} is probably the most used iterative eigensolver for hermitian matrices. It is a Krylov subspace search method, meaning the Rayleigh-Ritz procedure is done on a subspace formed as 
 \begin{equation}
     \mathcal K = \{ v_1, Av_1, A^2 v_1, \ldots, A^{k-1} v_1 \}
 \end{equation}

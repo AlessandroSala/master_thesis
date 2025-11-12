@@ -22,10 +22,10 @@ Including the spin degree of freedom, we can finally represent the fields in a n
     \varphi(\bm r, \sigma) \mapsto \varphi(x_i, y_j, z_k, s) = \varphi_{ijks}
 \end{equation}
 \subsubsection{Differential operators discretization}
-By using Taylor series, it's possible to write approximations to derivatives \cite{Zhou1993}, in any point of the lattice, of any (reasonable) order of accuracy, involving only near neighbouring points. In the present work, 5-points derivatives are used, meaning Taylor expansions are written for $\varphi(x\pm h)$ and $\varphi(x\pm 2h)$ to compute the differential operators. Formulae for first and second derivates are given in appendix \ref{app:5p_derivatives}.
-From the theory background of chapter \ref{chap:hf}, we discern two main kinds of PDEs: the Schr\"odinger-like KS equation, and the Poisson equation.
+By using Taylor series, it is possible to write approximations to derivatives \cite{Zhou1993}, in any point of the lattice, of any (reasonable) order of accuracy, involving only near neighbouring points. In the present work, 5-points derivatives are used, meaning Taylor expansions are written for $\varphi(x\pm h)$ and $\varphi(x\pm 2h)$ to compute the differential operators. Formulae for first and second derivates are given in appendix \ref{app:5p_derivatives}.
+From the theory background of Chapter~\ref{chap:hf}, we discern two main kinds of PDEs: the Schr\"odinger-like KS equation, and the Poisson equation.
 \subsection{Schr\"odinger equation}
-Starting from the Schr\"odinger equation \eqref{eq:spe_ks}, reported here for clarity:
+Starting from the Schr\"odinger Equation~\eqref{eq:spe_ks}, reported here for clarity:
 \begin{equation*}
     \bigg[-\nabla\bigg(\frac{\hbar^2}{2m^{*}_q(\mathbf r)}\nabla \bigg) + U_q(\mathbf r) + \delta_{\text{q,proton}}U_C(\mathbf r)-i\mathbf B_q(\mathbf r)\cdot(\nabla \times \boldsymbol\sigma) \bigg]\varphi=\varepsilon\varphi,
 \end{equation*}
@@ -88,20 +88,20 @@ From this system of equations, we get for points outside the boundary:
 Meaning that $\varphi$ outside the box will automatically be set to zero if the $A$ matrix is built assuming those points to be zero when computing its coefficients.
 \subsection{Poisson equation}
 \label{subsec:poisson}
-The other fundamental PDE we need to solve is the Poisson equation encountered in section \ref{sec:coulomb_treatment}. Dropping the $c$ and $p$ subscripts, it reads
+The other fundamental PDE we need to solve is the Poisson equation encountered in Section~\ref{sec:coulomb_treatment}. Dropping the $c$ and $p$ subscripts, it reads
 \begin{equation*}
 \nabla^2 V = 4\pi e^2 \rho
 \end{equation*}
-It's simpler than the Schr\"odinger equation, as it only involves a Laplacian and it's not an eigenvalue problem. The right is side is given, and the solution is found by inverting the coefficients' matrix.
+It is simpler than the Schr\"odinger equation, as it only involves a Laplacian and it is not an eigenvalue problem. The right is side is given, and the solution is found by inverting the coefficients' matrix.
 \subsubsection{Boundary conditions}
-Unlike the Schr\"odinger equation, we do not expect the solution to rapidly decay near the boundaries; as reported in section \ref{sec:coulomb_treatment}, we have fixed, non-vanishing boundary conditions, which we have to properly impose on the system.
+Unlike the Schr\"odinger equation, we do not expect the solution to rapidly decay near the boundaries; as reported in Section~\ref{sec:coulomb_treatment}, we have fixed, non-vanishing boundary conditions, which we have to properly impose on the system.
 We can choose a direction, say $x$, and look at the discretised equation at the boundaries $x=\pm a$. Since the indices $j,k$ won't vary, we can omit them, and ignore the other derivates in the following equations.
 \begin{align}
     \label{eq:poisson_disc}
     \nabla^2 V &= \partial_{xx} V + \partial_{yy}V + \partial_{zz}V\nonumber \\
     &= \frac{-V_{i-2} + 16V_{i-1} -30V_i + 16V_{i+1} - V_{i+2}}{12h^2}+\cdots=4\pi e^2 \rho_i
 \end{align}
-Near a boundary, say $i = 0$, the formula calls for points outside the box, known as \textit{ghost points}. Since they are not part of the linear system, but they are known, we can bring them on the right side of equation \eqref{eq:poisson_disc}.
+Near a boundary, say $i = 0$, the formula calls for points outside the box, known as \textit{ghost points}. Since they are not part of the linear system, but they are known, we can bring them on the right side of Equation~\eqref{eq:poisson_disc}.
 \begin{align}
     \frac{-30 V_0 + 16 V_1 - V_2 }{12h^2} &= 4\pi e^2 \rho_0 +\frac{ V_{-2} -16V_{-1}}{12h^2} = \tilde\rho_0
 \end{align}

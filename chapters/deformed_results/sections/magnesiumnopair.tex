@@ -2,7 +2,7 @@
 \label{sec:mg_benchmark}
 In the following section, results for $^{24}$Mg are presented and used as a benchmark for the performance of our code in a deformed case. $^{24}$Mg is a light, deformed nucleus, in which pairing correlations are negligible in its ground state and for deformations around it \cite{HilaireGirod2006}.
 
-In section \ref{sec:hfbtho}, the axially symmetric HO basis code \texttt{HFBTHO} is used, since it is a well-established code for axial calculations. We will compare results regarding the ground state. In section \ref{sec:ev8}, a comparison of the deformation curve is presented using the Cartesian mesh code \texttt{EV8}.
+In Section~\ref{sec:hfbtho}, the axially symmetric HO basis code \texttt{HFBTHO} is used, since it is a well-established code for axial calculations. We will compare results regarding the ground state. In Section~\ref{sec:ev8}, a comparison of the deformation curve is presented using the Cartesian mesh code \texttt{EV8}.
 \subsection{\texttt{HFBTHO} code and calculation details}
 \label{sec:hfbtho}
 To benchmark the code against a basis expansion method in the case of nuclear deformation, the \texttt{HFBTHO} code was used \cite{MAREVIC2022108367}: this is a HFB solver which minimises the energy functional on a harmonic oscillator basis. Since $^{24}$Mg is a light, well-bound nucleus, it still works well in this case.
@@ -11,7 +11,7 @@ Since the version of \texttt{HFBTHO} used in this work has been compiled with th
 The results obtained without them serve as a benchmark for the code, 
 while those including the $J^2$ contribution illustrate its impact on the ground state.
 \subsubsection{Ground state}
-Table \ref{tab:mg_table} reports data of the comparison with \texttt{HFBTHO} for the ground state of $^{24}$Mg. In figure \ref{fig:mg_gs_density_axial} contours of the density at $y=0$ are shown, while in figure \ref{fig:mg_gs_top} the density viewed `from the top', ie on $z=0$ is shown. As remarked by the density contours, the ground state is axially symmetric, quadrupole deformed, and parity-conserving.
+Table~\ref{tab:mg_table} reports data of the comparison with \texttt{HFBTHO} for the ground state of $^{24}$Mg. In Figure~\ref{fig:mg_gs_density_axial} contours of the density at $y=0$ are shown, while in Figure~\ref{fig:mg_gs_top} the density viewed `from the top', ie on $z=0$ is shown. As remarked by the density contours, the ground state is axially symmetric, quadrupole deformed, and parity-conserving.
 
 Charge radii for the two codes are displayed but not compared, due to different formulas used for their computation. $\expval{x^2}, \expval{y^2}$ and $\expval{z^2}$ are reported for our code but not for \texttt{HFBTHO} since it does not compute them.
 \begin{table}[ht]
@@ -37,7 +37,7 @@ Charge radii for the two codes are displayed but not compared, due to different 
 
 The comparison shows good agreement between the two codes, with ground state physical properties, energies and $\expval{\mathcal Q_{20}}$ that are comparable to each other.
 
-In table \ref{tab:mg24_levels}, the single-particle states energies are reported, to showcase the shift of the levels based on the angular momentum projection along the deformation axis $m_j$. As predicted by the Nilsson model, within the same sub-shell, levels that have a lower $|m_j|$ projection are lowered in energy, while those with a higher projection are raised, with respect to the degenerate spherical case. 
+In Table~\ref{tab:mg24_levels}, the single-particle states energies are reported, to showcase the shift of the levels based on the angular momentum projection along the deformation axis $m_j$. As predicted by the Nilsson model, within the same sub-shell, levels that have a lower $|m_j|$ projection are lowered in energy, while those with a higher projection are raised, with respect to the degenerate spherical case. 
 
 \begin{table}[ht]
 \centering
@@ -93,7 +93,7 @@ $\texttt{HFBTHO}$ can be used to judge how well our implementation behaves again
 An interesting alternative is provided by the \texttt{EV8} code \cite{Ryssens2015_EV8}, which is a HF code that solves the problem on a 3D mesh. Unlike our case, the lattice is reduced to a single octant of the box, which allows for faster computational times, imposing plane reflection symmetry on the three planes $(x, y, 0),\ (x,0,z),\ (0,y,z)$. The derivatives are computed using Lagrange derivatives.
 
 \subsubsection{\texttt{EV8} code comparison}
-Figure \ref{fig:ev8_compare_nopair} shows the comparison between the deformation curves of the two codes for $^{24}$Mg. Regarding the input parameters of $\texttt{EV8}$, a step size of $0.8$ fm, and a number of points on each axis of $32$ is used. The results are compared using the definition of $\beta_2$ in formula \eqref{eq:beta}, which uses a constant radius.
+Figure~\ref{fig:ev8_compare_nopair} shows the comparison between the deformation curves of the two codes for $^{24}$Mg. Regarding the input parameters of $\texttt{EV8}$, a step size of $0.8$ fm, and a number of points on each axis of $32$ is used. The results are compared using the definition of $\beta_2$ in formula \eqref{eq:beta}, which uses a constant radius.
 
 \begin{figure}[htp]
   \centering
@@ -102,9 +102,9 @@ Figure \ref{fig:ev8_compare_nopair} shows the comparison between the deformation
   \label{fig:ev8_compare_nopair}
 \end{figure}
 
-As show by the comparison in figure \ref{fig:ev8_compare_nopair}, the results are much closer than the ones obtained with the \texttt{HFBTHO} code. A slight deviation is still present, likely due to the different numerical methods used by the two codes, both for discretization of the derivatives and the minimisation of the energy functional. 
+As show by the comparison in Figure~\ref{fig:ev8_compare_nopair}, the results are much closer than the ones obtained with the \texttt{HFBTHO} code. A slight deviation is still present, likely due to the different numerical methods used by the two codes, both for discretization of the derivatives and the minimisation of the energy functional. 
 \subsection{Deformation curve for different functionals}
-In figure \ref{fig:functionals_compare}, two deformation curves for $^{24}$Mg are shown, comparing the SkM* and the SLy4 functionals. 
+In Figure~\ref{fig:functionals_compare}, two deformation curves for $^{24}$Mg are shown, comparing the SkM* and the SLy4 functionals. 
 \begin{figure}[htp]
   \centering
   \includegraphics[width=0.8\textwidth]{Images/functionals_compare}
