@@ -1,6 +1,6 @@
 \subsection{Details on the implementation of the code}
 The whole Hartree--Fock framework presented up to this point, has been implemented using the C++ language \cite{stroustrup1986overview} and the Eigen linear algebra library \cite{eigenweb}, which implements linear algebra operatrions through low level routines such as $\texttt{LAPACK}$ and $\texttt{BLAS}$. In figure \ref{fig:pseudocode}, the schematics of the program structure is reported.
-\begin{figure}[h!]
+\begin{figure}[h]
 \begin{forest}
   for tree={
     draw,
@@ -32,25 +32,25 @@ The whole Hartree--Fock framework presented up to this point, has been implement
     [Normalise wavefunctions]
     [HF iterations, name=1
       [Generate iteration data
-        [{Generate new densities, mix with previous ones}]
+        [{Generate new densities, mix with the previous ones}]
         [Generate mean fields]
-        [{Generate constraint fields, mix with previous ones}]
+        [{Generate constraint fields, mix with the previous ones}]
       ]
-      [Compute single-particle hamiltonian]
+      [Compute single-particle hamiltonian $h$]
       [Diagonalise $h$]
       [Normalise wavefunctions]
       [Check convergence
-        [{Compute energies, constraints residuals}]
+        [{Compute energies and constraints residuals}]
         [If above tolerance, name=3]
       ]
     ]
     [Generate output
     [{Compute multipole moments, energies, quantum numbers}] 
-    [Write program output]
+    [Write programme output]
     ]
   ]
   % square arrow from (1) -> (2)
-  \draw[-latex, to path={(\tikztostart.east) -- ++(15em,0) |- (\tikztotarget.east)}] (3) to (1);
+  \draw[-latex, to path={(\tikztostart.east) -- ++(17em,0) |- (\tikztotarget.east)}] (3) to (1);
 \end{forest}
 \caption{Pseudocode of the Hartree--Fock program.}
 \label{fig:pseudocode}

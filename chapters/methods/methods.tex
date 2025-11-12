@@ -12,7 +12,7 @@ The approaches to the nuclear many-body problem can be divided into three famili
 \paragraph{Shell model}
 In the interacting shell model, one assumes that a basis is constituted by nucleons in single-particle orbitals. While some orbitals are \emph{frozen}, there is a space called \emph{valence space} in which one includes all possible configurations with nucleons arbitrarily put in the valence orbitals. The nuclear Hamiltonian is diagnonalized in this configuration space. This model is very successful for spectroscopy but also computationally very demanding. Often, the predictive power is srongly dependent on the specific effective Hamiltonian that is assumed.
 \paragraph{Ab initio}
-One may be inclined towards studying nuclei starting from the fundamental interaction which binds them, the strong force. This would be done starting from the QCD Lagrangian, however, two problems arise. First, nucleons are bound states of quarks and gluons and what binds the nucleus together is the residual interaction arising from these bound systems. Second, the QCD coupling is large at the energy scales of nucleons and heavy mesons $\Lambda_\chi$ -- with respect to the QCD scale -- and as such cannot be treated perturbatively. 
+One may be inclined towards studying nuclei starting from the fundamental interaction which binds them, the strong force. This would be done starting from the QCD Lagrangian, however, two problems arise. First, nucleons are bound states of quarks and gluons and what binds the nucleus together is the residual interaction arising from these bound systems. Second, the QCD coupling is large at the energy scale $\Lambda_\chi\approx 0.5-1.0$~GeV of nucleons and heavy mesons and as such cannot be treated perturbatively. This is at variance with the higher energy scales like $100-1000$ GeV where QCD is perturbative.
 
 The solution to this problem is the use of effective chiral Lagrangians, equivalent to the QCD one at low energy scales. The interactions among the nucleons arise from the Feynman diagrams between two, three, or more nucleons, which must be hierarchically ordered, according to some perturbative parameter, usually denoted by $(Q/\Lambda_\chi)^\nu$, where $Q$ is the typical nucleon momentum. The power of $\nu$ at which the expansion stops determines the order of the potential that is calculated and used.
 
@@ -21,19 +21,19 @@ These methods are in principle exact, but require nevertheless a series of appro
 \paragraph{Density Functional Theory}
 The issues brought forth by the shell model and the ab initio approaches may be addressed by using an \textit{effective} interaction among nucleons that is not derived from exact principles but reliably reproduces experimental data. This was done starting from the 1970s, by minimising the energy functional $\bra{\Psi}\hat{H}_\text{eff}\ket{\Psi}$, where $\hat{H}_\text{eff}$ is a properly designed effective Hamiltonian and $\Psi$ is a Slater determinant.
 
-It was realised early on that the only way to obtain realistic results from this approach was to use density dependent forces, which somewhat account for the important many-body nuclear forces. The historical development of this realization has been to use the Hartree--Fock expectation value of an effective interaction as a starting point for the design of an Energy Density Functional (EDF), which can be used to do nuclear structure calculations using Density Functional Theory.
+It was realised early on that the only way to obtain realistic results from this approach was to use density dependent forces, which somewhat account for the important many-body effects. The historical development of this realization has been to first use the Hartree--Fock expectation value of an effective interaction as a starting point for the design of an Energy Density Functional (EDF), which can be used to do nuclear structure calculations using Density Functional Theory. Later, it has been customary to directly write an EDF.
 
-In particular, the minimisation of these EDFs has been done using two numerical approaches: (a) \textit{basis expansion methods}, which represent single-particle states on truncated complete bases, mainly harmonic oscillator bases, 
+In particular, the minimisation of these EDFs has been done using two numerical approaches: (a) \textit{basis expansion methods}, which represent single-particle states on truncated bases, mainly harmonic oscillator bases, 
 and (b) \textit{coordinate-space (mesh) methods}, which discretise space directly by using a mesh. 
 In the following sections, we review these two classes of methods and motivate the need for more flexible and computationally efficient unconstrained solvers.
 
 \subsection{Basis expansion methods}
 
 Basis expansion approaches are among the most widely used techniques for solving the HF and HFB equations. 
-In these methods, single-particle wavefunctions are expanded on a finite HO basis, chosen for its completeness and qualitative similarity to the mean-field potential of bound nuclei, as explained in section \ref{sec:models}. 
+In these methods, single-particle wavefunctions are expanded on a finite HO basis, chosen for its flexibility and easiness of use, together with the qualitative similarity to the mean-field potential of bound nuclei, as explained in section \ref{sec:models}. 
 Codes such as \texttt{HFBTHO}, also used in this work for benchmarking our implementation in section \ref{sec:hfbtho}, are based on this framework.
 
-The HO basis, however efficient, introduces inherent limitations.
+The HO basis, although efficient, introduces inherent limitations.
 First, weakly bound and continuum-like states, crucial for nuclei near the drip lines, are poorly represented because their asymptotic behaviour differs 
 fundamentally from that of HO functions. 
 Whereas HO states decay as $e^{-ar^{2}}$, quasi-bound states decay as $e^{-\kappa r}$, 
@@ -47,7 +47,7 @@ basis-expansion methods become inadequate for describing nuclei near drip lines,
 
 \subsection{Symmetry-Restricted mesh methods}
 
-A second major class of HF/HFB solvers uses a spatial mesh as the variational space.  
+A second major class of HF/HFB solvers uses a spatial mesh.  
 Historically, fully unconstrained three-dimensional meshes were computationally prohibitive, which motivated the introduction of \textit{symmetry constraints} to reduce the dimensionality of the problem.  
 By enforcing specific spatial symmetries, the number of degrees of freedom is greatly reduced, making coordinate-space calculations tractable on available hardware.
 
@@ -84,7 +84,7 @@ The aim of this work is to develop a new implementation of the Hartree--Fock met
     \item solve the self-consistent Hartree--Fock equations on an unconstrained 3D mesh;
     \item verify the numerical accuracy of the new implementation, first against existing spherical codes;
     \item second against well-established deformed codes; and
-    \item attempt to produce original results that specifically require an unconstrained implementation of this kind, and establish the advance brought to the field by this work.
+    \item attempt to produce novel results, and establish the advancement brought to the field by this work.
 \end{itemize}
 
 \section{Methods}
