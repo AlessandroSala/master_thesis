@@ -1,6 +1,6 @@
 \chapter*{Conclusion and future developments}
 
-This work set out to investigate the feasibility and performance of a fully unconstrained Cartesian mesh implementation of nuclear Density Functional Theory based on Skyrme EDFs. The central objective was to assess whether the Generalised Conjugate Gradient eigensolver could provide a robust and efficient alternative to conventional iterative diagonalisation methods for the minimisation of nuclear energy functionals.
+This work has been aimed to investigate the feasibility and performance of a fully unconstrained Cartesian mesh implementation of nuclear Density Functional Theory based on Skyrme Energy Density Functionals (EDFs). \emph{Fully unconstrained} means here that no a priori spatial symmetry has been assumed for the system. The central objective was to assess whether the Generalised Conjugate Gradient eigensolver could provide a robust and efficient alternative to conventional iterative diagonalisation methods for the minimisation of nuclear energy functionals.
 
 The implementation developed in this thesis demonstrated that this approach is viable and competitive.  
 Benchmarking against the spherical nuclei $^{16}$O, $^{48}$Ca, $^{56}$Ni, and $^{90}$Zr showed excellent agreement with the established radial code \texttt{hfbcs\_qrpa}, validating both the numerical accuracy of the solver and the correctness of the Skyrme EDF implementation.  
@@ -8,13 +8,13 @@ The method was subsequently applied to deformed systems. Comparisons with \textt
 
 Beyond these validation tests, the code was demonstrated to be viable for the exploration of clustering phenomena in the ground state of $^{20}$Ne, as well as the structure of the near-drip line nuclei $^{42}$Si and $^{28}$S. These applications highlight the flexibility of the method in handling strongly deformed, correlated, and weakly bound configurations.
 
-Overall, the GCG method proved to be an efficient and promising tool for DFT calculations, particularly in the frame of unconstrained Cartesian meshes, which require the diagonalisation of large-scale matrices. The efficiency and precision of GCG make it a suitable candidate for future unconstrained studies, not only for Skyrme functionals, but ab-initio methods and physics applications as well.
+Overall, the GCG method proved to be an efficient and promising tool for DFT calculations, particularly in the frame of Cartesian meshes, which require the diagonalisation of large-scale matrices. The efficiency and precision of GCG make it a suitable candidate for future unconstrained studies, not only for Skyrme functionals, but for ab-initio methods and further physics applications as well.
 
-The implementation presented here establishes a solid foundation but also leads the way for further improvement. These may be grouped into two broad categories: numerical developments and physics extensions.
+The implementation presented here establishes a solid foundation but also leads the way for further improvements. These may be grouped into two broad categories: numerical developments and physics extensions.
 
 \subsection*{Numerical improvements}
 
-While the GCG eigensolver enables unconstrained calculations, further work is required to optimise performance and scalability. The most relevant numerical improvements include:
+While the GCG eigensolver enables unconstrained calculations, further work is required to optimise its performance and scalability. The most relevant numerical improvements include:
 \begin{itemize}
     \item introducing suitable preconditioning schemes for the approximate inverse power iteration, which would significantly accelerate convergence;
     \item improving spatial discretisation by employing more accurate derivative operators;
@@ -22,13 +22,13 @@ While the GCG eigensolver enables unconstrained calculations, further work is re
     \item enhancing the minimisation of the EDF through advanced mixing techniques such as Broyden mixing, DIIS, or Anderson acceleration.
 \end{itemize}
 
-Furthermore, additional performance gains could be achieved by exploiting modern computational hardware. In particular, GPU acceleration for Linear Algebra operations and a more careful optimisation of memory access patterns would improve runtime and allow larger grid sizes to be explored.
+Furthermore, additional performance gains could be achieved by exploiting modern computational hardware. In particular, GPU acceleration for linear algebra operations and a more careful optimisation of memory access patterns would improve runtime and allow larger grid sizes to be explored.
 
 \subsection*{Physics additions}
 
 From the physics perspective, several important extensions lie naturally beyond the present work. These include:
 \begin{itemize}
-    \item incorporating pairing correlations through a BCS or full HFB framework with an effective pairing interaction, enabling the description of superfluid systems;
+    \item incorporating pairing correlations through a BCS or full HFB framework with an effective pairing interaction, enabling the description of superfluid systems. This may be relatively straightforward and, in a sense, could be considered the first priority;
     \item extending the formalism to odd-mass nuclei by introducing time-odd densities into the Skyrme functional and developing blocking techniques; and
     \item implementing cranking calculations to access rotational bands and the spectra of deformed nuclei.
 \end{itemize}
@@ -37,6 +37,7 @@ Such improvements would substantially broaden the range of phenomena that can be
 
 \section*{Final Remarks}
 
-Although many extensions remain to be implemented, the results presented in this thesis already demonstrate the potential of an unconstrained mesh DFT solver based on GCG. The ability to perform three-dimensional, symmetry-unrestricted calculations with modest computational resources opens promising prospects for applications across nuclear structure and fission theory.
+Although many extensions remain to be implemented, the results presented in this thesis already demonstrate the strong potential of an unconstrained DFT solver written on a mesh, and based on the Generalised Conjugate Gradient method. The ability to perform three-dimensional, symmetry-unrestricted calculations with modest computational resources opens promising prospects for applications in nuclear structure.
+In particular, this work paves the way for studies of heavy nuclei, which are also of interest in the context of nuclear fission. Such investigations could be facilitated by extending the present code to include pairing correlations, enabling its execution on high-performance computing platforms and optimising it for parallel linear-algebra operations on GPUs.
 
-The work developed here provides a first step towards a more general and flexible computational framework. Its extension to pairing correlations, odd nuclei, rotational states, and collective dynamics will further enhance its scope, ultimately contributing to a more complete microscopic description of nuclear structure and deformations.
+In summary, the work developed here provides a first step towards a more general and flexible computational framework. Its extension to pairing correlations, odd nuclei, rotational states, and collective dynamics will further enhance its scope, ultimately contributing to a more complete microscopic description of nuclear structure and deformations.

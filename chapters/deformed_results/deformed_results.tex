@@ -3,24 +3,24 @@
 Having established that the code works as expected for spherical nuclei, we can extend the calculations to deformed systems. In this chapter, the GCG implementation is validated against well-established deformed codes.
 In addition, we also present some new original results with a focus on $\alpha$-clustering and nuclei near the drip lines.
 
-This chapter is organised as follows. First, in Section~\ref{sec:beta}, the quadrupole deformation parameter $\beta_2$ is introduced and its two different definitions are compared. In Section~\ref{sec:mg_benchmark}, results for the deformed $^{24}$Mg are presented and used as a benchmark for the performance of our code, first against the HO basis expansion code \texttt{HFBTHO} in Section~\ref{sec:hfbtho}, second against the Cartesian mesh code \texttt{EV8} in Section~\ref{sec:ev8}. 
-Finally, in Section~\ref{sec:novel}, original results on other deformed nuclei are discussed, in particular, in Section~\ref{sec:ne20} results regarding an alpha-clustering study in $^{20}$Ne, and in Section~\ref{sec:si42} results for the near-drip line nuclei $^{42}$Si and $^{28}$S.
+This chapter is organised as follows. First, in Section~\ref{sec:beta}, the quadrupole deformation parameter $\beta_2$ is introduced and its two different definitions are compared. In Section~\ref{sec:mg_benchmark}, results for the deformed nucleus $^{24}$Mg are presented and used as a benchmark for the performance of our code, first against the HO basis expansion code \texttt{HFBTHO} in Section~\ref{sec:hfbtho}, second against the Cartesian mesh code \texttt{EV8} in Section~\ref{sec:ev8}. 
+Finally, in Section~\ref{sec:novel}, original results on other deformed nuclei are discussed, in particular: in Section~\ref{sec:ne20} results regarding an alpha-clustering study in $^{20}$Ne, and in Section~\ref{sec:si42} results for the near-drip line nuclei $^{42}$Si and $^{28}$S.
 
 \section{Deformation parameters}
 \label{sec:beta}
-When dealing with deformed nuclei, mean square radii are not sufficient to characterise the nuclear density. The main quantity used is the quadrupole deformation parameter $\beta_2$, similar to the one encountered in Section~\ref{sec:deformations}. There is an ambiguity in its definition in literature, where some \cite{MAREVIC2022108367} compute it by using the actual mean square radius of the density
+When dealing with deformed nuclei, mean square radii are not sufficient to characterise the nuclear density. The main quantity used is the quadrupole deformation parameter $\beta_2$, similar to the one encountered in Section~\ref{sec:deformations}. There is an ambiguity in its definition in literature, because some \cite{MAREVIC2022108367} compute it by using the actual mean square radius of the density
 \begin{equation}
     \label{eq:beta_real_radius}
     \beta_2 = \frac{4\pi\expval{\mathcal Q_{2 0}}}{5A\expval{r^2}},
 \end{equation}
 where $\expval{r^2}$ is the total mean square radius of the nucleus 
 \begin{equation}
-    \expval{r^2} = \frac{\int (\rho_n + \rho_p )r^2 d\bm r}{\int (\rho_n + \rho_p )d\bm r} = \expval{x^2+y^2+z^2}.
+    \expval{r^2} = \frac{\int (\rho_n + \rho_p )r^2 d\bm r}{\int (\rho_n + \rho_p )d\bm r} = \expval{x^2+y^2+z^2},
 \end{equation}
-While others \cite{HilaireGirod2006,Ryssens2015_EV8} normalise the quadrupole moment with respect to the parametetrised nuclear radius in formula \eqref{eq:nuc_radius}, which yields 
+while others \cite{HilaireGirod2006,Ryssens2015_EV8} normalise the quadrupole moment with respect to the parametrised nuclear radius in formula \eqref{eq:nuc_radius}, which yields 
 \begin{equation}
   \label{eq:beta}
-  \beta_{2} = \frac{4\pi\expval{\mathcal Q_{20}}}{3AR^2}
+  \beta_{2} = \frac{4\pi\expval{\mathcal Q_{20}}}{3AR^2},
 \end{equation}
 where the relation 
 \begin{equation}
@@ -28,7 +28,7 @@ where the relation
 \end{equation}
 is used and the value for $r_0$ is taken to be $1.2$ fm.
 
-Using either of the two formulae (\ref{eq:beta_real_radius}, \ref{eq:beta}), because of the normalization with respect to the total radius and mass, the $\beta_2$ parameter allows the comparison of different nuclei across the chart.
+Using either of the two formulae (\ref{eq:beta_real_radius}, \ref{eq:beta}), because of the normalization with respect to the total radius and mass, it allows comparing the parameter $\beta_2$ across the nuclear chart, at variance with $\expval{\mathcal Q_{20}}$ which depends on mass and radius.
 
 In Figure~\ref{fig:beta_compare}, a comparison between the two formulae is presented; as shown by the shape of the curves, it is possible to observe that the normalisation of $\beta_2$ with respect to the real radius has an asymptotic behaviour for large deformations, since for $\expval{z^2}\to \infty$, assuming axial symmetry and constant volume $V$
 \begin{equation}

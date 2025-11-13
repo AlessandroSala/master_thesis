@@ -37,7 +37,7 @@ Charge radii for the two codes are displayed but not compared, due to different 
 
 The comparison shows good agreement between the two codes, with ground state physical properties, energies and $\expval{\mathcal Q_{20}}$ that are comparable to each other.
 
-In Table~\ref{tab:mg24_levels}, the single-particle states energies are reported, to showcase the shift of the levels based on the angular momentum projection along the deformation axis $m_j$. As predicted by the Nilsson model, within the same sub-shell, levels that have a lower $|m_j|$ projection are lowered in energy, while those with a higher projection are raised, with respect to the degenerate spherical case. 
+In Table~\ref{tab:mg24_levels}, the single-particle states energies are reported, to showcase the shift of the levels based on the angular momentum projection along the deformation axis $m_j$. As predicted by the Nilsson model, within the same sub-shell, levels that have a lower $|m_j|$ projection are lowered in energy, while those with a higher projection are raised, with respect to the degenerate spherical case. This is shown in the graphical representation of the levels splitting in the Nilsson model in Figure~\ref{fig:nilsson}.
 
 \begin{table}[ht]
 \centering
@@ -88,7 +88,7 @@ In Table~\ref{tab:mg24_levels}, the single-particle states energies are reported
 
 \subsection{\texttt{EV8} code and calculation details}
 \label{sec:ev8}
-$\texttt{HFBTHO}$ can be used to judge how well our implementation behaves against other codes for deformed nuclei, but its numerical methodologies are profoundly different.
+$\texttt{HFBTHO}$ can be used to judge how well our implementation behaves against other codes for deformed nuclei, but its numerical methodology is profoundly different.
 
 An interesting alternative is provided by the \texttt{EV8} code \cite{Ryssens2015_EV8}, which is a HF code that solves the problem on a 3D mesh. Unlike our case, the lattice is reduced to a single octant of the box, which allows for faster computational times, imposing plane reflection symmetry on the three planes $(x, y, 0),\ (x,0,z),\ (0,y,z)$. The derivatives are computed using Lagrange derivatives.
 
@@ -102,7 +102,7 @@ Figure~\ref{fig:ev8_compare_nopair} shows the comparison between the deformation
   \label{fig:ev8_compare_nopair}
 \end{figure}
 
-As show by the comparison in Figure~\ref{fig:ev8_compare_nopair}, the results are much closer than the ones obtained with the \texttt{HFBTHO} code. A slight deviation is still present, likely due to the different numerical methods used by the two codes, both for discretization of the derivatives and the minimisation of the energy functional. 
+As show by the comparison in Figure~\ref{fig:ev8_compare_nopair}, the results are much closer than the ones obtained with the \texttt{HFBTHO} code. A slight deviation is still present, likely due to the different numerical methods used by the two codes, both for discretization of the derivatives and the minimisation of the energy functional. Nevertheless, the comparison is highly satisfactory.
 \subsection{Deformation curve for different functionals}
 In Figure~\ref{fig:functionals_compare}, two deformation curves for $^{24}$Mg are shown, comparing the SkM* and the SLy4 functionals. 
 \begin{figure}[htp]

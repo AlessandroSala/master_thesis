@@ -33,7 +33,7 @@
 \usepackage{color}
 
 % PACKAGES FOR LANGUAGE AND FONT
-\usepackage[english]{babel} % The document is in English  
+\usepackage[english, italian]{babel} % The document is in English  
 \usepackage[utf8]{inputenc} % UTF8 encoding
 \usepackage[T1]{fontenc} % Font encoding
 \usepackage[11pt]{moresize} % Big fonts
@@ -153,10 +153,10 @@
 
 % ABSTRACT IN ENGLISH
 \chapter*{Abstract}
-Energy Density Functionals have been used for a few decades in nuclear structure physics, with a large degree of success. Skyrme functionals are one widely used class that has been applied to the study of masses, radii, deformations, spectroscopy reactions and decays.
-Due to past computational limitations, calculations were often restricted to given symmetric systems, where nuclei have been assumed to be spherically, or axially symmetric. Many codes assume basis expansions that turn out to be not so effective.
+Energy Density Functionals (EDFs) have been used for a few decades in nuclear structure physics, with a large degree of success. Skyrme functionals are a widely used class that has been applied to the study of masses, radii, deformations, spectroscopy reactions and decays.
+Due to past computational limitations, calculations were often restricted to given symmetric cases, where nuclei have been assumed to be spherically, or axially symmetric. Many codes assume basis expansions that turn out to be not so effective.
 Only in recent years calculations in a Cartesian mesh without any imposed symmetry have been explored, which still require a major computational effort, often in the form of large computer clusters.
-Improving the efficiency of the diagonalization of large-scale matrices is still a major open problem, not only in the field of nuclear physics, but in physics and engineering as a whole.
+Improving the efficiency of the diagonalisation of large-scale matrices is still a major open problem, not only in the field of nuclear physics, but in physics and engineering as a whole.
 The present work aims at exploring a novel algorithm, the Generalised Conjugate Gradient, to solve the Kohn--Sham equations consistent with the Skyrme EDF, within an unconstrained minimization.
 The Generalised Conjugate Gradient algorithm is shown to be a robust, and most importantly efficient alternative for the unconstrained minimization of the energy functional, both in well tested spherical systems, as well as in deformed ones.
 \\
@@ -166,9 +166,9 @@ The Generalised Conjugate Gradient algorithm is shown to be a robust, and most i
 % ABSTRACT IN ITALIAN
 \chapter*{Abstract in lingua italiana}
 Negli ultimi decenni, i Funzionali di Densità di Energia hanno ottenuto un notevole successo nello studio della struttura nucleare. Tra questi, i funzionali di Skyrme rappresentano una delle classi più ampie e utilizzate per l'analisi di raggi, masse, deformazioni, spettroscopia, reazioni e decadimenti nucleari.
-In passato, le limitazioni computazionali hanno imposto di considerare soltanto sistemi con simmetria sferica o assiale. Inoltre, molti codici si basano su espansioni in basi complete, che non sempre garantiscono un risultato ottimale.
-Negli ultimi anni sono stati esplorati approcci basati su griglie cartesiane prive di restrizioni di simmetria, i quali tuttavia restano una sfida computazionale significativa, spesso richiedendo l'impiego di cluster per l'esecuzione dei calcoli.
-L'efficientamento della diagonalizzazione di matrici di grandi dimensioni costituisce ancora oggi un problema aperto e di fondamentale importanza, non solo nella fisica nucleare, ma più in generale in fisica e nell'ingegneria.
+In passato, i limiti computazionali hanno imposto di considerare soltanto sistemi con simmetria sferica o assiale. Inoltre, molti codici si basano su espansioni in basi complete, che non sempre garantiscono un risultato ottimale.
+Negli ultimi anni sono stati sviluppati approcci basati su griglie cartesiane prive di vincoli di simmetria, che tuttavia rappresentano ancora una sfida computazionale rilevante, richiedendo spesso l'impiego di ingenti risorse di calcolo su cluster.
+L'ottimizzazione delle tecniche di diagonalizzazione per matrici di grandi dimensioni costituisce ancora oggi un problema aperto e di fondamentale importanza, non solo nella fisica nucleare, ma più in generale in fisica e nell'ingegneria.
 Il presente lavoro esplora l'applicazione dell'algoritmo Generalised Conjugate Gradient (GCG) per la risoluzione delle equazioni di Kohn--Sham derivate dalla minimizzazione di un funzionale di Skyrme, senza assunzioni di simmetria. I risultati mostrano che il GCG rappresenta una soluzione robusta ed efficiente per la minimizzazione di funzionali di energia, sia in sistemi sferici, sia deformati.
 \\
 \\

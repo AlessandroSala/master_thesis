@@ -1,7 +1,8 @@
-\babel@toc {english}{}\relax 
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
 \contentsline {chapter}{Abstract}{i}{chapter*.2}%
 \contentsline {chapter}{Abstract in lingua italiana}{iii}{chapter*.4}%
-\contentsline {chapter}{Contents\markboth {\MakeUppercase []{Contents}}{\MakeUppercase []{Contents}}}{v}{chapter*.6}%
+\contentsline {chapter}{Indice\markboth {\MakeUppercase []{Indice}}{\MakeUppercase []{Indice}}}{v}{chapter*.6}%
 \vspace {2em}
 \contentsline {chapter}{Introduction}{1}{chapter*.8}%
 \contentsline {chapter}{\numberline {1}Nuclear structure and deformations}{5}{chapter.1}%
@@ -23,7 +24,7 @@
 \contentsline {subsubsection}{Deformed Woods--Saxon}{16}{subsubsection*.54}%
 \contentsline {subsection}{\numberline {1.3.3}Octupole deformations and parity breaking}{17}{subsection.1.3.3}%
 \contentsline {section}{\numberline {1.4}Nuclear fission}{18}{section.1.4}%
-\contentsline {subsubsection}{Spontaneous fission model}{20}{subsubsection*.63}%
+\contentsline {subsubsection}{Spontaneous fission model}{19}{subsubsection*.63}%
 \contentsline {subsubsection}{Pairing correlations in fission}{21}{subsubsection*.69}%
 \contentsline {chapter}{\numberline {2}State of the art, objectives and methods}{23}{chapter.2}%
 \contentsline {section}{\numberline {2.1}State of the art and motivation}{23}{section.2.1}%
@@ -124,25 +125,25 @@
 \contentsline {subsection}{\numberline {6.2.2}\texttt {EV8} code and calculation details}{93}{subsection.6.2.2}%
 \contentsline {subsubsection}{\texttt {EV8} code comparison}{93}{subsubsection*.303}%
 \contentsline {subsection}{\numberline {6.2.3}Deformation curve for different functionals}{94}{subsection.6.2.3}%
-\contentsline {section}{\numberline {6.3}Original results}{94}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}$\alpha $-clustering in light nuclei}{95}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.3}Original results}{95}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}$\alpha $-clustering in light nuclei}{98}{subsection.6.3.1}%
 \contentsline {subsubsection}{Nucleon localisation function}{98}{subsubsection*.306}%
 \contentsline {subsubsection}{$\alpha -$clustering in $^{20}$Ne}{98}{subsubsection*.309}%
-\contentsline {subsection}{\numberline {6.3.2}Nuclei near the drip lines}{98}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.2}Nuclei near the drip lines}{100}{subsection.6.3.2}%
 \contentsline {subsubsection}{$^{42}$Si}{100}{subsubsection*.311}%
 \contentsline {subsubsection}{$^{28}$S}{100}{subsubsection*.314}%
 \contentsline {chapter}{Conclusion and future developments}{103}{chapter*.318}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography\markboth {\MakeUppercase []{Bibliography}}{\MakeUppercase []{Bibliography}}}{107}{chapter*.320}%
+\contentsline {chapter}{Bibliografia\markboth {\MakeUppercase []{Bibliografia}}{\MakeUppercase []{Bibliografia}}}{107}{chapter*.320}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix}{119}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Spherical harmonics}{119}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Algorithm}{120}{subsection.A.1.1}%
-\contentsline {section}{\numberline {A.2}5-point derivatives}{120}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Functional derivatives}{120}{section.A.3}%
+\contentsline {chapter}{\numberline {A}Appendix}{119}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Spherical harmonics}{119}{section.Alph1.1}%
+\contentsline {subsection}{\numberline {A.1.1}Algorithm}{120}{subsection.Alph1.1.1}%
+\contentsline {section}{\numberline {A.2}5-point derivatives}{120}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Functional derivatives}{120}{section.Alph1.3}%
 \contentsline {paragraph}{Power dependence}{120}{paragraph*.330}%
 \contentsline {paragraph}{Divergence of a vector field}{121}{paragraph*.332}%
-\contentsline {section}{\numberline {A.4}$\overline U,\ \overline V$ matrix structure}{122}{section.A.4}%
-\contentsline {chapter}{List of Figures}{123}{appendix*.335}%
-\contentsline {chapter}{List of Tables}{125}{appendix*.337}%
+\contentsline {section}{\numberline {A.4}$\overline U,\ \overline V$ matrix structure}{122}{section.Alph1.4}%
+\contentsline {chapter}{Elenco delle figure}{123}{appendix*.335}%
+\contentsline {chapter}{Elenco delle tabelle}{125}{appendix*.337}%
 \contentsline {chapter}{List of Symbols}{127}{appendix*.339}%

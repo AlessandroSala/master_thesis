@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.30)  13 NOV 2025 09:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.30)  13 NOV 2025 11:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -192,7 +192,15 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language26). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language26). Reported on input line 108.
-)) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/babel-italian/italian.ldf
+Language: italian 2022/03/27 v.1.4.07 Italian support for the babel system
+\it@lettering=\count279
+\it@doublequoteactive=\count280
+\it@ISOcompliance=\count281
+)) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/it/babel-italian.tex
+Package babel Info: Importing font and identification data for italian
+(babel)             from babel-it.ini. Reported on input line 11.
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
@@ -256,14 +264,14 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \pgf@yd=\dimen187
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count279
-\c@pgf@countb=\count280
-\c@pgf@countc=\count281
-\c@pgf@countd=\count282
+\c@pgf@counta=\count282
+\c@pgf@countb=\count283
+\c@pgf@countc=\count284
+\c@pgf@countd=\count285
 \t@pgf@toka=\toks28
 \t@pgf@tokb=\toks29
 \t@pgf@tokc=\toks30
-\pgf@sys@id@count=\count283
+\pgf@sys@id@count=\count286
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -274,8 +282,8 @@ File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count284
-\pgfsyssoftpath@bigbuffer@items=\count285
+\pgfsyssoftpath@smallbuffer@items=\count287
+\pgfsyssoftpath@bigbuffer@items=\count288
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -299,13 +307,13 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen188
-\pgfmath@count=\count286
+\pgfmath@count=\count289
 \pgfmath@box=\box98
 \pgfmath@toks=\toks31
 \pgfmath@stack@operand=\toks32
 \pgfmath@stack@operation=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count287
+\c@pgfmathroundto@lastzeros=\count290
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@picminx=\dimen189
@@ -335,7 +343,7 @@ File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box99
 \pgf@hbox=\box100
 \pgf@layerbox@main=\box101
-\pgf@picture@serial@count=\count288
+\pgf@picture@serial@count=\count291
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgflinewidth=\dimen263
@@ -356,8 +364,8 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen268
-\pgf@sys@shading@range@num=\count289
-\pgf@shadingcount=\count290
+\pgf@sys@shading@range@num=\count292
+\pgf@shadingcount=\count293
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
@@ -392,7 +400,7 @@ Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count291
+\pgf@plot@mark@count=\count294
 \pgfplotmarksize=\dimen273
 )
 \tikz@lastx=\dimen274
@@ -407,17 +415,17 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@figbox@bg=\box105
 \tikz@tempbox=\box106
 \tikz@tempbox@bg=\box107
-\tikztreelevel=\count292
-\tikznumberofchildren=\count293
-\tikznumberofcurrentchild=\count294
-\tikz@fig@count=\count295
+\tikztreelevel=\count295
+\tikznumberofchildren=\count296
+\tikznumberofcurrentchild=\count297
+\tikz@fig@count=\count298
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count296
-\pgfmatrixcurrentcolumn=\count297
-\pgf@matrix@numberofcolumns=\count298
+\pgfmatrixcurrentrow=\count299
+\pgfmatrixcurrentcolumn=\count300
+\pgf@matrix@numberofcolumns=\count301
 )
-\tikz@expandcount=\count299
+\tikz@expandcount=\count302
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/forest/forest.sty
@@ -469,7 +477,7 @@ File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
-\pgf@intersect@solutions=\count300
+\pgf@intersect@solutions=\count303
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks36
@@ -478,54 +486,54 @@ Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
- (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 \@envbody=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2023-02-22 L3 programming layer (loader) 
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count301
+\l__color_backend_stack_int=\count304
 \l__pdf_internal_box=\box128
 ))
 Package: xparse 2023-02-02 L3 Experimental document command parser
 ) (/usr/share/texlive/texmf-dist/tex/latex/inlinedef/inlinedef.sty
 Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \ID@toks=\toks39
-\ID@count=\count302
+\ID@count=\count305
 )
 \ID@usercommands=\toks40
-\safeloop@depth=\count303
-\safeRKloop@depth=\count304
+\safeloop@depth=\count306
+\safeRKloop@depth=\count307
 \forest@temp@dimen=\dimen282
-\forest@temp@count=\count305
-\forest@n=\count306
-\forest@temp@global@count=\count307
+\forest@temp@count=\count308
+\forest@n=\count309
+\forest@temp@global@count=\count310
 \forest@temp@toks=\toks41
-\forest@temparray@M=\count308
-\forest@temparray@N=\count309
-\forest@global@temparray@M=\count310
-\forest@global@temparray@N=\count311
-\forest@isnum@count=\count312
-\forest@isdim@nonintpart=\count313
+\forest@temparray@M=\count311
+\forest@temparray@N=\count312
+\forest@global@temparray@M=\count313
+\forest@global@temparray@N=\count314
+\forest@isnum@count=\count315
+\forest@isdim@nonintpart=\count316
 \forest@isdim@dimen=\dimen283
-\forest@sort@m=\count314
-\forest@sort@k=\count315
-\forest@sort@p=\count316
+\forest@sort@m=\count317
+\forest@sort@k=\count318
+\forest@sort@p=\count319
 \bracket@content=\toks42
 \bracket@afterthought=\toks43
-\forest@node@maxid=\count317
-\forest@process@left@M=\count318
-\forest@process@left@N=\count319
-\forest@process@right@M=\count320
-\forest@process@right@N=\count321
-\forest@process@saved@M=\count322
-\forest@process@saved@N=\count323
-\forest@process@result@M=\count324
-\forest@process@result@N=\count325
-\forest@process@n=\count326
+\forest@node@maxid=\count320
+\forest@process@left@M=\count321
+\forest@process@left@N=\count322
+\forest@process@right@M=\count323
+\forest@process@right@N=\count324
+\forest@process@saved@M=\count325
+\forest@process@saved@N=\count326
+\forest@process@result@M=\count327
+\forest@process@result@N=\count328
+\forest@process@n=\count329
 \forest@nodewalk@branch@toks=\toks44
 \forest@nodewalk@shortsteps@resolution=\toks45
 \forest@do@dynamics=\toks46
@@ -540,8 +548,8 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \forest@PIii@toks=\toks50
 \forest@copy@in=\read4
 \forest@copy@out=\write4
-\forest@externalize@max@outer@n=\count327
-\forest@externalize@inner@n=\count328
+\forest@externalize@max@outer@n=\count330
+\forest@externalize@inner@n=\count331
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
@@ -562,10 +570,10 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 \DT@rulewidth=\dimen296
 \DT@dotwidth=\dimen297
 \DTbaselineskip=\dimen298
-\DT@counti=\count329
-\DT@countii=\count330
-\DT@countiii=\count331
-\DT@countiv=\count332
+\DT@counti=\count332
+\DT@countii=\count333
+\DT@countiii=\count334
+\DT@countiv=\count335
 \DT@indent=\dimen299
 \DT@parskip=\dimen300
 \DT@baselineskip=\dimen301
@@ -585,7 +593,7 @@ Package: amsthm 2020/05/29 v2.20.6
 ) (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thmtools.sty
 Package: thmtools 2023/02/17 v0.75
 \thmt@toks=\toks57
-\c@thmt@dummyctr=\count333
+\c@thmt@dummyctr=\count336
  (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-patch.sty
 Package: thm-patch 2023/02/17 v0.75
  (/usr/share/texlive/texmf-dist/tex/latex/thmtools/parseargs.sty
@@ -608,7 +616,7 @@ Package: thm-amsthm 2023/02/17 v0.75
 \thmt@style@headstyle=\toks59
 )) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count334
+\c@float@type=\count337
 \float@exts=\toks60
 \float@box=\box130
 \@float@everytoks=\toks61
@@ -632,14 +640,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count335
+\inf@bad=\count338
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count336
-\leftroot@=\count337
+\uproot@=\count339
+\leftroot@=\count340
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count338
-\DOTSCASE@=\count339
+\classnum@=\count341
+\DOTSCASE@=\count342
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -652,20 +660,20 @@ LaTeX Info: Redefining \Bigg on input line 725.
 \big@size=\dimen304
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count340
+\macc@depth=\count343
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count341
+\c@MaxMatrixCols=\count344
 \dotsspace@=\muskip16
-\c@parentequation=\count342
-\dspbrk@lvl=\count343
+\c@parentequation=\count345
+\dspbrk@lvl=\count346
 \tag@help=\toks63
-\row@=\count344
-\column@=\count345
-\maxfields@=\count346
+\row@=\count347
+\column@=\count348
+\maxfields@=\count349
 \andhelp@=\toks64
 \eqnshift@=\dimen305
 \alignsep@=\dimen306
@@ -684,7 +692,7 @@ Package: siunitx 2023-03-14 v3.2.3 A comprehensive (SI) units package
 \l__siunitx_angle_tmp_dim=\dimen311
 \l__siunitx_angle_marker_box=\box134
 \l__siunitx_angle_unit_box=\box135
-\l__siunitx_compound_count_int=\count347
+\l__siunitx_compound_count_int=\count350
  (/usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
  (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
@@ -696,15 +704,15 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ))
-\l__siunitx_number_exponent_fixed_int=\count348
-\l__siunitx_number_min_decimal_int=\count349
-\l__siunitx_number_min_integer_int=\count350
-\l__siunitx_number_round_precision_int=\count351
-\l__siunitx_number_lower_threshold_int=\count352
-\l__siunitx_number_upper_threshold_int=\count353
-\l__siunitx_number_group_first_int=\count354
-\l__siunitx_number_group_size_int=\count355
-\l__siunitx_number_group_minimum_int=\count356
+\l__siunitx_number_exponent_fixed_int=\count351
+\l__siunitx_number_min_decimal_int=\count352
+\l__siunitx_number_min_integer_int=\count353
+\l__siunitx_number_round_precision_int=\count354
+\l__siunitx_number_lower_threshold_int=\count355
+\l__siunitx_number_upper_threshold_int=\count356
+\l__siunitx_number_group_first_int=\count357
+\l__siunitx_number_group_size_int=\count358
+\l__siunitx_number_group_minimum_int=\count359
 \l__siunitx_table_tmp_box=\box136
 \l__siunitx_table_tmp_dim=\dimen312
 \l__siunitx_table_column_width_dim=\dimen313
@@ -715,9 +723,9 @@ Package pdftexcmds Info: \pdfdraftmode found.
 \l__siunitx_table_after_box=\box141
 \l__siunitx_table_before_dim=\dimen314
 \l__siunitx_table_carry_dim=\dimen315
-\l__siunitx_unit_tmp_int=\count357
-\l__siunitx_unit_position_int=\count358
-\l__siunitx_unit_total_int=\count359
+\l__siunitx_unit_tmp_int=\count360
+\l__siunitx_unit_position_int=\count361
+\l__siunitx_unit_total_int=\count362
  (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen316
@@ -753,18 +761,18 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
  (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count360
-\calc@Bcount=\count361
+\calc@Acount=\count363
+\calc@Bcount=\count364
 \calc@Adimen=\dimen318
 \calc@Bdimen=\dimen319
 \calc@Askip=\skip62
 \calc@Bskip=\skip63
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count362
+\calc@Ccount=\count365
 \calc@Cskip=\skip64
 )
-\g_MT_multlinerow_int=\count363
+\g_MT_multlinerow_int=\count366
 \l_MT_multwidth_dim=\dimen320
 \origjot=\skip65
 \l_MT_shortvdotswithinadjustabove_dim=\dimen321
@@ -776,14 +784,14 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \xmathstrut@box=\box144
 \xmathstrut@dim=\dimen327
 )
-\l_EQ_equationtype_int=\count364
-\l_EQ_alignmentmode_int=\count365
+\l_EQ_equationtype_int=\count367
+\l_EQ_alignmentmode_int=\count368
 \l_EQ_totalwidth_dim=\dimen328
 \l_EQ_displaywidth_dim=\dimen329
 \l_EQ_temp_linewidth_dim=\dimen330
 \l_EQ_linewidth_dim=\dimen331
 \EmphEqdelimitershortfall=\dimen332
-\EmphEqdelimiterfactor=\count366
+\EmphEqdelimiterfactor=\count369
 \g_EQ_toptag_height_dim=\dimen333
 \g_EQ_bottomtag_depth_dim=\dimen334
 \g_EQ_toprow_height_dim=\dimen335
@@ -791,7 +799,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \g_EQ_widesttag_dim=\dimen337
 \EQ_mathdisplay_box=\box145
 \EQ_tag_box=\box146
-\g_EQ_temprow_int=\count367
+\g_EQ_temprow_int=\count370
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
@@ -804,7 +812,7 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@old@col=\dimen340
 \TX@target=\dimen341
 \TX@delta=\dimen342
-\TX@cols=\count368
+\TX@cols=\count371
 \TX@ftn=\toks68
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
@@ -812,27 +820,27 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTright=\skip67
 \LTpre=\skip68
 \LTpost=\skip69
-\LTchunksize=\count369
+\LTchunksize=\count372
 \LTcapwidth=\dimen343
 \LT@head=\box147
 \LT@firsthead=\box148
 \LT@foot=\box149
 \LT@lastfoot=\box150
 \LT@gbox=\box151
-\LT@cols=\count370
-\LT@rows=\count371
-\c@LT@tables=\count372
-\c@LT@chunks=\count373
+\LT@cols=\count373
+\LT@rows=\count374
+\c@LT@tables=\count375
+\c@LT@chunks=\count376
 \LT@p@ftn=\toks69
 ) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
 \everycr=\toks70
 \minrowclearance=\skip70
-\rownum=\count374
+\rownum=\count377
 ) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip71
-\multirow@cntb=\count375
+\multirow@cntb=\count378
 \multirow@dima=\skip72
 \bigstrutjot=\dimen344
 ) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
@@ -847,12 +855,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen352
 \cmidrulekern=\dimen353
 \defaultaddspace=\dimen354
-\@cmidla=\count376
-\@cmidlb=\count377
+\@cmidla=\count379
+\@cmidlb=\count380
 \@aboverulesep=\dimen355
 \@belowrulesep=\dimen356
-\@thisruleclass=\count378
-\@lastruleclass=\count379
+\@thisruleclass=\count381
+\@lastruleclass=\count382
 \@thisrulewidth=\dimen357
 ) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
@@ -860,13 +868,13 @@ Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environ
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks71
-\c@algorithm=\count380
+\c@algorithm=\count383
 ) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count381
-\c@ALC@line=\count382
-\c@ALC@rem=\count383
-\c@ALC@depth=\count384
+\c@ALC@unique=\count384
+\c@ALC@line=\count385
+\c@ALC@rem=\count386
+\c@ALC@depth=\count387
 \ALC@tlm=\skip73
 \algorithmicindent=\skip74
 ) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -886,11 +894,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count385
+\c@section@level=\count388
 )
 \@linkdim=\dimen358
-\Hy@linkcounter=\count386
-\Hy@pagecounter=\count387
+\Hy@linkcounter=\count389
+\Hy@pagecounter=\count390
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -900,7 +908,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count388
+\Hy@SavedSpaceFactor=\count391
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -914,7 +922,7 @@ Package hyperref Info: Plain pages OFF on input line 4192.
 Package hyperref Info: Backreferencing OFF on input line 4197.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4425.
-\c@Hy@tempcnt=\count389
+\c@Hy@tempcnt=\count392
  (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -926,7 +934,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count390
+\Fld@menulength=\count393
 \Field@Width=\dimen360
 \Fld@charsize=\dimen361
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -940,9 +948,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count391
-\c@Item=\count392
-\c@Hfootnote=\count393
+\Hy@abspage=\count394
+\c@Item=\count395
+\c@Hfootnote=\count396
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -951,8 +959,8 @@ File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count394
-\c@bookmark@seq@number=\count395
+\Fld@listcount=\count397
+\c@bookmark@seq@number=\count398
  (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -980,7 +988,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip76
 \bibsep=\skip77
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count396
+\c@NAT@ctr=\count399
 ) (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
 \AM@pagewidth=\dimen362
@@ -989,13 +997,13 @@ Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
  (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count397
+\pdfpages@includegraphics@status=\count400
 \AM@pagebox=\box152
 \AM@global@opts=\toks72
-\AM@pagecnt=\count398
+\AM@pagecnt=\count401
 \AM@toc@title=\toks73
 \AM@lof@heading=\toks74
-\c@AM@survey=\count399
+\c@AM@survey=\count402
 \AM@templatesizebox=\box153
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
@@ -1006,9 +1014,9 @@ Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count400
-\l__lipsum_a_int=\count401
-\l__lipsum_b_int=\count402
+\g__lipsum_par_int=\count403
+\l__lipsum_a_int=\count404
+\l__lipsum_b_int=\count405
  (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip78
@@ -1023,13 +1031,13 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 ) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 239.
-\c@subfigure=\count403
+\c@subfigure=\count406
 Package caption Info: New subtype `subtable' on input line 239.
-\c@subtable=\count404
+\c@subtable=\count407
 ) (./Configuration_Files/config.tex
-\c@theorem=\count405
-\c@proposition=\count406
-\c@algsubstate=\count407
+\c@theorem=\count408
+\c@proposition=\count409
+\c@algsubstate=\count410
 ) (./Thesis.aux)
 \openout1 = `Thesis.aux'.
 
@@ -1096,16 +1104,16 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 Package caption Info: End \AtBeginDocument code.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count408
+\scratchcounter=\count411
 \scratchdimen=\dimen365
 \scratchbox=\box156
-\nofMPsegments=\count409
-\nofMParguments=\count410
+\nofMPsegments=\count412
+\nofMParguments=\count413
 \everyMPshowfont=\toks76
-\MPscratchCnt=\count411
+\MPscratchCnt=\count414
 \MPscratchDim=\dimen366
-\MPnumerator=\count412
-\makeMPintoPDFobject=\count413
+\MPnumerator=\count415
+\makeMPintoPDFobject=\count416
 \everyMPtoPDFconversion=\toks77
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1113,6 +1121,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+LaTeX Info: Redefining \it@ocap on input line 123.
+LaTeX Info: Redefining \it@ccap on input line 123.
+
 
 Package siunitx Warning: Detected the "physics" package:
 (siunitx)                omitting definition of \qty.
@@ -1124,6 +1135,7 @@ Package siunitx Warning: Detected the "physics" package:
 (siunitx)                
 (siunitx)                to your preamble.
 
+Package translations Info: no dictionary file `translations-basic-dictionary-italian.trsl' found. on input line 123.
 (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
@@ -1158,8 +1170,18 @@ File: Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO-eps-converted-to.pdf Graphic f
 <use Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO-eps-converted-to.pdf>
 Package pdftex.def Info: Images/02_ING_IND_INFORMAZIONE_COL_POSITIVO-eps-converted-to.pdf  used on input line 146.
 (pdftex.def)             Requested size: 302.73503pt x 150.052pt.
+
+Underfull \hbox (badness 6204) in paragraph at lines 146--146
+[]\T1/cmr/bx/n/24.88 Generalised Co-n-ju-ga-te Gra-dient
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 146--146
+\T1/cmr/bx/n/24.88 for the mi-ni-mi-sa-tion of ener-gy
+ []
+
 LaTeX Font Info:    Trying to load font information for U+msa on input line 146.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 146.
@@ -1300,7 +1322,7 @@ Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used 
  [4
 
 ]
-Chapter 1.
+Capitolo 1.
 (./chapters/introduction/nuclearmodels.tex [5
 
 ]
@@ -1389,20 +1411,15 @@ Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used 
  [22
 
 ]
-Chapter 2.
+Capitolo 2.
 [23
 
 ] [24] [25] [26] [27]) (./chapters/functional/functional.tex [28]
-Chapter 3.
+Capitolo 3.
 (./chapters/functional/hartree_fock.tex [29
 
 
-] [30] [31] [32] [33] [34]) (./chapters/functional/pairing.tex [35] [36] [37] [38] [39] [40] [41]) (./chapters/functional/microscopic_fission.tex [42]
-Overfull \hbox (4.25905pt too wide) in paragraph at lines 14--17
-[]\T1/cmr/m/n/12 A more fun-da-men-tal un-der-stand-ing is achieved within self-consistent mean-field ap-proaches
- []
-
-[43] [44] [45]) (./chapters/functional/skyrme/skyrme.tex [46] [47]) (./chapters/functional/edf/edf.tex [48] [49] [50] [51]) (./chapters/functional/coulomb/coulomb.tex [52] [53]) (./chapters/functional/energy/energy_calculation.tex [54])) (./chapters/numerical/numerical.tex [55]
+] [30] [31] [32] [33] [34]) (./chapters/functional/pairing.tex [35] [36] [37] [38] [39] [40] [41]) (./chapters/functional/microscopic_fission.tex [42] [43] [44] [45]) (./chapters/functional/skyrme/skyrme.tex [46] [47]) (./chapters/functional/edf/edf.tex [48] [49] [50] [51]) (./chapters/functional/coulomb/coulomb.tex [52] [53]) (./chapters/functional/energy/energy_calculation.tex [54])) (./chapters/numerical/numerical.tex [55]
 Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
 (epstopdf)                    date: 2025-09-15 15:14:14
 (epstopdf)                    size: 1813066 bytes
@@ -1419,7 +1436,7 @@ Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used 
  [56
 
 ]
-Chapter 4.
+Capitolo 4.
 (./chapters/numerical/finite_diff/finite_diff.tex [57
 
 ] [58] [59] [60]) (./chapters/numerical/gcg/gcg.tex [61] [62]
@@ -1479,7 +1496,7 @@ Package pdftex.def Info: Images/stability.pdf  used on input line 6.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [74] [75] [76 <./Images/conv_tol.pdf> <./Images/conv_steps_o.pdf>] [77 <./Images/conv_steps.pdf>] [78 <./Images/stability.pdf>]
-Chapter 5.
+Capitolo 5.
 (./chapters/spherical_results/sections/physical_quantities.tex [79
 
 
@@ -1493,7 +1510,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `superscript' on input line 5.
 
 [80] [81] [82])) (./chapters/deformed_results/deformed_results.tex [83] [84] [85] [86] [87] [88]
-Chapter 6.
+Capitolo 6.
 [89
 
 
@@ -1522,7 +1539,7 @@ LaTeX Font Warning: Font shape `T1/cmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 6.
 
 [92]
-<Images/mg_gs_density_axial.pdf, id=2300, 462.52798pt x 346.89601pt>
+<Images/mg_gs_density_axial.pdf, id=2301, 462.52798pt x 346.89601pt>
 File: Images/mg_gs_density_axial.pdf Graphic file (type pdf)
 <use Images/mg_gs_density_axial.pdf>
 Package pdftex.def Info: Images/mg_gs_density_axial.pdf  used on input line 78.
@@ -1531,7 +1548,7 @@ Package pdftex.def Info: Images/mg_gs_density_axial.pdf  used on input line 78.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Images/mg_gs_density_top.pdf, id=2301, 462.52798pt x 346.89601pt>
+<Images/mg_gs_density_top.pdf, id=2302, 462.52798pt x 346.89601pt>
 File: Images/mg_gs_density_top.pdf Graphic file (type pdf)
 <use Images/mg_gs_density_top.pdf>
 Package pdftex.def Info: Images/mg_gs_density_top.pdf  used on input line 84.
@@ -1539,13 +1556,13 @@ Package pdftex.def Info: Images/mg_gs_density_top.pdf  used on input line 84.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Images/ev8_compare_nopair.pdf, id=2305, 433.62pt x 433.62pt>
+<Images/ev8_compare_nopair.pdf, id=2306, 433.62pt x 433.62pt>
 File: Images/ev8_compare_nopair.pdf Graphic file (type pdf)
 <use Images/ev8_compare_nopair.pdf>
 Package pdftex.def Info: Images/ev8_compare_nopair.pdf  used on input line 100.
 (pdftex.def)             Requested size: 364.19667pt x 364.21185pt.
 [93]
-<Images/functionals_compare.pdf, id=2316, 433.62pt x 433.62pt>
+<Images/functionals_compare.pdf, id=2317, 433.62pt x 433.62pt>
 File: Images/functionals_compare.pdf Graphic file (type pdf)
 <use Images/functionals_compare.pdf>
 Package pdftex.def Info: Images/functionals_compare.pdf  used on input line 110.
@@ -1553,75 +1570,61 @@ Package pdftex.def Info: Images/functionals_compare.pdf  used on input line 110.
 ) (./chapters/deformed_results/sections/novel.tex [94 <./Images/mg_gs_density_axial.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\alpha' on input line 6.
+(hyperref)                removing `\alpha' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 [95 <./Images/mg_gs_density_top.pdf>] [96 <./Images/ev8_compare_nopair.pdf>] [97 <./Images/functionals_compare.pdf>]
-<Images/clustering/SLy4_density.pdf, id=2520, 441.17459pt x 369.781pt>
+<Images/clustering/SLy4_density.pdf, id=2519, 441.17459pt x 369.781pt>
 File: Images/clustering/SLy4_density.pdf Graphic file (type pdf)
 <use Images/clustering/SLy4_density.pdf>
-Package pdftex.def Info: Images/clustering/SLy4_density.pdf  used on input line 27.
+Package pdftex.def Info: Images/clustering/SLy4_density.pdf  used on input line 28.
 (pdftex.def)             Requested size: 204.85846pt x 171.70375pt.
-<Images/clustering/SLy4_localization.pdf, id=2521, 441.13431pt x 369.781pt>
+<Images/clustering/SLy4_localization.pdf, id=2520, 441.13431pt x 369.781pt>
 File: Images/clustering/SLy4_localization.pdf Graphic file (type pdf)
 <use Images/clustering/SLy4_localization.pdf>
-Package pdftex.def Info: Images/clustering/SLy4_localization.pdf  used on input line 33.
+Package pdftex.def Info: Images/clustering/SLy4_localization.pdf  used on input line 34.
 (pdftex.def)             Requested size: 204.85846pt x 171.72069pt.
-<Images/clustering/skm_density.pdf, id=2522, 441.17459pt x 369.781pt>
+<Images/clustering/skm_density.pdf, id=2521, 441.17459pt x 369.781pt>
 File: Images/clustering/skm_density.pdf Graphic file (type pdf)
 <use Images/clustering/skm_density.pdf>
-Package pdftex.def Info: Images/clustering/skm_density.pdf  used on input line 41.
+Package pdftex.def Info: Images/clustering/skm_density.pdf  used on input line 42.
 (pdftex.def)             Requested size: 204.85846pt x 171.70375pt.
-<Images/clustering/skm_localization.pdf, id=2523, 441.13431pt x 369.781pt>
+<Images/clustering/skm_localization.pdf, id=2522, 441.13431pt x 369.781pt>
 File: Images/clustering/skm_localization.pdf Graphic file (type pdf)
 <use Images/clustering/skm_localization.pdf>
-Package pdftex.def Info: Images/clustering/skm_localization.pdf  used on input line 47.
+Package pdftex.def Info: Images/clustering/skm_localization.pdf  used on input line 48.
 (pdftex.def)             Requested size: 204.85846pt x 171.72069pt.
-<Images/clustering/kde33_density.pdf, id=2524, 441.17459pt x 369.781pt>
+<Images/clustering/kde33_density.pdf, id=2523, 441.17459pt x 369.781pt>
 File: Images/clustering/kde33_density.pdf Graphic file (type pdf)
 <use Images/clustering/kde33_density.pdf>
-Package pdftex.def Info: Images/clustering/kde33_density.pdf  used on input line 56.
+Package pdftex.def Info: Images/clustering/kde33_density.pdf  used on input line 57.
 (pdftex.def)             Requested size: 204.85846pt x 171.70375pt.
-<Images/clustering/kde33_localization.pdf, id=2525, 441.13431pt x 369.781pt>
+<Images/clustering/kde33_localization.pdf, id=2524, 441.13431pt x 369.781pt>
 File: Images/clustering/kde33_localization.pdf Graphic file (type pdf)
 <use Images/clustering/kde33_localization.pdf>
-Package pdftex.def Info: Images/clustering/kde33_localization.pdf  used on input line 62.
+Package pdftex.def Info: Images/clustering/kde33_localization.pdf  used on input line 63.
 (pdftex.def)             Requested size: 204.85846pt x 171.72069pt.
  [98] [99 <./Images/clustering/SLy4_density.pdf> <./Images/clustering/SLy4_localization.pdf> <./Images/clustering/skm_density.pdf> <./Images/clustering/skm_localization.pdf> <./Images/clustering/kde33_density.pdf> <./Images/clustering/kde33_localization.pdf>]
 <Images/si42_density_sly4.pdf, id=2755, 462.52798pt x 346.89601pt>
 File: Images/si42_density_sly4.pdf Graphic file (type pdf)
 <use Images/si42_density_sly4.pdf>
-Package pdftex.def Info: Images/si42_density_sly4.pdf  used on input line 98.
+Package pdftex.def Info: Images/si42_density_sly4.pdf  used on input line 99.
 (pdftex.def)             Requested size: 364.19667pt x 273.16087pt.
-<Images/s28_density_sly4.pdf, id=2760, 462.52798pt x 346.89601pt>
+ [100]
+<Images/s28_density_sly4.pdf, id=2769, 462.52798pt x 346.89601pt>
 File: Images/s28_density_sly4.pdf Graphic file (type pdf)
 <use Images/s28_density_sly4.pdf>
-Package pdftex.def Info: Images/s28_density_sly4.pdf  used on input line 125.
+Package pdftex.def Info: Images/s28_density_sly4.pdf  used on input line 126.
 (pdftex.def)             Requested size: 364.19667pt x 273.16087pt.
-)) (./chapters/conclusion/conclusion.tex [100] [101 <./Images/si42_density_sly4.pdf> <./Images/s28_density_sly4.pdf>]
-Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
-(epstopdf)                    date: 2025-09-15 15:14:14
-(epstopdf)                    size: 1813066 bytes
-(epstopdf)             Output file: <./Images//./raggiera_polimi-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-09-15 17:18:34
-(epstopdf)                    size: 40044 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Images//./raggiera_polimi-eps-converted-to.pdf ./Images//./raggiera_polimi.eps>
-(epstopdf)             \includegraphics on input line 1.
-Package epstopdf Info: Output file is already uptodate.
-File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Images//./raggiera_polimi-eps-converted-to.pdf>
-Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 1.
-(pdftex.def)             Requested size: 507.88533pt x 507.88051pt.
- [102
+)) (./chapters/conclusion/conclusion.tex [101 <./Images/si42_density_sly4.pdf>] [102 <./Images/s28_density_sly4.pdf>] [103
 
-] [103
 
 ] [104]) (./Thesis.bbl [105]
 Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
@@ -1643,48 +1646,33 @@ Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used 
 
 ] [108]
 Underfull \hbox (badness 10000) in paragraph at lines 146--150
-[]\T1/cmr/m/n/12 Colo' Gi-an-luca.  Nu-clear physics - lec-ture notes (aca-demic year
+[]\T1/cmr/m/n/12 Colo' Gian-lu-ca.  Nu-clear phy-sics - lec-tu-re no-tes (aca-de-mic year
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 146--150
-\T1/cmr/m/n/12 2021/22).  On-line PDF, Di-par-ti-mento di Fisica, Uni-ver-sita'
+\T1/cmr/m/n/12 2021/22).  On-li-ne PDF, Di-par-ti-men-to di Fi-si-ca, Uni-ver-si-ta' de-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 146--150
-\T1/cmr/m/n/12 degli Studi di Mi-lano / INFN Mi-lano, 2021.  Ac-cessed from
+\T1/cmr/m/n/12 gli Stu-di di Mi-la-no / INFN Mi-la-no, 2021.  Ac-ces-sed from
  []
 
 [109] [110] [111] [112]
-Underfull \hbox (badness 2426) in paragraph at lines 418--424
-[]\T1/cmr/m/n/12 E. Cha-banat, P. Bonche, P. Haensel, J. Meyer, and R. Scha-ef-fer.  A
+Underfull \hbox (badness 1546) in paragraph at lines 418--424
+\T1/cmr/m/it/12 sics A\T1/cmr/m/n/12 , 627(4):710--746, 1997.  IS-SN 0375-9474.  doi: $https : / / doi . org / 10 .
  []
 
 [113] [114] [115]
-Underfull \hbox (badness 1527) in paragraph at lines 589--595
-\T1/cmr/m/n/12 ma-tion en-ergy curves with the con-strained hartree--fock method.  \T1/cmr/m/it/12 Nu-clear
+Underfull \hbox (badness 1546) in paragraph at lines 589--595
+\T1/cmr/m/it/12 sics A\T1/cmr/m/n/12 , 203(3):433--472, 1973.  IS-SN 0375-9474.  doi: $https : / / doi . org / 10 .
  []
 
-[116]) [117]
-Package epstopdf Info: Source file: <./Images//./raggiera_polimi.eps>
-(epstopdf)                    date: 2025-09-15 15:14:14
-(epstopdf)                    size: 1813066 bytes
-(epstopdf)             Output file: <./Images//./raggiera_polimi-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-09-15 17:18:34
-(epstopdf)                    size: 40044 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Images//./raggiera_polimi-eps-converted-to.pdf ./Images//./raggiera_polimi.eps>
-(epstopdf)             \includegraphics on input line 222.
-Package epstopdf Info: Output file is already uptodate.
-File: ./Images//./raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Images//./raggiera_polimi-eps-converted-to.pdf>
-Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used on input line 222.
-(pdftex.def)             Requested size: 507.88533pt x 507.88051pt.
- [118
-
-] (./chapters/appendix/appendix.tex
-Appendix A.
+[116] [117]) [118] (./chapters/appendix/appendix.tex
+Appendice A.
 (./chapters/appendix/spherical_harmonics.tex [119
+
 
 
 ]) (./chapters/appendix/5p_derivatives.tex) (./chapters/appendix/func_der.tex [120]) (./chapters/appendix/UV.tex
@@ -1769,21 +1757,21 @@ Package pdftex.def Info: ./Images//./raggiera_polimi-eps-converted-to.pdf  used 
 
 ] (./Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 411FE2A61769DA25D0385388893DF651;15470.
+(rerunfilecheck)             Checksum: 3156B8CDF0CE41C64F73B232CFA5E5D7;15554.
  ) 
 Here is how much of TeX's memory you used:
- 49318 strings out of 476041
- 1074652 string characters out of 5793174
- 1902388 words of memory out of 6000000
- 67964 multiletter control sequences out of 15000+600000
+ 49431 strings out of 476041
+ 1076603 string characters out of 5793174
+ 1903388 words of memory out of 6000000
+ 68067 multiletter control sequences out of 15000+600000
  541253 words of font info for 109 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
  150i,20n,141p,1644b,3071s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on Thesis.pdf (138 pages, 10555331 bytes).
+Output written on Thesis.pdf (138 pages, 10557529 bytes).
 PDF statistics:
- 3435 PDF objects out of 3580 (max. 8388607)
- 2583 compressed objects within 26 object streams
+ 3436 PDF objects out of 3580 (max. 8388607)
+ 2584 compressed objects within 26 object streams
  962 named destinations out of 1000 (max. 500000)
  852 words of extra memory for PDF output out of 10000 (max. 10000000)
 
