@@ -1,6 +1,6 @@
 \section{Eigenvalue problem}
 \label{sec:eigenvalue_problem}
-This section is devoted to the approximate solution of the eigenvalue problem, needed for the Schr"odinger Equation~\eqref{eq:spe_ks}. The analysis and implementation work presented was developed within the additional thesis activity carried out for the Honours Programme \emph{Scientific Research in Industrial Engineering -- Nuclear Science and Technology}.
+This section is devoted to the approximate solution of the eigenvalue problem, needed for the Schr\"odinger Equation~\eqref{eq:spe_ks}. The analysis and implementation work presented here was developed within the additional thesis activity carried out for the Honours Programme \emph{Scientific Research in Industrial Engineering -- Nuclear Science and Technology}.
 
 Eigenvalue problems are ubiquitous in physics and engineering, and while solving one for a small matrix is trivial, it still requires roughly $O(n^3)$ operations \cite{golub13} to do so. More often than not, real computational applications result in large-scale matrices, which are completely out of question for exact eigenvalues calculations, thus requiring the use of approximate algorithms. 
 
@@ -28,9 +28,9 @@ Many generalisations to this method exist, which relax the requirements on the m
 The quadratic form $f(x)$ derived from the system \eqref{eq:lin_sys} is
 \begin{equation}
     \label{eq:quad_form}
-    f(x) = \frac 1 2 x^T A x - b^T x
+    f(x) = \frac 1 2 x^T A x - b^T x,
 \end{equation}
-If $A$ is symmetric, positive-definite, the shape of $f(x)$ is convex and has a global minimum for
+if $A$ is symmetric, positive-definite, the shape of $f(x)$ is convex and has a global minimum for
 \begin{equation}
     \label{eq:quad_form_min}
     \nabla_x f(x) = A x_m - b = 0 \implies A x_m = b,
@@ -38,20 +38,20 @@ If $A$ is symmetric, positive-definite, the shape of $f(x)$ is convex and has a 
 hence the extremum of the quadratic form is the also the solution of the linear system \eqref{eq:lin_sys}.
 We can employ the well-known gradient descent technique \cite{PainlessCGM} to find such point: starting from a guess $x_0$, we compute the direction $d_i$ where $f$ decreases the most (the residual $r_i$), compute the step size that gives the largest decrease, and update $x_i$ at each iteration accordingly, repeating until convergence.
 \begin{align}
-d_i = r_i &= b - A x_i \\
-x_{i+1} &= x_i +\alpha_i r_i \\
-\text{with } \alpha_i \text{ such that } \dv{f}{\alpha_i} = 0 \implies \alpha_i &= \frac{r_i^T r_i}{r_i^T A r_i}
+d_i = r_i = b - A x_i, \\
+x_{i+1} = x_i +\alpha_i r_i, \\
+\text{with } \alpha_i \text{ such that } \dv{f}{\alpha_i} = 0 \implies \alpha_i = \frac{r_i^T r_i}{r_i^T A r_i}.
 \end{align}
 This is a powerful but highly inefficient procedure. We are not ensuring that the search direction doesn't end up with components in subspaces that were explored already.
 It can be proven \cite{PainlessCGM} that the norm of the error $e_i = x_i - x_m$ is minimal at each iteration if the search directions $d_i$ are chosen to be $A$-orthogonal to the next error, i.e. $d_i^T A e_{i+1} = 0$. This makes the algorithm converge at the exact solution in $n$ steps, but most importantly it allows to truncate the iterations without a large error on the approximation $x_i$.
 In this case, the algorithm is called Conjugate Gradient Method and is formulated as 
 \begin{align}
     \label{eq:cg_method}
-    \alpha_i = \frac{r_i^T r_i}{d_i^T A d_i}  
-    \\x_{i+1} = x_i + \alpha_i d_i
-    \\r_{i+1} = r_i - \alpha_i A d_i
-    \\\beta_{i+1} = \frac{r_{i+1}^T r_{i+1}}{r_i^T r_i}
-    \\d_{i+1} = r_{i+1} + \beta_{i+1} d_i
+    \alpha_i = \frac{r_i^T r_i}{d_i^T A d_i}  ,
+    \\x_{i+1} = x_i + \alpha_i d_i          ,
+    \\r_{i+1} = r_i - \alpha_i A d_i        ,
+    \\\beta_{i+1} = \frac{r_{i+1}^T r_{i+1}}{r_i^T r_i},
+    \\d_{i+1} = r_{i+1} + \beta_{i+1} d_i   ,
 \end{align}
 where iterations are truncated if the norm of the residual $r_i$ is smaller than a certain threshold. It can be proven that the orthonormalization of the new search direction, with respect to all the previous ones, can be done only through the rescaling factor $\beta_{i+1}$ \cite{PainlessCGM}.
 CG converges to the exact solution in $n$ steps, moreover, it represents a great method for sparse matrices, because it can be proven to be of complexity $O(m)$, where $m$ is the number of non-zero elements in $A$ \cite{PainlessCGM}. In Figure~\ref{fig:cg}, a visual representation of the conjugation of search directions and the subsequent exact solution is shown for a two-dimensional problem.
@@ -71,7 +71,7 @@ CG converges to the exact solution in $n$ steps, moreover, it represents a great
 The CG method convergence is known to be limited by the modulus of the condition number of $A$, $\kappa(A)$, given by \cite{PainlessCGM}
 \begin{equation}
     \label{eq:cond_num}
-    \kappa(A) = \frac{\lambda_\text{max}(A)}{\lambda_\text{min}(A)}
+    \kappa(A) = \frac{\lambda_\text{max}(A)}{\lambda_\text{min}(A)},
 \end{equation}
 where $\lambda_\text{max}$ and $\lambda_\text{min}$ are respectively the largest and smallest eigenvalues of $A$ in magnitude.
 If we were able to find a good \textit{preconditioner} $M$, symmetric and positive-definite, such that $\kappa(M^{-1}A) \lll \kappa(A)$, and $M^{-1}$ is easy to compute, then the algorithm would converge much faster, by solving $M^{-1}Ax = M^{-1}b$, since $x$ is also the solution of $Ax = b$.
@@ -86,7 +86,7 @@ The catch with preconditioning is that $M$ has no unique recipe. Preconditioners
 A common denominator of all these algorithms is the search of good approximations for the correct eigenvectors in a certain subspace. The method is called Rayleigh-Ritz (RR) procedure \cite{Saad1992}, and is here outlined.
 
 Let us suppose to have a matrix $A$ of size $n\times n$, with entries in $\C$ and a collection of vectors $k$ organized in a matrix $K$, where $K$ is of size $n\times k$. Generally speaking, $n$ is large, while $k$ is much smaller.
-The best approximation of the true eigenvectors of $A$ in the subspace $\mathcal K$ spanned by the vectors in $K$ can be computed by solving the small scale eigenvalue problem
+The best approximation of the true eigenvectors of $A$ in the subspace $\mathcal K$, spanned by the vectors in $K$, can be computed by solving the small scale eigenvalue problem
 \begin{equation}
     K^\dagger A  K C = C\Lambda.
 \end{equation}
@@ -96,39 +96,39 @@ Computing $K C$ gives a matrix of size $n\times k$, whose column vectors are the
 \label{sec:shift_invert}
 The power iteration is the technique on which Krylov subspace search methods are based \cite{golub13}. By repeatedly applying matrix $A$ to a vector $x$, $x$ gets skewed towards the eigenvector whose eigenvalue is of largest magnitude $\lambda_n$.
 
-Let us assume $A$ is a hermitian matrix, thus diagonalizable. This means we can write an arbitrary vector $x^{(0)}$ as a linear combination of the eigenvectors $\{v_i\}$ of $A$.
+Let us assume $A$ is a hermitian matrix, thus diagonalizable. This means we can write an arbitrary vector $x^{(0)}$ as a linear combination of the eigenvectors $\{v_i\}$ of $A$
 \begin{equation}
-    x^{(0)} = \sum_i^n \alpha_i v_i
+    x^{(0)} = \sum_i^n \alpha_i v_i.
 \end{equation}
-If we apply $A$ to $x^{(0)}$ k times, we get
+If we apply $A$ to $x^{(0)}$ $k$ times, we get
 \begin{equation}
-    x^{(k)} = A^k x^{(0)} = \sum_i^n \alpha_i A^k v_i = \sum_i^n \alpha_i\lambda_i ^{k}v_i
+    x^{(k)} = A^k x^{(0)} = \sum_i^n \alpha_i A^k v_i = \sum_i^n \alpha_i\lambda_i ^{k}v_i.
 \end{equation}
 It can be proven that the ratio of the $j$-th component of $x_j^{(k)}$ and $x_j^{(k-1)}$ converges to $\lambda_n$
 \begin{equation}
     \label{eq:power_iter_ratio}
-    \lim_{k\to\infty} \frac{x_j^{(k)}}{x_j^{(k-1)}} = \lambda_n
+    \lim_{k\to\infty} \frac{x_j^{(k)}}{x_j^{(k-1)}} = \lambda_n,
 \end{equation}
 which means, that for large enough $k$, we have the relation
 \begin{equation}
     \label{eq:power_iter_lambda}
-    A x^{(k)} \approx \lambda_n x^{(k)}
+    A x^{(k)} \approx \lambda_n x^{(k)}.
 \end{equation}
 So $x^{(k)}$ is an approximation of the eigenvector $v_n$ of $A$ whose eigenvalue is $\lambda_n$.
 \paragraph{Smallest eigenvalue}
 If instead of the largest eigenvalue, we were interested in the smallest one -- in magnitude -- $\lambda_0$, then we would need to apply the inverse matrix $A^{-1}$ to $x^{(k)}$, which would change the ratio \eqref{eq:power_iter_ratio} to 
 \begin{equation}
     \label{eq:power_iter_ratio_inv}
-    \lim_{k\to\infty} \frac{x_j^{(k)}}{x_j^{(k-1)}} = \lambda_0
+    \lim_{k\to\infty} \frac{x_j^{(k)}}{x_j^{(k-1)}} = \lambda_0.
 \end{equation}
-Let us assume for a moment that we're solving a nuclear single-particle Hamiltonian, where we have a certain number of bound states of negative energy and a much larger number of unbound states with positive energy. In this case, the inverse power iteration would converge to the states whose energy is closer to zero, avoiding the interesting ones on the bottom of the spectrum.
+Let us assume for a moment that we are solving a nuclear single-particle Hamiltonian, where we have a certain number of bound states of negative energy and a much larger number of unbound states with positive energy. In this case, the inverse power iteration would converge to the states whose energy is closer to zero, avoiding the interesting ones at the bottom of the spectrum.
 The solution is, before inverting, to shift the matrix by a quantity $\sigma$ that is very close to the lowest eigenvalue we want to compute, call it $\lambda_\sigma$ (eigenvector $v_\sigma$).
 Now, the eigenvalue of lowest magnitude of $(A-\sigma I)$ is $\lambda_\sigma - \sigma$ and by applying $(A-\sigma I)^{-1}$ to $x^{(k)}$, we will get the approximation to the eigenvector $v_\sigma$. This is the procedure implemented in step \ref{alg:inv_pow_step} of algorithm \ref{alg:mod_gcg}.
 \subsection{Iterative eigensolvers}
 \label{sec:eigensolvers}
 Now that the main techniques used by iterative eigensolvers have been laid out, we can look at three general methods, which are the most commonly used ones.
 \subsubsection{Jacobi-Davidson}
-The Jacobi-Davidson method is a type of algorithm where at each iteration, the approximation to an eigenpair of matrix $A$, is improved by correcting the eigenvector through the solution of a certain linear system, as we shall see shortly.
+The Jacobi-Davidson method is a type of algorithm where at each iteration, the approximation to an eigenpair of matrix $A$ is improved by correcting the eigenvector through the solution of a certain linear system, as we shall see shortly.
 Given an approximation $(u, \theta)$ of an eigenpair of matrix $A$, where $u$ is the approximate eigenvector and $\theta$ is the approximate eigenvalue, if the residual
 \begin{equation}
     \label{eq:residual}
@@ -137,13 +137,13 @@ Given an approximation $(u, \theta)$ of an eigenpair of matrix $A$, where $u$ is
 is $\approx 0$, then the eigenpair converged. Otherwise, we want to find a correction $t$ such that 
 \begin{equation}
     \label{eq:jacobi_correction}
-    r= A(u+t) - (\theta + \delta \theta) (u+t) = 0 
+    r= A(u+t) - (\theta + \delta \theta) (u+t) = 0.
 \end{equation}
-Linearizing this equation in $t$ gives
+Linearizing Equation~\eqref{eq:jacobi_correction} in $t$ gives
 \begin{equation}
-   (A - \theta  I ) t = -r 
+   (A - \theta  I ) t = -r,
 \end{equation}
-To avoid singularity of the equation near convergence, since $u$ approximately spans a subspace of the system's kernel $\text{ker} (A-\theta I)$, and enrich the subspace search with a useful orthogonal correction, we project the problem onto the orthogonal subspace of $u$, which finally gives
+to avoid singularity of this equation near convergence, since $u$ approximately spans a subspace of the system's kernel $\text{ker} (A-\theta I)$, and enrich the subspace search with a useful orthogonal correction, we project the problem onto the orthogonal subspace of $u$, which finally gives
 \begin{equation}
     \label{eq:jacobi_eq_proj}
     ( I - uu^\dagger) (A - \theta  I )(I - u u^\dagger) t = -r
@@ -223,7 +223,7 @@ A slightly different implementation of the algorithm is employed in the present 
 \paragraph{Eigenvalue problem} The original algorithm aims at solving the general eigenvalue problem $AX = \lambda BX$. Since in our case $B=I$, it is omitted from the procedure, reducing the computational cost of the algorithm, in particular, the one of the search direction block $P$. After orthonormalization of $V$, the columns of $X$ are orthonormal as well and the calculation of $P$ is given by
 \begin{equation}
     \label{eq:gcg_p}
-    P = X_\text{new} - X(X^\dagger X_\text{new})
+    P = X_\text{new} - X(X^\dagger X_\text{new}),
 \end{equation}
 which is the projection of $X_\text{new}$ onto the orthogonal complement of $X$, used in step \ref{alg:directions} of algorithm \ref{alg:mod_gcg}.
 \paragraph{Complex matrix} The algorithm has been generalised to the complex case, where the matrix is complex Hermitian and, as such, the transposition operation is replaced by the conjugate transpose.
@@ -232,10 +232,10 @@ which is the projection of $X_\text{new}$ onto the orthogonal complement of $X$,
 \paragraph{Shift update} The shift update is either fixed, in case of known spectrum, eg for HFB $\texttt{shift} = 0$, or adaptive \cite{GCG1}, so that the inverse power step can find the lowest eigenvalues, using the update formula
 \begin{equation}
     \label{eq:update_shift}
-    \texttt{shift}=(\lambda_\text{nev} - 100\lambda_1)/99
+    \texttt{shift}=(\lambda_\text{nev} - 100\lambda_1)/99,
 \end{equation}
 where $\lambda_\text{nev}$ is the biggest eigenvalue of the RR procedure and $\lambda_1$ is the smallest of the active eigenpairs.
-\paragraph{Preconditioning} The use of a preconditioner is beyond the scope of this work, a simple diagonal preconditioner is used.
+\paragraph{Preconditioning} Since the use of a properly designed preconditioner is beyond the scope of this work, a simple diagonal preconditioner is used.
 \begin{algorithm}[h]
 \caption{Generalised Conjugate Gradient algorithm}
 \begin{algorithmic}[1]

@@ -5,13 +5,13 @@ Constrained calculations are a fundamental tool to assess the stability of the g
 
 Constraints can be formulated as an equality-constrained optimisation problem (ECP), formulated as
 \begin{align}
-\min_{\ket \Psi}&E 
-\\\text{constrainted to } &\bra{\Psi} {\mathcal Q} \ket {\Psi} = \expval{ {\mathcal Q}} = q_0
+\min_{\ket \Psi}&E \nonumber
+\\\text{constrainted to } &\bra{\Psi} {\mathcal Q} \ket {\Psi} = \expval{ {\mathcal Q}} = q_0.
 \end{align}
 Which yields the Lagrangian
 \begin{equation}
     \label{eq:constr_lagrangian}
-    E' = E + \lambda (\expval{{\mathcal Q}}-q_0)
+    E' = E + \lambda (\expval{{\mathcal Q}}-q_0),
 \end{equation}
 where $\lambda$ is a Lagrange multiplier determined by the condition $\expval {{\mathcal Q}} = q_0$. 
 After finding the minimum of $E'$, it is trivial to show that for a given $\lambda$, we get \cite{FLOCARD1973433}
@@ -37,18 +37,18 @@ Without delving into cumbersome mathematical details, we'll see how the algorith
 Given the functional
 \begin{equation}
     \label{eq:alm_lagrangian}
-    E' = E + \lambda (q-q_0) + \frac c 2 (q-q_0)^2
+    E' = E + \lambda (q-q_0) + \frac c 2 (q-q_0)^2,
 \end{equation}
 where $q = \expval{{\mathcal Q}}$, the resulting mean-field potential will be given by
 \begin{align}
     U' &= U + \lambda  {\mathcal Q} + c(q-q_0) {\mathcal Q} 
-    \\ &= U + c(q-q_0(\lambda)) {\mathcal Q}
+    \\ &= U + c(q-q_0(\lambda)) {\mathcal Q},
 \end{align}
 where $q_0(\lambda)$ is updated at each iteration with the formula
 \begin{align}
     \label{eq:alm_q0}
-    q_0(\lambda) = q_0 - \frac{\lambda}{c}
-    \\\lambda ^{(i+1)} = \lambda^{(i)}+\mu c(q-q_0)
+    q_0(\lambda) = q_0 - \frac{\lambda}{c},
+    \\\lambda ^{(i+1)} = \lambda^{(i)}+\mu c(q-q_0).
 \end{align}
 Here, a slight deviation from the original ALM is present. Since the original work \cite{Staszczak2010} doesn't provide guidance regarding what is considered an \textit{iteration}, we employ the strategy \cite{CHEN2022108344} of using a damping factor $\mu\in [0, 1]$, so $\lambda$ can be updated at each HF iteration for fast convergence, without large oscillations or instabilities of any kind.
 
